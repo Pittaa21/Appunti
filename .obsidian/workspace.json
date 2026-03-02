@@ -112,6 +112,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Insiemi Numerici e Polinomi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +122,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Insiemi Numerici e Polinomi"
             }
           },
           {
@@ -130,11 +131,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Insiemi Numerici e Polinomi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Insiemi Numerici e Polinomi"
             }
           },
           {
@@ -172,12 +174,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Insiemi Numerici e Polinomi.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of Insiemi Numerici e Polinomi"
             }
           },
           {
@@ -209,10 +212,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "5c36c2ac74346afa",
+  "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
-    "Insiemi Numerici e Polinomi.md",
     "Screenshot 2026-03-02 205624.png",
+    "Insiemi Numerici e Polinomi.md",
     "Algebra.md",
     "Matematica discreta.md",
     "Algebra e Matematica discreta.md",
