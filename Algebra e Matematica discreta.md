@@ -1,4 +1,4 @@
 
-**Algebra**:
+**[[Algebra]]**:
 
-**Matematica discreta**:
+**[[Matematica discreta]]**:
