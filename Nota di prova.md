@@ -1,5 +1,0 @@
-
-
-daje roma daje
-
-
