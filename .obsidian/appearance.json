@@ -1,1 +1,6 @@
-{}
+{
+  "theme": "obsidian",
+  "cssTheme": "Catppuccin",
+  "baseFontSize": 16,
+  "interfaceFontFamily": ""
+}
