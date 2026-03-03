@@ -12,10 +12,15 @@ $$
 
 ---
 
+
 L'**Insieme dei numeri complessi** è 
 $$
 \mathbb{C}=\{a+i\cdot b\ |\ a,b\in\mathbb{R}\}
 $$
+---
+
+##### Osservazioni
+1. 
 
 
 ## MCD

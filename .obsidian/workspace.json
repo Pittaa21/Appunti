@@ -53,6 +53,19 @@
         "type": "tabs",
         "children": [
           {
+            "id": "0045e077050bce33",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
             "id": "443107e3ba30a4d0",
             "type": "leaf",
             "state": {
@@ -77,19 +90,6 @@
               "state": {},
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
-            }
-          },
-          {
-            "id": "c96fc433758e8523",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
             }
           }
         ]
@@ -212,16 +212,16 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "adff0da9db1a03b9",
+  "active": "9622b43658bb58c6",
   "lastOpenFiles": [
-    "Matematica discreta.md",
-    "Insiemi Numerici e Polinomi.md",
-    "Processi.md",
     "Sistemi Operativi.md",
-    "Date Esami.md",
-    "Algebra e Matematica discreta.md",
+    "Processi.md",
     "Grafi.md",
     "Screenshot 2026-03-02 205624.png",
-    "Algebra.md"
+    "Insiemi Numerici e Polinomi.md",
+    "Algebra.md",
+    "Matematica discreta.md",
+    "Algebra e Matematica discreta.md",
+    "Date Esami.md"
   ]
 }
