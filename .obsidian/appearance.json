@@ -2,5 +2,6 @@
   "theme": "obsidian",
   "cssTheme": "Catppuccin",
   "baseFontSize": 16,
-  "interfaceFontFamily": ""
+  "interfaceFontFamily": "",
+  "textFontFamily": "Noto Sans"
 }
