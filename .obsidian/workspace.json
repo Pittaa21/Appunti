@@ -53,19 +53,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0045e077050bce33",
-            "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {
-                "sortOrder": "alphabetical",
-                "autoReveal": false
-              },
-              "icon": "lucide-folder-closed",
-              "title": "Files"
-            }
-          },
-          {
             "id": "443107e3ba30a4d0",
             "type": "leaf",
             "state": {
