@@ -6,7 +6,6 @@
       {
         "id": "3390424729f6c8f9",
         "type": "tabs",
-        "dimension": 59.09090909090909,
         "children": [
           {
             "id": "adff0da9db1a03b9",
@@ -23,23 +22,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "1e1eb271f7dff6f3",
-        "type": "tabs",
-        "dimension": 40.909090909090914,
-        "children": [
-          {
-            "id": "5c36c2ac74346afa",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
@@ -53,7 +35,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "0045e077050bce33",
+            "id": "c96fc433758e8523",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -96,7 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -198,7 +180,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 200
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -212,16 +194,19 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "9622b43658bb58c6",
+  "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
-    "Sistemi Operativi.md",
+    "Pasted image 20260303213240.png",
+    "Pasted image 20260303212348.png",
+    "Pasted image 20260303213316.png",
+    "Insiemi Numerici e Polinomi.md",
+    "Matematica discreta.md",
     "Processi.md",
+    "Sistemi Operativi.md",
+    "Date Esami.md",
+    "Algebra e Matematica discreta.md",
     "Grafi.md",
     "Screenshot 2026-03-02 205624.png",
-    "Insiemi Numerici e Polinomi.md",
-    "Algebra.md",
-    "Matematica discreta.md",
-    "Algebra e Matematica discreta.md",
-    "Date Esami.md"
+    "Algebra.md"
   ]
 }
