@@ -28,7 +28,7 @@ Siano $a,b\in\mathbb{Z}$ non entrambi nulli.
 2° Metodo:      
 			   Eseguiamo le divisioni successive dell'algoritmo di *Euclide* in $\mathbb{Z}$
 			   **N.B.** tutti i resti devono essere numeri naturali. I massimi comun divisori sono dati dall'ultimo resto *non nullo* $d$ e da $-d$. 
-
+vault
 Esempio: MCD(-274, 110)
 		1° Metodo
 					 274 = 2 $\cdot$ 110 + *54*
