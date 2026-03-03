@@ -41,3 +41,17 @@ Esempio: MCD(-274, 110)
 					56 = 1 $\cdot$ 54 + ***2***
 					54 = 27 $\cdot$ 2 + *0*
 		MCD(274,110) = 2
+
+### TEOREMA (IDENTITÀ DI BEZOUT)
+Dati $a,b\in\mathbb{Z}$ non entrambi nulli *esistono* due numeri interi $m,n\in\mathbb{Z}$ tali che se $d$ è un massimo comun divisore di $a$ e $b$ allora:
+
+---
+$$
+d=m\cdot a + n\cdot b
+$$
+---
+
+Esempio:
+			a = 10,  b = 4,  d = 2
+			2 = 1 $\cdot$ 10 + (-2) $\cdot$ 4
+			2 = (-1) $\cdot$ 10 + 3
