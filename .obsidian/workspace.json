@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Insiemi Numerici e Polinomi.md",
+                "file": "Grafi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Insiemi Numerici e Polinomi"
+              "title": "Grafi"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 200
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -197,8 +196,8 @@
   },
   "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
-    "complex.svg",
     "Insiemi Numerici e Polinomi.md",
+    "complex.svg",
     "Pasted image 20260303213240.png",
     "Pasted image 20260303212348.png",
     "Pasted image 20260303213316.png",
