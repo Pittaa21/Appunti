@@ -1,6 +1,6 @@
 #### ssh connection:
 ```
-ssh <user>@100.100.120.122 -p 2200
+ssh <user>@4.tcp.eu.ngrok.io -p 10264
 ```
 
 #### starting ssh
@@ -9,8 +9,9 @@ sudo systemctl enable --now sshd
 sudo systemctl start sshd
 ```
 
-#### starting tailscaled
+#### starting ngrok
 ```
-sudo systemctl enable --now tailscaled
-sudo tailscale up
+ngrok tcp 2200
 ```
+
+#### users passwd
