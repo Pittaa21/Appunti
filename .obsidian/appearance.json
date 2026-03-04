@@ -3,5 +3,8 @@
   "cssTheme": "Catppuccin",
   "baseFontSize": 16,
   "interfaceFontFamily": "",
-  "textFontFamily": "Noto Sans"
+  "textFontFamily": "Noto Sans",
+  "enabledCssSnippets": [
+    "center-image"
+  ]
 }

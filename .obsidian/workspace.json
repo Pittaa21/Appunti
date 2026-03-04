@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 200,
+    "collapsed": true
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -180,7 +181,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 286
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,10 +197,11 @@
   },
   "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
+    "complex.svg",
+    "Insiemi Numerici e Polinomi.md",
     "Pasted image 20260303213240.png",
     "Pasted image 20260303212348.png",
     "Pasted image 20260303213316.png",
-    "Insiemi Numerici e Polinomi.md",
     "Matematica discreta.md",
     "Processi.md",
     "Sistemi Operativi.md",

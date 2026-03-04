@@ -1,0 +1,6 @@
+img[alt*="center"], span.internal-embed[alt*="center"] {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
