@@ -1,6 +1,6 @@
 ## Numeri Complessi
 
-$i$  = unità immaginaria tale che $i^2$ = -1
+*i*  = unità immaginaria tale che *i*$^2$ = -1
 
 un **numero complesso** è un numero della forma algebrica:
 
@@ -17,25 +17,47 @@ L'**Insieme dei numeri complessi** è
 $$
 \large\mathbb{C}=\{a+i\cdot b\ |\ a,b\in\mathbb{R}\}
 $$
+I **numeri complessi** si possono rappresentare con il piano cartesiano, dove *z* viene rappresentato dalle coordinate (*a*,*b*)
 
 ![[complex.svg|center]]
 
 ---
 
-##### Osservazioni
+#### Osservazioni
 1. *Tutti* i numeri reali sono numeri complessi
 $$
 \large\mathbb{N}\subseteq\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}\subseteq\mathbb{C}
 $$
 2. I numeri con a = 0, sono detti ***Immaginari Puri***
 
+### Somma e Prodotto di Numeri Complessi
+Siano *z* = a + *i* $\cdot$ b  e  *w* = c + *i* $\cdot$ d  due numeri complessi.
+
+- *z* + *w* = (a + *i*b) + (c + *i*d) = (a + c) + *i* $\cdot$ (b + d)
+
+![[complexsum.svg|center]]
+
+- *z* $\cdot$ *w* = (a + *i*b) $\cdot$ (c + *i*d) = (a$\cdot$c - b$\cdot$d) + *i* $\cdot$ (b$\cdot$c + a$\cdot$d)
+
+### Coniugato
+Definizione:  	Sia *z* = a + *i*b un numero complesso. Il **Coniugato di** *z* è il numero complesso
+
+---
+$$
+\bar{z} = a-i\cdot b
+$$
+---
+*Es*:      z = 2 + 3*i*        $\bar{\text{z}}$ = 2 - 3*i*
+Nel piano cartesiano $\bar{\text{z}}$ è il punto simmetrico a $\text{z}$ rispetto alle ascisse.
+
+##### Proprietà del Coniugato
+Siano *z*,*w* $\in\mathbb{C}$.
+1. $\bar{\text{z+w}}$ 
 
 
-
-
-## MCD
+### MCD
 ###### Calcolo dei Massimi Comun Divisori in $\mathbb{Z}$
-Siano $a,b\in\mathbb{Z}$ non entrambi nulli.
+Siano *a*,*b* $\in\mathbb{Z}$ non entrambi nulli.
 
 1° Metodo:      
 			   |$a$|$,$|$b$|$\in\mathbb{N}$ e MCD(|$a$|,|$b$|) 
