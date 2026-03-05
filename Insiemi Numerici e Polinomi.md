@@ -73,7 +73,57 @@ $$
 2. $|\text z \cdot\text w|$ = $|\text z|\cdot|\text w|\qquad\forall\text z,\text w\in\mathbb C$
 3. $|\text z +\text w|\ \le\ |\text z| +|\text w|\qquad\forall\text z,\text w\in\mathbb C$            (*Disuguaglianza Triangolare*)
 
-### MCD
+
+### Inverso
+Sia *z* $\in\mathbb C$,  *z* $\ne$ 0.
+L'inverso di *z* è il numero complesso $\large\frac 1{\text z}$
+Per trovare la forma algebrica di bisogna moltiplicare e dividere $\large\frac 1{\text z}$ per $\bar{\text z}$:
+$$
+\large \frac1{\text z} = \frac1{\text z}\cdot \bar{\text z} \cdot \frac1{\bar{\text z}} = \frac{\bar{\text z}}{\text z\cdot \bar{\text z}} = \frac{\bar{\text z}}{|\text z|^2}
+$$
+
+## Divisione in $\mathbb N$ e $\mathbb Z$ 
+---
+In $\mathbb N$ 
+Siano *a*,*b* $\in\mathbb N$  con *b* $\ne$ 0.  Allora **esistono** e sono **unici** due numeri *q* (*quoziente*) e *r* (*resto*)
+tali che:
+$$
+\large \text a = \text q \cdot \text b + \text r\qquad 0\le\text r<\text b
+$$
+---
+In $\mathbb Z$
+Siano *a*,*b* $\in\mathbb Z$  con *b* $\ne$ 0.  Allora **esistono** e sono **unici** due numeri *q* (*quoziente*) e *r* (*resto*)
+tali che:
+$$
+\large \text a = \text q \cdot \text b + \text r\qquad 0\le\text r<\text |b|
+$$
+*Nota*: il resto è sempre positivo o zero.
+
+---
+
+## MCD (in $\mathbb N$ e $\mathbb Z$)
+Siano *a*,*b* $\in\mathbb{Z}$  con *b* $\ne$ 0.
+Si dice che **b divide a**, e si scrive *b* | *a*   se *a* = q $\cdot$ *b*  per un opportuno *q* intero (il resto è zero).
+
+#### Proprietà
+---
+In $\mathbb Z$
+Siano *a*,*b*,*c* $\in\mathbb{Z}$  con *a* $\ne$ 0, *b* $\ne$ 0.
+1. Se *a* | *b* e *b* | *a* allora *a* = $\pm$ *b* 
+2. Se *a* | *b* e *a* | *c* allora *a* | (*b* + *c*)
+3. Se *a* | *b* e *b* | *c* allora *a* | *c*
+---
+In $\mathbb N$
+Siano *a*,*b* $\in\mathbb{N}$  non entrambi nulli.
+Si dice che *d* $\in\mathbb N$ è un **massimo comun divisore** di *a* e *b* se valgono:
+1. *d* | *a* e *d* | *b*  (*d* è un divisore comune di *a* e *b*)
+2. se *z* $\in\mathbb N$ è tale che *z* | *a* e *z* | *b*  allora  *z* | *d*   (*d* è multiplo di tutti i divisori di *a* e *b*)
+---
+**Osservazione**: se *a*,*b* $\in\mathbb{N}$  non entrambi nulli, allora esiste un *unico* **Massimo Comun Divisore** che si indica con *MCD (a,b)* 
+
+In $\mathbb Z$
+Abbiamo definizione simile di massimo comun divisore, ma *non* vale più l'*unicità*.  Infatti se *d* è mcd (*a*,*b*) anche *-d* lo è.
+
 ###### Calcolo dei Massimi Comun Divisori in $\mathbb{Z}$
 Siano *a*,*b* $\in\mathbb{Z}$ non entrambi nulli.
 

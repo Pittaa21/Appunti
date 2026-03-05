@@ -6,6 +6,7 @@
       {
         "id": "3390424729f6c8f9",
         "type": "tabs",
+        "dimension": 59.09090909090909,
         "children": [
           {
             "id": "adff0da9db1a03b9",
@@ -13,12 +14,29 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Congruenze.md",
+                "file": "Insiemi Numerici e Polinomi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Congruenze"
+              "title": "Insiemi Numerici e Polinomi"
+            }
+          }
+        ]
+      },
+      {
+        "id": "1e1eb271f7dff6f3",
+        "type": "tabs",
+        "dimension": 40.909090909090914,
+        "children": [
+          {
+            "id": "5c36c2ac74346afa",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -35,7 +53,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c96fc433758e8523",
+            "id": "0045e077050bce33",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -78,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200
+    "width": 256
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -180,7 +198,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 286
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -196,24 +214,18 @@
   },
   "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
-    "Algebra.md",
-    "Congruenze.md",
     "Insiemi Numerici e Polinomi.md",
-    "Algebra e Matematica discreta.md",
-    "Date Esami.md",
-    "Grafi.md",
-    "Matematica discreta.md",
-    "Processi.md",
-    "Sistemi Operativi.md",
-    "Risorsa.md",
     "Cyber.md",
-    "Untitled.base",
-    "conflict-files-obsidian-git.md",
+    "Congruenze.md",
     "complexsum.svg",
+    "Grafi.md",
     "complex.svg",
-    "Pasted image 20260303213240.png",
-    "Pasted image 20260303212348.png",
-    "Pasted image 20260303213316.png",
-    "Screenshot 2026-03-02 205624.png"
+    "Sistemi Operativi.md",
+    "Processi.md",
+    "Screenshot 2026-03-02 205624.png",
+    "Algebra.md",
+    "Matematica discreta.md",
+    "Algebra e Matematica discreta.md",
+    "Date Esami.md"
   ]
 }
