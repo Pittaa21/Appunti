@@ -5,8 +5,8 @@ ssh <user>@4.tcp.eu.ngrok.io -p 10264
 
 #### togliere privilegi
 ```
-sudo chmod 755 /home/<user>
-sudo chown root:root /home/<user>
+sudo chmod 750 /home/<user>
+sudo chown root:<user> /home/<user>
 ```
 
 #### starting ssh

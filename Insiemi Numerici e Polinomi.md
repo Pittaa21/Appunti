@@ -44,16 +44,34 @@ Definizione:  	Sia *z* = a + *i*b un numero complesso. Il **Coniugato di** *z* �
 
 ---
 $$
-\bar{z} = a-i\cdot b
+\large\bar{z} = a-i\cdot b
 $$
 ---
 *Es*:      z = 2 + 3*i*        $\bar{\text{z}}$ = 2 - 3*i*
 Nel piano cartesiano $\bar{\text{z}}$ è il punto simmetrico a $\text{z}$ rispetto alle ascisse.
 
-##### Proprietà del Coniugato
+##### Proprietà Coniugato
 Siano *z*,*w* $\in\mathbb{C}$.
-1. $\bar{\text{z+w}}$ 
+1. $\overline{\text{z}+\text{w}}$  = $\bar{\text{z}}$ + $\bar{\text{w}}$
+2. $\overline{\text{z}\cdot\text{w}}$  = $\bar{\text{z}}$ $\cdot$ $\bar{\text{w}}$
+3. $\overline{\bar{\text z}}$ =  $\text z$
+4. $\text z$ =  $\bar{\text z}\qquad \Leftrightarrow\qquad\text z \in \mathbb R$
 
+### Modulo
+Sia *z* = a + *i*b un numero complesso. Il **Modulo** di *z* è il numero.
+
+---
+$$
+\large\left|\text z\right| = \sqrt{a^2+b^2}
+$$
+---
+
+
+
+#### Proprietà Modulo
+1. $|\text z|^2$ = $\text z \cdot \bar{\text z}\qquad \forall\text z\in\mathbb C$
+2. $|\text z \cdot\text w|$ = $|\text z|\cdot|\text w|\qquad\forall\text z,\text w\in\mathbb C$
+3. $|\text z +\text w|\ \le\ |\text z| +|\text w|\qquad\forall\text z,\text w\in\mathbb C$            (*Disuguaglianza Triangolare*)
 
 ### MCD
 ###### Calcolo dei Massimi Comun Divisori in $\mathbb{Z}$

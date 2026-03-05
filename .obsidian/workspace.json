@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Cyber.md",
+                "file": "Processi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Cyber"
+              "title": "Processi"
             }
           }
         ]
@@ -196,20 +196,21 @@
   },
   "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
-    "Matematica discreta.md",
+    "Risorsa.md",
+    "Processi.md",
+    "Sistemi Operativi.md",
+    "Insiemi Numerici e Polinomi.md",
     "Cyber.md",
     "Untitled.base",
     "Grafi.md",
-    "Insiemi Numerici e Polinomi.md",
+    "Date Esami.md",
+    "Matematica discreta.md",
     "conflict-files-obsidian-git.md",
     "complexsum.svg",
     "complex.svg",
     "Pasted image 20260303213240.png",
     "Pasted image 20260303212348.png",
     "Pasted image 20260303213316.png",
-    "Processi.md",
-    "Sistemi Operativi.md",
-    "Date Esami.md",
     "Algebra e Matematica discreta.md",
     "Screenshot 2026-03-02 205624.png",
     "Algebra.md"
