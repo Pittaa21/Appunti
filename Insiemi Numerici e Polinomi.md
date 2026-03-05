@@ -102,7 +102,7 @@ Dati $a,b\in\mathbb{Z}$ non entrambi nulli *esistono* due numeri interi $m,n\in\
 
 ---
 $$
-d=m\cdot a + n\cdot b
+\large d=m\cdot a + n\cdot b
 $$
 ---
 
@@ -110,3 +110,50 @@ Esempio:
 			a = 10,  b = 4,  d = 2
 			2 = 1 $\cdot$ 10 + (-2) $\cdot$ 4
 			2 = (-1) $\cdot$ 10 + 3
+
+
+#### Zeri di Polinomi
+Sia *S* uno tra $\mathbb Z,\mathbb Q,\mathbb R,\mathbb C$.
+Un numero $\text z \in\mathbb C$ si dice **zero** (o radice) del polinomio f(x) $\in$ S[x] se
+$$
+\large F(\text z) = 0
+$$
+Se *z* $\in\mathbb R$, si dice che *z* è **Zero Reale**.
+
+*z* è soluzione dell'equazione
+$$
+\large a_0 + a_1x+ ... + a_nx^n = 0
+$$
+
+**Teorema di Ruffini**: Siano f(x) $\in$ S[x] e *z* $\in\mathbb C$.     *z* è zero di f(x) $\Leftrightarrow$ (x - *z*) divide f(x) in $\mathbb C$.    Quindi esiste q(x) $\in\mathbb C$[x] tale che:   f(x) = q(x) $\cdot$ (x - *z*)
+
+Esempio:     f(x) = $x^2 + x -2\qquad\Rightarrow\qquad (x-1)\cdot(x-2)$ 
+			prendo *1* come zero se (x - *1*) divide $(x-1)\cdot(x-2)$  allora *1* è uno zero di f(x), che in questo caso è vero $\checkmark$
+
+**Proprietà**: Sia f(x) $\in\mathbb R$[x].   Se *z* $\in\mathbb C$ è uno zero di *f*, allora ache $\bar{\text z}$ è zero di *f*.
+
+Nei polinomi a coefficienti reali gli zeri *non-reali* si trovano sempre in coppie. Se un polinomia a
+
+
+#### Teorema Fondamentale dell'Algebra
+Ogni polinomio di grado *n* > 0   allora  ha esattamente **n zeri complessi** (contati con le loro molteplicità quindi anche con *n* uguali) e quindi ha **n soluzioni complesse** (contando le molteplicità).  
+
+Di conseguenza ogni polinomio di grado *n* > 0 è il prodotto di *n* polinomi di grado 1 a coeff. complessi
+$$
+\large f(x) a_n\cdot (x)
+$$
+
+Esempio:
+						Polinomi reali di 1° grado
+$$
+\large F(x) = bx+c\qquad b,c\in\mathbb R
+$$
+Il teorema dice che $F$ ha un unico zero *z* con  *z* = -$\large\frac cb$ 
+						Polinomi reai di 2° grado
+$$
+f(x) = ax^2 + bx +c\qquad a,b,c\in\mathbb R
+$$
+Il teorema dice che ci sono sempre 2 zeri complessi *z*$_1$ e *z*$_2$
+$\Delta = b^2-4ac$   *discriminante* 
+
+Se $\Delta < 0$ allora non ci sono soluzioni nei reali, ma *z*$_1$,*z*$_2\in\mathbb C \setminus \mathbb R$  

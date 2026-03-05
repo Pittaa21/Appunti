@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Processi.md",
+                "file": "Congruenze.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Processi"
+              "title": "Congruenze"
             }
           }
         ]
@@ -196,23 +196,24 @@
   },
   "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
-    "Risorsa.md",
+    "Algebra.md",
+    "Congruenze.md",
+    "Insiemi Numerici e Polinomi.md",
+    "Algebra e Matematica discreta.md",
+    "Date Esami.md",
+    "Grafi.md",
+    "Matematica discreta.md",
     "Processi.md",
     "Sistemi Operativi.md",
-    "Insiemi Numerici e Polinomi.md",
+    "Risorsa.md",
     "Cyber.md",
     "Untitled.base",
-    "Grafi.md",
-    "Date Esami.md",
-    "Matematica discreta.md",
     "conflict-files-obsidian-git.md",
     "complexsum.svg",
     "complex.svg",
     "Pasted image 20260303213240.png",
     "Pasted image 20260303212348.png",
     "Pasted image 20260303213316.png",
-    "Algebra e Matematica discreta.md",
-    "Screenshot 2026-03-02 205624.png",
-    "Algebra.md"
+    "Screenshot 2026-03-02 205624.png"
   ]
 }
