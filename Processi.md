@@ -29,8 +29,17 @@ Il **Kernel** è la parte centrale del S/O, gestisce:
 ### Risorsa
 La **Risorsa** è un elemento fisico (*hardware*) o logico (*software*) necessario per la creazione, esecuzione e avanzamento dei processi.
 - **Risorsa CPU**: a livello fisico corrisponde alla CPU, a livello logico si può vedere come una "*macchina virtuale*" 
-- **Risorsa Memoria**
+- **Risorsa Memoria**: accesso individuale per la *scrittura*, accesso multiplo per la *lettura*, viene *virtualizzata* per renderla riutilizzabile e prerilasciabile
+- **Risorsa I/O**: riutilizzabili, ma non prerilasciabili e ad accesso *individuale*. L'accesso fisico ha bisogno del *BIOS*
 
+### Stati
+- **Disattivato**: il programma si trova nella memoria secondaria e viene caricato in memoria tramite una chiamata di sistema che crea un *Process Control Block*, **PCB** ossia una struttura di controllo del processo
+- **Pronto**: il processo resta in attesa del suo turno, ha tutte le risorse tranne il processore
+- **Esecuzione**: al processo viene attribuito il processore, può essere eseguito
+- **Attesa**: Il processo è in attesa di una risorsa o un evento
+- **Terminato**: il processo ha finito le sue operazioni e abbandona la *macchina virtuale*
+
+#### Transizioni
 
 
 
