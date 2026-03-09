@@ -71,6 +71,7 @@ Suddividento il tempo sulla politica *FCFS* si ottiene una tecnica di rotazione 
 | A   | B$_1$ | c$_1$ | B$_2$ | C$_2$ | B$_3$ | C$_3$ | C$_4$ | C$_5$ |
 | --- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
+Politica a **rotazione con priorità**: a ogni processo si attribuisce una *priorità* che denota il llivello di privilegio nel sistema. I processi si possono categorizzare (**CPU-bound**, **I/O-bound**)
 
 
 ### Stallo
