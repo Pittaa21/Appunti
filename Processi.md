@@ -39,8 +39,37 @@ La **Risorsa** è un elemento fisico (*hardware*) o logico (*software*) necessar
 - **Attesa**: Il processo è in attesa di una risorsa o un evento
 - **Terminato**: il processo ha finito le sue operazioni e abbandona la *macchina virtuale*
 
-#### Transizioni
+#### Strutture di Rappresentazione
+**Process Table**: modello di processo realizzato tramite una tabella (*Array di strutture*).
+Ogni processo è rappresentato da un **Process Control Block** che contiene:
+- Identificatore del processo
+- Contesto di esecuzione del processo
+- Stato di avanzamento del processo
+- Priorità
+- Privilegi e diritti di accesso alle risorse
+- Puntatore al **PCB** del processo genitore e i figli
+- Puntatore alla lista delle risorse assegnate al processo
+- ...
 
+#### Ordinamento di Processi
+Metodi per determinare quando sostituire un processo in esecuzione con un altro (*switch*).
+- **Scambio cooperativo**: il processo in exec. decide quando cedere il controllo al processo successivo
+- **Scambio a prerilascio**: il precesso in exec. viene sostituito da un processo con priorità maggiore o all'esaurimento del suo lasso di tempo
+
+#### Dispatcher
+**Dispatcher**: è il componente che avvia processi all'esecuzione (ma non li seleziona: *scheduler*).
+I processi in stato *pronto* sono messi nella code de la *ready list*. La più semplice gestione della lista è **Fist-Come-First-Served** (*FCFS*):
+- il primo processo ad entrare nella lista è il primo ad essere eseguito
+
+Solitamente un processo possiede alcune azioni eseguibili dalla CPU alternate da azioni di I/O. Ci sono quindi due classificazioni:
+1. Processi **CPU-bound**: attività sulla CPU con durata molto lunga
+2. Processi **I/O-bound**: attività brevi sulla CPU, con attività di I/O molto lunghe
+
+*FCFS* penalizza i processi **I/O-bound**.
+Suddividento il tempo sulla politica *FCFS* si ottiene una tecnica di rotazione **Round Robin**.
+
+| A   | B$_1$ | c$_1$ | B$_2$ | C$_2$ | B$_3$ | C$_3$ | C$_4$ | C$_5$ |
+| --- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
 
 
 
