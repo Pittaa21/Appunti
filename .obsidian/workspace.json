@@ -6,7 +6,7 @@
       {
         "id": "3390424729f6c8f9",
         "type": "tabs",
-        "dimension": 67.99580272822665,
+        "dimension": 59.706190975865695,
         "children": [
           {
             "id": "adff0da9db1a03b9",
@@ -27,7 +27,7 @@
       {
         "id": "558bc33ca7400398",
         "type": "tabs",
-        "dimension": 32.00419727177335,
+        "dimension": 40.29380902413431,
         "children": [
           {
             "id": "170f983e5fe6a48f",
@@ -215,6 +215,8 @@
   },
   "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
+    "completo.svg",
+    "kregolare.svg",
     "Grafi.md",
     "grafo.svg",
     "Date Esami.md",

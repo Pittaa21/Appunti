@@ -24,8 +24,21 @@ $\sum$ d(v) = 3 + 3 + 2 = 8 = 2 $\cdot$ $|$*E*$|$ = 2 $\cdot$ 4
 
 ---
 **Teorema 1**:     $\sum$ d(v) = 2 $\cdot$ $|$*E*$|$
-*Dim*: Ogni arco ha due estremi e quindi contribuisce di 2 alla somma dei gradi
+*Dim*: Ogni arco ha due estremi e quindi contribuisce di 2 alla somma dei gradi.
 
+Un grafo si dice **K-Regolare** (*K*$\in\mathbb N,$ *k* > 0) se ogni suo vertice ha grado *k*. Esempio:
+![[kregolare.svg|center]]
+
+Un grafo si dice **completo** se tutti i vertici sono adiacenti, il grafo completo con *n* vertici si indica con K$_n$ 
+Esempio:                                                                  K$_4$
+![[completo.svg|center]]
+
+In questo tipo di grafi ognuno dei *n* vertici di K$_n$ ha grado *n* - 1.
+
+#### Sottografi e Sottografi Indotti
+Dato un grafo G(V, E), un grafo *G'*(*V'*, *E'*) è un **sottografo** di G(V, E) se *V'* $\subseteq$ V  e *E'* $\subseteq$ E. Quindi *G'* può essere ottenuto da G togliendo alcuni vertici e archi. Se si toglie un vertice da V, si devono togliere da R tutti gli archi che lo hanno come estremo.
+   G'(V', E')                                G(V, E)
+![[kregolare.svg]]                    ![[completo.svg]]
 
 ### ISOMORFISMO
 Uno stesso grafo si può disegnare nello stesso modo:
