@@ -6,7 +6,6 @@
       {
         "id": "3390424729f6c8f9",
         "type": "tabs",
-        "dimension": 71.72489082969432,
         "children": [
           {
             "id": "adff0da9db1a03b9",
@@ -14,29 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Processi.md",
+                "file": "Congruenze.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Processi"
-            }
-          }
-        ]
-      },
-      {
-        "id": "558bc33ca7400398",
-        "type": "tabs",
-        "dimension": 28.27510917030568,
-        "children": [
-          {
-            "id": "170f983e5fe6a48f",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "title": "Congruenze"
             }
           }
         ]
@@ -215,9 +197,9 @@
   },
   "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
+    "Insiemi Numerici e Polinomi.md",
     "Processi.md",
     "Sistemi Operativi.md",
-    "Insiemi Numerici e Polinomi.md",
     "Congruenze.md",
     "Algebra.md",
     "Algebra e Matematica discreta.md",

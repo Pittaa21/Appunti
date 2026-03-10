@@ -1,7 +1,7 @@
 Siano $a,b\in\mathbb Z$,   $n\in\mathbb N$,    $n\ne0$ 
 Si dice che *a è congruo a **b** modulo **n*** se ***n** divide a - b*  
 
-**Proprietà**: $a \equiv b \mod n\ \Leftrightarrow$ 
+**Proprietà**: $a \equiv b \mod n\ \Leftrightarrow$ il resto della fivisione di $a$ è uguale al resto della divisione di $b$ per $n$ 
 
 
 
