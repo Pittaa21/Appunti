@@ -6,7 +6,7 @@
       {
         "id": "3390424729f6c8f9",
         "type": "tabs",
-        "dimension": 71.72489082969432,
+        "dimension": 67.99580272822665,
         "children": [
           {
             "id": "adff0da9db1a03b9",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Processi.md",
+                "file": "Grafi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Processi"
+              "title": "Grafi"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "558bc33ca7400398",
         "type": "tabs",
-        "dimension": 28.27510917030568,
+        "dimension": 32.00419727177335,
         "children": [
           {
             "id": "170f983e5fe6a48f",
@@ -215,14 +215,15 @@
   },
   "active": "adff0da9db1a03b9",
   "lastOpenFiles": [
+    "Grafi.md",
+    "grafo.svg",
+    "Date Esami.md",
     "Processi.md",
     "Sistemi Operativi.md",
     "Insiemi Numerici e Polinomi.md",
     "Congruenze.md",
     "Algebra.md",
     "Algebra e Matematica discreta.md",
-    "Date Esami.md",
-    "Grafi.md",
     "Matematica discreta.md",
     "Risorsa.md",
     "Cyber.md",
