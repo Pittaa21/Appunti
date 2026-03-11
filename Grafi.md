@@ -40,6 +40,13 @@ Dato un grafo G(V, E), un grafo *G'*(*V'*, *E'*) è un **sottografo** di G(V, E)
    G'(V', E')                                G(V, E)
 ![[kregolare.svg]]                    ![[completo.svg]]
 
+Un sottografo *G*'(*V*', *E*') del grafo G(V, E) si dice **indotto** se *E*' contiene tutti gli archi di E che hanno estremi in *V*'.
+
+#### Attraversare un Grafo
+Sia G(V, E) un grafo.
+*Def*: Un **Percorso** è una sequenza di vertici V$_1$, ... , V$_n$ (non necessariamente distinti) e una sequenza di archi e$_1$, ... , e$_{n-1}$ dove ogni coppia 
+
+
 ### ISOMORFISMO
 Uno stesso grafo si può disegnare nello stesso modo:
 
