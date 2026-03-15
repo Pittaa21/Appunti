@@ -6,5 +6,6 @@
   "textFontFamily": "Noto Sans",
   "enabledCssSnippets": [
     "center-image"
-  ]
+  ],
+  "baseFontSizeAction": true
 }

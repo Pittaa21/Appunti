@@ -5,7 +5,7 @@ Si dice che *a è congruo a* **b** *modulo* **n** se **n** *divide a - b*
 
 ## Classi di Congruenza
 Fissiamo $n\in\mathbb N,\ n\ne0$.
-Osserviamo che *essere congruenti modulo **n***  è una *relazione* tra l'insieme $\mathbb Z$ e se stesso.  Una relazione tra gli insiemi A e B è un sottoinsieme di A x B
+Osserviamo che *essere congruenti modulo* **n**  è una *relazione* tra l'insieme $\mathbb Z$ e se stesso.  Una relazione tra gli insiemi A e B è un sottoinsieme di A x B
 
 
 Le *relazione di congruenza* ha le seguenti proprietà:
@@ -37,14 +37,36 @@ Ogni elemento di $[a]_n$ è detto **Rappresentante** della classe di congruenza 
 
 *Dimostrazione*:
 1. b - a  è multiplo di n$$\large\begin{aligned} &b\in[a]_n\Leftrightarrow b\equiv a \mod n\\ &\Leftrightarrow n\ |\ (b-a)\Leftrightarrow b-a = K\cdot n \text{ per } K\in\mathbb Z\\&\Leftrightarrow b=a+K\cdot n\end{aligned}$$
-2. $$\large\begin{aligned}&b\in[a]_n\Rightarrow b= a + K\cdot n\Rightarrow b\in[a+K\cdot n]_n\\&b\in[a+K\cdot n]_n\Rightarrow b\equiv a+K\cdot n \mod n\\&\text{transitiva }\Rightarrow b\equiv a\mod n\\&\Rightarrow b\in[a]_n\end{aligned}$$
+2.  Se: $$\large\begin{aligned}&b\in[a]_n\Rightarrow b= a + K\cdot n\Rightarrow b\in[a+K\cdot n]_n\\&b\in[a+K\cdot n]_n\Rightarrow b\equiv a+K\cdot n \mod n\\&\text{transitiva }\Rightarrow b\equiv a\mod n\\&\Rightarrow b\in[a]_n\end{aligned}$$
 Abbiamo dimostrato che $[a]_n \subseteq [a+K\cdot n]_n$  e  $[a]_n \supseteq [a+K\cdot n]_n$  quindi vale l'uguaglianza.
+<br>
+3. Se $c\in[a]_n$ allora: $$\large\begin{aligned}&c = a+k\cdot n\quad k\in\mathbb Z\\&\Rightarrow [c]_n = [a+k\cdot n]_n = [a]_n\\&\Rightarrow [c]_n = [a]_n\end{aligned}$$
+Visto che $c\in[c]_n$ allora $c\in[a]_n$
+<br>
+4. $\large a = q\cdot n+r$ $$\large\begin{aligned}&\Rightarrow r=a-q\cdot n\ \in [a]_n\\&\Rightarrow[r]_n=[a]_n\end{aligned}$$
 
-3. Se$$\large\begin{aligned}&\end{aligned}$$
+*Oss*: poniamo $n\in\mathbb N$, $n\ne0$
+1. 2 classi di congruenza modulo **n** diverse **NON hanno elementi in comune**.
+2. Le classi di congruenza modulo **n** costituiscono unna *partizione* di $\mathbb Z$. Ogni numero intero appartiene ad una e una sola classe di congruenza modulo **n**.
 
+#### Congruenze con Incognite
+*Def*: Sia $n\in\mathbb N$, $n\ne0$.  Una **congruenza di modulo n** è un'espressione del tipo$$\large a\cdot x\equiv b\mod n\qquad\circledast$$ dove $a,b\in\mathbb Z$.
+$x_0\in\mathbb Z$ è una *soluzione* di $\circledast$ se  $a\cdot x_0\equiv b \mod n$.
+**NON** tutte le congruenze hanno *soluzioni*.
 
+Esempi:
+1. $\large n=4,\quad 2\cdot x\equiv 3\mod 4$  
+**non ha soluzioni** !
+Per *assurdo*, $x_0\in\mathbb Z$ è una soluzione. Quindi $2\cdot x_0\equiv 3\mod 4$  ossia $3=2\cdot x_0-4\cdot k$  **Impossibile** 
 
+2. $\large n=4,\quad 3\cdot x\equiv 2\mod 4$
+una *soluzione* è $x_0=2$ e anche $x_1=10$
 
+**Proposizione**: Sia $n\in\mathbb N,\ n\ne0,\ a,b\in\mathbb Z$  e si consideri la congruenza: $a\cdot x\equiv b\mod n\quad\circledast$ 
+Se $\circledast$ ha *soluzioni* e $x_0$ è una di queste allora tutti i numeri interi in $[x_0]_n$ sono *soluzioni*. Però non significa che quelle sono **tutte le soluzioni**.
+
+### Teorema 1 (Esistenza di Soluzioni di Congruenze)
+Siano
 
 ### Teorema 2 (Determinare tutte le soluzioni)
 Siano $n\in\mathbb N,\ n\ne0,\ a,b\in\mathbb Z$ e supponiamo che: $$\large a\cdot x\equiv b \mod n\qquad\circledast$$
