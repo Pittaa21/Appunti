@@ -66,7 +66,10 @@ una *soluzione* è $x_0=2$ e anche $x_1=10$
 Se $\circledast$ ha *soluzioni* e $x_0$ è una di queste allora tutti i numeri interi in $[x_0]_n$ sono *soluzioni*. Però non significa che quelle sono **tutte le soluzioni**.
 
 ### Teorema 1 (Esistenza di Soluzioni di Congruenze)
-Siano
+Siano $n\in\mathbb N,\ n\ne0,\ a,b\in\mathbb Z$ Allora
+$\large a\cdot x\equiv b\mod n$ ha soluzioni se e solo se MCD($a,n$) divide $b$.
+In tal caso una soluzione è $\large x_0 = \frac b{MCD(a,n)}\cdot \alpha$  con $\large \alpha\in\mathbb Z$ 
+*Dim*: lezione 5
 
 ### Teorema 2 (Determinare tutte le soluzioni)
 Siano $n\in\mathbb N,\ n\ne0,\ a,b\in\mathbb Z$ e supponiamo che: $$\large a\cdot x\equiv b \mod n\qquad\circledast$$
@@ -74,7 +77,7 @@ ammetta *soluzioni*.
 Allora tutte le soluzioni di $\circledast$ sono tutti e soli i numeri interi del tipo:$$\large x_K = x_0 + K\cdot \frac{n}{MCD(a,n)}\quad \forall K\in\mathbb Z$$
 dove $x_0$ è una soluzione *particolare*.
 
-*Oss*: il **Teorema 2** ci dice quali (quante) sono le classi di congruenza modulo $n$ in cui si distribuiscono le soluzioni.
+*Oss*: il **Teorema 2** ci dice quali (quante) sono le classi di congruenza modulo $n$ in cui si distribuiscono le *soluzioni*.
 Le *soluzioni* di $a\cdot x\equiv b\mod n$  sono:
 - $\large x_0$ (trovata con il **Teorema 1**)
 - $\large x_1 = x_0 + 1 \cdot \frac{n}{MCD(a,n)}$ 
@@ -103,9 +106,8 @@ $\large a_1\cdot x \equiv b_1\mod n_1$
 $\large a_2\cdot x \equiv b_2\mod n_2$     $\huge\}$
 $\large a_t\cdot x \equiv b_t\mod n_t$
 
-dove $a_i,\ b_i\in\mathbb Z,\ \ d$
-
-
+dove $a_i,\ b_i\in\mathbb Z,\ \ n_i\in\mathbb N,\ \ n_i\ne0$.
+$x_0$ è una **soluzione del sistema** se $x_0$ è contemporaneamente soluzione di **ogni** *congruenza del sistema*.
 
 Risolvere un *sistema di congruenze* significa:
 1. dire se il sistema ammette *soluzioni*
@@ -164,12 +166,11 @@ con $b_i\in\mathbb Z$,  $n_i\in\mathbb N$,  $n_i\ne0$,  $n_i$ a 2 a 2 comprimi
 
 Una tale $x_t$ sarà soluzione particolare del sistema e il **Teorema Cinese del Resto** garantisce che tutte le soluzioni sono interi in $$\LARGE[x_t]_{n_1\cdot n_2\cdot ...\cdot n_t}$$
 
-### Metodo risolutivo di Lagrange
+### Metodo Risolutivo di Lagrange
 per sistemi con 2 congruenze
-
-
+$\quad\large x_1\equiv b_1\mod n_1$
+$\quad\large x_2\equiv b_2\mod n_2$
 con $b_1,\ b_2\in\mathbb Z$,  $n_1,\ n_2\in\mathbb N$,  $n_1\ne0\ne n_2$,  MCD($n_1$, $n_2$) = 1
-**Identità di Bezout**: 
 
-Una soluzione del sistema è $$\large x_0 = $$
+**Identità di Bezout**: $$\large MCD(n_1,n_2)=1=\alpha_1\cdot n_1+\alpha_2\cdot n_2$$Una soluzione del sistema è $$\large x_0 = \alpha_1\cdot n_1\cdot b_2 + \alpha_2\cdot n_2\cdot b_1$$
 Il teorema Cinese dei Resti garantisce che tutte le soluzioni sono interi in$$\LARGE[x_0]_{n_1\cdot n_2}$$

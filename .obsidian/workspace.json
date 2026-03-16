@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Congruenze.md",
+                "file": "Sincronizzazione tra Processi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Congruenze"
+              "title": "Sincronizzazione tra Processi"
             }
           }
         ]
@@ -197,10 +197,11 @@
   },
   "active": "0673b23a3f9a50c3",
   "lastOpenFiles": [
-    "Cyber.md",
-    "Congruenze.md",
-    "Algebra.md",
+    "Sistemi Operativi.md",
     "Sincronizzazione tra Processi.md",
+    "Congruenze.md",
+    "Cyber.md",
+    "Algebra.md",
     "Grafi.md",
     "Processi.md",
     "Algebra e Matematica discreta.md",
@@ -211,7 +212,6 @@
     "kregolare.svg",
     "grafo.svg",
     "Insiemi Numerici e Polinomi.md",
-    "Sistemi Operativi.md",
     "Risorsa.md",
     "Untitled.base",
     "complexsum.svg",
