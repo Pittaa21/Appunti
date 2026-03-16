@@ -74,3 +74,71 @@ Alternative:
 
 Queste soluzioni hanno il problema della *attesa attiva*, inoltre può verificarsi l'**inversion priority**, ossia quando il processo a priorità alta (H) viene *prerilasciato* per eseguire I/O e quando lo conclude il processo a bassa priorità (L) si trova in *sezione critica*. In questo caso H rimane bloccato in *attesa attiva* perchè L non ha modo di finire la sua *sezione critica*.
 
+### Produttore-Consumatore
+```java
+const int N = 100;
+int count = 0;
+
+void producer(void){
+	int item;
+	while(True){
+		item = produce_item();    // genera il prossimo item
+		if(count == N)            // se il buffer è pieno, dormi
+			sleep();
+		insert_item(item);        // inserisce item nel buffer
+		count++;                 
+		if(count == 1)            // se il buffer è vuoto sveglia il consumatore
+			wakeup(consumer);
+	}
+}
+
+void consumer(void){
+	int item;
+	while(True){
+		if(count == 0)             // se il buffer è vuoto, dormi
+			sleep();
+		item = remove_item();      // rimuove l'item dal buffer
+		count--;
+		if(count == N - 1)         // se il buffer è pieno sveglia il produttore
+			wakeup(producer);
+		consume_item(item);        // stampa l'item
+	}
+}
+```
+
+**Rischio Race condition** su variabile *count*:
+Si verifica quando il buffer è vuoto e il **consumer** ha appena letto che *count* = 0. Prima che il **consumer** vada in sleep, lo *scheduler* ferma il **consumer** ed esegue il **producer**. Il **producer** produce un *item* e mette *count* = 1. Siccome *count* = 1 **producer** emette wakeup (non ascoltato). Lo *scheduler* decide di rieseguire **consumer** che inizia lo *sleep*, ma visto che *count* è già impostato a 1 la *wakeup* è già stata fatta, quindi il **consumer** non verrà più risvegliato.
+
+#### Soluzione
+Una soluzione al problema è tramite l'utilizzo di un **semaforo**, il quale:
+- Richiede accesso *indiviso*(**atomico**) alla variabile di controllo denominata *semaforo*
+	- **Semaforo** *binario*: contatore Booleano 0 o 1
+	- **Semaforo** *contatore*: permette tanti accessi in contemporanea, in base a quanto vale il contatore
+- La richiesta di accesso **P**, decrementa il contatore se non si trova già a 0, altrimenti va nella coda di **attesa** (*wait*)
+- Il rilasco **V**, incrementa il contatore e chiede al *dispatcher* di mettere in **pronto** il primo processo in coda (*signal*)
+
+```java
+void Processo(){
+
+	P(sem);   // viene invocata P per richiedere l'accesso alla risorsa condivisa R
+	// uso di una risorsa condivisa R
+	V(sem);   // viene invocata V per rilasciare la risorsa R
+}
+```
+
+Tramite l'utilizzo di **semafori** *binari* si possono **coordinare** più processi per l'esecuzione di attività collaborative.
+
+```java
+void ProcessoA(){
+	// esecuzione indipendente
+	P(sem); // in attesa di B
+	// seconda parte della collaborazione
+}
+
+void ProcessoB(){
+	// prima parte della collaborazione
+	V(sem); // rilascio di A
+	// esecuzione indipendente
+}
+```
+
