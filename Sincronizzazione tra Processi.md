@@ -109,7 +109,7 @@ void consumer(void){
 **Rischio Race condition** su variabile *count*:
 Si verifica quando il buffer è vuoto e il **consumer** ha appena letto che *count* = 0. Prima che il **consumer** vada in sleep, lo *scheduler* ferma il **consumer** ed esegue il **producer**. Il **producer** produce un *item* e mette *count* = 1. Siccome *count* = 1 **producer** emette wakeup (non ascoltato). Lo *scheduler* decide di rieseguire **consumer** che inizia lo *sleep*, ma visto che *count* è già impostato a 1 la *wakeup* è già stata fatta, quindi il **consumer** non verrà più risvegliato.
 
-#### Soluzione
+## Semafori
 Una soluzione al problema è tramite l'utilizzo di un **semaforo**, il quale:
 - Richiede accesso *indiviso*(**atomico**) alla variabile di controllo denominata *semaforo*
 	- **Semaforo** *binario*: contatore Booleano 0 o 1
@@ -142,3 +142,17 @@ void ProcessoB(){
 }
 ```
 
+Il **semaforo** *binario* (*mutex*) è una struttura (*struct*) composta da un campo valore intero e un campo coda che contiene tutti i *Process Control Block* dei processi in attesa. L'accesso al campo valore avviene in maniera **atomica**.
+
+Il **semaforo** *contatore* ha la stessa struttura del **mutex** ma ha logica diversa per il campo lavoro: se maggiore di 0 la disponibilità non è esaurita, se minore ci sono richieste pendenti.
+Il valore iniziale determina la capacità massima della risorsa.
+
+#### Problemi Semafori
+L'uso dei semafori a livello di programma è *rischioso*:
+- Il posizionamento errato di **P** può portare a blocchi infiniti (*deadlock*) o esecuzioni sbagliate di difficile verifica (*race condition*)
+- Non bisognerebbe lasciare il pieno controllo all'utente
+
+## Monitor
+Il **monitor** definisce la *regione critica*, il compilatore inserisce il codice necessario al controllo degli accessi.
+Un **monitor** è un insieme di sottoprogrammi, variabili e *struct*. Solo i sottoprogrammi del **monitor** possono accedere alle sue variabili. Un solo processo per volta può essere attivo nel **monitor**.
+Viene garantita la *mutua esclusione* 
