@@ -174,7 +174,7 @@ Servono per *sincronizzare* gruppi di processi. La **barriera** blocca tutti i p
 ### Filosofi a Cena
 $N$ filosofi sono seduti a tavola, ciascuno ha 1 piatto e 1 forchetta a destra, ogni filosofo ha bisogno di 2 forchette per mangiare, ciascun filosofo può mangiare e meditare.
 
-**DeadLock**
+**Soluzione A: DeadLock**
 ```java
 void filosofo(int i){
 	while(True){
@@ -188,7 +188,7 @@ void filosofo(int i){
 }
 ```
 
-**Starvation**
+**Soluzione B: Starvation**
 ```java
 
 void filosofo(int i){
@@ -211,4 +211,25 @@ void filosofo(int i){
 	}
 }
 ```
+
+La soluzione **A** comporta l'utilizzo di un semaforo a mutua esclusione per controllare gli accessi ad entrambe le forchette: funzionamento garantito.
+La soluzione **B** comporta a tempi di attesa *casuali* a ciascun processo, perciò il funzionamento non è garantito.
+
+### Stallo
+Si verifica quando si ha:
+- Accesso esclusivo a delle *risorse condivise*
+- Accumulazione di nuove *risorse*
+- Una risorsa deve essere rilasciata volontariamente (*Inibizione di Prerilascio*)
+- **Attesa circolare**, cioè un processo attende la risorsa posseduta dal processo successivo
+
+#### Prevenzione Stallo
+La **prevenzione** serve per impedire il verificarsi di almeno una delle condizioni che generano uno *stallo*. Una strategia è *riconoscere* uno stallo e avere una procedura di **sblocco**. Un'altra strategia sta nella **indifferenza**, quindi trascurare la possibilità di stallo e non prendere precauzioni per gestirlo. In quest'ultimo caso se si verifica lo *stallo* si ha, però, un problema.
+
+Prevenzione sulle *richieste di accesso*:
+- a **tempo d'esecuzione**: ossia a ogni richiesta di accesso si controlla se può portare a uno stallo
+- **prima dell'esecuzione**: quando si avvia un processo si controlla quali risorse deve usare, così si possono ordinare le attività
+
+Riconoscere lo stallo:
+- a **tempo d'esecuzione**: è molto oneroso, poichè serve bloccare periodicamente l'avanzamento del sistema per verificare lo stato dei *processi*
+- **statisticamente** (prima di eseguire): può non essere risolvibile
 

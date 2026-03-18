@@ -7,7 +7,7 @@ un **numero complesso** è un numero della forma algebrica:
 ---
 
 $$
-\large Z=a+i\cdot b\qquad \text{con }a,b\in\mathbb{R} 
+Z=a+i\cdot b\qquad \text{con }a,b\in\mathbb{R} 
 $$
 
 ---
@@ -15,7 +15,7 @@ $$
 
 L'**Insieme dei numeri complessi** è 
 $$
-\large\mathbb{C}=\{a+i\cdot b\ |\ a,b\in\mathbb{R}\}
+\mathbb{C}=\{a+i\cdot b\ |\ a,b\in\mathbb{R}\}
 $$
 I **numeri complessi** si possono rappresentare con il piano cartesiano, dove *z* viene rappresentato dalle coordinate (*a*,*b*)
 
@@ -26,7 +26,7 @@ I **numeri complessi** si possono rappresentare con il piano cartesiano, dove *z
 #### Osservazioni
 1. *Tutti* i numeri reali sono numeri complessi
 $$
-\large\mathbb{N}\subseteq\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}\subseteq\mathbb{C}
+\mathbb{N}\subseteq\mathbb{Z}\subseteq\mathbb{Q}\subseteq\mathbb{R}\subseteq\mathbb{C}
 $$
 2. I numeri con a = 0, sono detti ***Immaginari Puri***
 
@@ -44,7 +44,7 @@ Definizione:  	Sia *z* = a + *i*b un numero complesso. Il **Coniugato di** *z* �
 
 ---
 $$
-\large\bar{z} = a-i\cdot b
+\bar{z} = a-i\cdot b
 $$
 ---
 *Es*:      z = 2 + 3*i*        $\bar{\text{z}}$ = 2 - 3*i*
@@ -62,7 +62,7 @@ Sia *z* = a + *i*b un numero complesso. Il **Modulo** di *z* è il numero.
 
 ---
 $$
-\large\left|\text z\right| = \sqrt{a^2+b^2}
+\left|\text z\right| = \sqrt{a^2+b^2}
 $$
 ---
 
@@ -79,7 +79,7 @@ Sia *z* $\in\mathbb C$,  *z* $\ne$ 0.
 L'inverso di *z* è il numero complesso $\large\frac 1{\text z}$
 Per trovare la forma algebrica di bisogna moltiplicare e dividere $\large\frac 1{\text z}$ per $\bar{\text z}$:
 $$
-\large \frac1{\text z} = \frac1{\text z}\cdot \bar{\text z} \cdot \frac1{\bar{\text z}} = \frac{\bar{\text z}}{\text z\cdot \bar{\text z}} = \frac{\bar{\text z}}{|\text z|^2}
+\frac1{\text z} = \frac1{\text z}\cdot \bar{\text z} \cdot \frac1{\bar{\text z}} = \frac{\bar{\text z}}{\text z\cdot \bar{\text z}} = \frac{\bar{\text z}}{|\text z|^2}
 $$
 
 ## Divisione in $\mathbb N$ e $\mathbb Z$ 
@@ -88,14 +88,14 @@ In $\mathbb N$
 Siano *a*,*b* $\in\mathbb N$  con *b* $\ne$ 0.  Allora **esistono** e sono **unici** due numeri *q* (*quoziente*) e *r* (*resto*)
 tali che:
 $$
-\large \text a = \text q \cdot \text b + \text r\qquad 0\le\text r<\text b
+\text a = \text q \cdot \text b + \text r\qquad 0\le\text r<\text b
 $$
 ---
 In $\mathbb Z$
 Siano *a*,*b* $\in\mathbb Z$  con *b* $\ne$ 0.  Allora **esistono** e sono **unici** due numeri *q* (*quoziente*) e *r* (*resto*)
 tali che:
 $$
-\large \text a = \text q \cdot \text b + \text r\qquad 0\le\text r<\text |b|
+\text a = \text q \cdot \text b + \text r\qquad 0\le\text r<\text |b|
 $$
 *Nota*: il resto è sempre positivo o zero.
 
@@ -152,7 +152,7 @@ Dati $a,b\in\mathbb{Z}$ non entrambi nulli *esistono* due numeri interi $m,n\in\
 
 ---
 $$
-\large d=m\cdot a + n\cdot b
+d=m\cdot a + n\cdot b
 $$
 ---
 
@@ -166,13 +166,13 @@ Esempio:
 Sia *S* uno tra $\mathbb Z,\mathbb Q,\mathbb R,\mathbb C$.
 Un numero $\text z \in\mathbb C$ si dice **zero** (o radice) del polinomio f(x) $\in$ S[x] se
 $$
-\large F(\text z) = 0
+F(\text z) = 0
 $$
 Se *z* $\in\mathbb R$, si dice che *z* è **Zero Reale**.
 
 *z* è soluzione dell'equazione
 $$
-\large a_0 + a_1x+ ... + a_nx^n = 0
+a_0 + a_1x+ ... + a_nx^n = 0
 $$
 
 **Teorema di Ruffini**: Siano f(x) $\in$ S[x] e *z* $\in\mathbb C$.     *z* è zero di f(x) $\Leftrightarrow$ (x - *z*) divide f(x) in $\mathbb C$.    Quindi esiste q(x) $\in\mathbb C$[x] tale che:   f(x) = q(x) $\cdot$ (x - *z*)
@@ -190,13 +190,13 @@ Ogni polinomio di grado *n* > 0   allora  ha esattamente **n zeri complessi** (c
 
 Di conseguenza ogni polinomio di grado *n* > 0 è il prodotto di *n* polinomi di grado 1 a coeff. complessi
 $$
-\large f(x) a_n\cdot (x)
+f(x) a_n\cdot (x)
 $$
 
 Esempio:
 						Polinomi reali di 1° grado
 $$
-\large F(x) = bx+c\qquad b,c\in\mathbb R
+F(x) = bx+c\qquad b,c\in\mathbb R
 $$
 Il teorema dice che $F$ ha un unico zero *z* con  *z* = -$\large\frac cb$ 
 						Polinomi reai di 2° grado
