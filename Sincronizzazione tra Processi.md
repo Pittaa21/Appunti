@@ -155,4 +155,4 @@ L'uso dei semafori a livello di programma è *rischioso*:
 ## Monitor
 Il **monitor** definisce la *regione critica*, il compilatore inserisce il codice necessario al controllo degli accessi.
 Un **monitor** è un insieme di sottoprogrammi, variabili e *struct*. Solo i sottoprogrammi del **monitor** possono accedere alle sue variabili. Un solo processo per volta può essere attivo nel **monitor**.
-Viene garantita la *mutua esclusione* 
+Viene garantita la *mutua esclusione*
