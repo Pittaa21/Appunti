@@ -233,3 +233,4 @@ Riconoscere lo stallo:
 - a **tempo d'esecuzione**: è molto oneroso, poichè serve bloccare periodicamente l'avanzamento del sistema per verificare lo stato dei *processi*
 - **statisticamente** (prima di eseguire): può non essere risolvibile
 
+[[Esercizi Sincronizzazione]]

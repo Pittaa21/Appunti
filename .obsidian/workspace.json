@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sincronizzazione tra Processi.md",
+                "file": "Esercizi Sincronizzazione.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sincronizzazione tra Processi"
+              "title": "Esercizi Sincronizzazione"
             }
           }
         ]
@@ -197,16 +197,21 @@
   },
   "active": "0673b23a3f9a50c3",
   "lastOpenFiles": [
+    "GrafoAsRis1.svg",
+    "grafoAss1(1).svg",
+    "grafo.svg",
+    "Esercizi Sincronizzazione.md",
+    "grafoAss1.svg",
+    "grafoAssRis1.svg",
+    "Sincronizzazione tra Processi.md",
     "Processi.md",
     "Insiemi Numerici e Polinomi.md",
     "Algebra.md",
     "Congruenze.md",
-    "Sincronizzazione tra Processi.md",
     "Sincronizzazione tra Processi.pdf",
     "completo.svg",
     "conflict-files-obsidian-git.md",
     "kregolare.svg",
-    "grafo.svg",
     "Sistemi Operativi.md",
     "Algebra e Matematica discreta.md",
     "Date Esami.md",
@@ -218,8 +223,6 @@
     "complexsum.svg",
     "complex.svg",
     "Pasted image 20260303213240.png",
-    "Pasted image 20260303212348.png",
-    "Pasted image 20260303213316.png",
-    "Screenshot 2026-03-02 205624.png"
+    "Pasted image 20260303212348.png"
   ]
 }
