@@ -3,7 +3,7 @@
   "cssTheme": "Catppuccin",
   "baseFontSize": 16,
   "interfaceFontFamily": "",
-  "textFontFamily": "Noto Sans",
+  "textFontFamily": "Noto Sans,Fira Code",
   "enabledCssSnippets": [
     "center-image",
     "math-size"

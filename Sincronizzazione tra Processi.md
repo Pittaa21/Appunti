@@ -1,5 +1,13 @@
 I processi **indipendenti** possono avanzare *concorrentemente* senza alcun vincolo di ordinamento. Molti processi condividono risorse e informazioni funzionali, per gestire tale condivisione servono dei meccanismi di **sincronizzazione di accesso**.
 
+---
+### Problemi sincronizzazione
+- **Filosofi a cena**: accesso esclusivo
+- **Lettori e scrittori**: accesso concorrente
+- **Barbiere che dorme**: prevenzione *race condition*
+- **Produttore consumatore**: inserire e prelevare da *buffer*
+---
+
 Prendiamo come esempio i processi **A** e **B** che condividono la risorsa **X** = 10.
 - **A** incrementa **X** di 2
 - **B** decrementa **X** di 4
@@ -155,4 +163,52 @@ L'uso dei semafori a livello di programma è *rischioso*:
 ## Monitor
 Il **monitor** definisce la *regione critica*, il compilatore inserisce il codice necessario al controllo degli accessi.
 Un **monitor** è un insieme di sottoprogrammi, variabili e *struct*. Solo i sottoprogrammi del **monitor** possono accedere alle sue variabili. Un solo processo per volta può essere attivo nel **monitor**.
-Viene garantita la *mutua esclusione*
+Viene garantita la *mutua esclusione*, ma non basta per consentire la *sincronizzazione*. I **monitor** hanno due procedure che operano su delle *variabili condizione* (*condition variables*) che sono come nei semafori:
+- **Wait**: mette in attesa chi lo chiama
+- **Signal**: risveglia il processo in attesa
+Il segnale di risvegli *non ha memoria* quindi viene perso. Inoltre **Wait** e **Signal** sono invocate in *mutua esclusione* quindi non si verifica *race condition*.
+
+### Barriere
+Servono per *sincronizzare* gruppi di processi. La **barriera** blocca tutti i processi che la raggiungono fino all'ultimo e non comporta ad uno scambio di messaggi *esplicito*
+
+### Filosofi a Cena
+$N$ filosofi sono seduti a tavola, ciascuno ha 1 piatto e 1 forchetta a destra, ogni filosofo ha bisogno di 2 forchette per mangiare, ciascun filosofo può mangiare e meditare.
+
+**DeadLock**
+```java
+void filosofo(int i){
+	while(True){
+		medita();
+		P(f[i]);
+		P(f[(i+1) % N]);
+		mangia();
+		V(f[(i+1) % N]);
+		V(f[i]);
+	};
+}
+```
+
+**Starvation**
+```java
+
+void filosofo(int i){
+	while(True){
+		ok = False;
+		medita();
+		while(!ok){
+			P(f[i]);
+			if(!f[(i+1) % N]){
+				v(f[i]);
+				sleep(T);
+			}else{
+				P(f[(i+1) % N]);
+				ok = True;
+			};
+			mangia();
+			V(f[(i+1) % N]);
+			V(f[i]);
+		}
+	}
+}
+```
+
