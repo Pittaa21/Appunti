@@ -5,7 +5,8 @@
   "interfaceFontFamily": "",
   "textFontFamily": "Noto Sans",
   "enabledCssSnippets": [
-    "center-image"
+    "center-image",
+    "math-size"
   ],
   "baseFontSizeAction": true
 }

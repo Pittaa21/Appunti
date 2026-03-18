@@ -23,7 +23,8 @@ d = Grado del vertiche
 $\sum$ d(v) = 3 + 3 + 2 = 8 = 2 $\cdot$ $|$*E*$|$ = 2 $\cdot$ 4
 
 ---
-**Teorema 1**:     $\sum$ d(v) = 2 $\cdot$ $|$*E*$|$
+### Teorema 1
+$$\sum d(v) = 2 \cdot |E|$$
 *Dim*: Ogni arco ha due estremi e quindi contribuisce di 2 alla somma dei gradi.
 
 Un grafo si dice **K-Regolare** (*K*$\in\mathbb N,$ *k* > 0) se ogni suo vertice ha grado *k*. Esempio:
@@ -44,8 +45,37 @@ Un sottografo *G*'(*V*', *E*') del grafo G(V, E) si dice **indotto** se *E*' con
 
 #### Attraversare un Grafo
 Sia G(V, E) un grafo.
-*Def*: Un **Percorso** è una sequenza di vertici V$_1$, ... , V$_n$ (non necessariamente distinti) e una sequenza di archi e$_1$, ... , e$_{n-1}$ dove ogni coppia 
+*Def*: Un **Percorso** è una sequenza di vertici V$_1$, ... , V$_n$ (non necessariamente distinti) e una sequenza di archi e$_1$, ... , e$_{n-1}$ dove ogni coppia di vertici consecutivi del *percorso* (V$_i$, V$_{i+1}$) è collegata dall'arco e$_i$ 
+Un **Percorso** è *chiuso* se gli estremi coincidono.
+La *lunghezza* di un **percorso** è il numero di archi attraversati.
 
+Un **Cammino** è un *percorso* con tutti i vertici *distinti*. È una sequenza di vertici V$_1$, ... , V$_n$ *distinti* e una sequenza di archi e$_1$, ... , e$_{n-1}$ dove ogni coppia di vertici consecutivi è collegata dall'arco e$_i$. Per un *percorso* (o *cammino*) i vertici V$_1$ e V$_n$ si chiamano **estremi** del *percorso* (o *cammino*).
+
+Un **Ciclo** è un percorso *chiuso* V$_1$, ... , V$_n$ dove tutti i vertici V$_1$, ... , V$_{n-1}$ sono *distinti* e senza archi ripetuti.
+
+### Teorema 2
+Dato un percorso con estrimi V$_1$ e V$_n$ (con V$_1\ne$ V$_n$  quindi *non chiuso*) in G (V, E), esiste un *cammino* con estremi V$_1$ e V$_n$.
+Facendo dei **cortocircuiti** nelle ripetizioni dei vertici, si ottiene una *partizione* degli archi in:
+1. **Cicli**
+2. **Archi** percorsi due volte
+3. **Cammino** con estremi V$_1$ e V$_n$
+
+img
+
+
+### Teorema 3
+Un **percorso chiuso** di lunghezza *dispari* contiene almeno un ciclo di lunghezza *dispari*.
+
+
+### Grafi Connessi
+Siano $u,\ v\in V$ per un grafo G(V, E). Si dice che $u$ è **connesso** a $v$ ($u \sim v$) se esiste un cammino di estremi $u$ e $v$. La relazione è:
+- **Riflessiva**: $u \sim u$
+- **Simmetrica**: $u \sim v \Rightarrow v\sim u$
+- **Transitiva**: $u\sim v$, $\ v\sim f\quad\Rightarrow u\sim f$ 
+Sia $u\in V$ la classe di equivalenza con rappresentante $u$:
+$$[u] = \{v\in V:\ v\sim u\}$$
+dove $[u]$ è la componente connessa del grafo che contiene $u$.
+Le *classi di equivalenza* si chiamano **componenti connessi** del grafi. Un grafo si dice *connesso* se ha un'unica componente connessa.
 
 ### ISOMORFISMO
 Uno stesso grafo si può disegnare nello stesso modo:
