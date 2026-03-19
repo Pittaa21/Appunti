@@ -74,3 +74,5 @@ Suddividento il tempo sulla politica *FCFS* si ottiene una tecnica di rotazione 
 Politica a **rotazione con priorità**: a ogni processo si attribuisce una *priorità* che denota il llivello di privilegio nel sistema. I processi si possono categorizzare (**CPU-bound**, **I/O-bound**)
 
 [[Sincronizzazione tra Processi]]
+
+[[Politiche di Ordinamento]]

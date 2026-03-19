@@ -1,0 +1,1 @@
+Ogni processo è associato a un *descrittore*: il **Process Control Block**

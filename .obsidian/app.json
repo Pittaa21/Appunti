@@ -9,5 +9,6 @@
     "margin": "0",
     "downscalePercent": 100
   },
-  "tabSize": 4
+  "tabSize": 4,
+  "alwaysUpdateLinks": true
 }
