@@ -1,4 +1,4 @@
-Definizione: Insieme di *tools* che honno lo scopo di offrere un'astrazione (sembra) più semplice e potente della macchina *assembler*. Gestire in modo efficiente le risorse fisiche e logiche, ossia riduzione dei tempi di attesa e massimizzare i lavori svolti in un certo (unità) tempo.
+*Def*: Insieme di *tools* che honno lo scopo di offrere un'astrazione (sembra) più semplice e potente della macchina *assembler*. Gestire in modo efficiente le risorse fisiche e logiche, ossia riduzione dei tempi di attesa e massimizzare i lavori svolti in un certo (unità) tempo.
 
 #### Caricamento S/O
 Il S/O si può trovare:
@@ -9,4 +9,5 @@ Il S/O si può trovare:
 #### Argomenti:
 1. [[Processi]]
 2. [[Sincronizzazione tra Processi]]
-3. 
+3. [[Politiche di Ordinamento]]
+4. 

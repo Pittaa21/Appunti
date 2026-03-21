@@ -54,7 +54,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": false,
+                "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -197,16 +197,17 @@
   },
   "active": "72109d9a7fa78f26",
   "lastOpenFiles": [
-    "stati.svg",
-    "Processi.md",
+    "Sistemi Operativi.md",
     "Politiche di Ordinamento.md",
+    "Sincronizzazione tra Processi.md",
+    "Processi.md",
+    "stati.svg",
     "Esercizi Sincronizzazione.md",
     "GrafoAsRis1.svg",
     "grafoAss1(1).svg",
     "grafo.svg",
     "grafoAss1.svg",
     "grafoAssRis1.svg",
-    "Sincronizzazione tra Processi.md",
     "Insiemi Numerici e Polinomi.md",
     "Algebra.md",
     "Congruenze.md",
@@ -214,7 +215,6 @@
     "completo.svg",
     "conflict-files-obsidian-git.md",
     "kregolare.svg",
-    "Sistemi Operativi.md",
     "Algebra e Matematica discreta.md",
     "Date Esami.md",
     "Grafi.md",
@@ -223,7 +223,6 @@
     "Cyber.md",
     "Untitled.base",
     "complexsum.svg",
-    "complex.svg",
-    "Pasted image 20260303213240.png"
+    "complex.svg"
   ]
 }
