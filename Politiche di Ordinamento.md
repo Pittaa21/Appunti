@@ -53,4 +53,11 @@ Caratteristiche delle politiche di ordinamento:
 Si parla di *lavori* quando non c'è il prerilascio e di *processi* quando il prerilascio è presente.
 
 #### Sistemi interattivi
-- **OQ**
+- **OQ** (*ordinamento a quanti*): con prerilascio, senza priorità, ogni processo esegue al più per un quanto alla volta, lista circolare dei processi
+- **OQP**: *ordinamento a quanti con priorità*, quanti diversi per livello di priorità
+- **GP** (*Garanzia per processo*): con prerilascio e con promessa di una data quantità di tempo di esecuzione (*1/n* per *n* processi concorrenti), esegue prima il lavoro più penalizzato rispetto alla promessa
+- **SG** (*Senza Garanzia*): con prerilascio e priorità, più alta è la priorità più numeri ha quel processo e periodicamente vengono estratti dei numeri che decide il processo da eseguire
+- **GU** (*garanzia utente*): come **GP** ma con garanzia riferita a ciascun utente
+
+#### Sistemi in tempo reale
+Sono sistemi *concorrenti* dove il valore corretto deve essere prodotto entro un tempo fissato, oltre tale limite il valore prodotto ha utilità decrescente, nulla o negativa. L'ordinamento (*scheduling*) 
