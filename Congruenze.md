@@ -69,6 +69,8 @@ Se $\circledast$ ha *soluzioni* e $x_0$ è una di queste allora tutti i numeri i
 Siano $n\in\mathbb N,\ n\ne0,\ a,b\in\mathbb Z$ Allora
 $a\cdot x\equiv b\mod n$ ha soluzioni se e solo se MCD($a,n$) divide $b$.
 In tal caso una soluzione è $x_0 = \frac b{MCD(a,n)}\cdot \alpha$  con $\large \alpha\in\mathbb Z$ 
+con $\alpha \in \mathbb Z$ tale che MCD($a$,$n$) = $\alpha\cdot a + \beta \cdot n$
+(e quindi tutti gli interi in $[x_0]_n$ sono soluzioni)
 *Dim*: lezione 5
 
 ### Teorema 2 (Determinare tutte le soluzioni)
@@ -78,6 +80,7 @@ Allora tutte le soluzioni di $\circledast$ sono tutti e soli i numeri interi del
 dove $x_0$ è una soluzione *particolare*.
 
 *Oss*: il **Teorema 2** ci dice quali (quante) sono le classi di congruenza modulo $n$ in cui si distribuiscono le *soluzioni*.
+
 Le *soluzioni* di $a\cdot x\equiv b\mod n$  sono:
 - $x_0$ (trovata con il **Teorema 1**)
 - $x_1 = x_0 + 1 \cdot \frac{n}{MCD(a,n)}$ 
@@ -126,7 +129,7 @@ Il **Teorema** seguente dà una condizione *sufficiente* affinchè *particolari*
 #### Teorema Cinese dei Resti
 Si considera il sistema di congruenze:
 $\quad\quad\quad\ \ \ x\equiv b_1\mod n_2$
-$\circledast\ \huge\{$ $\qquad x\equiv b_2\mod n_2$
+$\circledast\ \huge\{$$\qquad x\equiv b_2\mod n_2$
 $\quad\quad\quad\ \ \ x\equiv b_t\mod n_t$
 
 dove $b_i\in\mathbb Z$  e  $n_i\in\mathbb N$   $n_i\ne0$        sono a due a due **comprimi**, ossia MCD($n_i,\ n_j$) = 1 per ogni $j\ne 1$ il sistema ammette soluzioni.
@@ -174,3 +177,71 @@ con $b_1,\ b_2\in\mathbb Z$,  $n_1,\ n_2\in\mathbb N$,  $n_1\ne0\ne n_2$,  MCD($
 
 **Identità di Bezout**: $$ MCD(n_1,n_2)=1=\alpha_1\cdot n_1+\alpha_2\cdot n_2$$Una soluzione del sistema è $$x_0 = \alpha_1\cdot n_1\cdot b_2 + \alpha_2\cdot n_2\cdot b_1$$
 Il teorema Cinese dei Resti garantisce che tutte le soluzioni sono interi in$$[x_0]_{n_1\cdot n_2}$$
+### Sistemi di Congruenze generici
+$\ \ \ \ \ a_1\cdot x \equiv c_1 \mod m_1$
+$\huge\{$  $a_2\cdot x \equiv c_2 \mod m_2$
+$\ \ \ \ \ a_t\cdot x \equiv c_t \mod m_t$
+
+$a_i,c_i\in\mathbb Z,\ m_i\in\mathbb N, m_i\ne0$
+Vogliamo trovare un sistema del tipo:
+$\ \ \ \ x\equiv b_1\mod n_1$
+$\huge\{$ $x\equiv b_2\mod n_2$
+$\ \ \ \ x\equiv b_t\mod n_t$
+con i moduli a 2 a 2 *coprimi* (MCD($n_i$, $n_j$) = 1, i $\ne$ j)
+
+**Strategia risolutiva**:
+1. calcolo $d_i$ = MCD($a_i$, $m_i$) per ogni $1\le i\le t$ 
+	- se $d_i$ non *divide* $c_i$ allora:  $a_i\cdot x\equiv c_i\mod m_i$ *NON HA SOLUZIONI* e quindi anche l'intero sistema non ne ha
+
+	- se $d_i$ *divide* $c_i$ per ogni $i$ allora: sostituiamo ogni congruenza $a_i\cdot x\equiv c_i\mod m_i$   con la congruenza equivalente $$\frac{a_i}{d_i}\cdot x\equiv \frac{c_i}{d_i}\mod \frac{m_i}{d_i}$$Scriviamo $n_i :=\frac{m_i}{d_i}$ e otteniamo un sistema equivalente a quello dato:
+		$\ \ \ \ \frac{a_1}{d_1}\cdot x\equiv \frac{c_1}{d_1}\mod n_1$
+		$\huge\{$  $...$
+		$\ \ \ \ \frac{a_t}{d_t}\cdot\equiv\frac{c_t}{d_t}\mod n_t$
+2. Osserviamo che tutte le soluzioni di $$\frac{a_i}{d_i}\cdot x\equiv\frac{c_i}{d_i}\mod n_i\qquad\circledast$$appartengono ad un'unica classe di congruenza modulo $n_i$  Quindi se $b_i$ è una soluzione di $\circledast$ deduciamo che $\circledast$ equivale a:$$x\equiv b_i\mod n_i$$Determiniamo una soluzione perticolare $b_i\in\mathbb Z$ per ogni congruenza $\frac{a_i}{d_i}\cdot x\equiv \frac{c_i}{d_i} \mod n_i$ e di conseguenza troviamo il sistema nella forma che volevamo
+3. Se i moduli $n_1,n_2,...,n_t$ sono a 2 a 2 *coprimi* allora possiamo applicare il **Teorema Cinese dei Resti** e i motodi risolutivi di **Newton** e **Lagrange** per risolvere il sistema. Se i moduli *NON* sono a 2 a 2 *coprimi* servono altre tecniche.
+
+### L'insieme di Interi Modulo $n$
+*Def*: **L'insieme degli Interi Modulo** $n$, indicato con $\mathbb Z_n$ è l'insieme:$$\mathbb Z_n = \{[0]_n,[1]_n,\ ...\ ,[n-1]_n\}$$ Gli elementi di $\mathbb Z_n$ non sono numeri interi ma *classi di congruenza*.
+
+#### Somma e Prodotto in $\mathbb Z_n$
+$[a]_n + [b]_n = [a+b]_n$
+$[a]_n\cdot [b]_n = [a\cdot b]_n$
+
+*Nota*: le operazioni sono *ben definite*, ossia non dipendono dai rappresentanti scelti per le classi.
+
+*Esempio*:   $n=4\rightarrow \mathbb Z_4$
+$$\begin{aligned}&[2]_4+[3]_4=[5]_4=[1]_4\\\\&[6]_4+[11]_4=[17]_4=[1]_4 \end{aligned}$$
+#### Tavole di Somma e Prodotto in $\mathbb Z_n$
+- $n=2\rightarrow \mathbb Z_2=\{\ [0]_2,\ [1]_2\ \}$
+
+|    +    | $[0]_2$ | $[1]_2$ |
+| :-----: | :-----: | :-----: |
+| $[0]_2$ | $[0]_2$ | $[1]_2$ |
+| $[1]_2$ | $[1]_2$ | $[0]_2$ |
+
+| $\huge\cdot$ | $[0]_2$ | $[1]_2$ |
+| :----------: | :-----: | :-----: |
+|   $[0]_2$    | $[0]_2$ | $[0]_2$ |
+|   $[1]_2$    | $[0]_2$ | $[1]_2$ |
+
+### Legame con le congruenze
+La congruenza $\quad a\cdot x\equiv b\mod n\quad \circledast$  corrisponde all'equazione in $\mathbb Z_n$ $$[a]_n\cdot X=[b]_n\quad \circledast\circledast$$
+- Se $x_0\in\mathbb Z$ è soluzione di $\circledast$, allora $[x_0]_n$ è soluzione di $\circledast\circledast$.
+- Se $X_0=[x_0]_n\in\mathbb Z_n$ è soluzione di $\circledast\circledast$, allora ogni intero in $X_0=[x_0]_n$ è soluzione di $\circledast$.
+
+Non tutte le equazioni lineari in $\mathbb Z_n$ hanno soluzioni, ma anche possono avere più soluzioni.
+Ricordiamo che però il **Teorema Fondamentale dell'algebra** dice che tutte le equazioni lineari in $\mathbb C$ hanno una e una sola soluzione: $ax=b\Rightarrow x= \frac ba$
+
+### Elementi Invertibili in $\mathbb Z_n$
+*Def*: sia $n\in\mathbb N,\ n\ne0$.
+- Un numero intero $a\in\mathbb Z$ si dice **invertibile modulo** $n$ se la congruenza $a\cdot x\equiv 1\mod n$ *ha soluzione*.
+- L'elemento $[a]_n\in\mathbb Z_n$ si dice **invertibile** in $\mathbb Z_n$ se l'equazione  $[a]_n\cdot X=[1]_n$ *ha soluzione*.
+
+*Oss*: 
+1. $a\in\mathbb Z$ è *invertibile* mod $n\Leftrightarrow$ MCD($a$, $n$) divide 1 e $\Leftrightarrow$ MCD($a$, $n$) = 1 ($a$ e $n$ sono coprimi)
+2. Se $[a]_n\cdot X=[1]_n$  allora $b$ è una soluzione di $a\cdot x\equiv 1\mod n$. Poichè MCD($a$, $n$) = 1, deduciamo che tutte le soluzioni della congruenza appartengono a $[b]_n$. Deduciamo che $[b]_n$ è l'**unica soluzione** di $[a]_n\cdot X=[1]_n$ ed è chiamata *inverso* di $[a]_n$ e si indica con $[a]^{-1}_n$ 
+
+#### Proprietà
+1. $[1]_n\in\mathbb Z_n$ è sempre *invertibile* e $[1]^{-1}_n=[1]_n$
+2. $[n-1]_n\in\mathbb Z_n$ è sempre *invertibile* e $[n-1]^{-1}_n = [n-1]_n$
+3. Se $[a]_n$ è *invertibile* allora anche $[a]_n^{-1}$ è *invertibile* e l'inverso di $[a]^{-1}_n$ è $[a]_n$

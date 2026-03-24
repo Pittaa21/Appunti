@@ -1,7 +1,7 @@
 {
   "theme": "obsidian",
   "cssTheme": "Catppuccin",
-  "baseFontSize": 13,
+  "baseFontSize": 16,
   "interfaceFontFamily": "",
   "textFontFamily": "Noto Sans,Fira Code",
   "enabledCssSnippets": [
