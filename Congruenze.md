@@ -245,3 +245,24 @@ Ricordiamo che però il **Teorema Fondamentale dell'algebra** dice che tutte le 
 1. $[1]_n\in\mathbb Z_n$ è sempre *invertibile* e $[1]^{-1}_n=[1]_n$
 2. $[n-1]_n\in\mathbb Z_n$ è sempre *invertibile* e $[n-1]^{-1}_n = [n-1]_n$
 3. Se $[a]_n$ è *invertibile* allora anche $[a]_n^{-1}$ è *invertibile* e l'inverso di $[a]^{-1}_n$ è $[a]_n$
+
+
+La **Funzione di Eulero** conta gli *invertibili*:$$\begin{aligned}&\varphi:\mathbb N\rightarrow\mathbb N\\&n\rightarrow\varphi(n)=\text{ numero di invertibili di }\mathbb Z_n\end{aligned}$$
+*Esempio*:
+- $n=10$  Abbiamo visto che $\varphi(10)=4$ ( gli invertibili sono $[1]_{10},[3]_{10},[7]_{10},[9]_{10}$ )
+- $n = 4,\ \mathbb Z_4=\{[0]_4,[1]_4,[2]_4,[3]_4\}$    Tavola del prodotto
+
+| $\huge\cdot$ | $[0]_4$ | **$[1]_4$** | $[2]_4$ | **$[3]_4$** |
+| :----------: | :-----: | :---------: | :-----: | :---------: |
+|   $[0]_4$    | $[0]_4$ |   $[0]_4$   | $[0]_4$ |   $[0]_4$   |
+| **$[1]_4$**  | $[0]_4$ | **$[1]_4$** | $[2]_4$ |   $[3]_4$   |
+|   $[2]_4$    | $[0]_4$ |   $[2]_4$   | $[0]_4$ |   $[2]_4$   |
+| **$[3]_4$**  | $[0]_4$ |   $[3]_4$   | $[2]_4$ | **$[1]_4$** |
+Vediamo che in $\mathbb Z_4$ ci sono 2 invertibili $[1]_4$ e $[3]_4$. Dunque $\varphi(4)=2$ 
+
+*Oss*: se $p\ge2$ è un numero *primo* e $0\le a<p$  allora:
+- MCD($0$, $p$) = $p$
+- se $a\ne0$, MCD($a$, $p$) = 1  Dunque $\varphi(p)=p-1$
+
+**Proposizione**: Sia $n\in\mathbb N$, $n\ne0$.
+Consideriamo la fattorizzazione di $n$ in numeri primi$$n=p_1^{m_1}\cdot p_2^{m_2}\cdot\ ...\ \cdot p_t^{m_t}$$($p_i$ numeri primi tutti diversi) Allora:$$\varphi(n)=n\cdot \left(1-\frac 1{p_1}\right)\cdot\left(1-\frac 1{p_2}\right)\ ...\ \left(1-\frac 1{p_t}\right)$$
