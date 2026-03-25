@@ -34,12 +34,10 @@ A=\begin{pmatrix}
 \end{pmatrix}=(a_{ij})
 $$
 $a_{ij}$ è il coefficiente di posto ($i,j$), cioè riga $i$ e colonna $j$.
-*Esempio*: $$
-A=\begin{pmatrix}
+*Esempio*:  $$A=\begin{pmatrix}
  & -1 & 0 & 1 \\
   & 2 & 3 & 4  & 
-\end{pmatrix}\in M_{2,3}(\mathbb Z)
-$$
+\end{pmatrix}\in M_{2,3}(\mathbb Z)$$
 $a_{11}=-1\qquad a_{23}=4$ 
 *Nota*: le parentesi di una matrice possono essere quadrate, ma *mai* graffe.
 
@@ -73,6 +71,49 @@ u = \begin{pmatrix}
 \end{pmatrix}\in M_{1,n}(\mathbb C)=\mathbb C_{n}
 $$
 ## Operazioni con le Matrici
-1. **Prodotto Matrice x Scalare**:  *Def*: Siano $A=(a_{ij})\in M_{m,n}(\mathbb C)$ una matrice e $\lambda\in\mathbb C$ uno scalare. Il prodotto di $A$ per $\lambda$ è la matrice $$
-\lambda \cdot A=\left(\lambda \cdot a_{ij}\right)\quad\in M_{m,n}(\mathbb C)
-$$
+
+### Prodotto Matrice x Scalare
+  *Def*: Siano $A=(a_{ij})\in M_{m,n}(\mathbb C)$ una matrice e $\lambda\in\mathbb C$ uno scalare. Il prodotto di $A$ per $\lambda$ è la matrice $$\lambda \cdot A=\left(\lambda \cdot a_{ij}\right)\quad\in M_{m,n}(\mathbb C)$$
+*Nota*: il numero $\lambda$ è detto *scalare* perchè riscala uniformemente i coefficienti di $A$.
+*Esempio*: $$\begin{align}
+ & A=\begin{pmatrix}
+ & 1 & -1 &  \\
+  & 0 & i \\
+   & 2-i & 5
+\end{pmatrix}\in M_{3,2}(\mathbb C)
+\\ \\
+ & \lambda=i\in\mathbb C \\
+  & \lambda \cdot A=\begin{pmatrix}
+   & i\cdot 1 & i\cdot (-1) &  \\
+    & i\cdot 0 & i\cdot i \\
+	 & i\cdot (2-i) & i\cdot 5
+  \end{pmatrix}=\begin{pmatrix}
+   & i & -i &  \\
+    & 0 & -1 \\
+	 & 1+2i & 5i
+  \end{pmatrix}\in M_{3,2}(\mathbb C)
+\end{align}$$
+
+#### Proprietà del Prodotto Matrice x Scalare
+Siano $A=(a_{ij})\in M_{m,n}(\mathbb C),\ \lambda\in\mathbb C$  Allora:
+1. $\lambda \cdot A=\emptyset \Leftrightarrow\lambda=0$ oppure $A=\emptyset$  (perchè in $\mathbb C$ vale la legge di *cancellazione del prodotto* $\lambda\cdot a=0\Leftrightarrow\lambda=0$ oppure $a=0$)
+2. Se poniamo $A\cdot\lambda=(a_{ij}\cdot\lambda)$ allora $\lambda\cdot A=A\cdot\lambda$ (perchè il prodotto in $\mathbb C$ è *commutativo*: $\lambda \cdot a=a\cdot\lambda$)
+3. Se $\lambda=1$, allora $1\cdot A=A$  (perchè $1$ è l'identità del prodotto in $\mathbb C:\ 1\cdot a=a$)
+4. $\lambda \cdot(u\cdot A)=(\lambda \cdot u)\cdot A\quad\forall u\in\mathbb C$.
+
+### Somma di Matrici
+Siano $a=(a_{ij}),\ B=(b_{ij})\in M_{m,n}(\mathbb C)$. La **somma di A e B** è la matrice: $$A+B=\left(\ a_{ij}+b_{ij}\ \right)\in M_{m,n}(\mathbb C)$$
+*Nota*: la somma è definita **solo se** le due matrici hanno lo stesso numero di righe e lo stesso numero di colonne.
+
+#### Proprietà della Somma
+Siano $A,B,C\in M_{m,n}(\mathbb C)$  e  $\lambda,u\in\mathbb C$. Allora:
+1. $A+(B+C)=(A+B)+C$  **prop. associativa**
+2. $A+B=B+A$  **prop. commutativa**
+3. $A+\emptyset=A=\emptyset+A$  **elemento neutro**
+4. Indichiamo $-A=(-1)\cdot A$  allora  $A + (-A)=\emptyset$  ($-A$ è **matrice opposta** di $A$)
+5. $\lambda \cdot(A+B)=\lambda \cdot A+\lambda \cdot B$  **prop. distributiva**
+6. $(\lambda+u)\cdot A=\lambda \cdot A+u\cdot A$  **prop. distributiva**
+
+### Prodotto Riga x Colonna
+*Def*: Siano $u=(u_{1},\dots,u_{n})\in\mathbb C_{n}$ un *vettore riga*  e  $v=\begin{pmatrix} & v_{1} &  \\  & \dots \\  & v_{n}\end{pmatrix}\in\mathbb C^n$ un *vettore colonna*.
+Il prodotto $u\cdot v$ è: $$u\cdot v=(u_{1},\dots,u_{n})\cdot$$
