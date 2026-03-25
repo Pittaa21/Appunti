@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Matrici e Sistemi lineari.md",
+                "file": "Grafi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Matrici e Sistemi lineari"
+              "title": "Grafi"
             }
           }
         ]
@@ -208,12 +208,13 @@
   },
   "active": "0673b23a3f9a50c3",
   "lastOpenFiles": [
+    "Matematica discreta.md",
+    "Politiche di Ordinamento.md",
+    "Processi.md",
+    "Matrici e Sistemi lineari.md",
     "Congruenze.md",
     "Algebra.md",
     "Insiemi Numerici e Polinomi.md",
-    "Matrici e Sistemi lineari.md",
-    "Politiche di Ordinamento.md",
-    "Processi.md",
     "Sincronizzazione tra Processi.md",
     "stati.svg",
     "GrafoAsRis1.svg",
@@ -221,7 +222,6 @@
     "conflict-files-obsidian-git.md",
     "Sincronizzazione tra Processi.pdf",
     "Grafi.md",
-    "Matematica discreta.md",
     "Sistemi Operativi.md",
     "Cyber.md",
     "Algebra e Matematica discreta.md",

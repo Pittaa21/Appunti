@@ -60,4 +60,4 @@ Si parla di *lavori* quando non c'è il prerilascio e di *processi* quando il pr
 - **GU** (*garanzia utente*): come **GP** ma con garanzia riferita a ciascun utente
 
 #### Sistemi in tempo reale
-Sono sistemi *concorrenti* dove il valore corretto deve essere prodotto entro un tempo fissato, oltre tale limite il valore prodotto ha utilità decrescente, nulla o negativa. L'ordinamento (*scheduling*) 
+Sono sistemi *concorrenti* dove il valore corretto deve essere prodotto entro un tempo fissato, oltre tale limite il valore prodotto ha utilità decrescente, nulla o negativa. L'ordinamento (*scheduling*) dei processi deve fornire garanzie di completamento adeguate.

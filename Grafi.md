@@ -77,6 +77,10 @@ $$[u] = \{v\in V:\ v\sim u\}$$
 dove $[u]$ è la componente connessa del grafo che contiene $u$.
 Le *classi di equivalenza* si chiamano **componenti connessi** del grafi. Un grafo si dice *connesso* se ha un'unica componente connessa.
 
+## Grafi Bipartiti
+Un grafo G(V, E) si dice **bipartito** se V = V$_1 \cup$ V$_2$ con V$_1\cap$ V$_2=\emptyset$, e ogni arco ha un estremo in V$_1$ in V$_2$. Si scrive G(V$_1$, V$_2$, E)
+
+
 ### ISOMORFISMO
 Uno stesso grafo si può disegnare nello stesso modo:
 
