@@ -58,15 +58,12 @@ Dato un percorso con estrimi V$_1$ e V$_n$ (con V$_1\ne$ V$_n$  quindi *non chiu
 Facendo dei **cortocircuiti** nelle ripetizioni dei vertici, si ottiene una *partizione* degli archi in:
 1. **Cicli**
 2. **Archi** percorsi due volte
-3. **Cammino** con estremi V$_1$ e V$_n$
-
-img
-
+3. **Cammino** con estremi V$_1$ e V$_{10}$
+![[cammino(1).svg|center|278]]
 
 ### Teorema 3
 Un **percorso chiuso** di lunghezza *dispari* contiene almeno un ciclo di lunghezza *dispari*.
-
-
+Lez 2
 ### Grafi Connessi
 Siano $u,\ v\in V$ per un grafo G(V, E). Si dice che $u$ è **connesso** a $v$ ($u \sim v$) se esiste un cammino di estremi $u$ e $v$. La relazione è:
 - **Riflessiva**: $u \sim u$
@@ -76,10 +73,19 @@ Sia $u\in V$ la classe di equivalenza con rappresentante $u$:
 $$[u] = \{v\in V:\ v\sim u\}$$
 dove $[u]$ è la componente connessa del grafo che contiene $u$.
 Le *classi di equivalenza* si chiamano **componenti connessi** del grafi. Un grafo si dice *connesso* se ha un'unica componente connessa.
+*Esempio*:
+
+![[conness1.svg]]                                     ![[conness2.svg]]
+1 componente (**connesso**)                           un grafo con 2 componenti (**non connesso**)
 
 ## Grafi Bipartiti
-Un grafo G(V, E) si dice **bipartito** se V = V$_1 \cup$ V$_2$ con V$_1\cap$ V$_2=\emptyset$, e ogni arco ha un estremo in V$_1$ in V$_2$. Si scrive G(V$_1$, V$_2$, E)
-
+Un grafo G(V, E) si dice **bipartito** se V = V$_1 \cup$ V$_2$ con V$_1\cap$ V$_2=\emptyset$, e ogni arco ha un estremo in V$_1$ in V$_2$.
+Si scrive G(V$_1$, V$_2$, E)
+![[bipartito.svg|center]]
+Il grafo **bipartito completo** è un grafo G(V$_1$, V$_{2}$, E), ossia *bipartito*, in cui ogni vertice di V$_1$ è adiacente ad ogni vertice di V$_2$. Si indica con $K_{n_{1},n_{2}}$ dove $|V_{1}|=n_{1}$ e $|V_{2}|=n_{2}$
+*Esempio*:
+$$K_{1,3}$$
+![[bipartito(1).svg|77|center]]
 
 ### ISOMORFISMO
 Uno stesso grafo si può disegnare nello stesso modo:

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Matrici e Sistemi lineari.md",
+                "file": "Grafi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Matrici e Sistemi lineari"
+              "title": "Grafi"
             }
           }
         ]
@@ -198,8 +198,17 @@
   },
   "active": "72109d9a7fa78f26",
   "lastOpenFiles": [
-    "Untitled.md",
+    "bipartito(1).svg",
+    "bipartito.svg",
+    "conness2.svg",
+    "conness1.svg",
+    "cammino(1).svg",
+    "cammino.svg",
+    "Matematica discreta.md",
+    "Algebra e Matematica discreta.md",
     "Matrici e Sistemi lineari.md",
+    "Matrici e Sistemi lineari.pdf",
+    "Untitled.md",
     "Algebra.md",
     "Congruenze.md",
     "Esercizi Sincronizzazione.md",
@@ -213,19 +222,12 @@
     "grafoAss1(1).svg",
     "grafo.svg",
     "grafoAss1.svg",
-    "grafoAssRis1.svg",
     "Insiemi Numerici e Polinomi.md",
     "Sincronizzazione tra Processi.pdf",
-    "completo.svg",
     "conflict-files-obsidian-git.md",
-    "kregolare.svg",
-    "Algebra e Matematica discreta.md",
     "Grafi.md",
-    "Matematica discreta.md",
     "Risorsa.md",
     "Cyber.md",
-    "Untitled.base",
-    "complexsum.svg",
-    "complex.svg"
+    "Untitled.base"
   ]
 }
