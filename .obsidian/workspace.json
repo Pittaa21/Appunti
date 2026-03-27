@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Matrici e Sistemi lineari.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -198,8 +198,9 @@
   },
   "active": "72109d9a7fa78f26",
   "lastOpenFiles": [
-    "Algebra.md",
+    "Untitled.md",
     "Matrici e Sistemi lineari.md",
+    "Algebra.md",
     "Congruenze.md",
     "Esercizi Sincronizzazione.md",
     "Date Esami.md",

@@ -208,4 +208,100 @@ z_{n}
   & \dots  & \dots & \dots & \dots & | & \dots \\
    & a_{m1} & \dots & \dots & a_{mn} & | & b_{m} & 
 \end{pmatrix}\in M_{m,n+1}(\mathbb C)$$
-### Algoritmo di Eliminazione di Gauss
+## Algoritmo di Eliminazione di Gauss
+L'**Algoritmo di Eliminazione di Gauss** permette di risolvere il *sistema lineare* $A\cdot x=b$ operando opportune **operazioni sulle righe** di ($A|b$) in modo da ottenere una **matrice a gradini** ($C|d$), detta **forma ridotta (di Gauss)** di $A$ che corrisponde al *sistema lineare*:$$C\cdot x=d$$(più facile da risolvere)
+
+#### Operazioni elementari su righe di matrice
+1. **Scambio di righe**  *Esempio*: $E_{ij}$ (scambio le righe $i$ e $j$) $$\begin{pmatrix}
+ & 0 & i & 2 & -3 &  \\
+  & 1 & 2i & 0 & -1 \\
+   & 1 & 2i & 1 & 0
+\end{pmatrix}\quad\rightarrow E_{12}\rightarrow\quad \begin{pmatrix}
+ & 1 & 2i & 0 & -1 &  \\
+  & 0 & i & 2 & -3 \\
+   & 1 & 2i & 1 & 0
+\end{pmatrix}$$*Nota* è come scabiere 2 equzioni del sistema
+2. **Moltiplicazione della riga $i$ x scalare** $\alpha \in\mathbb C,\ \alpha\ne0\quad E_{i}(\alpha)$ *Esempio*:$$\begin{pmatrix}
+ & 1 & 2i & 0 & -1 &  \\
+  & 0 & i & 2 & -3 \\
+   & 1 & 2i & 1 & 0
+\end{pmatrix}\quad\rightarrow E_{2}(-i)\rightarrow\quad\begin{pmatrix}
+ & 1 & 2i & 0 & -1 &  \\
+  & 0 & 1 & -2i & 3i \\
+  1 & 2i & 1 & 0
+\end{pmatrix}$$*Nota*: è come moltiplicare per $\alpha$ tutti i **coefficienti** di un'equazione e anche il **termine noto**.
+3. **Somma della riga $i$ con un multiplo scalare** $\alpha\in\mathbb C,\ \alpha\ne 0$ **della riga $j$**   $E_{ij}(\alpha)$ *Esempio*:$$\begin{pmatrix}
+ & 1 & 2i & 0 & -1 &  \\
+  & 0 & 1 & -2i & 3i \\
+   & 1 & 2i & 1 & 0
+\end{pmatrix}\quad\rightarrow E_{31}(-1)\rightarrow\quad\begin{pmatrix}
+ & 1 & 2i & 0 & -1 &  \\
+  & 0 & 1 & -2i & 3i \\
+   & 0 & 0 & 1 & 1
+\end{pmatrix}$$*Nota*: corrisponde a sostituire l'$i$-esima equazione del sistema con la somma della stessa con $\alpha$ volte la $j$-esima equazione.
+
+*Osservazione*: Se si applicano le **regole elementari** sulle righe della matrice **completa** $A|b$ si ottiene una matrice $C|d$ che corrisponde al sistema $C\cdot x=d$ che ha le *stesse soluzioni* di $A\cdot x=b$.
+
+### Matrici a Gradini
+*Definizione*: Una **matrice a gradini** (o **scala**) è una matrice della forma:$$\begin{pmatrix}
+ & 0 & \dots & 0 & 1 & \dots & \dots & \dots & \dots &  \\
+  & 0 & \dots & \dots & 0 & 1 & \dots & \dots & \dots \\
+   & \dots & \dots & \dots & \dots & 0 & 1 & \dots & \dots \\
+    & 0 & \dots & \dots & \dots & \dots & 0 & 1 & \dots \\
+	 & 0 & \dots & \dots & \dots & \dots & \dots &  \dots & 0
+\end{pmatrix}$$dove
+1. Tutte le righe nulle sono in fondo alla matrice
+2. Nelle righe non nulle, il primo coefficiente diverso da **zero** è uguale a 1 ed è chiamato *Pivot*
+3. Per ogni *Pivot* di posto ($i,j$), il *pivot* della riga successiva si trova nel posto ($i+1,j+k$) con $k>0$ (quindi più a destra del *pivot* precedente)
+
+*Definizione*: Le colonne di una matrice a gradini contenenti un *pivot* sono dette **dominanti**, le altre sono **libere**.
+
+*Esempio*: Risolvere il sistema lineare$$\begin{cases}
+ x_{1}-x_{2}+2x_{3}=0 \\
+ 2x_{1}-2x_{2}+x_{3}=4
+\end{cases}$$con il metodo di **Eliminazione di Gauss**.
+La *matrice completa* è:$$\begin{align}
+ & A|b=\begin{pmatrix}
+  & 1 & -1 & 2 & | & 0 &  \\
+   & 2 & -2 & 1 & | & 4
+ \end{pmatrix} \\
+  & E_{21}(-2)\rightarrow \begin{pmatrix}
+   & 1 & -1 & 2 & | & 0 \\
+    & 0 & 0 & -3 & | & 4
+  \end{pmatrix} \\
+   & E_{2}\left( -\frac{1}{3} \right)\rightarrow\begin{pmatrix}
+    & 1 & -1 & 2 & | & 0 &  \\
+	 & 0 & 0 & 1 & | & -\frac{4}{3}
+   \end{pmatrix}=(C|d)
+\end{align}$$
+$C\cdot x=d$ è il *sistema lineare*$$\begin{align}
+&\begin{cases}
+x_{1}-x_{2}+2x_{3}=0 \\
+x_{3}=-\frac{4}{3}
+\end{cases} \\
+&\Rightarrow \begin{cases}
+x_{1}-x_{2}+2\cdot\left( -\frac{4}{3} \right)=0 \\
+x_{3}=-\frac{4}{3}
+\end{cases} \\
+&\Rightarrow \begin{cases}
+x_{1}-x_{2}=\frac{8}{3} \\
+x_{3}=-\frac{4}{3}
+\end{cases}
+\end{align}$$*Osservazioni*:
+- la colonna $d$ (**termine noto**) è *libera*, dunque il sistema ammette soluzioni
+- la seconda colonna è *libera*, quindi all'incognita $x_{2}$ posso associare un parametro $z$$$\begin{cases}
+x_{1}-x_{2}=\frac{8}{3} \\
+x_{2}=z \\
+x_{3}=-\frac{4}{3}
+\end{cases}\Rightarrow \begin{cases}
+x_{1}=z+\frac{8}{3} \\
+x_{2}=z \\
+x_{3}=-\frac{4}{3}
+\end{cases}$$L'insieme delle soluzioni è:$$\left\{\begin{pmatrix}
+ & z+\frac{8}{3} &  \\
+  & z \\
+   & -\frac{4}{3}
+\end{pmatrix}:\ z\in\mathbb C\right\}$$(le soluzioni sono infinite e dipendono da 1 parametro)
+*Esempio*: 
+$z=0\rightarrow \begin{pmatrix} & \frac{8}{3} &  \\  & 0 \\  & -\frac{4}{3}\end{pmatrix}$ è una soluzione
+$z=-\frac{8}{3}\rightarrow \begin{pmatrix} & 0 &  \\  & -\frac{8}{3} \\  & -\frac{4}{3}\end{pmatrix}$ è una soluzione
