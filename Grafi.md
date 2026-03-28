@@ -38,7 +38,7 @@ In questo tipo di grafi ognuno dei *n* vertici di K$_n$ ha grado *n* - 1.
 
 #### Sottografi e Sottografi Indotti
 Dato un grafo G(V, E), un grafo *G'*(*V'*, *E'*) è un **sottografo** di G(V, E) se *V'* $\subseteq$ V  e *E'* $\subseteq$ E. Quindi *G'* può essere ottenuto da G togliendo alcuni vertici e archi. Se si toglie un vertice da V, si devono togliere da R tutti gli archi che lo hanno come estremo.
-   G'(V', E')                                G(V, E)
+   G'(V', E')&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;G(V, E)
 ![[kregolare.svg]]                    ![[completo.svg]]
 
 Un sottografo *G*'(*V*', *E*') del grafo G(V, E) si dice **indotto** se *E*' contiene tutti gli archi di E che hanno estremi in *V*'.
@@ -87,15 +87,45 @@ Il grafo **bipartito completo** è un grafo G(V$_1$, V$_{2}$, E), ossia *biparti
 $$K_{1,3}$$
 ![[bipartito(1).svg|77|center]]
 
+### Teorema 4
+Un grafo è **bipartito** se e solo se non contiene *cicli dispari*. Quindi è **bipartito** se e solo se i cicli sono *pari*.
+*Esempio*: il grafo contiene un *ciclo dispari* quindi non è **bipartito**.
+![[bipartito(2).svg|center]]
+
+### Grafo complementare
+Sia G(V, E) un grafo. Il grafo **complementare** di G(V, E) è $\bar{\text{G}}(\text{V},\bar{\text{E}})$ che ha lo stesso insieme di vertici di G(V, E) e come insieme di archi $\bar{\text{E}}$, ossia gli archi che **NON** ci sono in E.$$\forall u,v\in V\left[\begin{aligned}
+ &\ u \text{ e } v \text{ sono adiacenti } \\
+& \quad\quad \text{in }\bar{G}(V,\ \bar{E})
+   \end{aligned}\right]\Leftrightarrow\left[\begin{aligned}
+   & \ u\text{ e }v\text{ non sono adiacenti }\\
+   &\quad\qquad\text{in }G(V,\ E)
+   \end{aligned} \right]$$
+*Esempio*:
+<span>&emsp;&emsp; </span>G(V, E)<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>$\bar{G}(V,\ \bar{E})$<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>$G(V,\ E)\cup \bar{G}(V,\ \bar{E})$
+![[compl.svg]]<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>![[comple.svg]]<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>![[compl(1).svg]]
+
+
 ### ISOMORFISMO
 Uno stesso grafo si può disegnare nello stesso modo:
+![[iso1.svg|270]]<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>![[isom 1.svg|141]]
+$$\begin{align}
+ & E=\left\{\ ab,\ ac,\ ad,\ bd,\ cd,\ de\ \right\} \\
+   & \qquad\quad\downarrow\quad\downarrow\quad\ \downarrow\quad\downarrow\quad\downarrow\quad\downarrow \\
+  & E'=\left\{12,\ 13,\ 14,\ 24,\ 34,\ 45\right\}
+\end{align}$$
 
-IMG
-
-
-**Definizione**: G(V,E) è *isomorfo*   a G'(V',E') se esiste una biiezione $f:v\rightarrow v$' che conserva le adiacenze:
+*Definizione*: G(V,E) è *isomorfo*   a G'(V',E') se esiste una *biiezione* $f:v\rightarrow v$' che conserva le adiacenze:
 $$
-u,v\in V,\qquad u,v\in E \Leftrightarrow
+u,v\in V,\qquad u,v\in E \Leftrightarrow f(u)f(v)\in E'
 $$
 
+##### Sequenza dei gradi
+*Definizione*: $d(v)$ è il grado del vertice $v$. Sia G(V, E) un grafo, la **sequenza dei gradi** di G(V, E) è la stringa di gradi dei vertici ordinati dal più grande al più piccolo.
+
+*Esempio*:
+![[gradi.svg]]
+Sequenza dei gradi: 3, 1, 1, 1.
+
+**CONDIZIONI NECESSARIE** che i grafi $G(V,\ E)$ e $G'(V',\ E')$ sono *isomorfi*.
+1. 
 #### Esercizi
