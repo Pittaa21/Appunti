@@ -144,4 +144,9 @@ Bisogna guardare i complementari:
 ![[isocompl.svg]]<span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>![[isocompl2.svg]]
 $a\leftrightarrow2\qquad b\leftrightarrow 4\qquad c\leftrightarrow 1\qquad d\leftrightarrow3\qquad \checkmark$
 
-#### Esercizi
+**Bipartito cubico**: per esempio $K_{3,3}$ ha lo stesso numero di *vertici*, *archi* e stessa *sequenza di gradi*.
+
+*Nota*: Quando si vuole determinare se due grafi sono **isomorfi**, se un *grafo complementare* è *bipartito* e l'altro no, allora non sono **isomorfi**.
+
+### Arconettività
+*Definizione*: Siano $u,v\in V$. Se esiste un cammino con estremi $u$ e $v$, allora $u$ e $v$ sono **connessi**. Se $u$ e $v$ non sono connessi sono **disconnessi.

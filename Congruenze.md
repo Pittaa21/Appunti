@@ -22,7 +22,7 @@ Una relazione che ha le 3 proprietà è detta **Relazione d'equivalenza**.
 *Def*: Siano $n \in \mathbb N,\ n\ne0,\ a\in\mathbb Z$
 La **Classe di Congruenza di a modulo n** è l'insieme di tutti i numeri interi congrui ad *a modulo n*:
 $$
-\left[a\right]_n = \{b\in\mathbb Z\text{ tali che }b\equiv a\mod n\}
+\left[a\right]_n = \left\{b\in\mathbb Z\text{ tali che }b\equiv a\mod n\right\}
 $$
 ---
 *Nota*:$[a]_n$ è un insieme **infinito** che contiene tutti i numeri che divisi per $n$ danno come resto $a$.
