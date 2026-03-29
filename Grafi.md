@@ -127,5 +127,21 @@ $$
 Sequenza dei gradi: 3, 1, 1, 1.
 
 **CONDIZIONI NECESSARIE** che i grafi $G(V,\ E)$ e $G'(V',\ E')$ sono *isomorfi*.
-1. 
+1. $G$ e $G'$ hanno lo stesso numero di *vertici*
+2. $G$ e $G'$ hanno lo stesso numero di *archi*
+3. $G$ e $G'$ hanno la stessa *sequenza dei gradi*
+4. $G$ e $G'$ devono avere la stessa *struttura* di cicli e componenti (*isomorfi*)
+
+### Teorema 5
+I grafi $G(V,\ E)$ e $G'(V',\ E')$ sono *isomorfi* se e solo se i loro grafi complementari $\bar{G}(V,\ \bar{E})$ e $\bar{G}'(V',\ \bar{E}')$ sono *isomorfi*.
+*Esempio*:<span>&emsp;&emsp;&emsp;</span>G<span>&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;</span>G'
+![[iso.svg]]![[iso2.svg]]
+- $G$ e $G'$ hanno lo stesso numero di *vertici* (4)
+- $G$ e $G'$ hanno lo stesso numero di *archi* (5)
+- $G$ e $G'$ hanno la stessa *sequenza di gradi*
+Bisogna guardare i complementari:
+<span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>$\bar{G}$<span>&emsp;&emsp;&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>$\bar{G}'$
+![[isocompl.svg]]<span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>![[isocompl2.svg]]
+$a\leftrightarrow2\qquad b\leftrightarrow 4\qquad c\leftrightarrow 1\qquad d\leftrightarrow3\qquad \checkmark$
+
 #### Esercizi
