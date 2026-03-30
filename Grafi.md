@@ -148,5 +148,71 @@ $a\leftrightarrow2\qquad b\leftrightarrow 4\qquad c\leftrightarrow 1\qquad d\lef
 
 *Nota*: Quando si vuole determinare se due grafi sono **isomorfi**, se un *grafo complementare* è *bipartito* e l'altro no, allora non sono **isomorfi**.
 
-### Arconettività
-*Definizione*: Siano $u,v\in V$. Se esiste un cammino con estremi $u$ e $v$, allora $u$ e $v$ sono **connessi**. Se $u$ e $v$ non sono connessi sono **disconnessi.
+### Arcoconettività
+*Definizione*: Siano $u,v\in V$. Se esiste un cammino con estremi $u$ e $v$, allora $u$ e $v$ sono **connessi**. Se $u$ e $v$ non sono connessi sono **disconnessi**.
+$G=(V,\ E)$ è *connesso* se $\forall\ u,v\in V$, $u$ e $v$ sono *connessi*. Se $G=(V,\ E)$ non è *connesso*, si dice *disconnesso*. 
+
+Sia $G=(V,\ E)$ un *grafo* o *multigrafo*, e $S\subseteq V$. Si chiama il **taglio associato ad S** l'insieme degli archi $$\begin{align}
+\delta(S)&=\left\{\begin{aligned}
+&\text{ gli archi hanno esattamente}\\
+&\text{ un estremo in }S
+\end{aligned}\right\} \\ \\
+&=\left\{u,v\in E:\ |S\cap\{u,v\}|=]\right\} 
+\end{align}$$
+Fissati $w,y\in V$, si dice il taglio $\delta(S)$ **SEPARA** $w$ e $y$ se $S$ contiene esattamente uno tra $w$ e $y$.
+*Nota*: $\delta(S)=S(V\smallsetminus S)$ 
+
+Siano $u$ e $v$ *connessi*. Se $\gamma$ è un cammino con estremi $u$ e $v$ e $\delta(S)$ un tagli che separa $u$ e $v$. Se tutti i vertici di $\gamma$ sono in $S$, allora $\delta(S)$ *non separa* $u$ e $v$. Quindi esiste un arco con un estremo in $S$ e un estremo non in $S$.
+
+Sia $G=(V,\ E)$ un *grafo* o *multigrafo*, siano $u,v\in V$.$$K^E_{u,v}(G)$$
+- è uguale all'**Arcoconettività** fra $u$ e $v$
+- è uguale alla **cardinalità** minima di un taglio che separa $u$ e $v$
+- è uguale a min $\left\{|\delta(S)|:\ \delta(S)\text{ un taglio che separa }u \text{ e }v\right\}$
+
+*Nota*: per i **multigrafi**, i *cappi* non influiscono su $K^E_{u,v}(G)$. (nessun taglio contiene un cappio).
+
+**PROPRIETÀ**:
+1. $K^E_{u,v}(G)$ è il minimo numero di archi da togliere da $G$ affinchè diventino **disconnessi**.
+2. $K^E_{u,v}(G)$ è il numero di cammini con estremi $u$ e $v$ che non hanno archi in comune. (*cammini disgiunti sugli archi*)
+
+#### Arcoconnettività di un grafo/multigrafo
+*Arcoconnettività* di $G$: $$K^E(G)=\text{min}_{u,v\in V}\ K^E_{u,v}(G)$$
+Quindi se $G$ è *connesso*, $K^E(G)$ è il minimo numero di archi da togliere da $G$ per farlo diventare *disconnesso*.
+*Esempio*:
+IMG
+
+### Connettività sui vertici
+Supponiamo $G=(V,\ E)$ sia un grafo semplice *connesso* e *non completo*, e sia $S\subseteq V$. Indico $G\smallsetminus S$ il grafo con vertici $V\small\setminus S$ e con archi tutti gli archi $E$ escluso gli archi con estremo in $S$.
+
+Un $S\subseteq V$ è un **separatore** di $G(V,E)$ se il grafo $G\smallsetminus S$ è *disconnesso*.
+*Esempio*:
+IMG
+
+*Osservazione*: 
+$G$ contiene una coppia di vertici non adiacenti $\Rightarrow$ $G$ contiene un **separatore**
+$\nexists$ un **separatore** in $G$ $\Rightarrow$ $G$ è **completo** (tutte le coppie di vertici sono adiacenti)
+
+$K(K_{n})=n-1$
+*Nota*: in $K_{n}$ non c'è un **separatore**.
+
+IMG
+
+Se tolgo $m$ vertici da $k_n$, trovo $k_{n-m}$, che è ancora *connesso*.
+
+#### Connettività tra due vertici non adiacenti
+Siano $u,v\in V$ non *adiacenti*.$$K_{u,v}(G)$$
+- indica la **connettività tra** $u$ e $v$
+- indica la **cardinalità** minima di un *separatore* $S$ tale che $u$ e $v$ siano in due componenti *connesse* distinte in $G\smallsetminus S$.
+
+Quindi, se $G$ non è completo:$$K(G)=\text{min}_{u,v\in V}\ \ K_{u,v}(G)$$
+con $u,v$ non adiacenti.
+
+*Osservazione*: Siano $u$ e $v$ *non adiacenti* e $\gamma$ un cammino con estremi $u$ e $v$. Se $S$ è un **separatore** di $G$ tale che $u$ e $v$ sono disconnessi in $G\smallsetminus S$, allora $S$ *contiene almeno un vertice* di $\gamma$.
+
+**Teorema**: $\forall\ u,v\in V$ non adiacenti. $K_{u,v}(G)$ è il numero di cammini con estremi $u$ e $v$ che non hanno vertici intermedi in comune.
+IMG
+
+Togliendo un solo vetice di $G$, $u$ e $v$ non si *sconnettono*. Quindi $K_{u,v}(G)\ge2$, ossia ci sono almeno due cammini con estremi $u$ e $v$:
+IMG
+
+Quindi dal **Teorema**, $K_{u,v}(G)\ge 2$
