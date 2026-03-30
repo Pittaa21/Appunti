@@ -209,10 +209,15 @@ con $u,v$ non adiacenti.
 
 *Osservazione*: Siano $u$ e $v$ *non adiacenti* e $\gamma$ un cammino con estremi $u$ e $v$. Se $S$ è un **separatore** di $G$ tale che $u$ e $v$ sono disconnessi in $G\smallsetminus S$, allora $S$ *contiene almeno un vertice* di $\gamma$.
 
-**Teorema**: $\forall\ u,v\in V$ non adiacenti. $K_{u,v}(G)$ è il numero di cammini con estremi $u$ e $v$ che non hanno vertici intermedi in comune.
-IMG
+**Teorema**: $\forall\ u,v\in V$ non adiacenti. $K_{u,v}(G)$ è il numero di cammini con estremi $u$ e $v$ che non hanno vertici intermedi in comune. (*cammini internamente disgiunti*)
+![[teo5.svg]]
+Si vuole trovare $S$ tale che $u$ e $v$ siano disconnessi in $G\smallsetminus S$.
 
 Togliendo un solo vetice di $G$, $u$ e $v$ non si *sconnettono*. Quindi $K_{u,v}(G)\ge2$, ossia ci sono almeno due cammini con estremi $u$ e $v$:
-IMG
-
+<span>&emsp;&emsp;&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>**1** <span>&emsp;&emsp;&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span> **2**
+![[teo51 1.svg]]![[teo52.svg]]
 Quindi dal **Teorema**, $K_{u,v}(G)\ge 2$
+Prendo $S=\{y,t\}$.
+Se prendo $G\smallsetminus \{y,t\}$ è *disconnesso*, quindi $S=\{y,t\}$ è un **separatore**.
+$\Rightarrow K_{u,v}(G)\le 2$ 
+In conclusione $2\le K(G)\le 2$ quindi $K(G)=2$.
