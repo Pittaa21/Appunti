@@ -10,5 +10,5 @@ Il S/O si può trovare:
 1. [[Processi]]
 2. [[Sincronizzazione tra Processi]]
 3. [[Politiche di Ordinamento]]
-4. [[File System]]
+4. [[Linux]]
 5. [[Windows]]
