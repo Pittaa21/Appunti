@@ -341,3 +341,7 @@ Risolvere il sistema dipendente dal parametro $\alpha\in\mathbb C$
 ### Rango di una matrice
 *Definizione*: Il **rango** di una matrice $A\in M_{m.n}(\mathbb C)$ è il **numero di colonne dominanti** di una forma ridotta di $A$. Lo indichiamo con $rk(A)$.
 
+*Osservazioni*: sia $A\in M_{m,n}(\mathbb C),\ A\ne \emptyset$ e sia $C$ una sua forma ridotta
+1. $1\le rk(A)\le n$
+2. il sistema $A\cdot x=b$ ha un'unica soluzioni $\Leftrightarrow$ tutte le colonne di $C$ sono dominanti $\Leftrightarrow\ rk(A)=n$ $\ \ \ n$ è il numero di incognite ($x_{1},\dots,x_{n}$)
+3. $rk(A)=$ numero di gradini di $C$ $=$ numero di righe *non-nulle* di $C$ $\le m$ (numero totale di righe). Cioè il rango di $A$ è sempre minore o uguale al numero di righe di $A$. Questo implica che se $m<n$ (il numero di equazioni è minore del numero di incognite) allora $rk(A)\le m<n$ e il sistema **non** può avere un'*unica soluzione* ( o è impossibile o ne ha infinite).
