@@ -60,4 +60,9 @@ Si parla di *lavori* quando non c'è il prerilascio e di *processi* quando il pr
 - **GU** (*garanzia utente*): come **GP** ma con garanzia riferita a ciascun utente
 
 #### Sistemi in tempo reale
-Sono sistemi *concorrenti* dove il valore corretto deve essere prodotto entro un tempo fissato, oltre tale limite il valore prodotto ha utilità decrescente, nulla o negativa. L'ordinamento (*scheduling*) dei processi deve fornire garanzie di completamento adeguate.
+Sono sistemi *concorrenti* dove il valore corretto deve essere prodotto entro un tempo fissato, oltre tale limite il valore prodotto ha utilità decrescente, nulla o negativa. L'ordinamento (*scheduling*) dei processi deve fornire garanzie di completamento adeguate. Il problema maggiore è quando tutti i processi sono pronti per eseguire all'istante iniziale (**critical instant**).
+
+- Modello **cyclic executive**: consiste in un insieme periodico di processi *indipendenti*, ciascun processo è diviso in procedure di una certa durata. L'ordinamento è determinato come una sequenza di chiamate a procedure di processi. Un *ciclo maggiore* (**major cycle**) contiene l'invocazione di tutte le sequenze di processi. Tale ciclo è diviso in *N cicli minori* che contengono l'invocazione di *specifiche sottosequenze*.
+- **a priorità fissa**: meglio con *prerilascio* (a priorità), assegnazione delle priorità per il periodo
+- **a priorità fissa con prerilascio** e scadenza inferiore a prediodo (D < T): assegnazione priorità secondo la scadenza. Rischio *inversione di priorità*:
+    - processi con priorità maggiore vengono bloccati da processi a priorità minore, causato dall'accesso esclusivo alle risorse, può condurre a *blocco circolare* (**Deadlock**)

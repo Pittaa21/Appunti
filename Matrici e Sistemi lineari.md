@@ -304,4 +304,40 @@ x_{3}=-\frac{4}{3}
 \end{pmatrix}:\ z\in\mathbb C\right\}$$(le soluzioni sono infinite e dipendono da 1 parametro)
 *Esempio*: 
 $z=0\rightarrow \begin{pmatrix} & \frac{8}{3} &  \\  & 0 \\  & -\frac{4}{3}\end{pmatrix}$ è una soluzione
+
 $z=-\frac{8}{3}\rightarrow \begin{pmatrix} & 0 &  \\  & -\frac{8}{3} \\  & -\frac{4}{3}\end{pmatrix}$ è una soluzione
+
+Consideriamo il sistema lineare $A\cdot x =b$ e 
+*Osservazione*: Stabilire quali colonne di ( $C|d$ ) sono **libere** e quali sono **dominanti** ci da informazioni sulle soluzioni del sistema.
+
+**Caso 1**: $d$ è colonna dominante$$(C|d)=\begin{pmatrix}
+ & 0 & \dots & 0 & 1 & \dots & | & \dots &  \\
+  & 0 & \dots & \dots & 0 & 1 & | & \dots  \\
+   & 0 & \dots & \dots & \dots & 0 & | & 1 \\
+    & 0 & \dots & \dots & \dots & \dots & | & 0
+\end{pmatrix}$$ il sistema allora *non ha soluzioni* (l'ultima equazione è 0 = 1).
+
+**Caso 2**: $d$ non è dominante e tutte le colonne di $C$ sono dominanti$$(C|d)=\begin{pmatrix}
+ & 1 & \dots & \dots & | & d_{1} &  \\
+  & 0 & 1 & \dots & | & d_{2} \\
+   & \dots & 0 & 1 & | & d_{n} \\
+    & 0 & \dots & 0 & | & 0
+\end{pmatrix}$$ il sistema allora ha *una soluzione*.
+
+**Caso 3**: $d$ non è dominante e in $C$ ci sono $k\ge1$ colonne libere.$$A=\begin{pmatrix}
+ & 1 & 3 & -2 & 1 &  \\
+  & 0 & 0 & 2 & 4 \\
+   & 2 & 6 & -3 & 4
+\end{pmatrix}\quad b=\begin{pmatrix}
+ & -1 &  \\
+  & 2 \\
+   & -1
+\end{pmatrix}$$ il sistema ha *infinite soluzioni* dipendenti da $K$ parametri ($\infty^K$ soluzioni).
+
+### Sistema lineare dipendente dal parametro $\alpha$
+Risolvere il sistema dipendente dal parametro $\alpha\in\mathbb C$
+
+
+### Rango di una matrice
+*Definizione*: Il **rango** di una matrice $A\in M_{m.n}(\mathbb C)$ è il **numero di colonne dominanti** di una forma ridotta di $A$. Lo indichiamo con $rk(A)$.
+
