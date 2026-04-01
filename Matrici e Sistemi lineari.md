@@ -487,3 +487,25 @@ E_{13}(-1)\rightarrow \begin{pmatrix}
  & 0 & 0 & 1 \\
   & \frac{1}{\alpha} & -\frac{1}{\alpha} & 0
 \end{pmatrix}$$(che esiste solo per $\alpha\ne0\ne 1$)
+
+### Matrici Diagonali, Scalari e Triangolari
+*Definizione*: Sia $A=(a_{ij})\in M_{n}(\mathbb C)$ una matrice opposta
+
+*Definizione*: una matrice quadrata $A\in M_{n}(\mathbb C)$ si dice 
+- **MATRICE DIAGONALE**: se tutti i coefficienti fuori dalla *diagonale principale* sono nulli
+- **MATRICE SCALARE**: se $A=\alpha \cdot \mathbb 1_{n}=\begin{pmatrix} & \alpha & 0 & \dots & 0  & \\  & 0 & \dots & \dots & \dots \\  & 0 & \dots & 0 & \alpha\end{pmatrix}$ per un qualche $\alpha\in\mathbb C$
+- **MATRICE TRIANGOLARE SUPERIORE**: se tutti i coefficienti al di sotto della diagonale principale sono nulli
+
+*Esempi*:
+1. $\begin{pmatrix} & 5 & 0 \\  & 0 & i\end{pmatrix}$ è diagonale
+2. $\mathbb 1_{n}$ è scalare
+3. $\begin{pmatrix} & 2 & 0 & 0 &  \\  & 0 & 2 & 0 &  \\  & 0 & 0 & 2\end{pmatrix} = 2\cdot\mathbb 1_{3}$ è scalare
+4. $\begin{pmatrix} & 1 & 2 & 0 &  \\  & 0 & 0 & i \\  & 0 & 0 & -1\end{pmatrix}$ è triangolare superiore
+5. Una matrice quadrata a gradini è triangolare superiore
+
+#### Proprietà matrici scalari
+Sia $A=\alpha \cdot\mathbb 1_{n}\in M_{n}(\mathbb C)$ una matrice scalare e siano $B,C\in M_{n}(\mathbb C)$. Allora 
+1. $A\cdot B=(\alpha \cdot\mathbb 1_{n})\cdot B=\alpha \cdot(\mathbb 1_{n}\cdot B)=\alpha \cdot B$
+2. $C\cdot A=C\cdot(\alpha \cdot\mathbb 1_{n})=\alpha \cdot(C\cdot \mathbb 1_{n})=\alpha \cdot C$
+
+Cioè nel prodotto righe per colonne, le matrici scalari $\alpha \cdot\mathbb 1_{n}$ si comportano come numeri $\alpha\in\mathbb C$.
