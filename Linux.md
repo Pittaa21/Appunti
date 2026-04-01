@@ -14,3 +14,9 @@ Un **Processo** è la principale entità attiva nel sistema, inizialmente *seque
 ### Thread
 *Processi* con più flussi di controllo interni sono detti **thread**. I *thread* condividono tutte le risorse logiche e fisiche del processo genitore (inclusi i valori delle variabili). Una volta che completa il proprio lavoro il *thread* termina se stesso volontariamente. Un *thread* si può sincronizzare con la terminazione di un suo simile, l'accesso a risorse condivise si sincronizza tramite **semafori** a *mutua esclusione*. L'attesa su condizioni logiche avviene con variabili speciali simili a *condition variables* (ma senza monitor).
 
+Permanentemente in RAM e per tutti i processi ci sono:
+- Parametri di ordinamento (priorità, tempo di esecuzione, tempo di sospensione, ...)
+- Descrittore della memoria virtuale del processo
+- Lista dei segnali significativi e il loro stato
+- Stato, identità, relazioni di parentela, gruppo di appartenenza
+
