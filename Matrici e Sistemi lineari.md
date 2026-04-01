@@ -307,7 +307,8 @@ $z=0\rightarrow \begin{pmatrix} & \frac{8}{3} &  \\  & 0 \\  & -\frac{4}{3}\end{
 
 $z=-\frac{8}{3}\rightarrow \begin{pmatrix} & 0 &  \\  & -\frac{8}{3} \\  & -\frac{4}{3}\end{pmatrix}$ è una soluzione
 
-Consideriamo il sistema lineare $A\cdot x =b$ e 
+
+Consideriamo il sistema lineare $A\cdot x =b$ e una **forma ridotta di Gauss** $(C|d)$ della matrice completa $(A|b)$.
 *Osservazione*: Stabilire quali colonne di ( $C|d$ ) sono **libere** e quali sono **dominanti** ci da informazioni sulle soluzioni del sistema.
 
 **Caso 1**: $d$ è colonna dominante$$(C|d)=\begin{pmatrix}
@@ -341,7 +342,148 @@ Risolvere il sistema dipendente dal parametro $\alpha\in\mathbb C$
 ### Rango di una matrice
 *Definizione*: Il **rango** di una matrice $A\in M_{m.n}(\mathbb C)$ è il **numero di colonne dominanti** di una forma ridotta di $A$. Lo indichiamo con $rk(A)$.
 
+*Esempio*: Se $A\in M_{3}(\mathbb C),\ A\ne0$ e $C$ è una sua forma ridotta allora ci sono le possibilità:
+- $rk(A)=3$, tutte le colonne di $C$ sono *dominanti*$$C=\begin{pmatrix}
+ & 1 & a & b &  \\
+  & 0 & 1 & c \\
+   & 0 & 0 & 1
+\end{pmatrix}$$
+- $rk(A)=2$, 2 colonne di $C$ sono *dominanti*$$C=\begin{pmatrix}
+ & 1 & a & b &  \\
+  & 0 & 1 & c \\
+   & 0 & 0 & 0
+\end{pmatrix},\quad\begin{pmatrix}
+ & 1 & a & b &  \\
+  & 0 & 0 & 1 \\
+   & 0 & 0 & 0
+\end{pmatrix},\quad\begin{pmatrix}
+ & 0 & 1 & a &  \\
+  & 0 & 0 & 1  \\
+   & 0 & 0 & 0
+\end{pmatrix}$$
+- $rk(A)=1$, 1 colonna di $C$ è *dominante*$$C=\begin{pmatrix}
+ & 1 & a & b &  \\
+  & 0 & 0 & 0  \\
+   & 0 & 0 & 0
+\end{pmatrix},\quad\begin{pmatrix}
+ & 0 & 1 & a &  \\
+  & 0 & 0 & 0  \\
+   & 0 & 0 & 0
+\end{pmatrix},\quad\begin{pmatrix}
+ & 0 & 0 & 1 &  \\
+  & 0 & 0 & 0 \\
+   & 0 & 0 & 0
+\end{pmatrix}$$
+
 *Osservazioni*: sia $A\in M_{m,n}(\mathbb C),\ A\ne \emptyset$ e sia $C$ una sua forma ridotta
 1. $1\le rk(A)\le n$
 2. il sistema $A\cdot x=b$ ha un'unica soluzioni $\Leftrightarrow$ tutte le colonne di $C$ sono dominanti $\Leftrightarrow\ rk(A)=n$ $\ \ \ n$ è il numero di incognite ($x_{1},\dots,x_{n}$)
 3. $rk(A)=$ numero di gradini di $C$ $=$ numero di righe *non-nulle* di $C$ $\le m$ (numero totale di righe). Cioè il rango di $A$ è sempre minore o uguale al numero di righe di $A$. Questo implica che se $m<n$ (il numero di equazioni è minore del numero di incognite) allora $rk(A)\le m<n$ e il sistema **non** può avere un'*unica soluzione* ( o è impossibile o ne ha infinite).
+
+## Matrici Invertibili
+*Definizione*: una matrice quadrata $A\in M_{n}(\mathbb C)$ si dice **invertibile** (o *non singolare*) se esiste una matrice quadrata $B\in M_{n}(\mathbb C)$ tale che $$A\cdot B=\mathbb 1_{n}=B\cdot A$$
+*Osservazioni*:
+1. Se $A\in M_{n}(\mathbb C)$ è invertibile, allora esiste un'unica matrice $B\in M_{n}(\mathbb C)$ tale che $A\cdot B=\mathbb 1_{n}=B\cdot A$, detta **matrice inversa di A** e si indica con $A^{-1}$
+2. **Non tutte le matrici quadrate sono invertibili** <br> *Esempio*: $A=\begin{pmatrix} & 1 & 0 &  \\  & 0 & 0\end{pmatrix}\in M_{2}(\mathbb C),\ A\ne \emptyset$ <br> Cerchiamo una matrice $B=\begin{pmatrix} & a & b &  \\  & c & d\end{pmatrix}$
+3. È possibile dimostrare che $A\cdot B=\mathbb 1_{n}\Leftrightarrow B\cdot A=\mathbb 1_{n}$, cioè $B$ è inversa destra di $A$ *se e solo se* $B$ è inversa sinistra di $A$
+4. La definizione di matrice invertibile si può dare in modo analogo anche per matrici non quadrate.
+    - l'ordine del prodotto conta, quindi *inversa destra $\ne$ inversa sinistra*.
+    - salta l'unicità *Esempio*: La matrice $\begin{pmatrix}1 \\ \alpha\end{pmatrix}$ è inversa destra della matrice $\begin{pmatrix}1 & 0\end{pmatrix}\forall \alpha\in\mathbb C$:<br> $\begin{pmatrix}1 & 0\end{pmatrix}\cdot \begin{pmatrix}1 \\ \alpha\end{pmatrix}=1$
+
+**Proprietà della Matrice Inversa** di una matrice quadrata:
+Siano $A,B\in M_{n}(\mathbb C)$ matrici invertibili. Allora:
+1. $(A^{-1})^{-1}=A$
+2. $A\cdot D$ è invertibile e $(A\cdot D)^{-1}=D^{-1}\cdot A^{-1}$
+
+#### Teorema
+Sia $A\in M_{n}(\mathbb C)$ una matrice quadrata. Allora le seguenti affermazioni sono equivalenti:
+1. $A$ è invertibile
+2. $A\cdot x=b$ ha un'unica soluzione per ogni $b\in \mathbb C^n$
+3. una (ciascuna) forma ridotta di $A$ ha tutte le colonne dominanti
+4. $rk(A)=n$
+
+*Osservazioni*: le affermazioni 2,3,4 sono equivalenti. Se $A$ è invertibile allora esiste la sua inversa $A^{-1}\in M_{n}(\mathbb C)$ e $$\underbrace{A^{-1}\cdot A}_{\mathbb 1_{n}}\cdot x=A^{-1}\cdot b$$ cioè $x=A^{-1}\cdot b$  è l'*unica soluzione* del sistema.
+Analogamente con ciò che avviene in $\mathbb C$: $a\in\mathbb C$ è invertibile in $\mathbb C\Leftrightarrow a\ne 0$ e in tal caso <br>$\frac{a}{a}\cdot x=\frac{b}{a}\ \Rightarrow\ x=\frac{b}{a}=a^{-1}\cdot b$  è l'*unica soluzione*.
+
+*Proposizione*: Sia $A\in M_{m,n}(\mathbb C)$. Allora effettuando opportune **operazioni elementari sulle righe** di $A$ è possibile ottenere una *matrice a gradini* in cui le **colonne dominanti** hanno
+- i Pivot uguali a 1
+- tutti gli altri coefficienti uguali a 0
+detta **Forma Ridotta di Gauss-Jordan di A**.
+
+*Esempio*:$$\begin{align}
+\begin{pmatrix}
+ & 1 & \dots & \dots & \dots & \dots &  \\
+  & 0 & 1 & \dots & \dots & \dots \\
+   & 0 & 0 & 0 & 1 & \dots &  \\
+    & 0 & 0 & 0 & 0 & 0 \\
+\end{pmatrix} \\
+\begin{matrix}
+D &  D\ \   & L &\ \  D &\ \  L &  & 
+\end{matrix}\end{align}$$
+*Osservazione*: Se $A\in M_{n}(\mathbb C)$ è **invertibile**, allora una sua forma ridotta di Gauss ha tutte le colonne dominanti e quindi la sua forma ridotta di Gauss-Jordan è$$\mathbb 1_{n}=\begin{pmatrix}
+ & 1 & 0 & \dots & 0 &  \\
+  & 0 & 1 & \dots & \dots \\
+   & 0 & 0 & \dots & \dots \\
+    & \dots & \dots & \dots & \dots \\
+     & 0 & 0 & 0 & 1
+\end{pmatrix}$$
+##### Strategia per determinare se una matrice è invertibile e trovarne l'inversa
+Sia $A\in M_{n}(\mathbb C)$.
+1. Consideriamo la matrice $(A|\mathbb 1_{n})\in M_{n,2n}(\mathbb C)$
+2. Con opportune *operazioni elementari sulle righe*, otteniamo una forma ridotta di Gauss-Jordan$$(C|D)$$
+3. Se $C=\mathbb 1_{n}$ allora $A$ è *invertibile* e l'inversa di $A$ è $A^{-1}=D$. Altrimenti $A$ non è *invetibile*
+
+*Esercizio*: (calcolo inversa di matrice con parametro)
+
+Sia $A(\alpha)=\begin{pmatrix} & \alpha-1 & 1 & \alpha-1 &  \\  & \alpha-1 & 1 & -1 \\  & 0 & 1 & 0\end{pmatrix}\in M_{3}(\mathbb R)$ <span>&emsp;</span> con $\alpha \in\mathbb R$.
+
+Stabilire per quali $\alpha \in\mathbb R$ la matrice è invertibile e per questi valori calcolare l'inversa $A(\alpha)^{-1}$.$$\begin{align}
+(A(\alpha)\ |\ \mathbb 1_{3})=&\begin{pmatrix}
+ & \alpha-1 & 1 & \alpha-1 & | & 1 & 0 & 0 &  \\
+  & \alpha-1 & 1 & -1 & | & 0 & 1 & 0 \\
+& 0 & 1 & 0 & | & 0 & 0 & 1
+\end{pmatrix} \\ \\
+E_{21}(-1)\rightarrow&\begin{pmatrix}
+ & \alpha-1 & 1 & \alpha-1 & | & 1 & 0 & 0 &  \\
+  & 0 & 0 & -\alpha & | & -1 & 1 & 0 \\
+   & 0 & 1 & 0 & | & 0 & 0 & 1
+\end{pmatrix} \\ \\
+E_{23}\rightarrow &\begin{pmatrix}
+ & \alpha-1 & 1 & \alpha-1 & | & 1 & 0 & 0 &  \\
+  & 0 & 1 & 0 & | & 0 & 0 & 1 \\
+   & 0 & 0 & -\alpha & | & -1 & 1 & 0
+\end{pmatrix}
+\end{align}$$
+**Caso 1**: $\alpha-1=0$ quindi $\alpha=1$ $$(C\ |\ d)=\begin{pmatrix}
+ & \alpha-1 & 
+\end{pmatrix}$$
+
+**Caso 2**: $\alpha-1\ne 0$ cioè $\alpha\ne 1$ $$E_{1}\left( \frac{1}{\alpha-1} \right)\rightarrow\begin{pmatrix}
+ & 1 & \frac{1}{\alpha-1} & 1 & | & \frac{1}{\alpha-1} & 0 & 0 &  \\
+  & 0 & 1 & 0 & | & 0 & 0 & 1 \\
+   & 0 & 0 & -\alpha & | & -1 & 1 & 0
+\end{pmatrix}$$
+**Caso 2a**: $-\alpha=0$ quindi $\alpha=0$ $$(C\ |\ D)=\begin{pmatrix}
+ & 1 & -1 & 1 & | & -1 & 0 & 0 &  \\
+  & 0 & 1 & 0 & | & 0 & 0 & 1 \\
+   & 0 & 0 & 0 & | & 
+\end{pmatrix}$$
+**Caso 2b**: $\alpha\ne 1$ e $\alpha\ne 0$ $$E_{3}\left( \frac{1}{-\alpha} \right)\rightarrow \begin{pmatrix}
+ & 1 & \frac{1}{\alpha-1} & 1 & | & \frac{1}{\alpha-1} & 0 & 0 &  \\
+  & 0 & 1 & 0 & | & 0 & 0 & 1 \\
+   & 0 & 0 & 1 & | & \frac{1}{\alpha} & -\frac{1}{\alpha} & 0
+\end{pmatrix}$$Notiamo che in questo caso $A$ è invertibile. Troviamo una forma di Gauss-Jordan di $A$ (trasformiamo la matrice a sinistra di $|$ in $\mathbb 1_{3}$) per determinare $A^{-1}$.$$\begin{align}
+E_{12}\left( -\frac{1}{\alpha-1} \right)\rightarrow \begin{pmatrix}
+ & 1 & 0 & 1 & | & \frac{1}{\alpha-1} & 0 & -\frac{1}{\alpha-1} &  \\
+ & 0 & 1 & 0 & | & 0 & 0 & 1 \\
+  & 0 & 0 & 1 & | & \frac{1}{\alpha} & -\frac{1}{\alpha} & 0
+\end{pmatrix} \\ \\
+E_{13}(-1)\rightarrow \begin{pmatrix}
+ & 1 & 0 & 0 & | & \frac{1}{\alpha-1}-\frac{1}{\alpha} & \frac{1}{\alpha} & -\frac{1}{\alpha-1} &  \\
+  & 0 & 1 & 0 & | & 0 & 0 & 1 \\
+   &0 & 0 & 1 & | & \frac{1}{\alpha} & -\frac{1}{\alpha} & 0
+\end{pmatrix}\end{align}$$L'inversa di $A$ è quindi la matrice a destra della barra$$A^{-1}=\begin{pmatrix}
+& \frac{1}{\alpha-1}-\frac{1}{\alpha} & \frac{1}{\alpha} & -\frac{1}{\alpha-1} & \\
+ & 0 & 0 & 1 \\
+  & \frac{1}{\alpha} & -\frac{1}{\alpha} & 0
+\end{pmatrix}$$(che esiste solo per $\alpha\ne0\ne 1$)
