@@ -489,8 +489,7 @@ E_{13}(-1)\rightarrow \begin{pmatrix}
 \end{pmatrix}$$(che esiste solo per $\alpha\ne0\ne 1$)
 
 ### Matrici Diagonali, Scalari e Triangolari
-*Definizione*: Sia $A=(a_{ij})\in M_{n}(\mathbb C)$ una matrice opposta
-
+*Definizione*: Sia $A=(a_{ij})\in M_{n}(\mathbb C)$ una matrice quadrata. La **diagonale principale** di $A$ è l'n-upla ordinata$$(a_{11}\ a_{22}\ a_{33}\ \dots\ a_{nn})$$
 *Definizione*: una matrice quadrata $A\in M_{n}(\mathbb C)$ si dice 
 - **MATRICE DIAGONALE**: se tutti i coefficienti fuori dalla *diagonale principale* sono nulli
 - **MATRICE SCALARE**: se $A=\alpha \cdot \mathbb 1_{n}=\begin{pmatrix} & \alpha & 0 & \dots & 0  & \\  & 0 & \dots & \dots & \dots \\  & 0 & \dots & 0 & \alpha\end{pmatrix}$ per un qualche $\alpha\in\mathbb C$
@@ -509,3 +508,93 @@ Sia $A=\alpha \cdot\mathbb 1_{n}\in M_{n}(\mathbb C)$ una matrice scalare e sian
 2. $C\cdot A=C\cdot(\alpha \cdot\mathbb 1_{n})=\alpha \cdot(C\cdot \mathbb 1_{n})=\alpha \cdot C$
 
 Cioè nel prodotto righe per colonne, le matrici scalari $\alpha \cdot\mathbb 1_{n}$ si comportano come numeri $\alpha\in\mathbb C$.
+
+### Matrici Trasposta, Coniugata e H-Trasposta
+*Definizione*: Sia $A=(a_{ij})\in M_{m,n}(\mathbb C)$ una matrice
+- la **trasposta** di $A$ è la matrice $$A^T=(b_{ij})\in M_{n,m}(\mathbb C)$$dove $b$
+
+- la **coniugata** di $A$ è la matrice$$\bar{A}=(\bar{a_{ij}})\in M_{m,n}(\mathbb C)$$*Esempio*:
+- la **H-trasposta** di $A$ è la matrice$$A^H=\bar{(A^T)}=(\bar{A})^T\in M_{}$$
+**Proprietà**:
+Siano $A,B$ matrici  e $\alpha\in\mathbb C$ un numero. si supponga che le somme e i prodotti indicati esistano.
+1. $\frac{(A^T)^T}{\bar{A}}\Rightarrow(A^H)^H=A$
+2. $\frac{(\alpha \cdot A)^T}{\alpha \cdot A}\Rightarrow(\alpha \cdot A)^H=\bar{\alpha}\cdot A^H$
+3. $\frac{(A^{-1})^T}{(A^{-1})}\Rightarrow (A^{-1})^H=(A^H)^{-1}$
+4. $\frac{(A+B)^T}{A+B}\Rightarrow(A+B)^H=A^H+B^H$
+5. $\frac{(A\cdot B)^T}{A\cdot B}\Rightarrow(A\cdot B)^H=B^H\cdot A^H$
+
+*Esempio*: $A=\begin{pmatrix}1 & i \\ 0 & -1\end{pmatrix}\in M_{2}(\mathbb C),\ B=\begin{pmatrix}2 \\ 0\end{pmatrix}\in\mathbb C^2$ $$\begin{align}
+ & A\cdot B=\begin{pmatrix}
+ 1 & i \\
+ 0 & -1
+ \end{pmatrix}\cdot \begin{pmatrix}
+ 2 \\
+ 0
+ \end{pmatrix}=\begin{pmatrix}
+ 2 \\
+ 0
+ \end{pmatrix}\in\mathbb C^2 \\
+  & (A\cdot B)^T=\begin{pmatrix}
+  2 & 0
+  \end{pmatrix}\in\mathbb C_{2} \\ 
+   & B^T=\begin{pmatrix}
+  2 & 0
+  \end{pmatrix}\in \mathbb C_{2},\ A^T\begin{pmatrix}
+  1 & 0 \\
+  i & -1
+  \end{pmatrix}\in M_{2}(\mathbb C) \\
+   & B^T\cdot A^T=\begin{pmatrix}
+   2 & 0
+   \end{pmatrix}\cdot \begin{pmatrix}
+   1 & 0 \\
+   i & -1
+   \end{pmatrix}=\begin{pmatrix}
+   2 & 0
+   \end{pmatrix}\in\mathbb C_{2}
+\end{align}$$il prodotto $A^T\cdot B^T$ non è definito.
+
+*Definizione*: una matrice $A\in M_{m,n}(\mathbb C)$ è detta:
+- **simmetrica** se $A=A^T$
+- **antisimmetrica** se $A=-A^T$
+- **hermitiana** se $A=A^H$
+- **antihermitiana** se $A=-A^H$
+
+*Esempi*:
+1. $A=\begin{pmatrix}1 & -i \\ -i & 2\end{pmatrix}$ è *simmetrica*
+2. $A=\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}$ è *antisimmetrica*
+3. $A=\begin{pmatrix}1 & 1-i \\ 1+i & 2\end{pmatrix}$ è *hermitiana*
+4. $A=\begin{pmatrix}2i & 1-i \\ -1-i & -i\end{pmatrix}$ è *antiherimitiana*
+
+*Osservazioni*:
+1. Se $A$ soddisfa una delle definizione precedenti allora $A$ è *matrice quadrata*. (infatti se $A\in M_{m,n}(\mathbb C),\ A^T,A^H\in M_{n,m}(\mathbb C)$)
+2. Se $A$ è *antisimmetrica* allora la diagonale principale di $A$ è uguale alla diagonale principale di $-A^T$ cioè$\begin{cases}a_{11}=-a_{11} \\ a_{22}=-a_{22} \\ \dots \\ a_{nn}=-a_{nn}\end{cases}$
+3. Se $A$ è *antihermitiana* allora diagonale principale di $A$ è uguale alla diagonale principale di $-A^H$ cioè $\begin{cases}a_{11}=-\bar{a_{11}} \\ a_{22}=-\bar{a_{22}} \\ \dots \\ a_{nn}=-\bar{a_{nn}}\end{cases}$<br> Dunque una matrice *antihermitiana* ha tutti i valori nella diagonale principale uguali a 0 oppure immaginari puri.
+
+### Determinante di Matrici Quadrate
+Sia $A\in M_{n}(\mathbb C)$.
+Il **determinante** di $A$, indicato con $\det(A)$ o $Det(A)$, è un numero che dipende da $A$.
+- se $n=1,\ A=(a_{11})$ allora $\det(A)=a_{11}$
+- se $n=2,\ A=\begin{pmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{pmatrix}$
+---
+$$\det(A)=(a_{11}\cdot a_{22}-a_{12}\cdot a_{21})$$
+---
+
+*Definizione*: Data $A\in M_{n}(\mathbb C)$ la **matrice complementare di posto** $i_{ij}$ di $A$ è la matrice $C_{ij}\in M_{n-1}(\mathbb C)$ che si ottiene togliendo la $i$-esima riga e la $j$-esima colonna di $A$.
+
+*Esempio*: $$A=\begin{pmatrix}
+1 & 0 & -1 \\
+0 & 2 & 3 \\
+-2 & i & 0
+\end{pmatrix}\in M_{3}(\mathbb C)$$
+$C_{11}=\begin{pmatrix}2 & 3 \\ i & 0\end{pmatrix}\qquad C_{12}=\begin{pmatrix}0 & 3 \\ -2 & 0\end{pmatrix}$
+
+*Definizione*: Data $A\in M_{n}(\mathbb C)$ il **cofattore** di posto $(i,j)$ di $A$ è il numero$$A_{ij}=(-1)^{i+j}\cdot \det(C_{ij})$$
+*Nota*: $(-1)^{i+j}\rightarrow \begin{pmatrix}+ & - & + & - & \dots \\ - & + & - & + & \dots \\ \dots\end{pmatrix}$
+*Esempio*: $\qquad A=\begin{pmatrix}1 & 0 & -1 \\ 0 & 2 & 3 \\ -2 & i & 0\end{pmatrix}$
+$A_{11}=(-1)^{1+1}\cdot \det \begin{pmatrix}2 & 3 \\ i & 0\end{pmatrix}=(+1)\cdot[2\cdot0-3\cdot i]=-3i$
+$A_{12}=(-1)^{1+2}\cdot \det \begin{pmatrix}0 & 3 \\ -2 & 0\end{pmatrix}=(-1)\cdot[0\cdot0-(3\cdot(-2))]=-6$
+
+### Formula Calcolo del Determinante
+**Rispetto alla prima riga (sviluppo di Laplace)**
+Se $A=(a_{ij})\in M_{n}(\mathbb C)$, allora:
+$\det(A)=\begin{pmatrix}a_{11} & a_{12} & \dots & a_{1n}\end{pmatrix}\cdot \begin{pmatrix}A_{11} \\ A_{12} \\ \dots \\ A_{1n}\end{pmatrix}$ cofattori di post $1,j$

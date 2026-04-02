@@ -221,3 +221,11 @@ Prendo $S=\{y,t\}$.
 Se prendo $G\smallsetminus \{y,t\}$ è *disconnesso*, quindi $S=\{y,t\}$ è un **separatore**.
 $\Rightarrow K_{u,v}(G)\le 2$ 
 In conclusione $2\le K(G)\le 2$ quindi $K(G)=2$.
+
+### Arconettività e Connettività
+Sia $G(V,\ E)$ un grafo con almeno due vertici.
+*Definizione*: Il **grado minimo** di $G(V,\ E)$ è $$d^{min}(G)=\text{min }\{d(v):\ v\in V\}$$**Teorema**: $G(V,\ E)$ è semplice e connesso con almeno due vertici. Allora$$K(G)\le K^E(G)\le d^{min}(G)$$ *Esempio*:
+IMG
+
+$d^{min}(G)=2$
+$K(G)=2$
