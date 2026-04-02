@@ -598,3 +598,36 @@ $A_{12}=(-1)^{1+2}\cdot \det \begin{pmatrix}0 & 3 \\ -2 & 0\end{pmatrix}=(-1)\cd
 **Rispetto alla prima riga (sviluppo di Laplace)**
 Se $A=(a_{ij})\in M_{n}(\mathbb C)$, allora:
 $\det(A)=\begin{pmatrix}a_{11} & a_{12} & \dots & a_{1n}\end{pmatrix}\cdot \begin{pmatrix}A_{11} \\ A_{12} \\ \dots \\ A_{1n}\end{pmatrix}$ cofattori di post $1,j$
+**Teorema**: Sia $A\in M_{n}(\mathbb C),\ A=(a_{ij})$ Allora$$\begin{align}
+\det(A)&=\begin{pmatrix}
+a_{i1} & a_{i2} & \dots & a_{in}
+\end{pmatrix}\cdot \begin{pmatrix}
+A_{i1} \\
+A_{i 2} \\
+\dots \\
+A_{in}
+\end{pmatrix} \\
+ & =\begin{pmatrix}
+ A_{1j} & A_{2j} & \dots & A_{nj}
+ \end{pmatrix}\cdot \begin{pmatrix}
+ a_{1j} \\
+ a_{2j} \\
+ \dots \\
+ a_{nj}
+ \end{pmatrix}\end{align}$$
+*Osservazione*: possiamo calcolare il *determinante* utilizzando una riga o colonna con tanti zeri.
+
+*Osservazione*: Se $A\in M_{n}(\mathbb C)$ ha una riga o colonna nulla, allora $det(A)=0$.
+
+**Proposizione**: Se $A=\begin{pmatrix}a_{ij}\end{pmatrix}\in M_{n}(\mathbb C)$ è *triangolare superiore* allora $\det(A)=a_{11}\cdot a_{22}\cdot\dots \cdot a_{nn}$
+
+*Nota*: Si dimostra calcolando ripetutamente lo *sviluppo di Laplace* rispetto alla prima colonna$$A=\begin{pmatrix}
+a_{11} & * & \dots & * \\
+0 & a_{22} & \dots & \dots \\
+\dots & 0 & \dots & * \\
+0 & 0 & 0 & a_{nn}
+\end{pmatrix}$$
+*Esempi*:
+- $\det(\mathbb 1_{n})=\det \begin{pmatrix}1 &  &  \\  & \dots &  \\  &  & 1\end{pmatrix}$
+
+
