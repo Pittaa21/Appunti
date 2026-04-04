@@ -1,7 +1,7 @@
 Siano $a,b\in\mathbb Z$,   $n\in\mathbb N$,    $n\ne0$ 
-Si dice che *a è congruo a* **b** *modulo* **n** se **n** *divide a - b*  
+Si dice che **a** *è congruo a* **b** *modulo* **n** se **n** *divide* **a** - **b**  
 
-**Proprietà**: $a \equiv b \mod n\ \Leftrightarrow$ il resto della divisione di $a$ è uguale al resto della divisione di $b$ per $n$ 
+**Proprietà**: $a \equiv b \mod n\ \Leftrightarrow$ il resto della divisione di $a$ per $n$ è uguale al resto della divisione di $b$ per $n$ 
 
 ## Classi di Congruenza
 Fissiamo $n\in\mathbb N,\ n\ne0$.
@@ -18,13 +18,11 @@ Una relazione che ha le 3 proprietà è detta **Relazione d'equivalenza**.
 4. **Rispetto della Somma**: Se $a_1 \equiv b_1 \mod n$  e  $a_2 \equiv b_2 \mod n$  allora  $a_1+a_2 \equiv b_1 + b_2 \mod n$ 
 5. **Rispetto del Prodotto**: Se $a_1 \equiv b_1 \mod n$  e  $a_2 \equiv b_2 \mod n$  allora $a_1 \cdot a_2 \equiv b_1 \cdot b_2 \mod n$ 
 
----
 *Def*: Siano $n \in \mathbb N,\ n\ne0,\ a\in\mathbb Z$
 La **Classe di Congruenza di a modulo n** è l'insieme di tutti i numeri interi congrui ad *a modulo n*:
 $$
 \left[a\right]_n = \left\{b\in\mathbb Z\text{ tali che }b\equiv a\mod n\right\}
 $$
----
 *Nota*:$[a]_n$ è un insieme **infinito** che contiene tutti i numeri che divisi per $n$ danno come resto $a$.
 
 Ogni elemento di $[a]_n$ è detto **Rappresentante** della classe di congruenza di $a$ mod $n$
@@ -104,11 +102,11 @@ Inoltre MCD($a_1,\ n_1$)   quindi le soluzioni di $\circledast$ appartengono tut
 *Nota*: $[2]_3 = [2]_6\ \cup\ [5]_6$ 
 
 ## Sistemi di Congruenze
-Un *sistema di congruenze* è un'espressione del tipo:
-$a_1\cdot x \equiv b_1\mod n_1$
-$a_2\cdot x \equiv b_2\mod n_2$     $\huge\}$
-$a_t\cdot x \equiv b_t\mod n_t$
-
+Un *sistema di congruenze* è un'espressione del tipo:$$\begin{cases}
+  &  a_1\cdot x \equiv b_1\mod n_1\\
+ & a_2\cdot x \equiv b_2\mod n_2 \\
+  & a_t\cdot x \equiv b_t\mod n_t
+\end{cases}$$
 dove $a_i,\ b_i\in\mathbb Z,\ \ n_i\in\mathbb N,\ \ n_i\ne0$.
 $x_0$ è una **soluzione del sistema** se $x_0$ è contemporaneamente soluzione di **ogni** *congruenza del sistema*.
 
@@ -122,16 +120,17 @@ Risolvere un *sistema di congruenze* significa:
 
 *Nota*: Le osservazioni *1* e *2* valgono anche per sistemi di **equazioni lineari** in $\mathbb{Z,\ Q,\ R}$.
 
-Ad esempio: ........
+*Esempio*: $\begin{cases} & 2x=3 \\  & x=1\end{cases}$ 
+Il sistema non ha soluzioni intere in $\mathbb Z$. In $\mathbb Q$, $x_{0}=\frac{3}{2}$ è una soluzione di $2x=3$, $x_{1}=1$ è una soluzione di $x=1$, ma il sistema **non ha soluzioni**.
 
 
 Il **Teorema** seguente dà una condizione *sufficiente* affinchè *particolari* sistemi di congruenze ammettano soluzioni.
-#### Teorema Cinese dei Resti
-Si considera il sistema di congruenze:
-$\quad\quad\quad\ \ \ x\equiv b_1\mod n_2$
-$\circledast\ \huge\{$$\qquad x\equiv b_2\mod n_2$
-$\quad\quad\quad\ \ \ x\equiv b_t\mod n_t$
-
+### Teorema Cinese dei Resti
+Si considera il sistema di congruenze:$$\circledast\begin{cases}
+ & x\equiv b_1\mod n_2 \\
+ & x\equiv b_2\mod n_2 \\
+  &  x\equiv b_t\mod n_t
+\end{cases}$$
 dove $b_i\in\mathbb Z$  e  $n_i\in\mathbb N$   $n_i\ne0$        sono a due a due **comprimi**, ossia MCD($n_i,\ n_j$) = 1 per ogni $j\ne 1$ il sistema ammette soluzioni.
 
 *Oss*: se i moduli non sono a 2 a 2 **comprimi** il sistema potrebbe avere comunque *soluzioni*.
@@ -139,16 +138,14 @@ dove $b_i\in\mathbb Z$  e  $n_i\in\mathbb N$   $n_i\ne0$        sono a due a due
 
 ### Metodo risolutivo di Newton
 *Caso 1*: sistemi con *2* congruenze
-*1*$\quad\quad\quad\ \ \ x\equiv b_1\mod n_1$
-*2*$\quad\quad\quad\ \ \ x\equiv b_2\mod n_2$
+$\begin{cases} & x\equiv b_1\mod n_1 \\  & x\equiv b_2\mod n_2\end{cases}$
 
 $b_1,\ b_2\in\mathbb Z$,  $n_1,\ n_2\in\mathbb N$,  $n_1\ne0\ne n_2$,  MCD($n_1,\ n_2$) = 1 (**Teorema cinese dei resti** garantisce *soluzioni*)
-1. poniamo $x_1 = b_1$  osserviamo che $x_1$ è soluzione di *1*
-2. poniamo $x_2 = x_1+K_2\cdot n_1$   dove $K_2\in\mathbb Z$ è tale che $x_2$ sia soluzione di *2*
-Un tale $x_2$ è **soluzione del sistema**. Perchè $x_2$ è soluzione di *2* e anche di *1*.
+1. poniamo $x_1 = b_1$  osserviamo che $x_1$ è soluzione della *prima* congruenza.
+2. poniamo $x_2 = x_1+K_2\cdot n_1$   dove $K_2\in\mathbb Z$ è tale che $x_2$ sia soluzione della *seconda* congruenza
+Un tale $x_2$ è **soluzione del sistema**. Perchè $x_2$ è soluzione della *seconda* e anche della *prima*.
 
-3. 
-
+3. Il **Teorema Cinese dei Resti** dice che tutte le soluzioni sono gli interi in $$[x_{2}]_{n_{1}\cdot n_{2}}$$
 *Esempio*:
 *1*$\quad\quad\quad\ \ \ x\equiv 4\mod 6$
 *2*$\quad\quad\quad\ \ \ x\equiv 3\mod 5$
@@ -176,17 +173,17 @@ $\quad x_2\equiv b_2\mod n_2$
 con $b_1,\ b_2\in\mathbb Z$,  $n_1,\ n_2\in\mathbb N$,  $n_1\ne0\ne n_2$,  MCD($n_1$, $n_2$) = 1
 
 **Identità di Bezout**: $$ MCD(n_1,n_2)=1=\alpha_1\cdot n_1+\alpha_2\cdot n_2$$Una soluzione del sistema è $$x_0 = \alpha_1\cdot n_1\cdot b_2 + \alpha_2\cdot n_2\cdot b_1$$
-Il teorema Cinese dei Resti garantisce che tutte le soluzioni sono interi in$$[x_0]_{n_1\cdot n_2}$$
-### Sistemi di Congruenze generici
-$\ \ \ \ \ a_1\cdot x \equiv c_1 \mod m_1$
-$\huge\{$  $a_2\cdot x \equiv c_2 \mod m_2$
-$\ \ \ \ \ a_t\cdot x \equiv c_t \mod m_t$
+Il *Teorema Cinese dei Resti* garantisce che tutte le soluzioni sono interi in$$[x_0]_{n_1\cdot n_2}$$
+*Esempio*: $\begin{cases} & x\equiv4\mod 6 \\  & x\equiv 3 \mod 5\end{cases}$
+$MCD(6,5)=1=\alpha_{1}\cdot 6+\alpha_{2}\cdot 5$ 
+poniamo $\alpha_{1}=1$ e $\alpha_{2}=-1$. Dunque una soluzione è $x_{0}=(1\cdot6)\cdot 3+((-1)\cdot 5)\cdot 4=18-20=-2$
 
+### Sistemi di Congruenze generici
+$\begin{cases}  &  a_1\cdot x \equiv c_1 \mod m_1 \\ & a_2\cdot x \equiv c_2 \mod m_2 \\  & _t\cdot  \equiv c_t \mod m_t\end{cases}$
 $a_i,c_i\in\mathbb Z,\ m_i\in\mathbb N, m_i\ne0$
+
 Vogliamo trovare un sistema del tipo:
-$\ \ \ \ x\equiv b_1\mod n_1$
-$\huge\{$ $x\equiv b_2\mod n_2$
-$\ \ \ \ x\equiv b_t\mod n_t$
+$\begin{cases} & x\equiv b_1\mod n_1 \\  & x\equiv b_2\mod n_2 \\  & x\equiv b_t\mod n_t\end{cases}$
 con i moduli a 2 a 2 *coprimi* (MCD($n_i$, $n_j$) = 1, i $\ne$ j)
 
 **Strategia risolutiva**:
@@ -194,10 +191,10 @@ con i moduli a 2 a 2 *coprimi* (MCD($n_i$, $n_j$) = 1, i $\ne$ j)
 	- se $d_i$ non *divide* $c_i$ allora:  $a_i\cdot x\equiv c_i\mod m_i$ *NON HA SOLUZIONI* e quindi anche l'intero sistema non ne ha
 
 	- se $d_i$ *divide* $c_i$ per ogni $i$ allora: sostituiamo ogni congruenza $a_i\cdot x\equiv c_i\mod m_i$   con la congruenza equivalente $$\frac{a_i}{d_i}\cdot x\equiv \frac{c_i}{d_i}\mod \frac{m_i}{d_i}$$Scriviamo $n_i :=\frac{m_i}{d_i}$ e otteniamo un sistema equivalente a quello dato:
-		$\ \ \ \ \frac{a_1}{d_1}\cdot x\equiv \frac{c_1}{d_1}\mod n_1$
-		$\huge\{$  $...$
-		$\ \ \ \ \frac{a_t}{d_t}\cdot\equiv\frac{c_t}{d_t}\mod n_t$
+		$\begin{cases} & \frac{a_1}{d_1}\cdot x\equiv \frac{c_1}{d_1}\mod n_1 \\ &\dots \\  & \frac{a_t}{d_t}\cdot\equiv\frac{c_t}{d_t}\mod n_t\end{cases}$
+<br>
 2. Osserviamo che tutte le soluzioni di $$\frac{a_i}{d_i}\cdot x\equiv\frac{c_i}{d_i}\mod n_i\qquad\circledast$$appartengono ad un'unica classe di congruenza modulo $n_i$  Quindi se $b_i$ è una soluzione di $\circledast$ deduciamo che $\circledast$ equivale a:$$x\equiv b_i\mod n_i$$Determiniamo una soluzione perticolare $b_i\in\mathbb Z$ per ogni congruenza $\frac{a_i}{d_i}\cdot x\equiv \frac{c_i}{d_i} \mod n_i$ e di conseguenza troviamo il sistema nella forma che volevamo
+<br>
 3. Se i moduli $n_1,n_2,...,n_t$ sono a 2 a 2 *coprimi* allora possiamo applicare il **Teorema Cinese dei Resti** e i motodi risolutivi di **Newton** e **Lagrange** per risolvere il sistema. Se i moduli *NON* sono a 2 a 2 *coprimi* servono altre tecniche.
 
 ### L'insieme di Interi Modulo $n$

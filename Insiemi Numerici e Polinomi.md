@@ -83,15 +83,15 @@ $$
 $$
 
 ## Divisione in $\mathbb N$ e $\mathbb Z$ 
----
-In $\mathbb N$ 
+
+##### In $\mathbb N$ 
 Siano *a*,*b* $\in\mathbb N$  con *b* $\ne$ 0.  Allora **esistono** e sono **unici** due numeri *q* (*quoziente*) e *r* (*resto*)
 tali che:
 $$
 \text a = \text q \cdot \text b + \text r\qquad 0\le\text r<\text b
 $$
----
-In $\mathbb Z$
+
+##### In $\mathbb Z$
 Siano *a*,*b* $\in\mathbb Z$  con *b* $\ne$ 0.  Allora **esistono** e sono **unici** due numeri *q* (*quoziente*) e *r* (*resto*)
 tali che:
 $$
@@ -99,53 +99,64 @@ $$
 $$
 *Nota*: il resto è sempre positivo o zero.
 
----
-
-## MCD (in $\mathbb N$ e $\mathbb Z$)
+## MCD
 Siano *a*,*b* $\in\mathbb{Z}$  con *b* $\ne$ 0.
 Si dice che **b divide a**, e si scrive *b* | *a*   se *a* = q $\cdot$ *b*  per un opportuno *q* intero (il resto è zero).
 
 #### Proprietà
----
-In $\mathbb Z$
 Siano *a*,*b*,*c* $\in\mathbb{Z}$  con *a* $\ne$ 0, *b* $\ne$ 0.
 1. Se *a* | *b* e *b* | *a* allora *a* = $\pm$ *b* 
 2. Se *a* | *b* e *a* | *c* allora *a* | (*b* + *c*)
 3. Se *a* | *b* e *b* | *c* allora *a* | *c*
----
-In $\mathbb N$
+
+##### In $\mathbb N$
 Siano *a*,*b* $\in\mathbb{N}$  non entrambi nulli.
 Si dice che *d* $\in\mathbb N$ è un **massimo comun divisore** di *a* e *b* se valgono:
 1. *d* | *a* e *d* | *b*  (*d* è un divisore comune di *a* e *b*)
 2. se *z* $\in\mathbb N$ è tale che *z* | *a* e *z* | *b*  allora  *z* | *d*   (*d* è multiplo di tutti i divisori di *a* e *b*)
+
+**Proprietà**: 
+1. Se $b\ne 0$, allora MCD($0,b$) = $b$
+2. MCD($a,b$) = MCD($b,a$)
+3. Se $b\ |\ a$ allora MCD($a,b$) = b
+4. Se $a=q\cdot b+r$ cob $0\le r<b$ allora MCD($a,b$) = MCD($b,r$)
+
+**Unicità**: se *a*,*b* $\in\mathbb{N}$  non entrambi nulli, allora esiste un *unico* **Massimo Comun Divisore** che si indica con **MCD (a,b)**
+
+##### In $\mathbb Z$
+Abbiamo definizione simile di massimo comun divisore, ma *non* vale più l'*unicità*.  Infatti se *d* è MCD(*a*,*b*) anche *-d* lo è.
+
+### Calcolo dei Massimi Comun Divisori
+##### in $\mathbb{N}$
+**Algoritmo di Euclide**: sequenza di divisioni successive che permettono di calcolare l'MCD in modo più veloce della scomposizione in fattori primi.
+
+Siano $a,b\in\mathbb N,\ a\ne0,\ b\ne 0$.
+1. $a=q_{1}\cdot b+r_{1}$
+    - se $r_{1}=0$ allora MCD($a,b$) = $b$.
+    - se $r_{1}\ne 0$
+2. $b=q_{2}\cdot r_{1}+r_{2}$
+    - se $r_{2}=0$ allora MCD($a,b$) = MCD($b,r_{1}$)
+    - se $r_{2}\ne0$ l'algoritmo continua
+
+*Esempio*: MCD(36, 28)
+$\Rightarrow 36=1\cdot 28+8$
+$\Rightarrow 28=3\cdot 8+4$
+$\Rightarrow 8=2\cdot 4+0$
+MCD(35, 28) = 4
+
 ---
-**Osservazione**: se *a*,*b* $\in\mathbb{N}$  non entrambi nulli, allora esiste un *unico* **Massimo Comun Divisore** che si indica con *MCD (a,b)* 
+Il **massimo comun divisore** MCD($a,b$) è l'ultimo resto *non-nullo* della sequenza di divisioni successive.
 
-In $\mathbb Z$
-Abbiamo definizione simile di massimo comun divisore, ma *non* vale più l'*unicità*.  Infatti se *d* è mcd (*a*,*b*) anche *-d* lo è.
-
-###### Calcolo dei Massimi Comun Divisori in $\mathbb{Z}$
+---
+##### in $\mathbb{Z}$
 Siano *a*,*b* $\in\mathbb{Z}$ non entrambi nulli.
 
-1° Metodo:      
-			   |$a$|$,$|$b$|$\in\mathbb{N}$ e MCD(|$a$|,|$b$|) 
+- **1° Metodo**: $|a|,|b|\in\mathbb{N}$ e MCD($|a|,|b|$) è un massimo comun divisore di $a$ e $b$. Quindi si può applicate l'*algoritmo di Euclide*.
+- **2° Metodo**: Eseguiamo le divisioni successive dell'*algoritmo di Euclide* in $\mathbb{Z}$<br>*N.B.* tutti i resti devono essere numeri naturali. I massimi comun divisori sono dati dall'ultimo resto *non nullo* $d$ e da $-d$. 
 
-2° Metodo:      
-			   Eseguiamo le divisioni successive dell'algoritmo di *Euclide* in $\mathbb{Z}$
-			   **N.B.** tutti i resti devono essere numeri naturali. I massimi comun divisori sono dati dall'ultimo resto *non nullo* $d$ e da $-d$. 
-vault
-Esempio: MCD(-274, 110)
-		1° Metodo
-					 274 = 2 $\cdot$ 110 + *54*
-					110 = 2 $\cdot$ 54 + ***2***
-					54 = 27 $\cdot$ 2 + *0*
-		MCD(274,110) = 2
-		2° Metodo
-					-274 = (-3) $\cdot$ 110 + *56*
-					110 = 1 $\cdot$ 56 + *54*
-					56 = 1 $\cdot$ 54 + ***2***
-					54 = 27 $\cdot$ 2 + *0*
-		MCD(274,110) = 2
+*Esempio*: MCD(-274, 110)
+- **1° Metodo**: 274 = 2 $\cdot$ 110 + *54*<br>110 = 2 $\cdot$ 54 + ***2***<br>54 = 27 $\cdot$ 2 + *0*<br>MCD(274,110) = 2
+- **2° Metodo**: -274 = (-3) $\cdot$ 110 + *56*<br>110 = 1 $\cdot$ 56 + *54*<br>56 = 1 $\cdot$ 54 + ***2***<br>54 = 27 $\cdot$ 2 + *0*<br>MCD(274,110) = 2
 
 ### TEOREMA (IDENTITÀ DI BEZOUT)
 Dati $a,b\in\mathbb{Z}$ non entrambi nulli *esistono* due numeri interi $m,n\in\mathbb{Z}$ tali che se $d$ è un massimo comun divisore di $a$ e $b$ allora:
@@ -156,10 +167,8 @@ d=m\cdot a + n\cdot b
 $$
 ---
 
-Esempio:
-			a = 10,  b = 4,  d = 2
-			2 = 1 $\cdot$ 10 + (-2) $\cdot$ 4
-			2 = (-1) $\cdot$ 10 + 3
+*Esempio*:
+a = 10,  b = 4,  d = 2<br>2 = 1 $\cdot$ 10 + (-2) $\cdot$ 4<br>2 = (-1) $\cdot$ 10 + 3
 
 
 #### Zeri di Polinomi
