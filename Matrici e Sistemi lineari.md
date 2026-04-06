@@ -105,6 +105,14 @@ Siano $A=(a_{ij})\in M_{m,n}(\mathbb C),\ \lambda\in\mathbb C$  Allora:
 Siano $a=(a_{ij}),\ B=(b_{ij})\in M_{m,n}(\mathbb C)$. La **somma di A e B** è la matrice: $$A+B=\left(\ a_{ij}+b_{ij}\ \right)\in M_{m,n}(\mathbb C)$$
 *Nota*: la somma è definita **solo se** le due matrici hanno lo stesso numero di righe e lo stesso numero di colonne.
 
+*Esempio*: $A=\begin{pmatrix}1 & 2 & -i \\ 0 & 4i & 1\end{pmatrix}\quad B=\begin{pmatrix}3 & -i & 1 \\ 3 & 2 & i\end{pmatrix}$
+$$A+B=\begin{pmatrix}
+1+3 & 2+(-i) & -i+1 \\
+0+3 & 4i+2 & 1+i
+\end{pmatrix}=\begin{pmatrix}
+4 & 2-i & 1-i \\
+3 & 2+4i & 1+i
+\end{pmatrix}$$
 #### Proprietà della Somma
 Siano $A,B,C\in M_{m,n}(\mathbb C)$  e  $\lambda,u\in\mathbb C$. Allora:
 1. $A+(B+C)=(A+B)+C$  **prop. associativa**
@@ -511,10 +519,35 @@ Cioè nel prodotto righe per colonne, le matrici scalari $\alpha \cdot\mathbb 1_
 
 ### Matrici Trasposta, Coniugata e H-Trasposta
 *Definizione*: Sia $A=(a_{ij})\in M_{m,n}(\mathbb C)$ una matrice
-- la **trasposta** di $A$ è la matrice $$A^T=(b_{ij})\in M_{n,m}(\mathbb C)$$dove $b$
+- la **trasposta** di $A$ è la matrice: $$A^T=(b_{ij})\in M_{n,m}(\mathbb C)$$dove $b_{ij}=a_{ji}\quad\forall 1\le i\le n,\ 1\le j\le m$.<br>*Esempio*:$$A=\begin{pmatrix}
+1 & 3+i \\
+i & -1 \\
+0 & 2i
+\end{pmatrix}\in M_{3,2}(\mathbb C)\quad A^T=\begin{pmatrix}
+1 & i & 0 \\
+3+i & -1 & 2i
+\end{pmatrix}\in M_{2,3}(\mathbb C)$$
 
-- la **coniugata** di $A$ è la matrice$$\bar{A}=(\bar{a_{ij}})\in M_{m,n}(\mathbb C)$$*Esempio*:
-- la **H-trasposta** di $A$ è la matrice$$A^H=\bar{(A^T)}=(\bar{A})^T\in M_{}$$
+- la **coniugata** di $A$ è la matrice:$$\bar{A}=(\bar{a_{ij}})\in M_{m,n}(\mathbb C)$$*Esempio*:$$A=\begin{pmatrix}
+1 & i & 0 \\
+3+i & -1 & 2i
+\end{pmatrix}\in M_{2,3}(\mathbb C)\quad \bar{A}=\begin{pmatrix}
+1 & -i & 0 \\
+3-i & -1 & -2i
+\end{pmatrix}\in M_{2,3}(\mathbb C)$$
+- la **H-trasposta** di $A$ è la matrice:$$A^H=\bar{(A^T)}=(\bar{A})^T\in M_{}$$*Esempio*:$$A=\begin{pmatrix}
+1 & 3+i \\
+i & -1 \\
+0 & 2i
+\end{pmatrix}\quad A^H=(\bar{A})^T=\begin{pmatrix}
+1 & 3-i \\
+-i & -1 \\
+0 & -2i
+\end{pmatrix}^T=\begin{pmatrix}
+1 & -i & 0 \\
+3-i & -1 & -2i
+\end{pmatrix}\in M_{2,3}(\mathbb C)$$
+<br>
 **Proprietà**:
 Siano $A,B$ matrici  e $\alpha\in\mathbb C$ un numero. si supponga che le somme e i prodotti indicati esistano.
 1. $\frac{(A^T)^T}{\bar{A}}\Rightarrow(A^H)^H=A$
@@ -575,9 +608,7 @@ Sia $A\in M_{n}(\mathbb C)$.
 Il **determinante** di $A$, indicato con $\det(A)$ o $Det(A)$, è un numero che dipende da $A$.
 - se $n=1,\ A=(a_{11})$ allora $\det(A)=a_{11}$
 - se $n=2,\ A=\begin{pmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{pmatrix}$
----
 $$\det(A)=(a_{11}\cdot a_{22}-a_{12}\cdot a_{21})$$
----
 
 *Definizione*: Data $A\in M_{n}(\mathbb C)$ la **matrice complementare di posto** $i_{ij}$ di $A$ è la matrice $C_{ij}\in M_{n-1}(\mathbb C)$ che si ottiene togliendo la $i$-esima riga e la $j$-esima colonna di $A$.
 

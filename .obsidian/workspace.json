@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Congruenze.md",
-                "mode": "source",
+                "file": "Matrici e Sistemi lineari.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Congruenze"
+              "title": "Matrici e Sistemi lineari"
             }
           }
         ]
@@ -199,8 +199,9 @@
   "active": "72109d9a7fa78f26",
   "lastOpenFiles": [
     "Insiemi Numerici e Polinomi.md",
-    "Algebra.md",
+    "Matrici e Sistemi lineari.md",
     "Congruenze.md",
+    "Algebra.md",
     "Linux.md",
     "linux.svg",
     "linux(1).svg",
@@ -222,7 +223,6 @@
     "iso.svg",
     "Matematica discreta.md",
     "Algebra e Matematica discreta.md",
-    "Matrici e Sistemi lineari.md",
     "Matrici e Sistemi lineari.pdf",
     "Untitled.md",
     "Esercizi Sincronizzazione.md",

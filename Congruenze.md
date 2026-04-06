@@ -189,14 +189,17 @@ con i moduli a 2 a 2 *coprimi* (MCD($n_i$, $n_j$) = 1, i $\ne$ j)
 **Strategia risolutiva**:
 1. calcolo $d_i$ = MCD($a_i$, $m_i$) per ogni $1\le i\le t$ 
 	- se $d_i$ non *divide* $c_i$ allora:  $a_i\cdot x\equiv c_i\mod m_i$ *NON HA SOLUZIONI* e quindi anche l'intero sistema non ne ha
-
-	- se $d_i$ *divide* $c_i$ per ogni $i$ allora: sostituiamo ogni congruenza $a_i\cdot x\equiv c_i\mod m_i$   con la congruenza equivalente $$\frac{a_i}{d_i}\cdot x\equiv \frac{c_i}{d_i}\mod \frac{m_i}{d_i}$$Scriviamo $n_i :=\frac{m_i}{d_i}$ e otteniamo un sistema equivalente a quello dato:
-		$\begin{cases} & \frac{a_1}{d_1}\cdot x\equiv \frac{c_1}{d_1}\mod n_1 \\ &\dots \\  & \frac{a_t}{d_t}\cdot\equiv\frac{c_t}{d_t}\mod n_t\end{cases}$
+    - se $d_i$ *divide* $c_i$ per ogni $i$ allora: sostituiamo ogni congruenza $a_i\cdot x\equiv c_i\mod m_i$   con la congruenza equivalente $$\frac{a_i}{d_i}\cdot x\equiv \frac{c_i}{d_i}\mod \frac{m_i}{d_i}$$Scriviamo $n_i :=\frac{m_i}{d_i}$ e otteniamo un sistema equivalente a quello dato:<br>$\begin{cases} & \frac{a_1}{d_1}\cdot x\equiv \frac{c_1}{d_1}\mod n_1 \\ &\dots \\  & \frac{a_t}{d_t}\cdot\equiv\frac{c_t}{d_t}\mod n_t\end{cases}$
 <br>
-2. Osserviamo che tutte le soluzioni di $$\frac{a_i}{d_i}\cdot x\equiv\frac{c_i}{d_i}\mod n_i\qquad\circledast$$appartengono ad un'unica classe di congruenza modulo $n_i$  Quindi se $b_i$ è una soluzione di $\circledast$ deduciamo che $\circledast$ equivale a:$$x\equiv b_i\mod n_i$$Determiniamo una soluzione perticolare $b_i\in\mathbb Z$ per ogni congruenza $\frac{a_i}{d_i}\cdot x\equiv \frac{c_i}{d_i} \mod n_i$ e di conseguenza troviamo il sistema nella forma che volevamo
+2. Osserviamo che tutte le soluzioni di $$\frac{a_i}{d_i}\cdot x\equiv\frac{c_i}{d_i}\mod n_i\qquad\circledast$$appartengono ad un'unica classe di congruenza modulo $n_i$  Quindi se $b_i$ è una soluzione di $\circledast$ deduciamo che $\circledast$ equivale a:$$x\equiv b_i\mod n_i$$Determiniamo una *soluzione particolare* $b_i\in\mathbb Z$ per ogni congruenza $\frac{a_i}{d_i}\cdot x\equiv \frac{c_i}{d_i} \mod n_i$ e di conseguenza troviamo il sistema nella forma che volevamo
 <br>
 3. Se i moduli $n_1,n_2,...,n_t$ sono a 2 a 2 *coprimi* allora possiamo applicare il **Teorema Cinese dei Resti** e i motodi risolutivi di **Newton** e **Lagrange** per risolvere il sistema. Se i moduli *NON* sono a 2 a 2 *coprimi* servono altre tecniche.
 
+*Esempio*:
+$\begin{cases}2x\equiv 8\mod 12 \\ 3x\equiv 4\mod 5\end{cases}$
+1. $d_{1}=MCD(2,12)=2$ che divide $8\ \checkmark$<br>$d_{2}=MCD(3,5)=1$ che divide $4\ \checkmark$<br>Sostituiamo le congruenze:<br>$\begin{cases} \frac{2}{2}\cdot x\equiv \frac{8}{2}\mod \frac{12}{2} \\ \frac{3}{1}\cdot x\equiv \frac{4}{1}\mod \frac{5}{1} \end{cases}\quad\Rightarrow\quad\begin{cases} x\equiv 4\mod 6 \\ 3\cdot x\equiv 4\mod 5\end{cases}$
+2. Troviamo una soluzione particolare della *prima* e della *seconda* congruenza:<br>$b_{1}=4\ \checkmark$<br>$b_{2}= \frac{4}{MCD(3,5)}\cdot \alpha$ dove $\alpha\in\mathbb Z$ è tale che $MCD(3,5)=1=3\cdot \alpha+5\cdot \beta$ (**Bèzout**)<br>$b_{2}=8$ e otteniamo: $\begin{cases}x\equiv 4\mod 6 \\ x\equiv 8\mod 5\end{cases}$
+3. Verificare se i moduli sono a 2 a 2 coprimi: $MCD(6,5)=1\ \checkmark$ ora si può usare *Newton* o *Lagrange*.
 ### L'insieme di Interi Modulo $n$
 *Def*: **L'insieme degli Interi Modulo** $n$, indicato con $\mathbb Z_n$ è l'insieme:$$\mathbb Z_n = \{[0]_n,[1]_n,\ ...\ ,[n-1]_n\}$$ Gli elementi di $\mathbb Z_n$ non sono numeri interi ma *classi di congruenza*.
 
