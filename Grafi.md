@@ -225,7 +225,22 @@ In conclusione $2\le K(G)\le 2$ quindi $K(G)=2$.
 ### Arconettività e Connettività
 Sia $G(V,\ E)$ un grafo con almeno due vertici.
 *Definizione*: Il **grado minimo** di $G(V,\ E)$ è $$d^{min}(G)=\text{min }\{d(v):\ v\in V\}$$**Teorema**: $G(V,\ E)$ è semplice e connesso con almeno due vertici. Allora$$K(G)\le K^E(G)\le d^{min}(G)$$ *Esempio*:
-IMG
-
+![[conn.svg]]
 $d^{min}(G)=2$
 $K(G)=2$
+**dal Teorema**: $K(G)\le K^E(G)\le d^{min}(G)\ \Rightarrow\ K^E(G)=2$
+
+*Nota*: $K(K_{n})=n-1\qquad d^{min}(K_{n})=n-1\qquad K^E(K_{n})=n-1$
+
+*Esempio*: $n=5$ abbiamo che $K^E(K_{5})=5-1=4$, inoltre $K^E(K_{5})=\text{min}\left\{K^E_{u,v}:\ u,v\in V\right\}=K^E_{u,v}(G)$
+$K^E_{u,v}(K_{5})=$ *massimo numero* di **cammini** con estremi $u$ e $v$ disgiunti sugli archi. 
+
+## Foreste e Alberi
+*Def*: Una **Foresta** è un grafo senza cicli (*aciclico*).
+*Esempio*: **3 componenti connesse**
+![[foresta.svg]]
+
+*Def*: Un **Albero** è una foresta connessa.
+*Esempio*:
+![[albero.svg]]
+a meno di isomorfismo tutti gli alberi su $n=1,2,3,4$ *vertici*.

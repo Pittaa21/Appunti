@@ -259,7 +259,7 @@ L'**Algoritmo di Eliminazione di Gauss** permette di risolvere il *sistema linea
 	 & 0 & \dots & \dots & \dots & \dots & \dots &  \dots & 0
 \end{pmatrix}$$dove
 1. Tutte le righe nulle sono in fondo alla matrice
-2. Nelle righe non nulle, il primo coefficiente diverso da **zero** è uguale a 1 ed è chiamato *Pivot*
+2. Nelle righe non nulle, il primo coefficiente diverso da **zero** e uguale a 1 ed è chiamato *Pivot*
 3. Per ogni *Pivot* di posto ($i,j$), il *pivot* della riga successiva si trova nel posto ($i+1,j+k$) con $k>0$ (quindi più a destra del *pivot* precedente)
 
 *Definizione*: Le colonne di una matrice a gradini contenenti un *pivot* sono dette **dominanti**, le altre sono **libere**.

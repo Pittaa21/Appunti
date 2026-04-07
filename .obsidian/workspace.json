@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Matrici e Sistemi lineari.md",
-                "mode": "preview",
+                "file": "Grafi.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Matrici e Sistemi lineari"
+              "title": "Grafi"
             }
           }
         ]
@@ -198,9 +198,13 @@
   },
   "active": "72109d9a7fa78f26",
   "lastOpenFiles": [
-    "Insiemi Numerici e Polinomi.md",
+    "albero.svg",
+    "foresta.svg",
+    "conn.svg",
     "Matrici e Sistemi lineari.md",
     "Congruenze.md",
+    "Insiemi Numerici e Polinomi.md",
+    "Grafi.md",
     "Algebra.md",
     "Linux.md",
     "linux.svg",
@@ -211,7 +215,6 @@
     "Processi.md",
     "teo51 1.svg",
     "teo51.svg",
-    "Grafi.md",
     "Windows.md",
     "File System.md",
     "teo52.svg",
@@ -219,8 +222,6 @@
     "EserciziMateDiscreta.md",
     "isocompl2.svg",
     "isocompl.svg",
-    "iso2.svg",
-    "iso.svg",
     "Matematica discreta.md",
     "Algebra e Matematica discreta.md",
     "Matrici e Sistemi lineari.pdf",
