@@ -38,7 +38,7 @@ In questo tipo di grafi ognuno dei *n* vertici di K$_n$ ha grado *n* - 1.
 
 #### Sottografi e Sottografi Indotti
 Dato un grafo G(V, E), un grafo *G'*(*V'*, *E'*) è un **sottografo** di G(V, E) se *V'* $\subseteq$ V  e *E'* $\subseteq$ E. Quindi *G'* può essere ottenuto da G togliendo alcuni vertici e archi. Se si toglie un vertice da V, si devono togliere da R tutti gli archi che lo hanno come estremo.
-   G'(V', E')&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;G(V, E)
+   G'(V', E')<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>G(V, E)
 ![[kregolare.svg]]                    ![[completo.svg]]
 
 Un sottografo *G*'(*V*', *E*') del grafo G(V, E) si dice **indotto** se *E*' contiene tutti gli archi di E che hanno estremi in *V*'.
@@ -243,4 +243,64 @@ $K^E_{u,v}(K_{5})=$ *massimo numero* di **cammini** con estremi $u$ e $v$ disgiu
 *Def*: Un **Albero** è una foresta connessa.
 *Esempio*:
 ![[albero.svg]]
-a meno di isomorfismo tutti gli alberi su $n=1,2,3,4$ *vertici*.
+*Nota*: Fissato $n$ tutti gli alberi su $n$ vertici hanno almeno 2 vertici di grado 1 e hanno lo stesso numero di archi. 
+
+### Proprietà
+Sia $T(V,\ E)$ un *albero* con almeno due vertici.
+
+1. Ci sono almeno 2 vertici di grado 1.
+2. $|V|-1=|E|$
+
+#### Albero di Peso Minimo e Algoritmo di Kruskal
+Dato un grafo $G(V,\ E)$ connesso con $|V|=n$, in cui ad ogni *arco* si associa un **peso** (o *costo* o *distanza*) trovare un albero di **peso minimo** (ossia dove la somma dei pesi degli archi sia minima).
+
+Si parte da $G(V,\ E)$ un grafo connesso con pesi $w(e),\ e\in E$
+IMG
+Si vuole ottenere $T(V,\ E')$ albero di peso minimo.
+
+*Svolgimento*:
+1. Ordino gli archi $\{e_{1},\dots e_{m}\}$ in ordine crescente in base al peso:$$w(e_{1})\le w(e_{2})\le \dots\le w(e_{m})$$
+2. **i-esimo passaggio**: Esamino l'arco $i$-esimo e lo inserisco nell'albero se non forma alcun ciclo con gli archi precedentemente inseriti, altrimenti lo rigetto.
+3. **finisce** quando ottengo un *albero* con $n=|V|$ vertici e $n-1$ archi.
+
+*Esempio*: ...
+
+### Caratterizzazione degli alberi
+Un grafo $G(V,\ E)$ è **arcoconnesso** se:
+1. È connesso
+2. $\forall\ e\in E$ con estremi $u$ e $v$, $u$ e $v$ sono in due *componenti connesse distinte* di $G\smallsetminus\{e\}:=G\left(V,\ E\smallsetminus\{e\} \right)$ In particolare, $G\smallsetminus\{e\}$ è *disconnesso*.
+
+**Teorema**: Sia $T(V,\ E)$ un grafo. Sono equivalenti:
+1. $T(V,\ E)$ è un *albero*
+2. $T(V,\ E)$ è un *arcoconnesso*
+3. $\forall\ x,y\in V\ x\ne y,\ \exists$ cammino con estremi $x$ e $y$ 
+
+## Grafi Planari
+Un grafo o multigrafo si dice **planare** se lo si può disegnare sul piano senza intersezioni degli archi. Una tale rappresentazione si chiama *rappresentazione piana del grafo*.
+
+*Esempio*:
+
+#### Minori di un grafo
+Consideriamo tre operazioni su un grafo:
+1. **contrazione di un arco**:
+2. **rimozione di un arco**
+3. **rimozione di un vertice isolato**:
+
+Un grafo $G'(V',\ E')$ è un **minore** di un grafo $G(V,\ E)$ se $G'$ con le tre operazioni sopra
+*Esempio*:
+
+Queste 3 operazioni non creano intersezioni di archi. Quindi, se $G'$ è un minore di $G$:
+$G$ è *planare* $\Rightarrow$ $G'$ è *planare*
+oppure:
+$G'$ non è *planare* $\Rightarrow$ $G$ non è *planare*
+
+### Teorema di Kuratowski
+$G(V,\ E)$ è *planare* se e solo se nè $K_{3,3}$ nè $K_{5}$ sono minori di $G$.
+
+*Dim*: dimostro con il metodo dei cerchi e delle corde che $K_{3,3}$ e $K_{5}$ non sono *planari*, quindi non possono essere minori di un grafo *planare*.
+
+*Esempio*:
+
+**Metodo dei Cerchi e delle Corde**: serve per stabilire se $G(V,\ E)$  è *planare*.
+
+Un **circuito hamiltoniano** di un grafo è un circuito che contiene tutti i vertici del grafo. Il *metodo dei cerchi e delle corde* può essere usato solo se $G(V,\ E)$ ha un circuito *hamiltoniano*.

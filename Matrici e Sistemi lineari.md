@@ -236,7 +236,7 @@ L'**Algoritmo di Eliminazione di Gauss** permette di risolvere il *sistema linea
 \end{pmatrix}\quad\rightarrow E_{2}(-i)\rightarrow\quad\begin{pmatrix}
  & 1 & 2i & 0 & -1 &  \\
   & 0 & 1 & -2i & 3i \\
-  1 & 2i & 1 & 0
+   & 1 & 2i & 1 & 0
 \end{pmatrix}$$*Nota*: è come moltiplicare per $\alpha$ tutti i **coefficienti** di un'equazione e anche il **termine noto**.
 3. **Somma della riga $i$ con un multiplo scalare** $\alpha\in\mathbb C,\ \alpha\ne 0$ **della riga $j$**   $E_{ij}(\alpha)$ *Esempio*:$$\begin{pmatrix}
  & 1 & 2i & 0 & -1 &  \\
