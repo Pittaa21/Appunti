@@ -255,7 +255,7 @@ Sia $T(V,\ E)$ un *albero* con almeno due vertici.
 Dato un grafo $G(V,\ E)$ connesso con $|V|=n$, in cui ad ogni *arco* si associa un **peso** (o *costo* o *distanza*) trovare un albero di **peso minimo** (ossia dove la somma dei pesi degli archi sia minima).
 
 Si parte da $G(V,\ E)$ un grafo connesso con pesi $w(e),\ e\in E$
-IMG
+![[grafoconnesso(1).svg|225]]
 Si vuole ottenere $T(V,\ E')$ albero di peso minimo.
 
 *Svolgimento*:
@@ -263,8 +263,36 @@ Si vuole ottenere $T(V,\ E')$ albero di peso minimo.
 2. **i-esimo passaggio**: Esamino l'arco $i$-esimo e lo inserisco nell'albero se non forma alcun ciclo con gli archi precedentemente inseriti, altrimenti lo rigetto.
 3. **finisce** quando ottengo un *albero* con $n=|V|$ vertici e $n-1$ archi.
 
-*Esempio*: ...
+*Esempio*:  il grafo ha 5 vertici e 8 archi
+![[pesi.svg]]
+*Pesi*: 2, 2, 2, 3, 3, 3, 3, 6
+Per trovare l'*albero di peso minimo* non posso scegliere tutti gli archi di peso 2, altrimenti non ho più un *albero*.
+Un esempio di albero di peso minimo è:
+![[pesomin.svg|121]]
 
+### Algoritmo di Dijkstra
+Sia $G(V,\ E)$ un grafo connesso con le lunghezze (pesi) positive sugli archi. Dati $u,w\in V$ la **lunghezza** (peso) di un cammino con estremi $u$ e $w$, è la somma dei pesi degli archi nel cammino.
+La **distanza** $d(u,w)$ tra $u$ e $w$ è la lunghezza di un *cammino minimo* con estremi $u$ e $w$.
+
+L'**algoritmo** trova $\forall\ u,v\in V,\ u\ne w$ :
+- il *cammino minimo* tra $u$ e $w$
+- la distanza fra $u$ e $w$
+
+Come **input** bisogna avere un $G(V,\ E)$ connesso, lunghezze $l(e)>0,\ e\in E$, e un vertice di partenza.
+Come **output** si hanno distanze e cammini minimi tra $u$ e tutti gli altri vertici.
+$$\begin{aligned}&\forall w\in V,\quad \Delta(w):=\left\{x\in V:\begin{align}
+&\ x\text{ adiacente} \\
+& \qquad\text{ a }w
+\end{align}\right\}\\
+&\forall e\in E,\quad l(e)=\text{ la lunghezza dell'arco }e.
+\end{aligned}$$
+*Esempio*:
+![[dijkstra.svg|212]]
+$\Delta(u)=\{a,c\}$
+$l(ua)=3$
+$l(uc)=1$
+$d_{i}(w)=$ la distanza da $u$ a $w$ al passaggio $i$-esimo := $\text{min}\{d_{i-1}(w),d_{i-1}(x)+l(wx):\ x\in \Delta(w)\}$
+ ­­
 ### Caratterizzazione degli alberi
 Un grafo $G(V,\ E)$ è **arcoconnesso** se:
 1. È connesso
@@ -278,13 +306,16 @@ Un grafo $G(V,\ E)$ è **arcoconnesso** se:
 ## Grafi Planari
 Un grafo o multigrafo si dice **planare** se lo si può disegnare sul piano senza intersezioni degli archi. Una tale rappresentazione si chiama *rappresentazione piana del grafo*.
 
-*Esempio*:
-
+*Esempio*: $K_{4}$
+![[noplanare.svg|141]]![[planare.svg|139]]
+ **non** è *planare*<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>*planare*
+ Quindi $K_{4}$ è *planare*.
+ Un esempio di grafo non *planare* è $K_{3,3}$
 #### Minori di un grafo
 Consideriamo tre operazioni su un grafo:
-1. **contrazione di un arco**:
+1. **contrazione di un arco**<br>![[contrazione.svg|center]]<br>
 2. **rimozione di un arco**
-3. **rimozione di un vertice isolato**:
+3. **rimozione di un vertice isolato**:<br>
 
 Un grafo $G'(V',\ E')$ è un **minore** di un grafo $G(V,\ E)$ se $G'$ con le tre operazioni sopra
 *Esempio*:
