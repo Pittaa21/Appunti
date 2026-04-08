@@ -315,10 +315,10 @@ Un grafo o multigrafo si dice **planare** se lo si può disegnare sul piano senz
 Consideriamo tre operazioni su un grafo:
 1. **contrazione di un arco**<br>![[contrazione.svg|center]]<br>
 2. **rimozione di un arco**
-3. **rimozione di un vertice isolato**:<br>
+3. **rimozione di un vertice isolato**:<br>![[dsfse.svg|197|center|179]]<br>
 
 Un grafo $G'(V',\ E')$ è un **minore** di un grafo $G(V,\ E)$ se $G'$ con le tre operazioni sopra
-*Esempio*:
+
 
 Queste 3 operazioni non creano intersezioni di archi. Quindi, se $G'$ è un minore di $G$:
 $G$ è *planare* $\Rightarrow$ $G'$ è *planare*
@@ -330,8 +330,21 @@ $G(V,\ E)$ è *planare* se e solo se nè $K_{3,3}$ nè $K_{5}$ sono minori di $G
 
 *Dim*: dimostro con il metodo dei cerchi e delle corde che $K_{3,3}$ e $K_{5}$ non sono *planari*, quindi non possono essere minori di un grafo *planare*.
 
-*Esempio*:
+*Esempio*: Il **grafo di Petersen** non è *planare*.
+![[petersen.svg]]
+Se si contraggono gli archi si ottiene un $K_{5}$ che **non** è *planare*.
+
 
 **Metodo dei Cerchi e delle Corde**: serve per stabilire se $G(V,\ E)$  è *planare*.
 
 Un **circuito hamiltoniano** di un grafo è un circuito che contiene tutti i vertici del grafo. Il *metodo dei cerchi e delle corde* può essere usato solo se $G(V,\ E)$ ha un circuito *hamiltoniano*.
+
+*Metodo*:
+1. Trovare un *circuito hamiltoniano*
+2. Disegnarlo come cerchio
+3. scrivere gli archi che non sono nel circuito
+4. inserirli dentro o fuori dal cerchio cercando di evitare gli archi
+
+Se si riesce ad inserire tutti gli archi uno ad uno senza incroci, il grafo è *planare*.
+
+*Nota*: Si può scegliere se mettere la prima corda dentro oppure fuori dal cerchio.
