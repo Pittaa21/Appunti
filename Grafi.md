@@ -364,5 +364,50 @@ Se $G(V,\ E)$ è un grafo connesso e planare e $r$ è il numero di *regioni* di 
 **Teorema**: Se $G(V,\ E)$ è un grafo semplice e planare e connesso, e $v=|V|\ge 3$, $e=|E|$, si ha che: $$e\le 3v-6$$
 *Definizione*:
 - **Frontiera**: di $f$ è l'insieme degli archi che delimitano la faccia $f$
-- **Perimetro**: di $f$ è il percorso chiuso che parte da un vertice attraversando tutta la frontiera allo stesso vertice
+- **Perimetro**: di $f$ è il percorso chiuso che parte da un vertice attraversando tutta la *frontiera* allo stesso vertice
 
+$lf$ = lunghezza del perimetro, percorso
+In $\sum_{f\text{ faccia}}lf$ ogni arco del grafo viene contato due volte quindi$$\sum_{f}lf=2\cdot|E|=2\cdot e$$Il **teorema** ci da un altro modo per vedere che $K_5$ non è *planare*.
+Supponiamo che $K_5$ sia *planare*, semplice e connesso quindi vale:$$e\le 3\cdot v-6$$$K_{5}$ ha 10 archi e 5 vertici quindi verrebbe che $10\le 3\cdot 5-6$ che è assurdo, quindi $K_5$ non è *planare*.
+
+*Nota*: Ci sono grafi non planari per cui vale il **teorema**.
+
+### Circuiti Hamiltoniani, Grafi Hamiltoniani
+Un **circuito hamiltoniano** di un grafo è un circuito (ciclo) che attraversa tutti i vertici, solo una volta.
+Un grafo è **hamiltoniano** se possiede un *circuito hamiltoniano*.
+
+*Nota*: Dato un multigrafo $G(V,\ E)$.
+$G$ è **hamiltoniano** *se e solo se* $G$ possiede un sottografo semplice hamiltoniano con gli stessi vertici.
+
+*Proposizione*: $K_{r,s}$ il grafo bipartito completo è **hamiltoniano** *se e solo se* $r=s\ge 2$.
+*Nota*: Se $G(V_{1},V_{2},E)$ è bipartito ma non completo allora è **hamiltoniano** $\Rightarrow\ |V_{1}|=|V_{2}|$
+
+##### Condizioni necessarie per essere hamiltoniano
+Sia $G(V,\ E)$ un grafo **hamiltoniano** con $\gamma$ un *circuito hamiltoniano* di $G$. Sia $H(V,E')$ il sottografo di $G$ che ha gli stessi vertici ma solo gli archi di $\gamma,\ E'\subseteq E$.
+
+### Teorema di Dirac
+Sia $G(V,E)$ un grafo semplice tale che $|V|=n\ge 3$ e $d(v)\ge \frac{n}{2}\quad \forall v\in V$. Allora $G(V,E)$ è **hamiltoniano**.
+
+*Nota*: il teorema di Dirac è *suffiente* ma *non necessario* per dire se un grafo è hamiltoniano.
+
+#### Percorsi Euleriano, Grafi Euleriani
+Sia $G(V,E)$ un grafo (semplice).
+Un **percorso** di $G$ è una sequenza di vertici non necessariamente distinti per cui ogni paio di vertici consecutivi sono adiacenti.
+
+### Teorema di Eulero
+$G(V,E)$ è **euleriano** *se e solo se*:
+- $G(V,E)$ è connesso
+- ogni vertice ha grado pari
+
+## Grafi Orientati
+Un **grafo orientato** $D(V,A)$ consiste in un insieme finito di vertici, $V$ e un insieme finito di archi $A$, dove un arco in un grafo orientato è una coppia ordinata di vertici.
+$(u,v)$![[orientato.svg]]
+
+$(u,v)\ne(v,u)$
+e $(u,v)$ e $(v,u)$ non sono detti paralleli.
+
+In un **multigrafo orientato** sono permessi:
+- archi paralleli
+- cappi
+
+Un **grafo semplice orientato** non ha nè archi paralleli nè cappi.

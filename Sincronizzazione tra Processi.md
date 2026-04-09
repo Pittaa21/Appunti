@@ -150,7 +150,7 @@ void ProcessoB(){
 }
 ```
 
-Il **semaforo** *binario* (*mutex*) è una struttura (*struct*) composta da un campo valore intero e un campo coda che contiene tutti i *Process Control Block* dei processi in attesa. L'accesso al campo valore avviene in maniera **atomica**.
+Il **semaforo** *binario* (*mutex*) è una struttura (*struct*) composta da un campo valore intero e un campo coda che contiene tutti i *Process Control Block* dei processi in attesa. L'accesso al campo valore avviene in maniera **atomica** (quindi senza interferenza di altri processi).
 
 Il **semaforo** *contatore* ha la stessa struttura del **mutex** ma ha logica diversa per il campo lavoro: se maggiore di 0 la disponibilità non è esaurita, se minore ci sono richieste pendenti.
 Il valore iniziale determina la capacità massima della risorsa.
@@ -166,10 +166,10 @@ Un **monitor** è un insieme di sottoprogrammi, variabili e *struct*. Solo i sot
 Viene garantita la *mutua esclusione*, ma non basta per consentire la *sincronizzazione*. I **monitor** hanno due procedure che operano su delle *variabili condizione* (*condition variables*) che sono come nei semafori:
 - **Wait**: mette in attesa chi lo chiama
 - **Signal**: risveglia il processo in attesa
-Il segnale di risvegli *non ha memoria* quindi viene perso. Inoltre **Wait** e **Signal** sono invocate in *mutua esclusione* quindi non si verifica *race condition*.
+Il segnale di risveglio *non ha memoria* quindi viene perso. Inoltre **Wait** e **Signal** sono invocate in *mutua esclusione* quindi non si verifica *race condition*.
 
 ### Barriere
-Servono per *sincronizzare* gruppi di processi. La **barriera** blocca tutti i processi che la raggiungono fino all'ultimo e non comporta ad uno scambio di messaggi *esplicito*
+Servono per *sincronizzare* gruppi di processi. La **barriera** blocca tutti i processi che la raggiungono fino all'ultimo e non comporta ad uno scambio di messaggi *esplicito*.
 
 ### Filosofi a Cena
 $N$ filosofi sono seduti a tavola, ciascuno ha 1 piatto e 1 forchetta a destra, ogni filosofo ha bisogno di 2 forchette per mangiare, ciascun filosofo può mangiare e meditare.
