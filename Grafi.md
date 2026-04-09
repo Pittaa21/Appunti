@@ -348,3 +348,21 @@ Un **circuito hamiltoniano** di un grafo è un circuito che contiene tutti i ver
 Se si riesce ad inserire tutti gli archi uno ad uno senza incroci, il grafo è *planare*.
 
 *Nota*: Si può scegliere se mettere la prima corda dentro oppure fuori dal cerchio.
+
+*Esempio*: [Lez 8](https://stem.elearning.unipd.it/pluginfile.php/1347708/mod_resource/content/1/Lezione%208%20Matematica%20Discreta%20-%20Lezione%2023%20Mar.pdf)
+
+#### Regioni o Facce di un grafo planare
+Dato un grafo *planare*, ogni sua rappresentazione piana divide il piano in **facce** o **regioni**.
+
+*Esempio*: ...
+
+### Formula di Eulero
+Se $G(V,\ E)$ è un grafo connesso e planare e $r$ è il numero di *regioni* di $G$, $e=|E|$, $v=|V|$. Si ha:$$r=e-v+2$$ *Nota*: l'ipotesi che $G$ è connesso è necessaria.
+
+*Esempio*: ...
+
+**Teorema**: Se $G(V,\ E)$ è un grafo semplice e planare e connesso, e $v=|V|\ge 3$, $e=|E|$, si ha che: $$e\le 3v-6$$
+*Definizione*:
+- **Frontiera**: di $f$ è l'insieme degli archi che delimitano la faccia $f$
+- **Perimetro**: di $f$ è il percorso chiuso che parte da un vertice attraversando tutta la frontiera allo stesso vertice
+

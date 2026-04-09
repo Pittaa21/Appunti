@@ -20,3 +20,29 @@ Permanentemente in RAM e per tutti i processi ci sono:
 - Lista dei segnali significativi e il loro stato
 - Stato, identità, relazioni di parentela, gruppo di appartenenza
 
+```c
+while(True){
+    type_prompt(); // mostra il prompt sullo schermo
+    read_command(cmd, par); // legge linea di comando
+    pid = fork();
+    if(pid < 0){
+        printf("Errore di attivazione del processo");
+        continue; // si ripete il ciclo
+    };
+    if(pid != 0){
+        // codice eseguito dal padre
+        waitpid(-1, &status, 0); // attende la terminazione di un figlio
+    }else{
+        // codice eseguito dal figlio
+        execve(cmd, par, 0); 
+    };
+};
+```
+
+All'istruzione `pid = fork()` il processo che chiama al Kernel e inserisce i dati per il figlio nella **tabella dei processi**. Se ci riesce viene allocata la memoria per lo *stack* e i dati del figlio. A questo punto il codice del figlio è lo stesso del padre.
+
+Con il comando `execve(cmd, par, 0)` la linea di comando emessa dall'utente viene passata al processo figlio come *array* di stringhe. La *exec*, che opera nel Kernel, trova il programma da eseguire e lo sostituisce al codice del chiamante.
+
+IMG
+
+**fork()**
