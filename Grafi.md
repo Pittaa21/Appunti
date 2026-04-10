@@ -22,7 +22,6 @@ d = Grado del vertiche
 | V$_3$ |       | 1     | 1     | 1     | 3   |
 $\sum$ d(v) = 3 + 3 + 2 = 8 = 2 $\cdot$ $|$*E*$|$ = 2 $\cdot$ 4
 
----
 ### Teorema 1
 $$\sum d(v) = 2 \cdot |E|$$
 *Dim*: Ogni arco ha due estremi e quindi contribuisce di 2 alla somma dei gradi.
@@ -415,3 +414,31 @@ In un **multigrafo orientato** sono permessi:
 Un **grafo semplice orientato** non ha nè archi paralleli nè cappi.
 
 Un **cammino orientato** in un grafo orientato semplice è una sequenza di vertici distinti per cui ogni coppia di vertici consecutivi $(v_{i},v_{i+1})\in A$.
+La **lunghezza** di un cammino è il numero di archi nel *cammino orientato*.
+*Esempio*: ...
+
+*Nota*: Sia $G(V,\ E)$ un grafo non orientato. Se $\gamma$ è un cammino con estremi $v_{1},v_{n}\in V,\ \gamma=v_{1}v_{2}\dots v_{n}$ allora anche $\gamma^{-1}=v_{n}v_{n-1}\dots v_{1}$ è un cammino. Ma se $D(V,A)$ è un grafo orientato e $\gamma$ un cammino orienntato, allora $\gamma^{-1}$ non è un cammino.
+
+Un grafo orientato è **fortemente connesso** se per ogni coppia di vertici $u,v\in V$:
+- esiste un cammino da $v$ a $u$.
+*Esempio*: ...
+
+*Nota*: il numero massimo di archi in un grafo orientato semplice con $n$ vertici è $n\cdot(n-1)$.
+
+Sia $D(V,A)$ un grafo orientato e $v\in V$.
+$d^{in}(v)$ = il grado entrante di $v$ = il numero di archi in $A$ che hanno $v$ come testa.
+$d^{out}(v)$ = il grado uscente di $v$ = il numero di archi che hanno $v$ come coda.
+
+**Teorema**: Per ogni grafo orientato $D(V,A)$ si ha:$$|A|=\sum_{v\in V}d^{in}(v)=\sum_{v\in V}d^{out}(v)$$ogni arco contribuisce di 1 a $d(v)$ e 1 a $\sum d^{out}(v)$. Un cappio contribuisce di 1 a $d^{in}(v)$ e di 1 a $d^{out}(v)$.
+
+## Colorazione Grafi
+#### Teorema dei quattro colori
+Data una superficie piana divisa in regioni, sono sufficienti 4 colori per colorare in modo che regioni adiacenti non hanno lo stesso colore.
+Data una superficie piana divisa in regioni, possiamo assiociare un *grafo planare* con vertici colorati.
+...
+
+Si dice che un grafo è **K-colorabile** se servono $K\in\mathbb N$ colori per colorare i vertici con ogni coppia di vertici adiacenti non dello stesso colore.
+*Esempio*: ...
+
+Un grafo è bipartito se e solo se è *2-colorabile*.
+Inoltre, ogni grafo planare è *4-colorabile*.
