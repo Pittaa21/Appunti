@@ -26,11 +26,12 @@ $\sum$ d(v) = 3 + 3 + 2 = 8 = 2 $\cdot$ $|$*E*$|$ = 2 $\cdot$ 4
 $$\sum d(v) = 2 \cdot |E|$$
 *Dim*: Ogni arco ha due estremi e quindi contribuisce di 2 alla somma dei gradi.
 
-Un grafo si dice **K-Regolare** (*K*$\in\mathbb N,$ *k* > 0) se ogni suo vertice ha grado *k*. Esempio:
+Un grafo si dice **K-Regolare** (*K*$\in\mathbb N,$ *k* > 0) se ogni suo vertice ha grado *k*. 
+*Esempio*: grafo 2-regolare
 ![[kregolare.svg|center]]
 
 Un grafo si dice **completo** se tutti i vertici sono adiacenti, il grafo completo con *n* vertici si indica con K$_n$ 
-Esempio:                                                                  K$_4$
+*Esempio*:                                                                  K$_4$
 ![[completo.svg|center]]
 
 In questo tipo di grafi ognuno dei *n* vertici di K$_n$ ha grado *n* - 1.
@@ -38,7 +39,7 @@ In questo tipo di grafi ognuno dei *n* vertici di K$_n$ ha grado *n* - 1.
 #### Sottografi e Sottografi Indotti
 Dato un grafo G(V, E), un grafo *G'*(*V'*, *E'*) è un **sottografo** di G(V, E) se *V'* $\subseteq$ V  e *E'* $\subseteq$ E. Quindi *G'* può essere ottenuto da G togliendo alcuni vertici e archi. Se si toglie un vertice da V, si devono togliere da R tutti gli archi che lo hanno come estremo.
    G'(V', E')<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>G(V, E)
-![[kregolare.svg]]                    ![[completo.svg]]
+![[kregolare.svg]]<span>&emsp;&emsp;&emsp;&emsp;</span>![[completo.svg]]
 
 Un sottografo *G*'(*V*', *E*') del grafo G(V, E) si dice **indotto** se *E*' contiene tutti gli archi di E che hanno estremi in *V*'.
 
@@ -440,10 +441,12 @@ $d^{out}(v)$ = il grado uscente di $v$ = il numero di archi che hanno $v$ come c
 #### Teorema dei quattro colori
 Data una superficie piana divisa in regioni, sono sufficienti 4 colori per colorare in modo che regioni adiacenti non hanno lo stesso colore.
 Data una superficie piana divisa in regioni, possiamo assiociare un *grafo planare* con vertici colorati.
-...
+![[colorabile.svg|center|207]]
 
 Si dice che un grafo è **K-colorabile** se servono $K\in\mathbb N$ colori per colorare i vertici con ogni coppia di vertici adiacenti non dello stesso colore.
-*Esempio*: ...
+*Esempio*:
+
+![[kcolorabile.svg|246]]
 
 Un grafo è bipartito se e solo se è *2-colorabile*.
 Inoltre, ogni grafo planare è *4-colorabile*.
