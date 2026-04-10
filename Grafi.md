@@ -415,13 +415,18 @@ Un **grafo semplice orientato** non ha nè archi paralleli nè cappi.
 
 Un **cammino orientato** in un grafo orientato semplice è una sequenza di vertici distinti per cui ogni coppia di vertici consecutivi $(v_{i},v_{i+1})\in A$.
 La **lunghezza** di un cammino è il numero di archi nel *cammino orientato*.
-*Esempio*: ...
+*Esempio*:
+![[lungh.svg|161]]
+2 3 4 1 è un cammino di *lunghezza* 3.
+2 4 1 è un cammino di *lunghezza* 2.
 
 *Nota*: Sia $G(V,\ E)$ un grafo non orientato. Se $\gamma$ è un cammino con estremi $v_{1},v_{n}\in V,\ \gamma=v_{1}v_{2}\dots v_{n}$ allora anche $\gamma^{-1}=v_{n}v_{n-1}\dots v_{1}$ è un cammino. Ma se $D(V,A)$ è un grafo orientato e $\gamma$ un cammino orienntato, allora $\gamma^{-1}$ non è un cammino.
 
 Un grafo orientato è **fortemente connesso** se per ogni coppia di vertici $u,v\in V$:
 - esiste un cammino da $v$ a $u$.
-*Esempio*: ...
+*Esempio*:
+è **fortemente connesso**<span>&emsp;&emsp;&emsp;&emsp;</span>non è **fortemente connesso**
+![[fortment.svg]]<span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</span>![[nonfortment.svg]]
 
 *Nota*: il numero massimo di archi in un grafo orientato semplice con $n$ vertici è $n\cdot(n-1)$.
 
