@@ -354,12 +354,14 @@ Se si riesce ad inserire tutti gli archi uno ad uno senza incroci, il grafo è *
 #### Regioni o Facce di un grafo planare
 Dato un grafo *planare*, ogni sua rappresentazione piana divide il piano in **facce** o **regioni**.
 
-*Esempio*: ...
+*Esempio*: 
+![[facce.svg]]
 
 ### Formula di Eulero
 Se $G(V,\ E)$ è un grafo connesso e planare e $r$ è il numero di *regioni* di $G$, $e=|E|$, $v=|V|$. Si ha:$$r=e-v+2$$ *Nota*: l'ipotesi che $G$ è connesso è necessaria.
 
-*Esempio*: ...
+*Esempio*: questo grafo non è connesso quindi non vale la **formula di Eulero**.
+![[eulero.svg]]
 
 **Teorema**: Se $G(V,\ E)$ è un grafo semplice e planare e connesso, e $v=|V|\ge 3$, $e=|E|$, si ha che: $$e\le 3v-6$$
 *Definizione*:
@@ -411,3 +413,5 @@ In un **multigrafo orientato** sono permessi:
 - cappi
 
 Un **grafo semplice orientato** non ha nè archi paralleli nè cappi.
+
+Un **cammino orientato** in un grafo orientato semplice è una sequenza di vertici distinti per cui ogni coppia di vertici consecutivi $(v_{i},v_{i+1})\in A$.

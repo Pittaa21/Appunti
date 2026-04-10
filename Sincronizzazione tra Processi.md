@@ -125,16 +125,18 @@ Una soluzione al problema è tramite l'utilizzo di un **semaforo**, il quale:
 - La richiesta di accesso **P**, decrementa il contatore se non si trova già a 0, altrimenti va nella coda di **attesa** (*wait*)
 - Il rilasco **V**, incrementa il contatore e chiede al *dispatcher* di mettere in **pronto** il primo processo in coda (*signal*)
 
+Esempio di come realizzare **mutua esclusione** su una risorsa condivisa tramite semaforo binario inizializzato a 1:
 ```java
 void Processo(){
 
 	P(sem);   // viene invocata P per richiedere l'accesso alla risorsa condivisa R
 	// uso di una risorsa condivisa R
-	V(sem);   // viene invocata V per rilasciare la risorsa R
+	V(sem);   // viene invocata V per rilasciare la risorsa R e quindi liberarla
 }
 ```
 
-Tramite l'utilizzo di **semafori** *binari* si possono **coordinare** più processi per l'esecuzione di attività collaborative.
+Tramite l'utilizzo di **semafori** *binari* si possono **coordinare** più processi per l'esecuzione di attività collaborative. 
+Esempio di **sincronizzazione** con semaforo inizializzato a 0:
 
 ```java
 void ProcessoA(){
@@ -152,7 +154,7 @@ void ProcessoB(){
 
 Il **semaforo** *binario* (*mutex*) è una struttura (*struct*) composta da un campo valore intero e un campo coda che contiene tutti i *Process Control Block* dei processi in attesa. L'accesso al campo valore avviene in maniera **atomica** (quindi senza interferenza di altri processi).
 
-Il **semaforo** *contatore* ha la stessa struttura del **mutex** ma ha logica diversa per il campo lavoro: se maggiore di 0 la disponibilità non è esaurita, se minore ci sono richieste pendenti.
+Il **semaforo** *contatore* ha la stessa struttura del **mutex** ma ha logica diversa per il campo valore: se maggiore di 0 la disponibilità non è esaurita, se minore ci sono richieste pendenti.
 Il valore iniziale determina la capacità massima della risorsa.
 
 #### Problemi Semafori
@@ -163,11 +165,12 @@ L'uso dei semafori a livello di programma è *rischioso*:
 ## Monitor
 Il **monitor** definisce la *regione critica*, il compilatore inserisce il codice necessario al controllo degli accessi.
 Un **monitor** è un insieme di sottoprogrammi, variabili e *struct*. Solo i sottoprogrammi del **monitor** possono accedere alle sue variabili. Un solo processo per volta può essere attivo nel **monitor**.
-Viene garantita la *mutua esclusione*, ma non basta per consentire la *sincronizzazione*. I **monitor** hanno due procedure che operano su delle *variabili condizione* (*condition variables*) che sono come nei semafori:
+Viene, quindi, garantita la *mutua esclusione*, ma non basta per consentire la *sincronizzazione*. I **monitor** hanno due procedure che operano su delle *variabili condizione* (*condition variables*) che sono come nei semafori:
 - **Wait**: mette in attesa chi lo chiama
 - **Signal**: risveglia il processo in attesa
 Il segnale di risveglio *non ha memoria* quindi viene perso. Inoltre **Wait** e **Signal** sono invocate in *mutua esclusione* quindi non si verifica *race condition*.
 
+![[monitor.svg|300|center]]
 ### Barriere
 Servono per *sincronizzare* gruppi di processi. La **barriera** blocca tutti i processi che la raggiungono fino all'ultimo e non comporta ad uno scambio di messaggi *esplicito*.
 

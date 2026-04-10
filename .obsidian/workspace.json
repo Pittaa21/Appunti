@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sincronizzazione tra Processi.md",
-                "mode": "preview",
+                "file": "Grafi.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sincronizzazione tra Processi"
+              "title": "Grafi"
             }
           }
         ]
@@ -198,8 +198,11 @@
   },
   "active": "993cce82a4a28e1f",
   "lastOpenFiles": [
-    "Sistemi Operativi.md",
+    "eulero.svg",
+    "facce.svg",
     "Sincronizzazione tra Processi.md",
+    "monitor.svg",
+    "Sistemi Operativi.md",
     "Matrici e Sistemi lineari.md",
     "Processi.md",
     "Grafi.md",
@@ -211,8 +214,6 @@
     "rimvertis(1).svg",
     "rimvertis.svg",
     "rimvertis 1.svg",
-    "contrazione.svg",
-    "planare.svg",
     "Congruenze.md",
     "Insiemi Numerici e Polinomi.md",
     "Algebra.md",
