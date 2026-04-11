@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Grafi.md",
-                "mode": "preview",
+                "file": "Linux.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Grafi"
+              "title": "Linux"
             }
           }
         ]
@@ -208,6 +208,8 @@
   },
   "active": "0673b23a3f9a50c3",
   "lastOpenFiles": [
+    "Sistemi Operativi.md",
+    "Grafi.md",
     "colorabile.svg",
     "kcolorabile.svg",
     "nonfortment.svg",
@@ -223,10 +225,7 @@
     "Processi.md",
     "Sincronizzazione tra Processi.md",
     "Esercizi Sincronizzazione.md",
-    "Sistemi Operativi.md",
-    "Grafi.md",
     "rimvertis(1).svg",
-    "planare.svg",
     "Congruenze.md",
     "Matematica discreta.md",
     "Windows.md",

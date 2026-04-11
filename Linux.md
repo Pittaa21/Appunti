@@ -43,6 +43,19 @@ All'istruzione `pid = fork()` il processo che chiama al Kernel e inserisce i dat
 
 Con il comando `execve(cmd, par, 0)` la linea di comando emessa dall'utente viene passata al processo figlio come *array* di stringhe. La *exec*, che opera nel Kernel, trova il programma da eseguire e lo sostituisce al codice del chiamante.
 
-IMG
+**fork()**: duplica il processo chiamante creando un figlio uguale al padre ma distinto.
+Il **multi-threading** aggiunge complessità al *FS* e alla comunicazione tra entità attive.
 
-**fork()**
+chiamata di sistema (*system call*) alternativa a **fork()**:
+```java
+pid = clone(function, stack_ptr, ctrl, arg);
+```
+- `function` = programma da eseguire nel nuovo processo o thread con argomento `par`
+- `stack_ptr` = indirizzo dello stack assegnato al processo o thread
+- `ctrl` = grado di condivisione desiderato tra il processo e l'ambiente del chiamante: spazio di memoria, FS, file, segnali, identità
+
+I **thread** sono gestiti direttamente dal *Kernel*:
+- ordinamento per *task* (thread o processo)
+- selezione distinta
+- prerilascio per fine quanto o per attesa
+Ci sono 3 classi di priorità di *task*:
