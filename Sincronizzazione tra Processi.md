@@ -218,10 +218,10 @@ void filosofo(int i){
 La soluzione **A** comporta l'utilizzo di un semaforo a mutua esclusione per controllare gli accessi ad entrambe le forchette: funzionamento garantito.
 La soluzione **B** comporta a tempi di attesa *casuali* a ciascun processo, perciò il funzionamento non è garantito.
 
-### Stallo
+### Stallo (deadlock)
 Si verifica quando si ha:
 - Accesso esclusivo a delle *risorse condivise*
-- Accumulazione di nuove *risorse*
+- Accumulo di nuove *risorse*
 - Una risorsa deve essere rilasciata volontariamente (*Inibizione di Prerilascio*)
 - **Attesa circolare**, cioè un processo attende la risorsa posseduta dal processo successivo
 
