@@ -607,9 +607,8 @@ Siano $A,B$ matrici  e $\alpha\in\mathbb C$ un numero. si supponga che le somme 
 Sia $A\in M_{n}(\mathbb C)$.
 Il **determinante** di $A$, indicato con $\det(A)$ o $Det(A)$, è un numero che dipende da $A$.
 - se $n=1,\ A=(a_{11})$ allora $\det(A)=a_{11}$
-- se $n=2,\ A=\begin{pmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{pmatrix}$
-$$\det(A)=(a_{11}\cdot a_{22}-a_{12}\cdot a_{21})$$
-
+- se $n=2,\ A=\begin{pmatrix}a_{11} & a_{12} \\ a_{21} & a_{22}\end{pmatrix}$$$\det(A)=(a_{11}\cdot a_{22}-a_{12}\cdot a_{21})$$
+ <br>
 *Definizione*: Data $A\in M_{n}(\mathbb C)$ la **matrice complementare di posto** $i_{ij}$ di $A$ è la matrice $C_{ij}\in M_{n-1}(\mathbb C)$ che si ottiene togliendo la $i$-esima riga e la $j$-esima colonna di $A$.
 
 *Esempio*: $$A=\begin{pmatrix}
