@@ -58,4 +58,17 @@ I **thread** sono gestiti direttamente dal *Kernel*:
 - ordinamento per *task* (thread o processo)
 - selezione distinta
 - prerilascio per fine quanto o per attesa
+
 Ci sono 3 classi di priorità di *task*:
+- Tempo reale politica FCFS a priorità senza prerilascio
+- Tempo reale con politica RR a priorità
+- Divisione di tempo RR a priorità
+
+Con versione < 2.6 del *Kernel* i processi attivi non avevano prerilascio. Dalla versione 2.6 in poi si ha inibizione selettiva di prerilascio, si usano i semafori e si minimizza l'uso della disabilitazione delle interruzioni.
+
+### Inizializzazione
+Il BIOS carica l'MBR sul disco di boot in RAM, l'MBR carica il programma di *boot* dal corrispondente blocco della partizione attiva
+
+- **Processo 0**: configurazione clock, installazione del FS, creazione di processi 1(*init*) e 2(*daemon*)
+- **Processo 1**: configurazione della modalità utente(singolo o multi), esecuzione *script* di inizializzazione **shell**, lettura del numero e tipo di terminali, `fork` per ogni terminale abilitato
+- **Processo getty**: configurazione terminale e attivazione prompt di login, verifica password login e `exec("shell")`.
