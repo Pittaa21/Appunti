@@ -24,7 +24,7 @@ Il **Kernel** è la parte centrale del S/O, gestisce:
 - La Politica di ordinamento deve essere equa (*fair*)
 	- i processi pronti devono poter essere eseguiti
 	- i processi che attendono le risorse devono poter accederci
-- La comunicazione e sincronizzazione deve essere efficacie
+- La comunicazione e sincronizzazione deve essere efficaci
 
 ### Risorsa
 La **Risorsa** è un elemento fisico (*hardware*) o logico (*software*) necessario per la creazione, esecuzione e avanzamento dei processi.
