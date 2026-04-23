@@ -69,3 +69,7 @@ $|A|=n_{1}\quad|A_{j}|=r_{j}\quad\sum^k_{j=1}r_{j}=n$
 
 *Esempio*: Quante soluzioni intere ha $x_{1}+x_{2}+x_{3}=5$ infinite. Invece, se $x_{1}\ge0,\ x_{2}\ge 0,\ x_{3}\ge 0$ quindi $x_{1},x_{2},x_{3}$ sono interi positivi $x_{1}+x_{2}=5$ ha 6 soluzioni.
 
+
+- $r$-permutazioni: disposizioni ordinate di $r$ oggetti distinti su $n$ possibili *disposizioni*$$\frac{n!}{r!}$$
+- $r$-combinazioni: selezione non-ordinata di $n$ oggetti distinti su $n$ possibili *combinazioni*$$\binom nr=\frac{n!}{r!(n-r)!}$$
+*Esempio*: 11 domande a risposta multipla con 2 alternative per avere 5 risposte corrette ho $\binom {11}5$ che equivale a $\binom {11}6$ sbagliate
