@@ -12,3 +12,5 @@ Il S/O si può trovare:
 3. [[Politiche di Ordinamento]]
 4. [[Linux]]
 5. [[Windows]]
+6. [[Gestione Memoria]]
+7. 
