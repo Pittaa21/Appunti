@@ -1,6 +1,6 @@
 Tecnica per calcolare quanti elementi ha un dato insieme.
 
-#### Principio di Additività
+#### Principio di Additività o Addizione
 Se ho $n$ insiemi disgiunti allora $|\text{I}|$ è il numero di elementi $$|\text{U}^n_{j=1}\ \text{I}_{j}|=\sum_{j=1}^n|\text{I}_{j}|$$
 
 Se abbiamo $n$ insiemi (non necessariamente disgiunti) posso sempre renderli disgiunti
@@ -12,9 +12,11 @@ $I_{1}'$ è disgiunto da $I_{2},I_{3}$
 #### Principio di Moltiplicazione
 Esperimenti **indipendenti** e **ripetuti**.
 
-- **indipendenti**: il risultato del successivo non dipende dal risultato del precedente, se i risultati del $j$-esimo *esperimento* sono $r_j$ allora tutti i possibili risultati sono: $$r_{1}\cdot r_{2}\cdot r_{3} \cdot r_{n}=\pi^n_{j=1}r_{j}$$Dove $n$ è il numero di esperimenti<br>*Esempio*: Abbiamo tre dati uno con 6 facce uno con 8 e uno con 20<br>$6\cdot8\cdot 20$
+- **indipendenti**: il risultato del successivo non dipende dal risultato del precedente, se i risultati del $j$-esimo *esperimento* sono $r_j$ allora tutti i possibili risultati sono: $$r_{1}\cdot r_{2}\cdot r_{3} \cdot r_{n}=\pi^n_{j=1}r_{j}$$Dove $n$ è il numero di esperimenti<br>*Esempio*: Abbiamo tre dadi uno con 6 facce uno con 8 e uno con 20<br>$6\cdot8\cdot 20$
 
 ##### Permutazioni di un insieme
+*Def*: La permutazione è una disposizione ordinata di $n$ oggetti distinti $\in \mathbb N$.
+
 Abbiamo un insieme $A$ che contiene $n$ elementi (disgiunti e diversi) $A=\{a_{1},a_{2},a_{n}\}$ 
 creare una $n$-upla (un vettore di $n$ componenti **ordinato**)
 Quante permutazioni di $A$ ?

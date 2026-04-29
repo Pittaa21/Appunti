@@ -1,4 +1,5 @@
-Sia $\mathbb K$ uno tra $\mathbb R$ e $\mathbb C$. Uno **spazio vettoriale** su $\mathbb K$ (che si chiama reale se $\mathbb K=\mathbb R$ e complesso se $\mathbb K=\mathbb C$) è un insieme *non-vuoto* $V$ i cui elementi sono detti **vettori**, su cui sono definite due operazioni:
+Sia $\mathbb K$ uno tra $\mathbb R$ e $\mathbb C$. 
+Uno **spazio vettoriale** su $\mathbb K$ (che si chiama reale se $\mathbb K=\mathbb R$ e complesso se $\mathbb K=\mathbb C$) è un insieme *non-vuoto* $V$ i cui elementi sono detti **vettori**, su cui sono definite due operazioni:
 
 - **somma** di vettori: $$\begin{align}
 V\ \text x\ V\rightarrow V \\
