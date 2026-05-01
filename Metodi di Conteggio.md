@@ -1,4 +1,4 @@
-Tecnica per calcolare quanti elementi ha un dato insieme.
+*Def*: Tecnica per calcolare quanti elementi ha un dato insieme.
 
 #### Principio di Additività o Addizione
 Se ho $n$ insiemi disgiunti allora $|\text{I}|$ è il numero di elementi $$|\text{U}^n_{j=1}\ \text{I}_{j}|=\sum_{j=1}^n|\text{I}_{j}|$$
@@ -20,18 +20,22 @@ Esperimenti **indipendenti** e **ripetuti**.
 Abbiamo un insieme $A$ che contiene $n$ elementi (disgiunti e diversi) $A=\{a_{1},a_{2},a_{n}\}$ 
 creare una $n$-upla (un vettore di $n$ componenti **ordinato**)
 Quante permutazioni di $A$ ?
-$n\cdot(n-1)\cdot(n-2)\cdot\ \dots\ \cdot2\cdot1=n! =n$-fattoriale  
+$\text{P}(n,n)=n\cdot(n-1)\cdot(n-2)\cdot\ \dots\ \cdot2\cdot1=n! =n$-fattoriale  
 
 Numero di permutazioni di un insieme di $n$ elementi **disgiunti** è $n!$
 
 
 ##### $r$-permutazioni
-Abbiamo un insieme di $n$ elementi diversi e vogliamo determinare una $$\frac{n\cdot(n-1)\cdot(n-2)\cdot\ \dots\ \cdot 2\cdot 1}{(n-r)\cdot(n-r-1)\cdot\ \dots\ \cdot 2 \cdot 1}$$
+Dati $n$ oggetti *distinti*, con $n,r\in\mathbb N$, $r\le n$
+Una $r$**-permutazione** è una disposizione ordinata di questi $n$ oggetti usando $r$ degli $n$ oggetti.
+Il numero di tutte le possibili $r$**-permutazioni** di $n$ oggetti è:$$\text{P}(n,r)=n\cdot(n-1)\cdot(n-2)\cdot\ \dots\ \cdot (n-r+1)$$Quindi:$$\text{P}(n,r)=\frac{n!}{(n-r)!}$$
 ##### $r$-combinazioni
-Dato un insieme di $n$ elementi **diversi**$$A=\{a_{1},\dots,a_{n}\}$$Una $r$-combinazione è un sottoinsieme di $r$-elementi di $A$.
-*Nota*: $r\le n$, sottoinsieme $\Rightarrow$ $r$-upla non-ordinata.
+Selezione *non ordinata* di $r$ degli $n$ oggetti (un sottoinsieme di $r$ oggetti dell'insieme di $n$ oggetti) e si indica con $\text{C}(n,r)$.
 
-data una $r$-permutazione questa induce una $r$-combinazione$$\left(a_{i_{1}},a_{i_{2}},\dots,a_{i_{r}}\right)\rightarrow\left\{a_{i_{1}},a_{i_{2}},\dots,a_{i_{r}}\right\}$$
+Dato un insieme di $n$ elementi **diversi**$$A=\{a_{1},\dots,a_{n}\}$$Una $r$-combinazione è un sottoinsieme di $r$-elementi di $A$.
+
+*Nota*: $r\le n$, sottoinsieme $\Rightarrow$ $r$-upla non-ordinata.
+Data una $r$-permutazione questa induce una $r$-combinazione$$\left(a_{i_{1}},a_{i_{2}},\dots,a_{i_{r}}\right)\rightarrow\left\{a_{i_{1}},a_{i_{2}},\dots,a_{i_{r}}\right\}$$
 numero di $r$-combinazioni=$\frac{n!}{(n-r)!\cdot r!}$ 
 
 *Esempio*: calcolare probabilità di fare cinquina al lotto
