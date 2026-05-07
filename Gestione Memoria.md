@@ -40,3 +40,12 @@ Strategie di allocazione:
 - **best fit**: segmento libero più adatto
 - **worst fit**: segmento libero più ampio
 - **quick fit**: liste diverse di ricerca per ampiezze *tipiche*
+
+### Memoria Virtuale
+Una singola partizione o l'intera RAM sono insufficienti per un'intero processo. La prima soluzione è stata dividere il processo in parti (*overlay*) che venivano caricate in RAM una parte per volta.
+
+L'idea di **memoria virtuale** si basa sul fatto che un singolo processo può avere ampiezza maggiore della RAM disponibile. Basta caricare solo la parte strettamente necessaria e lasciare il restante sul disco.
+Quindi ogni processo ha il proprio spazio di *memoria virtuale*.
+
+Gli *indirizzi generati* dalla CPU, quindi non linkano direttamente alla RAM ma sono **indirizzi virtuali** (*logici*), che vengono interpretati dalla **MMU** che li trasforma in indirizzi *fisici reali*.
+
