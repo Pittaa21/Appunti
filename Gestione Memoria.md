@@ -41,7 +41,7 @@ Strategie di allocazione:
 - **worst fit**: segmento libero più ampio
 - **quick fit**: liste diverse di ricerca per ampiezze *tipiche*
 
-### Memoria Virtuale
+## Memoria Virtuale
 Una singola partizione o l'intera RAM sono insufficienti per un'intero processo. La prima soluzione è stata dividere il processo in parti (*overlay*) che venivano caricate in RAM una parte per volta.
 
 L'idea di **memoria virtuale** si basa sul fatto che un singolo processo può avere ampiezza maggiore della RAM disponibile. Basta caricare solo la parte strettamente necessaria e lasciare il restante sul disco.
@@ -49,7 +49,7 @@ Quindi ogni processo ha il proprio spazio di *memoria virtuale*.
 
 Gli *indirizzi generati* dalla CPU, quindi non linkano direttamente alla RAM ma sono **indirizzi virtuali** (*logici*), che vengono interpretati dalla **MMU** che li trasforma in indirizzi *fisici reali*.
 
-##### Paginazione
+#### Paginazione
 - **Memoria fisica**: è divisa in blocchi di dimensione fissa (*page frame*)
 - **Memoria virtuale**: è divisa in blocchi della stessa dimensione (*pagine*)
 
@@ -59,7 +59,9 @@ La traduzione da *virtuale* a *fisico* avviene con una **tabella delle pagine**,
 
 La traduzione deve esere molto veloce, infatti un'istruzione può fare riferimento più volte alla stessa tabella; quindi il suo **rifermento** deve metterci meno del tempo totale di esecuzione dell'istruzione per evitare *bottleneck*. Ogni indirizzo emesso dal processo deve essere tradotto.
 
-##### Segmentazione
+La tabella delle pagine serve alla MMU (*hardware*), il caricamento della pagina da disco è a 
+
+#### Segmentazione
 - **Programma**: è una collezione di *segmenti*
 - **Segmento**: è un'unità logica come: *main*, *funzioni*
 
