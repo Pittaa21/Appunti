@@ -68,4 +68,9 @@ Sia $V$ uno *spazio vettoriale* su $\mathbb K$. Allora:
     1. $\underline{v}\in<\underline{v}>$ quindi $<\underline{v}>\ne\emptyset$
     2. Siano $\underline{u_{1}},\underline{u_{2}}\in<\underline{v}>$ allora $\underline{u_{1}}=\alpha_{1}\cdot \underline{v}$ e $\underline{u_{2}}=\alpha_{2}\cdot \underline{v}$, quindi $\underline{u_{1}}+\underline{u_{2}}=(\alpha_{1}+\alpha_{2})\cdot \underline{v}\in<\underline{v}>$.
     3. Siano $\underline{u}\in<\underline{v}>$ e $\alpha\in\mathbb K$. Allora $\underline{u}=\beta \cdot \underline{v}$ e $\alpha \cdot \underline{u}=(\alpha \cdot \beta)\cdot \underline{v}\in<\underline{v}>$<br>
-2. Se $\underline{v}=\underline{0}$ allora $<\underline{v}=<\underline{0}>=\{\underline{0}\}$
+2. Se $\underline{v}=\underline{0}$ allora $<\underline{v}=<\underline{0}>=\{\underline{0}\}$ cioè $<\underline{0}>$ ha un **unico elemento**: $\underline{0}$<br>
+3. Se $\underline{v}\ne \underline{0}$ allora, se $\alpha,\beta\in\mathbb K$, $\alpha \cdot \underline{v}=\beta \cdot \underline{v}\Leftrightarrow\alpha=\beta$<br>Dunque se $\underline{v}\ne \underline{0}$, $<\underline{v}>$ ha tanti elementi quanti sono i numeri in $\mathbb K$ ($\mathbb R$ o $\mathbb C$), cioè **infiniti**.
+
+### Combinazioni Lineari
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in\left\{\mathbb R,\mathbb C\right\}$. La **combinazione lineare** degli $n$ vettori $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ di $V$ con coefficienti $\alpha_{1},\alpha_{2},\dots,\alpha_{n}\in\mathbb K$ è il vettore:$$\underline{v}=\alpha_{1}\cdot \underline{v_{2}}+\alpha_{2}\cdot \underline{v_{2}}+\dots+\alpha_{n}\cdot \underline{v_{n}}$$
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Siano $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ vettori di $V$.
