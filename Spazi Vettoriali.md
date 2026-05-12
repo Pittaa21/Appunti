@@ -51,3 +51,21 @@ IMG
 *Nota*: 
 - $U\subseteq V$, $U$ è sottoinsieme di $V$<br>$U\le V$, $U$ è sottospazio di $V$
 - se $U\le V$ allora $U$ è spazio vettoriale su $\mathbb K$ con le operazioni che si ottengono restringendo ad $U$ quelle di $V$.
+
+Sia $V$ uno *spazio vettoriale* su $\mathbb K$. Allora:
+1. Se $U\le W\le V\Rightarrow U\le V$
+2. Se $U_{1}\le V$ e $U_{2}\le V$ allora $U_{1}\cap U_{2}\le V$
+3. $\{\underline{0}\}\le V$ **sottospazio nullo**, $V\le V$ ($V$ è sottospazio di se stesso)
+
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Siano $U_{1}$ e $U_{2}$ due sottospazi vettoriali di $V$. La **somma** di $U_{1}$ e $U_{2}$ è$$U_{1}+U_{2}=\left\{\underline{u_{1}}+\underline{u_{2}}\ |\ \underline{u_{1}}\in U_{1}\text{ e }\underline{u_{2}}\in U_{2}\right\}$$Se $U_{1}\cap U_{2}=\{\underline{0}\}$ allora scriviamo $U_{1}\oplus U_{2}$ è lo chiamiamo **somma diretta** di $U_{1}$ e $U_{2}$.
+
+*Osservazione*: $U_{1}+U_{2}$ è sottospazio di $V$.
+
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Sia $\underline{v}\in V$. L'**insieme dei multipli** di $\underline{v}$ è:$$<\underline{u}\geq\left\{\alpha \cdot \underline{v}\ |\ \alpha\in\mathbb K\right\}$$
+##### Proprietà di $<\underline{v}>$
+
+1. $<\underline{v}>$ è un sottospazio di $V$. Infatti:
+    1. $\underline{v}\in<\underline{v}>$ quindi $<\underline{v}>\ne\emptyset$
+    2. Siano $\underline{u_{1}},\underline{u_{2}}\in<\underline{v}>$ allora $\underline{u_{1}}=\alpha_{1}\cdot \underline{v}$ e $\underline{u_{2}}=\alpha_{2}\cdot \underline{v}$, quindi $\underline{u_{1}}+\underline{u_{2}}=(\alpha_{1}+\alpha_{2})\cdot \underline{v}\in<\underline{v}>$.
+    3. Siano $\underline{u}\in<\underline{v}>$ e $\alpha\in\mathbb K$. Allora $\underline{u}=\beta \cdot \underline{v}$ e $\alpha \cdot \underline{u}=(\alpha \cdot \beta)\cdot \underline{v}\in<\underline{v}>$<br>
+2. Se $\underline{v}=\underline{0}$ allora $<\underline{v}=<\underline{0}>=\{\underline{0}\}$
