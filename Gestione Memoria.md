@@ -40,3 +40,34 @@ Strategie di allocazione:
 - **best fit**: segmento libero più adatto
 - **worst fit**: segmento libero più ampio
 - **quick fit**: liste diverse di ricerca per ampiezze *tipiche*
+
+## Memoria Virtuale
+Una singola partizione o l'intera RAM sono insufficienti per un'intero processo. La prima soluzione è stata dividere il processo in parti (*overlay*) che venivano caricate in RAM una parte per volta.
+
+L'idea di **memoria virtuale** si basa sul fatto che un singolo processo può avere ampiezza maggiore della RAM disponibile. Basta caricare solo la parte strettamente necessaria e lasciare il restante sul disco.
+Quindi ogni processo ha il proprio spazio di *memoria virtuale*.
+
+Gli *indirizzi generati* dalla CPU, quindi non linkano direttamente alla RAM ma sono **indirizzi virtuali** (*logici*), che vengono interpretati dalla **MMU** che li trasforma in indirizzi *fisici reali*.
+
+#### Paginazione
+- **Memoria fisica**: è divisa in blocchi di dimensione fissa (*page frame*)
+- **Memoria virtuale**: è divisa in blocchi della stessa dimensione (*pagine*)
+
+I trasferimenti da e verso il disco avvengono sempre in **pagine**. Di ogni **pagina** bisogna sapere se è presente in RAM, tramite *bit di presenza*. Se una pagina manca quando avviene il riferimento si genera un **page fault**, evento gestito dal S/O tramite *trap*.
+
+La traduzione da *virtuale* a *fisico* avviene con una **tabella delle pagine**, di cui ciascun processo ha la propria. 
+
+La traduzione deve esere molto veloce, infatti un'istruzione può fare riferimento più volte alla stessa tabella; quindi il suo **rifermento** deve metterci meno del tempo totale di esecuzione dell'istruzione per evitare *bottleneck*. Ogni indirizzo emesso dal processo deve essere tradotto.
+
+La tabella delle pagine serve alla MMU (*hardware*), il caricamento della pagina da disco è a 
+
+#### Segmentazione
+- **Programma**: è una collezione di *segmenti*
+- **Segmento**: è un'unità logica come: *main*, *funzioni*
+
+Un processo si può dividere o in *pagine* o in *segmenti* che non hanno bisogno di essere allocati in modo contiguo in memoria, durante l'esecuzione non tutte le *pagine* o *segmenti* devono essere caricati in memoria centrale.
+
+Più processi possono stare in memoria principale, è quindi più probabile ci siano più processi *ready*. Inoltre un processo può essere più grande della memoria principale.
+
+La **memoria reale** è quella principale. La **memoria virtuale** è invece quella sul disco e rende facile la *multiprogrammazione* e libera l'utente dalle limitazioni della memoria principale.
+

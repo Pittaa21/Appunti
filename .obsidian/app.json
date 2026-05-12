@@ -13,5 +13,9 @@
   "alwaysUpdateLinks": true,
   "showLineNumber": true,
   "strictLineBreaks": false,
-  "useTab": false
+  "useTab": false,
+  "livePreview": true,
+  "defaultViewMode": "source",
+  "readableLineLength": false,
+  "propertiesInDocument": "visible"
 }
