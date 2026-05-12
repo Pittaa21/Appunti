@@ -44,5 +44,10 @@ se $f(x),g(x)\in\mathbb K_{n}[x]$ allora
 *Definizione*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Un **sottospazio vettoriale** di $V$ è un sottoinsieme $U$ di $V$ tale che:
 1. $\underline{0}\in U$
 2. $\underline{u_{1}}+\underline{u_{2}}\in U\ \forall \underline{u_{1}},\underline{u_{2}}\in U$ ($U$ è chiuso per la somma)
-3. $\alpha \cdot \underline{u}\in U\ \forall \underline{u}\in U,\ \forall \alpha\in\mathbb K$ ($U$ è chiuso per prod per scal)<br>Scriviamo $U\le V$ IMG
+3. $\alpha \cdot \underline{u}\in U\ \forall \underline{u}\in U,\ \forall \alpha\in\mathbb K$ ($U$ è chiuso per prodotto per scalare)<br>Scriviamo $U\le V$ 
 
+IMG
+
+*Nota*: 
+- $U\subseteq V$, $U$ è sottoinsieme di $V$<br>$U\le V$, $U$ è sottospazio di $V$
+- se $U\le V$ allora $U$ è spazio vettoriale su $\mathbb K$ con le operazioni che si ottengono restringendo ad $U$ quelle di $V$.
