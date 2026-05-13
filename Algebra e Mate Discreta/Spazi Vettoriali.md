@@ -73,4 +73,6 @@ Sia $V$ uno *spazio vettoriale* su $\mathbb K$. Allora:
 
 ### Combinazioni Lineari
 *Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in\left\{\mathbb R,\mathbb C\right\}$. La **combinazione lineare** degli $n$ vettori $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ di $V$ con coefficienti $\alpha_{1},\alpha_{2},\dots,\alpha_{n}\in\mathbb K$ è il vettore:$$\underline{v}=\alpha_{1}\cdot \underline{v_{2}}+\alpha_{2}\cdot \underline{v_{2}}+\dots+\alpha_{n}\cdot \underline{v_{n}}$$
-*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Siano $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ vettori di $V$.
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Siano $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ vettori di $V$. Il **sottospazio** di $V$ **generato** da $\underline{v_{1}},\underline{v_{2}},\dots ,\underline{v_{n}}$ è l'insieme di tutte le combinazioni lineari di $\underline{v_{1}},\dots,\underline{v_{n}}$:$$<\underline{v_{1}},\dots,\underline{v_{n}}\geq\left\{\alpha_{1}\cdot \underline{v_{1}}+\dots+\alpha_{n}\cdot \underline{v_{n}}\ |\ \alpha_{1},\dots,\alpha_{n}\in\mathbb K\right\}$$
+*Osservazioni*:
+1. 

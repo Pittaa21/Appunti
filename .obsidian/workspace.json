@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e Mate Discreta/Algebra.md",
-                "mode": "preview",
+                "file": "Algebra e Mate Discreta/Spazi Vettoriali.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Algebra"
+              "title": "Spazi Vettoriali"
             }
           }
         ]
@@ -242,8 +242,8 @@
   },
   "active": "75e44e7d10b8c521",
   "lastOpenFiles": [
-    "Calendar/2026-06-12.md",
     "Algebra e Mate Discreta/Algebra.md",
+    "Calendar/2026-06-12.md",
     "Calendar",
     "Sistemi Operativi/Sincronizzazione tra Processi.md",
     "Sistemi Operativi/Esercizi Sincronizzazione.md",
