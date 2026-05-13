@@ -1,5 +1,5 @@
-[[Algebra e Matematica discreta]]: compitino 16 aprile
+[[Algebra]]:
 
-[[Sistemi Operativi]]: compitino 15 aprile
+[[Sistemi Operativi]]: compitino 12 giugno
 
-[[Programmazione]]: compitino 14 aprile
+[[Programmazione]]: compitino 
