@@ -33,6 +33,7 @@
       {
         "id": "6cc669c8a32e7f5f",
         "type": "tabs",
+        "dimension": 67.50418760469012,
         "children": [
           {
             "id": "c96fc433758e8523",
@@ -79,6 +80,7 @@
       {
         "id": "c32b9eb2edc0b65f",
         "type": "tabs",
+        "dimension": 32.49581239530988,
         "children": [
           {
             "id": "c62ea90046959f99",
@@ -94,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 441.5110321044922,
+    "width": 223.5110321044922,
     "collapsed": true
   },
   "right": {
@@ -105,6 +107,16 @@
         "id": "6ed2a097ec0a53a9",
         "type": "tabs",
         "children": [
+          {
+            "id": "9622b43658bb58c6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
           {
             "id": "1efde5ccd4ee8fed",
             "type": "leaf",
@@ -183,16 +195,6 @@
             }
           },
           {
-            "id": "9622b43658bb58c6",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "f1a5d1b66fdd31f0",
             "type": "leaf",
             "state": {
@@ -202,12 +204,27 @@
               "title": "Advanced Tables"
             }
           }
-        ],
-        "currentTab": 5
+        ]
+      },
+      {
+        "id": "f9a6dd153d4270ec",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b88e17757eb18162",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {},
+              "icon": "calendar-with-checkmark",
+              "title": "Calendar"
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 246
+    "width": 283.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -219,16 +236,19 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "omnisearch:Omnisearch": false
     }
   },
   "active": "75e44e7d10b8c521",
   "lastOpenFiles": [
+    "Calendar/2026-06-12.md",
+    "Algebra e Mate Discreta/Algebra.md",
+    "Calendar",
     "Sistemi Operativi/Sincronizzazione tra Processi.md",
     "Sistemi Operativi/Esercizi Sincronizzazione.md",
     "Cyber.md",
     "Algebra e Mate Discreta/Grafi.md",
-    "Algebra e Mate Discreta/Algebra.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Date Esami.md",
     "Sistemi Operativi/Sistemi Operativi.md",
@@ -257,11 +277,9 @@
     "Algebra e Mate Discreta/Insiemi Numerici e Polinomi.md",
     "Algebra e Mate Discreta/Congruenze.md",
     "Algebra e Mate Discreta",
-    "2026-06-12.md",
     "Algebra.md",
     "conflict-files-obsidian-git.md",
     "Congruenze.md",
-    "Gestione Memoria.md",
     "SVG/colorabile.svg",
     "SVG/kcolorabile.svg",
     "Sincronizzazione tra Processi.pdf",
