@@ -59,7 +59,37 @@ La traduzione da *virtuale* a *fisico* avviene con una **tabella delle pagine**,
 
 La traduzione deve esere molto veloce, infatti un'istruzione può fare riferimento più volte alla stessa tabella; quindi il suo **rifermento** deve metterci meno del tempo totale di esecuzione dell'istruzione per evitare *bottleneck*. Ogni indirizzo emesso dal processo deve essere tradotto.
 
-La tabella delle pagine serve alla MMU (*hardware*), il caricamento della pagina da disco è a 
+La **tabella delle pagine** serve alla **MMU** (*hardware*), il caricamento della pagina da disco è a carico del S/O (*software*) quando si verifica un **page fault**.
+La **tabella delle pagine** è talmente grande che non può stare nei registri, quindi sta in RAM, per migliorare le prestazioni si usa una sorta di *cache*: **HW**. Il *translation lookaside buffer* (**TLB**) è una piccola *memoria associativa* che permette la scansione parallela e si trova all'interno della **MMU**. Ogni indirizzo emesso verso **MMU** viene prima trattato con **TLB**. Se la pagina è presente e l'accesso è permesso la *traduzione* avviene con **TLB**; altrimenti si ha l'equivalente di un *cache miss* e le informazioni devono essere caricate in **TLB** dalla *tabella delle pagine*. Prevalentemente le **TLB** sono realizzate via *software*.
+
+##### Problema:
+Con architetture a 64 bit le *tabelle delle pagine* hanno dimensioni esagerate.
+
+Tramite una **tabella invertita** non si ha più una riga per *pagina*, ma per *page frame* in RAM. Si risparmia così spazio ma la traduzione è più complessa.
+
+##### Rimpiazzo
+Quando avviene un *page fault* il S/O deve **rimpiazzare** una pagina, ma salvandola su disco se modificata. Non bisognerebbe **rimpiazzare** pagine ad uso frequente. 
+Si usa quindi un **rimpiazzo ottimale** (*optimal replacement*), ossia si rimpiazza la pagina che non viene usata per maggior tempo.
+
+- **NRU** (*Not Recently Used*): Per ogni *page frame* si aggiornano:
+    - Bit M (*modified*) inizializzato a 0
+    - Bit R (*referenced*) messo a 0 periodicamente per stimare la frequenza d'uso
+    Le pagine sono classificate in:
+    - **Classe 0**: non riferita, non modificata
+    - **Classe 1**: non riferita, modificata
+    - **Classe 2**: riferita, non modificata
+    - **Classe 3**: riferita, modificata
+    **NRU** sceglie una pagina a caso della classe non vuota di indice più basso.
+- **FIFO**: Rimuove la pagine di ingresso più vecchio in RAM
+- **Second Chance**: Corregge *FIFO* rimpiazzando solo le pagine con bit R = 0
+- **Orologio**: Come SC ma i *page frame* sono mantenuti in una **lista circolare**
+- **LRU** (*Least Recently Used*): Approssima l'algoritmo ottimale, necessita una lista aggiornata ad ogni riferimento a memoria
+- **NFU** (*Not Frequently Used*): Per ogni *page frame* aggiorna periodicamente un *contatore* C che cresce di più se R = 1
+- **Aging**: NFU modificato, approssima LRU con delle differenze
+
+##### Working set
+
+
 
 #### Segmentazione
 - **Programma**: è una collezione di *segmenti*
