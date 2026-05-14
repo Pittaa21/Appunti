@@ -156,3 +156,4 @@ Cioè esistono **unici** coefficienti $\alpha_{1},\dots,\alpha_{n}\in\mathbb K$ 
 \dots \\
 \alpha_{n}
 \end{pmatrix}\in\mathbb K^n$$
+ n
