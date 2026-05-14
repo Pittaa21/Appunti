@@ -117,3 +117,9 @@ Il termine *dipendente* indica che possiamo scrivere uno dei vettori come combin
  0
  \end{pmatrix}>
 \end{align}$$
+*Nota*: Verranno considerati solo spazi vettoriali **finitamente generati**, cioè esiste un insieme di generatori ==FINITO==.
+
+##### Proprietà di Insiemi L.I.
+1. Se $\underline{v}\in V$ allora $\{ \underline{v} \}$ è L.I. $\Leftrightarrow \underline{v}\ne \underline{0}$
+2. Se $\textit{S}$ è un insieme ==L.I.== e $\textit{U}\subseteq\textit{S}$ allora anche $\textit{U}$ è ==L.I.==
+3. In un insieme ==L.I.== non ci sono ripetizioni di vettori
