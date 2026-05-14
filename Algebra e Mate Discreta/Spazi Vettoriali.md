@@ -41,7 +41,7 @@ che soddisfano le proprietà:
     3. $\underline{0}$ è la funzione nulla
     4. $(-f)(x)=-\left(f(x)\right)$<br>
 7. **Spazio Vett nullo**: $V=\{\underline{0}\}$ è il più piccolo spazio vettoriale.
-### Sottospazi Vettoriali
+## Sottospazi Vettoriali
 *Definizione*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Un **sottospazio vettoriale** di $V$ è un sottoinsieme $U$ di $V$ tale che:
 1. $\underline{0}\in U$
 2. $\underline{u_{1}}+\underline{u_{2}}\in U\ \forall \underline{u_{1}},\underline{u_{2}}\in U$ ($U$ è chiuso per la somma)
@@ -72,7 +72,7 @@ Sia $V$ uno *spazio vettoriale* su $\mathbb K$. Allora:
 2. Se $\underline{v}=\underline{0}$ allora $<\underline{v}=<\underline{0}>=\{\underline{0}\}$ cioè $<\underline{0}>$ ha un **unico elemento**: $\underline{0}$<br>
 3. Se $\underline{v}\ne \underline{0}$ allora, se $\alpha,\beta\in\mathbb K$, $\alpha \cdot \underline{v}=\beta \cdot \underline{v}\Leftrightarrow\alpha=\beta$<br>Dunque se $\underline{v}\ne \underline{0}$, $<\underline{v}>$ ha tanti elementi quanti sono i numeri in $\mathbb K$ ($\mathbb R$ o $\mathbb C$), cioè **infiniti**.
 
-### Combinazioni Lineari
+## Combinazioni Lineari
 ***Def***: Sia $V$ uno spazio vettoriale su $\mathbb K\in\left\{\mathbb R,\mathbb C\right\}$. La **combinazione lineare** degli $n$ vettori $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ di $V$ con coefficienti $\alpha_{1},\alpha_{2},\dots,\alpha_{n}\in\mathbb K$ è il vettore:$$\underline{v}=\alpha_{1}\cdot \underline{v_{2}}+\alpha_{2}\cdot \underline{v_{2}}+\dots+\alpha_{n}\cdot \underline{v_{n}}$$
 *Def*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Siano $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ vettori di $V$. Il **sottospazio** di $V$ **generato** da $\underline{v_{1}},\underline{v_{2}},\dots ,\underline{v_{n}}$ è l'insieme di tutte le combinazioni lineari di $\underline{v_{1}},\dots,\underline{v_{n}}$:$$<\underline{v_{1}},\dots,\underline{v_{n}}\geq\left\{\alpha_{1}\cdot \underline{v_{1}}+\dots+\alpha_{n}\cdot \underline{v_{n}}\ |\ \alpha_{1},\dots,\alpha_{n}\in\mathbb K\right\}$$
 *Osservazioni*:
@@ -81,7 +81,7 @@ Sia $V$ uno *spazio vettoriale* su $\mathbb K$. Allora:
 3. Se $\underline{v_{1}},\dots,\underline{v_{n}}\in W\le V$ allora $<\underline{v_{1}},\dots,\underline{v_{n}}>\le W$
 4. Per convenzione si pone $<\emptyset\ge\{\underline{0}\}$
 
-#### Insieme di Generatori
+### Insieme di Generatori
 *Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in\{\mathbb R,\mathbb C\}$. 
 Sia $\textit{S}=\{\underline{v_{1}},\dots,\underline{v_{n}}\}$ un insieme di vettori di $V$. Diciamo che $\textit{S}$ è un **insieme di generatori** di $V$ se $<\textit{S}>\ =\ <\underline{v_{1}},\dots,\underline{v_{n}}>\ =V$, cioè se ogni vettore di $V$ si può scrivere come combinazione lineare dei vettori di $\textit{S}$.
 
@@ -119,7 +119,40 @@ Il termine *dipendente* indica che possiamo scrivere uno dei vettori come combin
 \end{align}$$
 *Nota*: Verranno considerati solo spazi vettoriali **finitamente generati**, cioè esiste un insieme di generatori ==FINITO==.
 
-##### Proprietà di Insiemi L.I.
+#### Proprietà di Insiemi L.I.
 1. Se $\underline{v}\in V$ allora $\{ \underline{v} \}$ è L.I. $\Leftrightarrow \underline{v}\ne \underline{0}$
-2. Se $\textit{S}$ è un insieme ==L.I.== e $\textit{U}\subseteq\textit{S}$ allora anche $\textit{U}$ è ==L.I.==
-3. In un insieme ==L.I.== non ci sono ripetizioni di vettori
+2. Se $\textit{S}$ è un insieme *L.I.* e $\textit{U}\subseteq\textit{S}$ allora anche $\textit{U}$ è *L.I.*
+3. In un insieme *L.I.* ==non== ci sono **ripetizioni di vettori**. Di conseguenza in un insieme *L.I.* non possono esserci un vettore e un suo multiplo
+
+## Basi di Spazi Vettoriali
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***Base*** di $V$ è un insieme di vettori di $V$ che sia:
+1. un insieme di generatori di $V$
+2. *L.I.*
+
+*Nota*: uno spazio vettoriale può avere più **basi**.
+
+#### Teorema di Esistenza ed Equipollenza delle Basi
+Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Allora:
+1. Ogni insieme $\textit{S}$ di generatori di $V$ contiene, almeno, una base $B$ di $V$.
+2. Se $B_{1}$ e $B_{2}$ sono due basi di $V$, allora n° di vettori in $B_{1}=$ n° di vettori in $B_{2}$. Quindi il *numero di vettori di una base* è invariante per lo spazio vettoriale $V$, ed è chiamato **dimensione di $V$** e si indica $dim\ V$.
+
+###### Conseguenza del Teorema
+Sia $V$ uno spazio vettoriale con $dim\ V=m$. Sia $\textit{S}$ un insieme di generatori di $V$ con $m$ elementi.
+Allora $\textit{S}$ è una **base di $V$**.
+
+##### Proprietà delle dimensioni
+Sia $V$ uno spazio vettoriale su $\mathbb K$.
+1. Se $U\leq V$ allora $dim\ U\leq dim\ V$. Inoltre:
+    - $dim\ U=dim\ V\Leftrightarrow U=V$ 
+    - $dim\ U=0\Leftrightarrow U=\{ \underline{0} \}$
+2. Se $U_{1},U_{2}\leq V$ allora $dim\ (U_{1}+U_{2})=dim\ U_{1}+dim\ U_{2}-dim(U_{1}\cap U_{2})$
+
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***Base Ordinata*** di $V$ è una base di $V$ in cui l'ordine degli elementi è fissato.
+
+###### Proprietà
+Se $B=\{ \underline{v_{1}},\dots,\underline{v_{n}} \}$ è una *base ordinata* di $V$ allora ogni vettore $\underline{v}\in V$ si scrive in ==modo unico== come combinazione lineare dei vettori di $B$.
+Cioè esistono **unici** coefficienti $\alpha_{1},\dots,\alpha_{n}\in\mathbb K$ tali che:$$\underline{v}=\alpha_{1}\cdot \underline{v_{1}}+\dots+\alpha_{n}\cdot \underline{v_{n}}$$Il ***vettore delle coordinate*** di $\underline{v}$ rispetto $B$ è$$C_{B}(\underline{v})=\begin{pmatrix}
+\alpha_{1} \\
+\dots \\
+\alpha_{n}
+\end{pmatrix}\in\mathbb K^n$$
