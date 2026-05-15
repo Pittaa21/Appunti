@@ -88,7 +88,11 @@ Si usa quindi un **rimpiazzo ottimale** (*optimal replacement*), ossia si rimpia
 - **Aging**: NFU modificato, approssima LRU con delle differenze
 
 ##### Working set
+Il ***working set*** è l'insieme di *pagine* che un porcesso ha in uso a un dato istante, se la memoria non è sufficiente ad accogliere il *WS* si verifica il **thrashing**. Invece se il *WS* viene caricato prima dell'esecuzione si verifica il **prepaging**. Conoscere il *WS* dei processi a tempo d'esecuzione è una pratica ==troppo costosa==, anche se si avrebbe il vantaggio che le pagine da rimpiazzare sono quelle non comprese nel *WS*.
 
+Si ha quindi un **WS approssimato**, simile all'*Aging*:
+- Ogni *page frame* in RAM ha un attributo temporale che viene utilizzato insieme all'attributo riferito (R=1), questo attributo prende il tempo virtuale corrente all'arrivo di un *page fault*
+- Al *page fault* sono rimpiazzabili le pagine con R=0 e valore dell'attributo precedente all'intervallo ($t-\Delta t,t$)
 
 
 #### Segmentazione
