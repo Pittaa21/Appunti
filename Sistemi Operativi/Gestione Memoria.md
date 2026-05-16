@@ -94,6 +94,25 @@ Si ha quindi un **WS approssimato**, simile all'*Aging*:
 - Ogni *page frame* in RAM ha un attributo temporale che viene utilizzato insieme all'attributo riferito (R=1), questo attributo prende il tempo virtuale corrente all'arrivo di un *page fault*
 - Al *page fault* sono rimpiazzabili le pagine con R=0 e valore dell'attributo precedente all'intervallo ($t-\Delta t,t$)
 
+**WS approssimato** con **orologio**:
+- *Page frame* organizzati in ==lista circolare==
+- Una *lancetta* indica il *page frame* corrente, quando si verifica un *page fault* se R=1 la *lancetta* avanza e R=0
+- Se nessun *page frame* è rimpiazzabile, si sceglie una pagina con M=0 oppure quella dove punta la *lancetta*
+
+###### Anomalia di Belady
+La frequenza di *page fault* non sempre descresce al crescere della grandezza della RAM.
+
+**LRU** è immune all'*anomalia*. Gli ***stack algorithms*** sono immuni all'*anomalia di Belady*.
+
+Nel rimpiazzare una pagina bisogna scegliere tra:
+
+- Politiche ***locali***: viene rimpiazzato nel *WS* il processo che ha causato il *page fault*, ogni processo ha un tempo fisso in RAM. Hanno prestazioni **inferiori**, se *WS* di un processo cresce l'allocazione fissa provoca rimpiazzi indesiderati (*Thrashing*). Se il *WS* si riduce si ha uno spreco di memoria<br>
+- Politiche ***globali***: scelti *page frame* senza distinzione di processo, allocazione in RAM varia dinamicamente nel tempo. Sono più **efficaci** soprattutto se l'ampiezza del *WS* varia durante l'esecuzione
+
+Pagine **ampie** hanno un rischio maggiore di ***frammentazione interna***. Quelle **piccole**, invece, implicano un ampiezza maggiore della *tabella delle pagine*.
+
+Quando si verifica un *page fault* il ***Program Counter*** dice a quale indirizzo si è verificato il problema
+
 
 #### Segmentazione
 - **Programma**: è una collezione di *segmenti*
