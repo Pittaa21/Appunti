@@ -111,8 +111,15 @@ Nel rimpiazzare una pagina bisogna scegliere tra:
 
 Pagine **ampie** hanno un rischio maggiore di ***frammentazione interna***. Quelle **piccole**, invece, implicano un ampiezza maggiore della *tabella delle pagine*.
 
-Quando si verifica un *page fault* il ***Program Counter*** dice a quale indirizzo si è verificato il problema
+Quando si verifica un *page fault* il ***Program Counter*** dice a quale indirizzo si è verificato il problema e il S/O capisce se si tratta di un'istruzione o un'operando.
 
+###### Funzionamento
+- *Page fault*: l'hardware fa *trap* al Kernel e salva il *PC* sullo stack
+- un *assembler* salva i dati nei registri e chiama S/O
+- S/O scopre il *page fault* e cerca di trovare la pagina, guardando registri e *PC*
+- quando si ottiene l'*indirizzo virtuale* che ha causato il problema, il S/O guarda se è un indirizzo valido e cerca un *page frame* vuoto o rimpiazzabile
+- se la *pagina* da rimpiazzare ha M=1 (*dirty*), si imposta il suo spostamento nel disco e si blocca il *frame*
+- 
 
 #### Segmentazione
 - **Programma**: è una collezione di *segmenti*
