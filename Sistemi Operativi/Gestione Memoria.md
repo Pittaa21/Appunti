@@ -28,6 +28,15 @@ Assicurazione che ogni processo opera solo nello spazio di memoria a esso permes
 Tecnica per alternare processi in **memoria principale** senza garanzia di **allocazione fissa**. Bisogna prendere un processo per intero e salvarlo in memoria principale, non è possibile spezzarlo. Al processo si assegna partizioni diverse nel tempo.
 Rischio di **frammentazione esterna**.
 
+***LINUX***
+- Ha una partizione dedicata allo **swap**, con un *file system* apposta
+- Si può impostarne la dimensione all'installazione dall'utente, serve almeno la stessa dimensione della RAM per gestire l'ibernazione
+
+***WINDOWS***
+- Usa un file di **swap**
+- *hyberfil.sys* usato dalla RAM per l'ibernazione
+- *pagefile.sys* quando la RAM non basta
+- se il file viene frammentato, diminuiscono le prestazioni
 
 Avendo la memoria principale allocata dinamicamente bisogna tener traccia del suo stato d'uso. 
 Due strategie:
@@ -119,9 +128,15 @@ Quando si verifica un *page fault* il ***Program Counter*** dice a quale indiriz
 - S/O scopre il *page fault* e cerca di trovare la pagina, guardando registri e *PC*
 - quando si ottiene l'*indirizzo virtuale* che ha causato il problema, il S/O guarda se è un indirizzo valido e cerca un *page frame* vuoto o rimpiazzabile
 - se la *pagina* da rimpiazzare ha M=1 (*dirty*), si imposta il suo spostamento nel disco e si blocca il *frame*
-- 
+- quando il *page frame* è libero, si copia la *pagina* richiesta
+- all'arrivo dell'*interrupt*, la tabella delle pagine è aggiornata e il *frame* è **normale**
+- il **PC** viene reimpostato e punta all'istruzione che ha causato il *page fault*
+- il processo causa del *page fault* è pronto per essere eseguito e S/O torna all'*assembler* che lo ha chiamato
+- l'*assembler* ricarica i registri, poi torna in *user space* e continua l'esecuzione
+
 
 #### Segmentazione
+Gli spazi di indirizzamento sono **indipendenti** gli uni dagli altri, porta alla *frammentazione esterna*.
 - **Programma**: è una collezione di *segmenti*
 - **Segmento**: è un'unità logica come: *main*, *funzioni*
 
@@ -130,4 +145,6 @@ Un processo si può dividere o in *pagine* o in *segmenti* che non hanno bisogno
 Più processi possono stare in memoria principale, è quindi più probabile ci siano più processi *ready*. Inoltre un processo può essere più grande della memoria principale.
 
 La **memoria reale** è quella principale. La **memoria virtuale** è invece quella sul disco e rende facile la *multiprogrammazione* e libera l'utente dalle limitazioni della memoria principale.
+
+I segmenti sono spesso **paginati**. Si usa una **LDT** (*Local Descriptor Table*) per processo che descrive i segmenti del processo. C'è una sola **GDT** (*Global Descriptor Table*) per l'intero sistema che descrive i segmenti del S/O.
 
