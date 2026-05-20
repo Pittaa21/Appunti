@@ -31,3 +31,8 @@ Il ***file*** è un concetto logico realizzato mediante **meccanismi di astrazio
         2. Livello *struttura logica*: il S/O organizza i dati grezzi in strutture logiche per facilitarne il trattamento
         3. Livello *struttura fisica*: il S/O mappa le strutture logiche sulle strutture fisiche in memoria secondaria disponibile<br>
     - **Operazioni ammesse**
+
+###### Strutture logiche
+Le possibile strutture logiche di un *file* sono:
+- Sequenza di *byte* (*byte stream*): metodo più rudimentale e flessibile (scelto da **UNIX** e **MS Windows**), il *programma applicativo* sa come dare significato al contenuto del *file*, si usa un puntatore relativo all'inizio del *file*, infine lettura e scrittura sono a **blocchi di byte**. Si ha quindi lo sforzo minimo del S/O.
+- Record di lunghezza e struttura fissa
