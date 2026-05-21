@@ -156,4 +156,40 @@ Cioè esistono **unici** coefficienti $\alpha_{1},\dots,\alpha_{n}\in\mathbb K$ 
 \dots \\
 \alpha_{n}
 \end{pmatrix}\in\mathbb K^n$$
- n
+ 
+## Spazi Vettoriali associati a Matrici
+Sia $A\in M_{m,n}(\mathbb K)\quad\mathbb K\in \{ \mathbb R,\mathbb C \}$.
+
+1. **Lo spazio delle colonne di $A$**
+    È il sottospazio di $\mathbb C^m$ generato dalle colonne di $A$:$$C(A)= <\underline{c_{1}},\dots,\underline{c_{n}}>\ \leq\mathbb C^m$$Per trovare una *Base* di $C(A)$ bisogna:
+    1. trovare una *forma ridotta* $u$ di $A$.
+    2. $dim\left(C(A)\right)=rk\ A$ (rango di $A$) $=n$° colonne dominanti di $u$.<br>Una *base* di $C(A)$ è data dalle colonne di $A$ che hanno posizione corrispondente alle *colonne dominanti* di $u$. $C(A)\neq C(u)$<br>
+2. **Lo spazio delle righe di $A$**
+    È il sottospazio di $\mathbb C^n$ generato dalle *H-trasposte* delle righe di $A$. $$\begin{align}
+     & R(A)= <\underline{\overline{r_{1}^T}}, \dots, \underline{\overline{r_{m}^T}}>\ \leq\mathbb C^n \\
+     & R(A)=C(A^H)
+    \end{align}
+    $$Per trovare una *base* di $R(A)$ bisogna:
+    1. trovare una *forma ridotta* $u$ di $A$.
+    2. $R(A)=R(u)$. Una *base* di $R(A)$ è data dalle *H-trasposte* delle righe non-nulle di $u$.
+
+3. **Lo spazio nullo di $A$**
+    $$N(A)=\left\{ \underline{v}\in\mathbb C^n\ |\ A\cdot \underline{v}=\underline{0} \right\}\leq\mathbb C^n$$
+    $N(A)$ è quindi l'insieme delle soluzioni del sistema lineare $A\cdot \underline{x}=\underline{0}$. È, inoltre uno spazio vettoriale e $\underline{0}\in N(A)$.
+    ***Proprietà***: $dim\ (N(A))=dim\mathbb\ C^n-rk(A)$
+    Per trovare una *base* di $N(A)$ bisogna:
+    1. trovare una *forma ridotta* $u$ di $A$
+    2. osservo che $N(A)=N(u)$ e $dim\ (N(A))=n$° colonne di $u-n$° colonne *dominanti* di $u=n$° colonne *libere* di $u$.
+        Per trovare la base basta risolvere il sistema $u\cdot \underline{x}=\underline{0}$.
+        Se tutte le colonne di $u$ sono *dominanti*, allora $$N(A)=\{ \underline{0} \},\ dim\ (N(A))=0,\ B=\emptyset$$
+
+## Applicazioni Lineari
+*Def*: Un'***Applicazione Lineare*** (o *trasformazione lineare*) è una funzione $f:\ V\to W$ tale che:
+- $V$ e $W$ sono *spazi vettoriali* definiti sullo stesso $\mathbb K$.
+- $f$ conserva la **somma**: $f(\underline{v_{1}}+\underline{v_{2}})=f(\underline{v_{1}})+f(\underline{v_{2}})\ \forall \underline{v_{1}},\underline{v_{2}}\in V$.
+- $f$ conserva il **prodotto scalare**: $f(\alpha \cdot \underline{v})=\alpha \cdot f(\underline{v})\ \forall \underline{v}\in V,\alpha\in\mathbb K$.
+
+#### Proprietà Applicazioni Lineari
+Sia $f:\ V\to W$ un'*applicazione lineare*.
+1. $f(\underline{0}_{v})=\underline{0}_{w}$
+2. Se $g:\ W\to Z$ è un'*applicazione lineare*, allora $g$ o $f:\ $
