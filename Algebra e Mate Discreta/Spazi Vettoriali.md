@@ -201,4 +201,11 @@ Sia $f:\ V\to W$ un'*applicazione lineare*.
 ##### Proprietà
 Sia $f:\ V\to W$ un'*applicazione lineare*.
 
-1. $N(f)$ è un *sottospazio vettoriale* di $V$ e
+1. $N(f)$ è un *sottospazio vettoriale* di $V$ e $f$ è iniettiva se e solo se $N(f)=\{ \underline{0}_{V} \}\Leftrightarrow dim\ N(f)=0$.
+    $f$ è **iniettiva** se dati $\underline{v_{1}},\underline{v_{2}}\in V,\ \underline{v_{1}}\neq \underline{v_{2}}$ si ha $f(\underline{v_{1}})\neq f(\underline{v_{2}})$<br>
+2. $\text{Im}(f)$ è un *sottospazio vettoriale* di $W$.
+    $f$ è **suriettiva** se e solo se $\text{Im}(f)=W\Leftrightarrow dim\ (\text{Im}(f))=dim\ (W)$<br>
+3. $f$ è **isomorfo** (*iniettiva* e *suriettiva*) se e solo se $N(f)=\{ \underline{0}_{v} \}$ e $\text{Im}(f)=W$.
+
+#### Teorema di Nullità + Rango
+Sia $f:\ V\to W$ un'*applicazione lineare*. Allora: $$dim\ (V)=dim\ (N(f))+dim\ (\text{Im}(f))$$
