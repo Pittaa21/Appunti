@@ -192,4 +192,13 @@ Sia $A\in M_{m,n}(\mathbb K)\quad\mathbb K\in \{ \mathbb R,\mathbb C \}$.
 #### Proprietà Applicazioni Lineari
 Sia $f:\ V\to W$ un'*applicazione lineare*.
 1. $f(\underline{0}_{v})=\underline{0}_{w}$
-2. Se $g:\ W\to Z$ è un'*applicazione lineare*, allora $g$ o $f:\ $
+2. Se $g:\ W\to Z$ è un'*applicazione lineare*, allora $g$ o $f:\ V\xrightarrow{f}W\xrightarrow{g}Z$ è *applicazione lineare* .
+
+Sia $f:\ V\to W$ un'*applicazione lineare*.
+- Lo **spazio nullo** di $f$ è $N(f)=\{ \underline{v}\in V\ |\ f(\underline{v}) =\underline{0}_{w} \}\subseteq V$
+- Lo **spazio immagine** di $f$ è $\text{Im}(f)=\{ \underline{w}\in W\ |\ \underline{w}=f(\underline{v})\text{ per }\underline{v}\in V\}\subseteq W$
+
+##### Proprietà
+Sia $f:\ V\to W$ un'*applicazione lineare*.
+
+1. $N(f)$ è un *sottospazio vettoriale* di $V$ e
