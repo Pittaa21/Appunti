@@ -209,3 +209,29 @@ Sia $f:\ V\to W$ un'*applicazione lineare*.
 
 #### Teorema di Nullità + Rango
 Sia $f:\ V\to W$ un'*applicazione lineare*. Allora: $$dim\ (V)=dim\ (N(f))+dim\ (\text{Im}(f))$$
+## Applicazioni Lineari e Matrici
+*Def*: Sia $A\in M_{m,n}(\mathbb K)$ una matrice. L'*applicazione lineare* **indotta** da $A$ è$$\begin{align}
+f_{A}:\ \mathbb K^n\to\mathbb K^m \\
+\underline{v}\to f(\underline{v})=A\cdot \underline{v}
+\end{align}$$
+*Nota*: $f_{A}$ è *applicazione lineare*.
+
+*Osservazioni*:
+- $N(f_{A})=\{ \underline{v}\in\mathbb K^n\ |\ f_{A}(\underline{v})=\underline{0} \}=N(A)$ **spazio nullo** di $A$. 
+- $\text{Im}(f_{A})=\{ \underline{w}\in\mathbb K^m\ |\ \underline{w}=f_{A}(\underline{v})\text{ per }\underline{v}\in\mathbb K^n \}=C(A)$ **spazio delle colonne** di $A$.
+
+Il **Teorema di Nullità + Rango** ci dice che:$$\begin{align}
+ & dim(\mathbb K^n)=dim\ N(f_{A})+dim\ \text{Im}(f_{A}) \\
+ & n=dim\ N(A)+ \left[\ dim\ C(A)=rk(A)\ \right] \\
+\end{align}$$Da cui si ricava la formula:$$dim\ N(A)=n-rk(A)$$
+*Def*: Sia $f:\ V\to W$ un'*applicazione lineare*. Siano $B=\{ \underline{v_{1}},\dots,\underline{v_{n}} \}$ una *base ordinata* di $V$ e $D=\{ \underline{w_{1}},\dots,\underline{w_{n}} \}$ una *base ordinata* di $W$.
+![[baseOrd.svg|center|290]]
+La ***matrice associata*** a $f$ rispetto alle basi $B$ e $D$ è la matrice $A\in M_{m,n}(\mathbb K)$ tale che:$$f_{A}\cdot C_{B}=C_{D}\cdot f$$![[matAsso.svg|center|650]]
+cioè: $$A\cdot C_{B}(\underline{v})=C_{D}(f(\underline{v}))\quad\forall \underline{v}\in V$$
+*Nota*: una tale $A$ esiste sempre.
+
+##### Strategia per costruire $A$
+$A$ è la **matrice** che ha come *colonne*:$$C_{D}(f(\underline{v_{1}})),\dots,C_{D}(f(\underline{v_{n}}))$$
+*Osservazione*: Se $f:\ \mathbb K^n\to\mathbb K^m$ e 
+$B=\epsilon_{n}=\{ \underline{e_{1}},\dots \underline{e_{n}} \}$ **base canonica** di $\mathbb K^n$.
+$D=\epsilon_{m}=\{ \underline{e_{1}},\dots \underline{e_{m}} \}$ **base canonica** di $\mathbb K^m$.

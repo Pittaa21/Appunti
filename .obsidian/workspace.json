@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5124969482422,
-    "collapsed": true
+    "width": 329.5124969482422
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -245,9 +244,11 @@
   },
   "active": "7ab9cb7463af4853",
   "lastOpenFiles": [
+    "SVG/baseOrd.svg",
+    "SVG/matAsso.svg",
+    "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Sistemi Operativi/File System.md",
     "Sistemi Operativi/Gestione Memoria.md",
-    "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Varie",
     "Algebra e Mate Discreta/Insiemi Numerici e Polinomi.md",
     "SVG/teo52.svg",
@@ -258,8 +259,6 @@
     "SVG/rimvertis(1).svg",
     "SVG/planare.svg",
     "SVG/petersen.svg",
-    "SVG/pesomin.svg",
-    "SVG/pesi.svg",
     "SVG",
     "Calendar/2026-06-12.md",
     "Calendar",
@@ -285,7 +284,6 @@
     "Sistemi Operativi.md",
     "Politiche di Ordinamento.md",
     "Matrici e Sistemi lineari.md",
-    "Linux.md",
     "Matrici e Sistemi lineari.pdf",
     "Sincronizzazione tra Processi.pdf",
     "Untitled.base"
