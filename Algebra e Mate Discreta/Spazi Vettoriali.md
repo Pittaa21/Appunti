@@ -274,4 +274,7 @@ $\mathbb R^2$ il piano cartesiano di coordinate dei punti $P(a,b)$.
 
 
 ## Norme di Vettori
-*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***norma*** per $V$ è una funzione$$||\cdot||:\ V\to\mathbb R\geq0$$
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***norma*** per $V$ è una funzione$$||\cdot||:\ V\to\mathbb R\geq0$$tale che:
+1. $||\underline{v}||>=0\quad\forall \underline{v}\in V,\ \underline{v}\neq \underline{0}$ e $||\underline{0}||=0$
+2. $||\alpha \cdot \underline{v}||=|\alpha|\cdot||\underline{v}||\quad\forall \alpha\in\mathbb K,\forall \underline{v}\in V$
+3. $||\underline{v}+\underline{w}||\leq||\underline{v}||+||\underline{w}||\quad \forall \underline{v},\underline{w}\in V$ (**disuguaglianza triangolare**)
