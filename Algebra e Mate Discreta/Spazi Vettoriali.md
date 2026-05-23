@@ -235,3 +235,43 @@ $A$ è la **matrice** che ha come *colonne*:$$C_{D}(f(\underline{v_{1}})),\dots,
 *Osservazione*: Se $f:\ \mathbb K^n\to\mathbb K^m$ e 
 $B=\epsilon_{n}=\{ \underline{e_{1}},\dots \underline{e_{n}} \}$ **base canonica** di $\mathbb K^n$.
 $D=\epsilon_{m}=\{ \underline{e_{1}},\dots \underline{e_{m}} \}$ **base canonica** di $\mathbb K^m$.
+allora $\forall \underline{v}\in V,\ C_{B}(\underline{v})=\underline{v}\quad C_{D}(f(\underline{v}))=f(\underline{v})$
+
+quindi se $A$ è *matrice associata* a $f$ rispetto alle **basi canoniche** allora:$$\begin{align}
+ & A\cdot \underline{v}=f(\underline{v}) \\
+  & f_{A}(\underline{v})
+\end{align}$$cioè $f_{A}=f$.
+
+
+*Nota*: In generale se $A$ è *matrice associata* a $f$ rispetto alle basi $B$ e $D$ allora: $$N(A)\neq N(f)\text{ e }C(A)\neq\text{Im}(f)$$Ma$$dim(N(A))=dim(N(f))\text{ e }dim(C(A))=dim(\text{Im}(f))$$
+
+*Osservazione*: Siano $f:\ V\to W$ e $g:\ W\to Z$ *applicazioni lineari* e
+- $B$ **base ordinata** di $V$
+- $D$ **base ordinata** di $W$
+- $F$ **base ordinata** di $Z$
+
+Se $A_{1}$ è la *matrice associata* a $f$ rispetto a $B$ e $D$, $A_{2}$ è la *matrice associata* a $g$ rispetto a $D$ e $F$ allora:$$A_{2}\cdot A_{1}$$è la *matrice associata* a $g\cdot f:\ V\xrightarrow{f}W\xrightarrow{g}Z$ rispetto alle basi $B$ e $F$.
+
+
+###### Matrice di Passaggio di Base
+*Def*: Sia $V$ uno *spazio vettoriale* su $\mathbb K\in \{ \mathbb R,\mathbb C \}$, con $dim\ V=n$. Siano $B_{1}$ e $B_{2}$ due basi (ordinate) di $V$.
+La ***Matrice di Passaggio di Base*** da $B_{1}$ a $B_{2}$, indicata $\quad M_{B_{2}\leftarrow B_{1}}\quad$ è la *matrice associata* all'applicazione identica $$id_{V}:\ V\to V\quad id_{V}(v)=v$$
+Cioè se $B_{1}=\{ \underline{v_{1}},\dots,\underline{v_{n}} \}$ allora $M_{B_{2}\leftarrow B_{1}}(C_{B_{2}}(\underline{v_{1}}),\dots,C_{B_{2}}(\underline{v_{n}}))\in M_{n}(\mathbb K)$.
+
+***Proprietà***:
+1. $M_{B_{2}\leftarrow B_{1}}\in M_{n}(\mathbb K)$ è *matrice quadrata* di ordine $n=dim\ V$.
+2. Se $B_{1}=B_{2}$ allora $M_{B_{2}\leftarrow B_{1}}=\mathbb 1_{n}$
+3. $M_{B_{2}\leftarrow B_{1}}$ è sempre *invertibile* e $$\left(M_{B_{2}\leftarrow B_{1}}\right)^{-1}=M_{B_{1}\leftarrow B_{2}}$$
+4. Se $V=\mathbb K^n,\ B=\{ \underline{v_{1}},\dots,\underline{v_{n}} \}$ **base ordinata**, $\epsilon_{n}$ **base cononica**.$$M_{\epsilon_{n}\leftarrow B}=\Bigl(\underline{v_{1}},\dots,\underline{v_{n}}\Bigr)$$
+
+## Interpretazione Geometrica di $\mathbb R^2$
+###### Algebra
+$\mathbb R^2=\left\{ \binom ab:a,b\in\mathbb R \right\}$
+coordinate di vettori rispetto alla base cononica $\epsilon_{2}$.
+
+###### Geometria
+$\mathbb R^2$ il piano cartesiano di coordinate dei punti $P(a,b)$. 
+
+
+## Norme di Vettori
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***norma*** per $V$ è una funzione$$||\cdot||:\ V\to\mathbb R\geq0$$
