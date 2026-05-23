@@ -278,3 +278,17 @@ $\mathbb R^2$ il piano cartesiano di coordinate dei punti $P(a,b)$.
 1. $||\underline{v}||>=0\quad\forall \underline{v}\in V,\ \underline{v}\neq \underline{0}$ e $||\underline{0}||=0$
 2. $||\alpha \cdot \underline{v}||=|\alpha|\cdot||\underline{v}||\quad\forall \alpha\in\mathbb K,\forall \underline{v}\in V$
 3. $||\underline{v}+\underline{w}||\leq||\underline{v}||+||\underline{w}||\quad \forall \underline{v},\underline{w}\in V$ (**disuguaglianza triangolare**)
+
+#### Esempi di Norme per $V=\mathbb K^m$ con $\mathbb K\in \{ \mathbb R,\mathbb C \}$
+$$||\cdot||:\ \mathbb K^m\to\mathbb R\geq{0}$$
+1. **Norma Euclidea** $||\cdot||_{2}$
+    in $\mathbb R^2$ "misura la lunghezza di un vettore".
+    $\underline{v}=\binom ab\to P(a,b)$
+    $||\underline{v}||_{2}=\sqrt{a^2+b^2}$
+    La ***Norma Euclidea*** è data da:$$||\underline{v}||_{2}=\sqrt{\underline{v}^h\cdot \underline{v}}$$cioè$$\left\|\begin{pmatrix}
+    v_{1} \\
+    \dots \\
+    v_{m}
+    \end{pmatrix}\right\|=\sqrt{ |v_{1}|^2+\dots+|v_{m}|^2 }\in\mathbb R\geq_{0}$$
+    *Nota*: va considerato $\underline{v}^H$ invece di $\underline{v}^T$ affinchè si abbia sempre $||\underline{v}||_{2}\in\mathbb R\geq0$.<br>
+2. **Norma Taxi-Driver** o **Manhattan**:
