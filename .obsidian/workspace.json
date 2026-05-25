@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5124969482422,
-    "collapsed": true
+    "width": 329.5124969482422
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -243,8 +242,9 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "7ab9cb7463af4853",
+  "active": "c96fc433758e8523",
   "lastOpenFiles": [
+    "SVG/graph.svg",
     "SVG/baseOrd.svg",
     "SVG/matAsso.svg",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",

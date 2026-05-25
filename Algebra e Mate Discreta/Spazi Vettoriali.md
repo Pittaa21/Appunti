@@ -274,21 +274,46 @@ $\mathbb R^2$ il piano cartesiano di coordinate dei punti $P(a,b)$.
 
 
 ## Norme di Vettori
-*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***norma*** per $V$ è una funzione$$||\cdot||:\ V\to\mathbb R\geq0$$tale che:
-1. $||\underline{v}||>=0\quad\forall \underline{v}\in V,\ \underline{v}\neq \underline{0}$ e $||\underline{0}||=0$
-2. $||\alpha \cdot \underline{v}||=|\alpha|\cdot||\underline{v}||\quad\forall \alpha\in\mathbb K,\forall \underline{v}\in V$
-3. $||\underline{v}+\underline{w}||\leq||\underline{v}||+||\underline{w}||\quad \forall \underline{v},\underline{w}\in V$ (**disuguaglianza triangolare**)
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***norma*** per $V$ è una funzione$$\|\cdot\|:\ V\to\mathbb R\geq0$$tale che:
+1. $\|\underline{v}\|>=0\quad\forall \underline{v}\in V,\ \underline{v}\neq \underline{0}$ e $\|\underline{0}\|=0$
+2. $\|\alpha \cdot \underline{v}\|=|\alpha|\cdot\|\underline{v}\|\quad\forall \alpha\in\mathbb K,\forall \underline{v}\in V$
+3. $\|\underline{v}+\underline{w}\|\leq\|\underline{v}\|+\|\underline{w}\|\quad \forall \underline{v},\underline{w}\in V$ (**disuguaglianza triangolare**)
 
 #### Esempi di Norme per $V=\mathbb K^m$ con $\mathbb K\in \{ \mathbb R,\mathbb C \}$
-$$||\cdot||:\ \mathbb K^m\to\mathbb R\geq{0}$$
+$$\|\cdot\|:\ \mathbb K^m\to\mathbb R\geq{0}$$
 1. **Norma Euclidea** $||\cdot||_{2}$
     in $\mathbb R^2$ "misura la lunghezza di un vettore".
     $\underline{v}=\binom ab\to P(a,b)$
-    $||\underline{v}||_{2}=\sqrt{a^2+b^2}$
-    La ***Norma Euclidea*** è data da:$$||\underline{v}||_{2}=\sqrt{\underline{v}^h\cdot \underline{v}}$$cioè$$\left\|\begin{pmatrix}
+    $\|\underline{v}\|_{2}=\sqrt{a^2+b^2}$
+    La ***Norma Euclidea*** è data da:$$\|\underline{v}\|_{2}=\sqrt{\underline{v}^h\cdot \underline{v}}$$cioè$$\left\|\begin{pmatrix}
     v_{1} \\
     \dots \\
     v_{m}
     \end{pmatrix}\right\|=\sqrt{ |v_{1}|^2+\dots+|v_{m}|^2 }\in\mathbb R\geq_{0}$$
-    *Nota*: va considerato $\underline{v}^H$ invece di $\underline{v}^T$ affinchè si abbia sempre $||\underline{v}||_{2}\in\mathbb R\geq0$.<br>
-2. **Norma Taxi-Driver** o **Manhattan**:
+    *Nota*: va considerato $\underline{v}^H$ invece di $\underline{v}^T$ affinchè si abbia sempre $\|\underline{v}\|_{2}\in\mathbb R\geq0$.<br>
+2. **Norma Taxi-Driver** o **Manhattan** $\|\cdot\|_{1}$
+    in $\mathbb R^2$, "conta i passi di lunghezza 1 per andare da $0$ a $P$ muovendosi solo in orizzontake o verticale".
+    La **norma** è data da:$$\left\|\begin{pmatrix}
+    v_{1} \\
+    \dots \\
+    v_{m}
+    \end{pmatrix}\right\|_{1}=|v_{1}|+\dots+|v_{m}|$$
+3. **Norma "Infinito"**:
+    In $\mathbb R^2$, "una volta stabilito se è maggiore il numero di passi orizzontali o verticali, mi dà questo numero".
+    La **Norma Infinito** è data da:$$\left\|\begin{pmatrix}
+    v_{1} \\
+    \dots \\
+    v_{m}
+    \end{pmatrix}\right\|=\text{max }\{ |v_{1}|,\dots,|v_{m}| \}$$
+    *Osservazione*: Sia $\underline{v}\in\mathbb K^m$, allora$$\|\underline{v}\|_{\infty}\leq\|\underline{v}\|_{2}\leq\|\underline{v}\|_{1}$$
+    in$\mathbb R^2$. D'ora in poi, ci si concentra sulla **Norma Euclidea**.
+
+
+##### Normalizzazione
+*Def*: Sia $\underline{v}\in\mathbb K^n,\ \underline{v}\neq \underline{0}$. ***Normalizzare*** $\underline{v}$ significa considerare l'==unico== multiplo positivo di $\underline{v}$ con norma euclidea uguale a 1:$$\underline{v}'=\frac{1}{\|\underline{v}\|_{2}}\cdot \underline{v}$$
+
+### Il Coseno dell'Angolo tra vettori di $\mathbb K^m$
+In $\mathbb R^2$. 
+$\underline{v},\underline{w}\in\mathbb R^2,\ \underline{v}\neq{0}\neq \underline{w},\ \underline{v}\neq \underline{w}$.
+![[graph.svg|center|334]]
+
