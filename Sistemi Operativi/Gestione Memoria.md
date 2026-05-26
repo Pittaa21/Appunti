@@ -90,7 +90,7 @@ Si usa quindi un **rimpiazzo ottimale** (*optimal replacement*), ossia si rimpia
     - **Classe 3**: riferita, modificata
     **NRU** sceglie una pagina a caso della classe non vuota di indice più basso.
 - **FIFO**: Rimuove la pagine di ingresso più vecchio in RAM
-- **Second Chance**: Corregge *FIFO* rimpiazzando solo le pagine con bit R = 0
+- **Second Chance**: Corregge *FIFO*, quindi la più vecchia, rimpiazzando solo le pagine con bit R = 0
 - **Orologio**: Come SC ma i *page frame* sono mantenuti in una **lista circolare**
 - **LRU** (*Least Recently Used*): Approssima l'algoritmo ottimale, necessita una lista aggiornata ad ogni riferimento a memoria
 - **NFU** (*Not Frequently Used*): Per ogni *page frame* aggiorna periodicamente un *contatore* C che cresce di più se R = 1
