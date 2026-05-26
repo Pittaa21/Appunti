@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/Gestione Memoria.md",
-                "mode": "preview",
+                "file": "Algebra e Mate Discreta/Spazi Vettoriali.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gestione Memoria"
+              "title": "Spazi Vettoriali"
             }
           }
         ]
@@ -240,7 +240,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "9622b43658bb58c6",
+  "active": "65670865057dc7dc",
   "lastOpenFiles": [
     "Sistemi Operativi/Gestione Memoria.md",
     "conflict-files-obsidian-git.md",

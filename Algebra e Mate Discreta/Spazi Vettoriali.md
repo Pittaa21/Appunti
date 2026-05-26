@@ -317,3 +317,36 @@ In $\mathbb R^2$.
 $\underline{v},\underline{w}\in\mathbb R^2,\ \underline{v}\neq{0}\neq \underline{w},\ \underline{v}\neq \underline{w}$.
 ![[graph.svg|center|334]]
 
+$\underline{v}$ e $\underline{w}$ individuano un unico angolo $\alpha<360°$, andando da $\underline{v}$ a $\underline{w}$. L'angolo non dipende dal sistema di riferimento.
+
+Calcolo il $\cos(\alpha)$:$$\cos(\alpha)=\frac{\underline{v}^H\cdot \underline{w}}{\|\underline{v}\|_{2}\cdot\|\underline{w}\|_{2}}$$
+##### Proprietà
+Siano $\underline{v},\underline{w}\in\mathbb K^m,\ \underline{v}\neq \underline{0}\neq \underline{w}$.
+1. Se $\mathbb K=\mathbb R,\ \alpha$ è l'angolo compreso tra $\underline{v}$ e $\underline{w}$ e $\beta$ è l'angolo compreso tra $\underline{w}$ e $\underline{v}$ allora:$$\cos(\alpha)=\cos(\beta)$$
+2. $\cos(\alpha)=0\Leftrightarrow\underline{v}^H\cdot \underline{w}=\underline{0}$
+
+## Vettori Ortogonali e Ortonormali
+*Def*: Il **Prodotto interno standard** (o *scalare*) di $\mathbb K^m$ è:$$\begin{align}
+ & (\cdot|\cdot):\ \mathbb K^m\text{ x }\mathbb K^m\to\mathbb K \\
+  & (\underline{v}|\underline{w})=\underline{v}^H\cdot \underline{w}
+\end{align}$$
+##### Proprietà
+1. $(\underline{v}|\underline{0})=(\underline{0}|\underline{v})=0\quad\forall \underline{v}\in\mathbb K^m$<br>
+2. $(\underline{v}|\underline{v})=\underline{v}^H\cdot \underline{v}=\|\underline{v}\|_{2}^2\in\mathbb R\geq0\quad\forall \underline{v}\in\mathbb K^m$<br>
+3. $(\alpha \underline{v}|\beta \underline{w})=(\overline \alpha \cdot v_{1}\ \dots\ \overline \alpha \cdot v_{m})\cdot \begin{pmatrix}\beta \cdot w_{1} \\ \dots \\ \beta \cdot w_{m}\end{pmatrix}=\overline \alpha \cdot \beta \cdot(\underline{v}|\underline{w})$
+    Se $\alpha,\beta\neq0$ allora $(\alpha \cdot \underline{v}|\beta \cdot \underline{w})=0\Leftrightarrow (\underline{v}|\underline{w})=0$
+
+*Def*: Sia $V\leq\mathbb K^m,\ \mathbb K\in \{ \mathbb R,\mathbb C \}$. Due vettori $\underline{v},\underline{w}\in V$ si dicono ***ortogonali***, e si scrive $\underline{v}\perp \underline{w}$ se $(\underline{v}|\underline{w})=0$.
+
+*Nota*: Se $(\underline{v}|\underline{w})=0$ allora anche $(\underline{w}|\underline{v})=0$.
+
+*Osservazioni*:
+1. $\underline{0}$ è ortogonale ad ogni vettore $\underline{v}\in\mathbb K^m$
+2. Se $\underline{v}\neq \underline{0}-\underline{w}$ e $\alpha$ è l'angolo compreso tra $\underline{v}$ e $\underline{w}$ allora: $$\underline{v}\perp \underline{w}\Leftrightarrow(\underline{v}|\underline{w})=0\Leftrightarrow\cos(\alpha)=0$$
+*Def*: Un insieme $S=\{ \underline{v_{1}},\dots \underline{v_{t}} \}$ di vettori di $V\leq\mathbb K^m$ si dice ***Insieme Ortogonale***, se i suoi vettori sono a due a due **ortogonali**, ossia $\underline{v_{i}}\perp \underline{v_{j}}\ \forall i\neq j$, $(\underline{v_i}|\underline{v_{j}})=0\ \forall i\neq j$.
+Una ***Base Ortogonale*** di $V$ è una base che è anche **insieme ortogonale**.
+
+*Def*: Un insieme $S=\{ \underline{v_{1}},\dots \underline{v_{j}} \}$ di vettori di $V\leq\mathbb K^m$ si dice ***Insieme Ortonormale***, se è un **insieme ortogonale** in cui tutti i vettori hanno **norma euclidea** uguale a 1, ossia $\underline{v_{i}}\perp \underline{v_{j}}$ e $\|\underline{v_{i}}\|_{2}=\|\underline{v_{j}}\|_{2}=1\ \forall i\neq j$, $(\underline{v_{i}}|\underline{v_{j}})=0$ e $(\underline{v_{i}}|\underline{v_{i}})=(\underline{v_{j}}|\underline{v_{j}})=1$.
+Una ***Base Ortonormale*** di $V$ è una base di $V$ che è anche **insieme ortonormale**.
+
+*Osservazione*: Dato un **insieme ortogonale** possiamo ottenere un **insieme ortonormale** rimuovendo eventuali vettori *nulli* di $S$ e normalizzando i *non-nulli*:$$S'=\left\{ \frac{1}{\|\underline{v_{1}}\|_{2}}\cdot \underline{v_{1}},\ \dots \right\}$$
