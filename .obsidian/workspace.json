@@ -20,23 +20,8 @@
               "icon": "lucide-file",
               "title": "Gestione Memoria"
             }
-          },
-          {
-            "id": "1fd50f4a84f8c9ea",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "conflict-files-obsidian-git.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "conflict-files-obsidian-git"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -255,7 +240,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1fd50f4a84f8c9ea",
+  "active": "9622b43658bb58c6",
   "lastOpenFiles": [
     "Sistemi Operativi/Gestione Memoria.md",
     "conflict-files-obsidian-git.md",
