@@ -209,3 +209,111 @@ Sia $f:\ V\to W$ un'*applicazione lineare*.
 
 #### Teorema di Nullità + Rango
 Sia $f:\ V\to W$ un'*applicazione lineare*. Allora: $$dim\ (V)=dim\ (N(f))+dim\ (\text{Im}(f))$$
+## Applicazioni Lineari e Matrici
+*Def*: Sia $A\in M_{m,n}(\mathbb K)$ una matrice. L'*applicazione lineare* **indotta** da $A$ è$$\begin{align}
+f_{A}:\ \mathbb K^n\to\mathbb K^m \\
+\underline{v}\to f(\underline{v})=A\cdot \underline{v}
+\end{align}$$
+*Nota*: $f_{A}$ è *applicazione lineare*.
+
+*Osservazioni*:
+- $N(f_{A})=\{ \underline{v}\in\mathbb K^n\ |\ f_{A}(\underline{v})=\underline{0} \}=N(A)$ **spazio nullo** di $A$. 
+- $\text{Im}(f_{A})=\{ \underline{w}\in\mathbb K^m\ |\ \underline{w}=f_{A}(\underline{v})\text{ per }\underline{v}\in\mathbb K^n \}=C(A)$ **spazio delle colonne** di $A$.
+
+Il **Teorema di Nullità + Rango** ci dice che:$$\begin{align}
+ & dim(\mathbb K^n)=dim\ N(f_{A})+dim\ \text{Im}(f_{A}) \\
+ & n=dim\ N(A)+ \left[\ dim\ C(A)=rk(A)\ \right] \\
+\end{align}$$Da cui si ricava la formula:$$dim\ N(A)=n-rk(A)$$
+*Def*: Sia $f:\ V\to W$ un'*applicazione lineare*. Siano $B=\{ \underline{v_{1}},\dots,\underline{v_{n}} \}$ una *base ordinata* di $V$ e $D=\{ \underline{w_{1}},\dots,\underline{w_{n}} \}$ una *base ordinata* di $W$.
+![[baseOrd.svg|center|290]]
+La ***matrice associata*** a $f$ rispetto alle basi $B$ e $D$ è la matrice $A\in M_{m,n}(\mathbb K)$ tale che:$$f_{A}\cdot C_{B}=C_{D}\cdot f$$![[matAsso.svg|center|650]]
+cioè: $$A\cdot C_{B}(\underline{v})=C_{D}(f(\underline{v}))\quad\forall \underline{v}\in V$$
+*Nota*: una tale $A$ esiste sempre.
+
+##### Strategia per costruire $A$
+$A$ è la **matrice** che ha come *colonne*:$$C_{D}(f(\underline{v_{1}})),\dots,C_{D}(f(\underline{v_{n}}))$$
+*Osservazione*: Se $f:\ \mathbb K^n\to\mathbb K^m$ e 
+$B=\epsilon_{n}=\{ \underline{e_{1}},\dots \underline{e_{n}} \}$ **base canonica** di $\mathbb K^n$.
+$D=\epsilon_{m}=\{ \underline{e_{1}},\dots \underline{e_{m}} \}$ **base canonica** di $\mathbb K^m$.
+allora $\forall \underline{v}\in V,\ C_{B}(\underline{v})=\underline{v}\quad C_{D}(f(\underline{v}))=f(\underline{v})$
+
+quindi se $A$ è *matrice associata* a $f$ rispetto alle **basi canoniche** allora:$$\begin{align}
+ & A\cdot \underline{v}=f(\underline{v}) \\
+  & f_{A}(\underline{v})
+\end{align}$$cioè $f_{A}=f$.
+
+
+*Nota*: In generale se $A$ è *matrice associata* a $f$ rispetto alle basi $B$ e $D$ allora: $$N(A)\neq N(f)\text{ e }C(A)\neq\text{Im}(f)$$Ma$$dim(N(A))=dim(N(f))\text{ e }dim(C(A))=dim(\text{Im}(f))$$
+
+*Osservazione*: Siano $f:\ V\to W$ e $g:\ W\to Z$ *applicazioni lineari* e
+- $B$ **base ordinata** di $V$
+- $D$ **base ordinata** di $W$
+- $F$ **base ordinata** di $Z$
+
+Se $A_{1}$ è la *matrice associata* a $f$ rispetto a $B$ e $D$, $A_{2}$ è la *matrice associata* a $g$ rispetto a $D$ e $F$ allora:$$A_{2}\cdot A_{1}$$è la *matrice associata* a $g\cdot f:\ V\xrightarrow{f}W\xrightarrow{g}Z$ rispetto alle basi $B$ e $F$.
+
+
+###### Matrice di Passaggio di Base
+*Def*: Sia $V$ uno *spazio vettoriale* su $\mathbb K\in \{ \mathbb R,\mathbb C \}$, con $dim\ V=n$. Siano $B_{1}$ e $B_{2}$ due basi (ordinate) di $V$.
+La ***Matrice di Passaggio di Base*** da $B_{1}$ a $B_{2}$, indicata $\quad M_{B_{2}\leftarrow B_{1}}\quad$ è la *matrice associata* all'applicazione identica $$id_{V}:\ V\to V\quad id_{V}(v)=v$$
+Cioè se $B_{1}=\{ \underline{v_{1}},\dots,\underline{v_{n}} \}$ allora $M_{B_{2}\leftarrow B_{1}}(C_{B_{2}}(\underline{v_{1}}),\dots,C_{B_{2}}(\underline{v_{n}}))\in M_{n}(\mathbb K)$.
+
+***Proprietà***:
+1. $M_{B_{2}\leftarrow B_{1}}\in M_{n}(\mathbb K)$ è *matrice quadrata* di ordine $n=dim\ V$.
+2. Se $B_{1}=B_{2}$ allora $M_{B_{2}\leftarrow B_{1}}=\mathbb 1_{n}$
+3. $M_{B_{2}\leftarrow B_{1}}$ è sempre *invertibile* e $$\left(M_{B_{2}\leftarrow B_{1}}\right)^{-1}=M_{B_{1}\leftarrow B_{2}}$$
+4. Se $V=\mathbb K^n,\ B=\{ \underline{v_{1}},\dots,\underline{v_{n}} \}$ **base ordinata**, $\epsilon_{n}$ **base cononica**.$$M_{\epsilon_{n}\leftarrow B}=\Bigl(\underline{v_{1}},\dots,\underline{v_{n}}\Bigr)$$
+
+## Interpretazione Geometrica di $\mathbb R^2$
+###### Algebra
+$\mathbb R^2=\left\{ \binom ab:a,b\in\mathbb R \right\}$
+coordinate di vettori rispetto alla base cononica $\epsilon_{2}$.
+
+###### Geometria
+$\mathbb R^2$ il piano cartesiano di coordinate dei punti $P(a,b)$. 
+
+
+## Norme di Vettori
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***norma*** per $V$ è una funzione$$\|\cdot\|:\ V\to\mathbb R\geq0$$tale che:
+1. $\|\underline{v}\|>=0\quad\forall \underline{v}\in V,\ \underline{v}\neq \underline{0}$ e $\|\underline{0}\|=0$
+2. $\|\alpha \cdot \underline{v}\|=|\alpha|\cdot\|\underline{v}\|\quad\forall \alpha\in\mathbb K,\forall \underline{v}\in V$
+3. $\|\underline{v}+\underline{w}\|\leq\|\underline{v}\|+\|\underline{w}\|\quad \forall \underline{v},\underline{w}\in V$ (**disuguaglianza triangolare**)
+
+#### Esempi di Norme per $V=\mathbb K^m$ con $\mathbb K\in \{ \mathbb R,\mathbb C \}$
+$$\|\cdot\|:\ \mathbb K^m\to\mathbb R\geq{0}$$
+1. **Norma Euclidea** $||\cdot||_{2}$
+    in $\mathbb R^2$ "misura la lunghezza di un vettore".
+    $\underline{v}=\binom ab\to P(a,b)$
+    $\|\underline{v}\|_{2}=\sqrt{a^2+b^2}$
+    La ***Norma Euclidea*** è data da:$$\|\underline{v}\|_{2}=\sqrt{\underline{v}^h\cdot \underline{v}}$$cioè$$\left\|\begin{pmatrix}
+    v_{1} \\
+    \dots \\
+    v_{m}
+    \end{pmatrix}\right\|=\sqrt{ |v_{1}|^2+\dots+|v_{m}|^2 }\in\mathbb R\geq_{0}$$
+    *Nota*: va considerato $\underline{v}^H$ invece di $\underline{v}^T$ affinchè si abbia sempre $\|\underline{v}\|_{2}\in\mathbb R\geq0$.<br>
+2. **Norma Taxi-Driver** o **Manhattan** $\|\cdot\|_{1}$
+    in $\mathbb R^2$, "conta i passi di lunghezza 1 per andare da $0$ a $P$ muovendosi solo in orizzontake o verticale".
+    La **norma** è data da:$$\left\|\begin{pmatrix}
+    v_{1} \\
+    \dots \\
+    v_{m}
+    \end{pmatrix}\right\|_{1}=|v_{1}|+\dots+|v_{m}|$$
+3. **Norma "Infinito"**:
+    In $\mathbb R^2$, "una volta stabilito se è maggiore il numero di passi orizzontali o verticali, mi dà questo numero".
+    La **Norma Infinito** è data da:$$\left\|\begin{pmatrix}
+    v_{1} \\
+    \dots \\
+    v_{m}
+    \end{pmatrix}\right\|=\text{max }\{ |v_{1}|,\dots,|v_{m}| \}$$
+    *Osservazione*: Sia $\underline{v}\in\mathbb K^m$, allora$$\|\underline{v}\|_{\infty}\leq\|\underline{v}\|_{2}\leq\|\underline{v}\|_{1}$$
+    in$\mathbb R^2$. D'ora in poi, ci si concentra sulla **Norma Euclidea**.
+
+
+##### Normalizzazione
+*Def*: Sia $\underline{v}\in\mathbb K^n,\ \underline{v}\neq \underline{0}$. ***Normalizzare*** $\underline{v}$ significa considerare l'==unico== multiplo positivo di $\underline{v}$ con norma euclidea uguale a 1:$$\underline{v}'=\frac{1}{\|\underline{v}\|_{2}}\cdot \underline{v}$$
+
+### Il Coseno dell'Angolo tra vettori di $\mathbb K^m$
+In $\mathbb R^2$. 
+$\underline{v},\underline{w}\in\mathbb R^2,\ \underline{v}\neq{0}\neq \underline{w},\ \underline{v}\neq \underline{w}$.
+![[graph.svg|center|334]]
+

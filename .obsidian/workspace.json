@@ -20,8 +20,23 @@
               "icon": "lucide-file",
               "title": "Gestione Memoria"
             }
+          },
+          {
+            "id": "1fd50f4a84f8c9ea",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "conflict-files-obsidian-git.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "conflict-files-obsidian-git"
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -240,10 +255,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "65670865057dc7dc",
+  "active": "1fd50f4a84f8c9ea",
   "lastOpenFiles": [
-    "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Sistemi Operativi/Gestione Memoria.md",
+    "conflict-files-obsidian-git.md",
+    "SVG/matAsso.svg",
+    "SVG/graph.svg",
+    "SVG/baseOrd.svg",
+    "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Sistemi Operativi/Esercizi Sincronizzazione.md",
     "Varie/Date Esami.md",
     "Varie/Cyber.md",
@@ -272,7 +291,6 @@
     "Sistemi Operativi/File System.md",
     "Sistemi Operativi",
     "Sistemi Operativi.md",
-    "SVG/cammino(1).svg",
     "Spazi Vettoriali.md",
     "Algebra e Mate Discreta/Metodi di Conteggio.md",
     "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
@@ -281,9 +299,6 @@
     "Algebra e Mate Discreta/Congruenze.md",
     "Algebra e Mate Discreta",
     "Algebra.md",
-    "conflict-files-obsidian-git.md",
-    "SVG/colorabile.svg",
-    "SVG/kcolorabile.svg",
     "Sincronizzazione tra Processi.pdf",
     "Untitled.base"
   ]
