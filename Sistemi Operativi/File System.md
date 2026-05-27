@@ -84,3 +84,23 @@ Requisiti fondamentali a livello utente:
 
 - ***Symbolic (Soft) Link***: Si crea un *file speciale* che contiene il cammino del *file* originario, si ha 1 sola via di accesso al *file* originario
 
+
+I *file system* sono memorizzati su disco, il quale può essere **partizionato** e ogni partizione può avere un FS diverso. Il settore 0 del disco ha le informazioni di inizializzazione del sistema: *Master Boot Record* (*MBR*) che ha una descrizione delle partizioni e identifica quella attiva. Il primo blocco di ogni partizioni ha le sue informazioni specifiche di inizializzazione, *boot block*. L'**inizializzazione** è eseguita dal ***BIOS***.
+
+A livello fisico un *file* è un insieme di blocchi di disco, bisogna decidere quali blocchi assegnare e come tenerne traccia. Ci sono quindi 3 modi di allocazione di blocchi a *file*:
+
+- **Allocazione contigua**: si cerca di memorizzare i *file* su blocchi **consecutivi**, ogni *file* è descritto dall'indirizzo del suo primo blocco e dal numero di blocchi usati. Consente sia accesso **sequenziale** sia **diretto**. Le modifiche ai *file* comportano il rischio di ==frammentazione esterna==. <br>
+- **Allocazione a lista concatenata** (*linked list*): *file* come lista concatenata di blocchi e identificato dal puntatore al suo primo blocco. Ogni blocco di *file* contiene il puntatore al prossimo blocco o alla fine della lista. L'accesso sequenzale è semplica ma ha bisogno di molte operazioni su disco. Un solo blocco guasto ==corrompe== l'intero *file*. <br>
+- **Allocazione a lista indicizzata**: i puntatori ai blocchi sono in strutture apposite, i blocchi hanno solo i dati. Il *file* + descritto dall'insieme dei suoi puntatori. Si può organizzare in **forma tabulare** (***FAT***, *File Allocation Table*) o in **forma indicizzata** (***i-node***). Niente ==frammentazione esterna==. Consente accesso sequenziale e diretto, inoltre non serve sapere la dimensione massima del *file*.
+
+#### File Allocation Table (FAT)
+Si usava in **MS Windows**.
+Si tratta di una *tabella ordinata di puntatori*, si ha un puntatore per ogni blocco (*cluster*), quindi la tabella aumenta con l'ampiezza della partizione. La porzione di **FAT** relativa ai *file* in uso deve stare sempre interamente in RAM. Un *file* è una catena di indici.
+
+*Esempio*: Con un disco da 200GB, blocchi da 1KB, serve FAT da 200 milioni di righe ognuna di 3-4 Bytes: 600-800MB di memoria usati.
+
+#### Nodi indice (i-node)
+Si usano in **UNIX**, **GNU/LINUX**.
+Si ha una struttura indice (**i-node**) per ogni *file*. L'*i-node* ha gli attributi del *file* e i puntatori ai blocchi del file. L'*i-node* si trova in un blocco dedicato. In RAM si ha una tabella di *i-node* solo per i *file* in uso, la dimensione massima della tabella dipende dal numero massimo di *file* apribili in contemporanea.
+
+Un *i-node* ha un numero limitato di puntatori a blocchi. Per i *file* di piccola dimensione gli indirizzi dei blocchi dei dati sono contenuti in un singolo *i-node*. Per dimensioni maggiori, un campo dell'*i-node* principale punta a un livello di blocchi di *i-node* intermedi che puntano ai blocchi di dati. Se non ancora sufficiente si aggiungono altri livelli.
