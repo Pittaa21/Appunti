@@ -34,5 +34,6 @@ Il ***file*** è un concetto logico realizzato mediante **meccanismi di astrazio
 
 ###### Strutture logiche
 Le possibile strutture logiche di un *file* sono:
-- Sequenza di *byte* (*byte stream*): metodo più rudimentale e flessibile (scelto da **UNIX** e **MS Windows**), il *programma applicativo* sa come dare significato al contenuto del *file*, si usa un puntatore relativo all'inizio del *file*, infine lettura e scrittura sono a **blocchi di byte**. Si ha quindi lo sforzo minimo del S/O.
-- Record di lunghezza e struttura fissa
+- Sequenza di *byte* (*byte stream*): metodo più rudimentale e flessibile (scelto da **UNIX** e **MS Windows**), il *programma applicativo* sa come dare significato al contenuto del *file*, si usa un puntatore relativo all'inizio del *file*, infine lettura e scrittura sono a **blocchi di byte**. Si ha quindi lo sforzo minimo del S/O.<br>
+- *Record* di lunghezza e struttura *fissa*: il S/O deve conoscere la struttura interna del *file*, gli spazi non usati sono riempiti da `NULL` o `SPACE`. L'accesso ai dati è sequenziale e si usa un puntatore al *record* attuale. La lettura e scrittura operano sui singoli *record*.<br>
+- *Record* di lunghezza e struttura *variabile*: 
