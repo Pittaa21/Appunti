@@ -104,3 +104,31 @@ Si usano in **UNIX**, **GNU/LINUX**.
 Si ha una struttura indice (**i-node**) per ogni *file*. L'*i-node* ha gli attributi del *file* e i puntatori ai blocchi del file. L'*i-node* si trova in un blocco dedicato. In RAM si ha una tabella di *i-node* solo per i *file* in uso, la dimensione massima della tabella dipende dal numero massimo di *file* apribili in contemporanea.
 
 Un *i-node* ha un numero limitato di puntatori a blocchi. Per i *file* di piccola dimensione gli indirizzi dei blocchi dei dati sono contenuti in un singolo *i-node*. Per dimensioni maggiori, un campo dell'*i-node* principale punta a un livello di blocchi di *i-node* intermedi che puntano ai blocchi di dati. Se non ancora sufficiente si aggiungono altri livelli.
+
+
+##### Gestione file condivisi
+Per ogni *file* condiviso si mette nella *directory* remota un *symbolic link* verso l'originale, così esiste un solo un *i-node*. L'accesso condivisio avviene per cammino sul FS. Oppure nella *directory* remota si può mettere il puntatore diretto (*hard-link*) al descrittore (*i-node*) del *file* originale. Il ==proprietario== del *file* è unico. Il *file* condiviso non può essere distrutto finchè esistono dei suoi descrittori remoti.
+
+##### Gestione blocchi liberi
+- Vettore di *bit* (*bitmap*) dove ogni *bit* indica lo stato del blocco: 0 libero, 1 occupato
+- Lista concatenata di blocchi: scelta da **FAT**.
+
+### MS-DOS (Microsoft Disk Operating System)
+Non è ***multiprogrammato***, quindi l'utente vede tutto il FS. Il FS è **gerarchico** senza limite di profondità e senza condivisione. Le *directory* hanno lunghezza variabile con *entry* di 32 B. Allocazione *file* a lista: **FAT**.
+
+- **FAT-X** per **X**: numero di *bit* per indirizzo di blocco 12 $\leq$ **X** $<$ 32
+    - **Blocchi/Cluster** di dimensione multipla di 512 B
+- **FAT-16**: *file* e partizione limitati a 2 GB
+- **FAT-32**: indirizzi da 28 *bit*, perchè Win95 ha come limite di partizione 2TB quindi $\text{2}^{28}\cdot\text{2}^{13}=\text{2}^{41}$B $=$ 2TB. Dimensione di blocchi in questo caso da 8 KB.
+
+
+### Integrità FS
+- **Consistenza FS**: Un *file* viene aperto, modificato e prima di essere salvato il sistema cade, il salvataggio del contenuto del *file* su disco è ==inconsistente==.
+- **Consistenza blocchi**: 2 liste di blocchi con un contatore per ogni blocco: lista blocchi in uso dei *file*, lista blocchi liberi.
+    - Ciascun blocco appartiene a una e sola lista ***consistenza***
+    - un blocco non appartiene ad alcuna lista ***perdita***
+    - il contatore del blocco è maggiore di 1 in una delle due liste ***duplicazione***
+
+### Prestazioni FS
+- Una porzione di memoria principale viene usata come *cahce* di blocchi, in questo modo si riduce la frequenza di accesso ai dischi, l'accesso ai blocchi avviene tramite ricerca *hash*.
+- Occorre garantire la consistenza dei dati: **MS-DOS** i blocchi modificati son copiati subito su disco (*write trough*), **UNIX** un processo periodico *sync* effettua l'aggiornamento dei blocchi su disco.
