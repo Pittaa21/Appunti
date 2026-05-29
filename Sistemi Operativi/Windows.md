@@ -1,8 +1,8 @@
-- **MS-DOS** (*Microsoft Disk Operating System*): in modalità linea di comando, singolo utente, non *multi-programmato*
+**MS-DOS** (*Microsoft Disk Operating System*): in modalità linea di comando, singolo utente, non *multi-programmato*
 
 **Windows** di 1° generazione ha una **GUI** solo come rivestimento di **MS-DOS**.
 
-- **GUI** (*Graphical User Interface*): realizzabile come programma (*linux*) o come parte del S/O (*windows*)
+**GUI** (*Graphical User Interface*): realizzabile come programma (*linux*) o come parte del S/O (*windows*)
 
 **Windows** di 2° generazione è *multiprogrammato* e utilizza **FAT**.
 
