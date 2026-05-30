@@ -33,6 +33,4 @@ I **thread** comunicano senza sincronizzazione tramite:
 **time-critical, highest, above-normal, normal, below-normal, lowest, idle**
 32 livelli di priorità (31 ... 0)
 
-TABELLA
-
 Ciascun *thread* ha una priorità base iniziale e una corrente che varia nel corso dell'esecuzione
