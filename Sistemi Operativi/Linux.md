@@ -72,3 +72,28 @@ Il BIOS carica l'MBR sul disco di boot in RAM, l'MBR carica il programma di *boo
 - **Processo 0**: configurazione clock, installazione del FS, creazione di processi 1(*init*) e 2(*daemon*)
 - **Processo 1**: configurazione della modalità utente(singolo o multi), esecuzione *script* di inizializzazione **shell**, lettura del numero e tipo di terminali, `fork` per ogni terminale abilitato
 - **Processo getty**: configurazione terminale e attivazione prompt di login, verifica password login e `exec("shell")`.
+
+## Gestione Memoria
+Ha una semplicità massima e massima portabilità su diverse architetture. Ogni *processo* ha un proprio spazio di indirizzamento privato (**memoria virtuale**). Diviso in:
+
+|         **Stack**         |
+|:-------------------------:|
+| **Block Storage Segment** |
+|     **Data segment**      |
+|     **Text segment**      |
+
+- Il *segmento dati* varia in dimensione in base alle attività del programma.
+- Lo ***stack*** contiene l'ambiente d'esecuzione attuale (*record* di attivazione) e cresce in direzione opposta al *segmento dati*.
+- Il *segmento codice* può essere condiviso con più processi, ma non gli altri segmenti per evitare la **duplicazione** di `fork()`.
+
+
+Inizialmente l'allocazione di memoria principale era tramite ***swap*** di processi. Il gestore (***swapper***) creava lo spazio necessario salvando su disco i processi sospesi con più tempo di esecuzione recente e priorità minore.
+
+Successivamente, fu introdotta paginazione **a richiesta** (*paging on demand*): un processo è eseguibile se il suo descrittore e la sua tabella delle pagine si trovano in RAM.
+
+***Page deamon*** controlla periodicamente se in RAM ci sono tot pagine libere. Se c'è spazio libero il *deamon* riporta in RAM i processi pronti, caricando solo il descritto di processo e la sua tabella delle pagine.
+
+Per architetture a 32 bit la **memoria virtuale** di processo è di 4GB. Di cui 1GB è riservato e invisibile per la tabella delle pagine e per dei dati di controllo usati dal ***Kernel***. Lo spazio è diviso in **regioni** (**sequenze**) contigue di pagine, ogni *regione* ha un descrittore.
+La `fork()` replica per il *figlio* la lista di descrittori del *padre*. Le pagine del *figlio* sono duplicate ==solo== nella modifica (*copy on write*).
+
+Il ***Kernel*** rimane ==sempre== in RAM.

@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FarFilePdf",
+      "FasFilePdf",
       "FiArchive",
       "FiImage",
-      "FiDatabase",
-      "FiCalendar",
-      "FiActivity"
+      "FiDatabase"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -38,5 +38,6 @@
   "Calendar": "FiCalendar",
   "Sistemi Operativi": "FiDatabase",
   "SVG": "FiImage",
-  "Varie": "FiArchive"
+  "Varie": "FiArchive",
+  "PDF": "FarFilePdf"
 }

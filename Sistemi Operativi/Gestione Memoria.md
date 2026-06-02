@@ -78,7 +78,7 @@ Tramite una **tabella invertita** non si ha più una riga per *pagina*, ma per *
 
 ##### Rimpiazzo
 Quando avviene un *page fault* il S/O deve **rimpiazzare** una pagina, ma salvandola su disco se modificata. Non bisognerebbe **rimpiazzare** pagine ad uso frequente. 
-Si usa quindi un **rimpiazzo ottimale** (*optimal replacement*), ossia si rimpiazza la pagina che non viene usata per maggior tempo.
+Si usa quindi un **rimpiazzo ottimale** (*optimal replacement*), ossia si rimpiazza la pagina che non verrà usata per maggior tempo.
 
 - **NRU** (*Not Recently Used*): Per ogni *page frame* si aggiornano:
     - Bit M (*modified*) inizializzato a 0

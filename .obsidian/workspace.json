@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/Windows.md",
-                "mode": "source",
+                "file": "Sistemi Operativi/Linux.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Windows"
+              "title": "Linux"
             }
           }
         ]
@@ -243,14 +243,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "7ab9cb7463af4853",
+  "active": "9622b43658bb58c6",
   "lastOpenFiles": [
     "Sistemi Operativi/File System.md",
+    "Sistemi Operativi/Windows.md",
+    "Sistemi Operativi/Gestione Memoria.md",
+    "Sistemi Operativi/Linux.md",
+    "PDF",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "SVG/graph.svg",
     "SVG/baseOrd.svg",
     "SVG/matAsso.svg",
-    "Sistemi Operativi/Gestione Memoria.md",
     "Varie",
     "Algebra e Mate Discreta/Insiemi Numerici e Polinomi.md",
     "SVG/teo52.svg",
@@ -284,7 +287,6 @@
     "Processi.md",
     "Sistemi Operativi.md",
     "Politiche di Ordinamento.md",
-    "Matrici e Sistemi lineari.md",
     "Matrici e Sistemi lineari.pdf",
     "Sincronizzazione tra Processi.pdf",
     "Untitled.base"

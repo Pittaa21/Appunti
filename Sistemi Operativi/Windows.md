@@ -79,7 +79,7 @@ Gli indici sono espressi su 64 bit.
 - *File* inteso come **insieme di attributi** rappresentati come ==sequenza di caratteri== (*byte stream*)
 - Ha un'***architettura gerarchica*** (come *ext2*):
     - usa \ invece che / come separatore nelle espressioni di cammino
-    - supposta entrambe le forme di *link*
+    - supporta entrambe le forme di *link*
 
 **NTFS** è una collezione di **volumi logici**: un volume logico può mappare su più partizioni e su più dischi.
 Per ***volume*** si intende una sequenza **lineare di blocchi** (*cluster*) di ampiezza fissa, volumi diversi possono avere dimensioni di blocco diverse. Con blocchi piccoli la ***frammentazione interna*** è ridotta, mentre con quelli più grandi si hanno ==meno accessi== al disco ma più ***frammentazione***.
