@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Sistemi Operativi/Linux.md",
-                "mode": "preview",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
@@ -243,7 +243,7 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "9622b43658bb58c6",
+  "active": "7ab9cb7463af4853",
   "lastOpenFiles": [
     "Sistemi Operativi/File System.md",
     "Sistemi Operativi/Windows.md",

@@ -96,4 +96,11 @@ Successivamente, fu introdotta paginazione **a richiesta** (*paging on demand*):
 Per architetture a 32 bit la **memoria virtuale** di processo è di 4GB. Di cui 1GB è riservato e invisibile per la tabella delle pagine e per dei dati di controllo usati dal ***Kernel***. Lo spazio è diviso in **regioni** (**sequenze**) contigue di pagine, ogni *regione* ha un descrittore.
 La `fork()` replica per il *figlio* la lista di descrittori del *padre*. Le pagine del *figlio* sono duplicate ==solo== nella modifica (*copy on write*).
 
-Il ***Kernel*** rimane ==sempre== in RAM.
+Il ***Kernel*** rimane ==sempre== in RAM. Nella RAM rimanente possono trovarsi:
+- Le pagine attive dei processi utente
+- Un insieme di pagine utente inattive ma presenti
+- Una *cache* di blocchi di *file* usata dal FS
+
+La RAM è allocata dinamicamente e in modo variabile.
+
+### Gestione I/O
