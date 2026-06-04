@@ -104,3 +104,51 @@ Il ***Kernel*** rimane ==sempre== in RAM. Nella RAM rimanente possono trovarsi:
 La RAM è allocata dinamicamente e in modo variabile.
 
 ### Gestione I/O
+**UNIX** tratta i dispositivi di I/O come *file* speciali, con una posizione specifica nel FS ad esempio `/dev/...`. Un ==gestore== (*device driver*) è associato in modo esclusivo a ciascun dispositivo o famiglia di dispositivi dello stesso tipo.
+
+**GNU/Linux** consente invece caricamento ==dinamico== dei moduli di gestione dei dispositivi. Il caricamento dinamico richiede al **Kernel** di fare diverse azioni di configurazione:
+- Rilocazione dello spazio di indirizzamento del modulo
+- Allocazione risorse necessarie
+- Configurazione vettore delle interruzioni
+- Attivazione e inizializzazione del gestore
+
+Un *file* speciale, ***socket***, viene utilizzato per la connessione di rete e i protocolli. Un **socket** è associato a uno specifico indirizzo di rete. Ci sono tre tipi di connessione:
+- Connessione ==affidabile== a flusso di caratteri (**TCP**): il gestore garantisce la correttezza, invio e ricezione per blocchi variabili
+- Connessione ==affidabile== a flusso di pacchetti (**TCP**): invio e ricezione per pacchetti
+- Trasmissione ==inaffidabile== di pacchetti (**UDP**): utente deve gestire gli errori
+
+## File System
+#### UNIX
+Il *file* è visto dal FS come una ==sequenza di byte==. Ci sono: *file* regolari, *file* repertorio (*directory*) e *file* speciali per i dispositivi I/O.
+
+Il *file* è designato da un **cammino** assoluto o relativo.
+- Il cammino relativo richiede di conoscere la *directory* di lavoro corrente
+
+Tramite `mount`, Un FS$B$  che si trova su una partizione visibile, può essere ritenuto parte di un FS$A$. Si può accedere a $B$ tramite $A$ partendo da un cammino designato, detto *mount point*.
+
+Il **Kernel** usa due strutture di controllo:
+- Un insieme di **tabelle di processo** contengono *descrittori utente* dei *file* in uso dai processi
+- Una **tabella globale** mantiene la corrispondenza tra tutti i *file* aperti e i loro *i-node*
+Ogni voce della **tabella di processo** punta a una voce della **tabella globale** che specifica ==diritti== e ==posizione di R/W== attuale nel *file*. 
+
+Sono previsti fino a 3 livelli di *indirezzione* per gli *i-node* (64B) e 12 indirizzi diretti dell'*i-node* principale.
+
+#### GNU/Linux
+Come FS viene scelto ***ext2***, che suddivide la partizione in **gruppi di blocchi**. Si ha quindi una distribuzione uniforme delle *directory* su disco, gli *i-node* e i relativi blocchi dati sono vicini tramite la preallocazione di alcuni blocchi quando si crea un *file*.
+
+Gli *i-node* hanno una dimensione estesa a 128B, indirizzi di blocco ampi 4B. La scelta della dimensione dei blocchi (1,2,4 KB) è scelta in configurazione del FS.
+Ci sono 12 indirizzi **diretti** e 3 **indiretti** (fino a terzo livello di indirezione).
+
+### Android
+Sistema *open-source* personalizzabile per vari dispositivi.
+
+![[android.svg|center|690]]
+- *Init* è il primo processo utente, come su **Linux**, che vvia processi a basso livello tra cui *zygote*
+- *Zygote* avvia altri processi, tra cui *system_server*, ma anche altri
+- *App* interagiscono con il SO con un set di chiamate a librerie, detto **Android Framework**
+- *App* comunicano tra loro e con i servizi forniti dal SO (*system_server*) tramite *IPC Binder*
+- *Wake Lock* sistema per inibire lo spegnimento e la gestione energetica
+- *Out-of-memory-killer*: viene usa per chiudere i processi quando **Android** non ha abbastanza spazio
+- *Android RunTime*: implementa un ambiente Java e ogni applicazione usa il proprio *ART*
+
+I processi delle app non escono mai in modo pulito, ci pensa il **Kernel**.

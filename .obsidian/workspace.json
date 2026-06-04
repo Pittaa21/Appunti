@@ -14,7 +14,7 @@
               "type": "markdown",
               "state": {
                 "file": "Sistemi Operativi/Linux.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
@@ -245,6 +245,7 @@
   },
   "active": "7ab9cb7463af4853",
   "lastOpenFiles": [
+    "android.svg",
     "Sistemi Operativi/File System.md",
     "Sistemi Operativi/Windows.md",
     "Sistemi Operativi/Gestione Memoria.md",
@@ -286,7 +287,6 @@
     "Sincronizzazione tra Processi.md",
     "Processi.md",
     "Sistemi Operativi.md",
-    "Politiche di Ordinamento.md",
     "Matrici e Sistemi lineari.pdf",
     "Sincronizzazione tra Processi.pdf",
     "Untitled.base"
