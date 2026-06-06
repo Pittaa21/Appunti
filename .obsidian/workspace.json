@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e Mate Discreta/Spazi Vettoriali.md",
+                "file": "Calendar/2026-06-22.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spazi Vettoriali"
+              "title": "2026-06-22"
             }
           }
         ]
@@ -96,8 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5124969482422,
-    "collapsed": true
+    "width": 329.5124969482422
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -243,8 +242,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "7ab9cb7463af4853",
+  "active": "c96fc433758e8523",
   "lastOpenFiles": [
+    "Algebra e Mate Discreta/Spazi Vettoriali.md",
+    "Calendar/2026-06-22.md",
     "Sistemi Operativi/Linux.md",
     "SVG/android.svg",
     "PDF/Linux.pdf",
@@ -253,7 +254,6 @@
     "Sistemi Operativi/Windows.md",
     "Sistemi Operativi/Gestione Memoria.md",
     "PDF",
-    "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "SVG/graph.svg",
     "SVG/baseOrd.svg",
     "SVG/matAsso.svg",
