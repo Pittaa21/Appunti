@@ -372,4 +372,27 @@ $\text{dim }\mathbb K^m=\text{dim }W+\text{dim }W^\perp$ quindi $\text{dim }W^\p
 - $C(A)^\perp=N(A^H)$
 
 ### Algoritmo di Gram-Schmidt
-*Problema*: 
+*Problema*: Trovare una ***base ortonormale*** di $$W=\ <\underline{v_{1}},\dots,\underline{v_{m}}>\ \leq\mathbb K^n,\ \mathbb K\in \{ \mathbb R,\mathbb C\}$$
+1. Porre $S=\{ \underline{v_{1}},\dots,\underline{v_{m}} \}$. $S$ è l'***insieme di generatori*** di $W$.
+2. Costruire un **insieme ortogonale di generatori** di $W$$$S'=\{ \underline{w_{1}},\dots,\underline{w_{m}} \}$$a partire da $S$.
+3. Togliere eventuali vettori nulli da $S'$ per avere una ***base ortogonale*** $B$ di $W$.
+4. Normalizzare i vettori di $B$ per ottenere una ***base ortonormale*** $B^*$ di $W$.
+
+Il punto 2 si può svolgere tramite l'***Algoritmo di Gram-Schmidt***.
+
+###### In  generale
+Dato $S=\{ \underline{v_{1}},\dots,\underline{v_{m}} \}$ insieme di generatori di $W\leq\mathbb K^n$.
+- Poniamo $\underline{w_{1}}=\underline{v_{1}}$
+- $\underline{w_{2}}=\underline{v_{2}}-\alpha_{12}\cdot \underline{w_{1}}$ dove$$\alpha_{12}=\begin{cases}
+0\qquad  & \text{se }\underline{w_{1}}=\underline{0} \\
+\large \frac{(\underline{w_{1}}|\underline{v_{2}})}{\|\underline{w_{1}}\|_{2}^2} & \text{se }\underline{w_{1}}\neq \underline{0}
+\end{cases}$$
+- $\underline{w_{3}}=\underline{v_{3}}-\alpha_{13}\underline{w_{1}}-\alpha_{23}\cdot \underline{w_{2}}$<br>
+    dove $\quad\alpha_{13}=\begin{cases}0\qquad & \text{se }\underline{w_{1}}=\underline{0} \\ \large \frac{(\underline{w_{1}}|\underline{v_{2}})}{\|\underline{w_{1}}\|_{2}^2} & \text{se }\underline{w_{1}}\neq \underline{0}\end{cases}\qquad$ e $\quad \alpha_{23}=\begin{cases}0\qquad & \text{se }\underline{w_{2}}=\underline{0} \\ \large\frac{(\underline{w_{2}}|\underline{v_{3}})}{\|\underline{w_{2}}\|_{2}^2} & \text{se }\underline{w_{2}}\neq \underline{0}\end{cases}$
+
+In generale:$$\underline{w_{i}}=\underline{v_{i}}-\alpha_{1i}\cdot \underline{w_{1}}-\dots-\alpha_{(i-1)i}\cdot \underline{w_{(i-1)}}$$
+con$$\alpha_{ji}=\begin{cases}
+0\qquad & \text{se }\underline{w_{j}}=\underline{0} \\
+\frac{(\underline{w_{j}}|\underline{v_{i}})}{\|\underline{w_{j}}\|_{2}^2} & \text{se }\underline{w_{j}}\neq \underline{0}
+\end{cases}$$
+L'insieme $S'=\{ \underline{w_{1}},\dots,\underline{w_{m}} \}$ è **insieme ortogonale di generatori** di $W$.

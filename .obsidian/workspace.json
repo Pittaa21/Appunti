@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Calendar/2026-06-22.md",
+                "file": "Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "2026-06-22"
+              "title": "Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate"
             }
           }
         ]
@@ -96,7 +96,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5124969482422
+    "width": 329.5124969482422,
+    "collapsed": true
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -242,8 +243,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "c96fc433758e8523",
+  "active": "7ab9cb7463af4853",
   "lastOpenFiles": [
+    "Algebra e Mate Discreta/Algebra.md",
+    "Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Calendar/2026-06-22.md",
     "Sistemi Operativi/Linux.md",
@@ -268,7 +271,6 @@
     "Calendar/2026-06-12.md",
     "Calendar",
     "Sistemi Operativi",
-    "Algebra e Mate Discreta/Algebra.md",
     "Algebra e Mate Discreta/Metodi di Conteggio.md",
     "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
     "Algebra e Mate Discreta/Grafi.md",
@@ -286,7 +288,6 @@
     "Insiemi Numerici e Polinomi.md",
     "Sincronizzazione tra Processi.md",
     "Processi.md",
-    "Sistemi Operativi.md",
     "Matrici e Sistemi lineari.pdf",
     "Sincronizzazione tra Processi.pdf",
     "Untitled.base"
