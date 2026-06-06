@@ -347,6 +347,29 @@ Siano $\underline{v},\underline{w}\in\mathbb K^m,\ \underline{v}\neq \underline{
 Una ***Base Ortogonale*** di $V$ è una base che è anche **insieme ortogonale**.
 
 *Def*: Un insieme $S=\{ \underline{v_{1}},\dots \underline{v_{j}} \}$ di vettori di $V\leq\mathbb K^m$ si dice ***Insieme Ortonormale***, se è un **insieme ortogonale** in cui tutti i vettori hanno **norma euclidea** uguale a 1, ossia $\underline{v_{i}}\perp \underline{v_{j}}$ e $\|\underline{v_{i}}\|_{2}=\|\underline{v_{j}}\|_{2}=1\ \forall i\neq j$, $(\underline{v_{i}}|\underline{v_{j}})=0$ e $(\underline{v_{i}}|\underline{v_{i}})=(\underline{v_{j}}|\underline{v_{j}})=1$.
-Una ***Base Ortonormale*** di $V$ è una base di $V$ che è anche **insieme ortonormale**.
+Una ***Base Ortonormale*** di $V$ è una base di $V$ che è anche **insieme ortonormale**, quindi tutti i .
 
 *Osservazione*: Dato un **insieme ortogonale** possiamo ottenere un **insieme ortonormale** rimuovendo eventuali vettori *nulli* di $S$ e normalizzando i *non-nulli*:$$S'=\left\{ \frac{1}{\|\underline{v_{1}}\|_{2}}\cdot \underline{v_{1}},\ \dots \right\}$$
+###### Proprietà
+Sia $S=\{ \underline{v_{1}},\dots,\underline{v_{t}} \}$ un insieme di vettori di $\mathbb K^m$. Supponiamo che $S$ sia **ortogonale**. Allora:
+1. Se $S$ non contiene vettori nulli, allora $S$ è L.I.
+2. Se $S$ è *insieme di generatori* di $V\leq\mathbb K^m$, allora togliendo i vettori nulli si ottiene una **base ortogonale** di $V$.
+
+### Complemento Ortogonale
+*Def*: Sia $W\leq\mathbb K^m,\ \mathbb K\in \{ \mathbb R,\mathbb C \}$. Il ***complemento ortogonale*** $W^{\perp}$ di $W$ in $\mathbb K^m$ è $$W^\perp=\{ \underline{v}\in\mathbb K^m\ |\ \underline{v}\perp \underline{w}\ \ \forall \underline{w}\in W \}$$
+###### Proprietà
+Sia $W\leq\mathbb K^m$
+1. $W^\perp$ è un sottospazio vettoriale di $\mathbb K^m$
+2. $\left(W^\perp\right)^\perp=W$
+3. $W\cap W^\perp=\{ \underline{0} \}$
+4. $\mathbb K^m=W+W^\perp=^3W\oplus W^\perp$
+
+Per ogni vettore $\underline{v}\in\mathbb K^m$ esistono unici $\underline{w}\in W$ e $\underline{u}\in W^\perp$ tali che $\underline{v}=\underline{w}+\underline{u}$.
+$\text{dim }\mathbb K^m=\text{dim }W+\text{dim }W^\perp$ quindi $\text{dim }W^\perp=m-\text{dim }W$.
+
+*Osservazione*: Sia $A\in M_{m,n}(\mathbb C)$. Allora
+- $N(A)^\perp=C(A^H)=R(A)$ spazio delle righe di $A$
+- $C(A)^\perp=N(A^H)$
+
+### Algoritmo di Gram-Schmidt
+*Problema*: 

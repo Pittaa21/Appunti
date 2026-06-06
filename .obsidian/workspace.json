@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/Linux.md",
-                "mode": "preview",
+                "file": "Algebra e Mate Discreta/Spazi Vettoriali.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Linux"
+              "title": "Spazi Vettoriali"
             }
           }
         ]
@@ -245,11 +245,13 @@
   },
   "active": "7ab9cb7463af4853",
   "lastOpenFiles": [
+    "Sistemi Operativi/Linux.md",
+    "SVG/android.svg",
+    "PDF/Linux.pdf",
     "android.svg",
     "Sistemi Operativi/File System.md",
     "Sistemi Operativi/Windows.md",
     "Sistemi Operativi/Gestione Memoria.md",
-    "Sistemi Operativi/Linux.md",
     "PDF",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "SVG/graph.svg",
@@ -262,8 +264,6 @@
     "SVG/teo51 1.svg",
     "SVG/teo5.svg",
     "SVG/stati.svg",
-    "SVG/rimvertis(1).svg",
-    "SVG/planare.svg",
     "SVG",
     "Calendar/2026-06-12.md",
     "Calendar",
