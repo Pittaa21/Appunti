@@ -28,14 +28,15 @@
               "type": "markdown",
               "state": {
                 "file": "Sistemi Operativi/File System.md",
-                "mode": "source",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
               "title": "File System"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -257,13 +258,13 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "7ab9cb7463af4853",
+  "active": "e0c723b7664e2447",
   "lastOpenFiles": [
+    "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
     "Sistemi Operativi/File System.md",
     "Sistemi Operativi/Gestione Memoria.md",
     "Sistemi Operativi/Politiche di Ordinamento.md",
     "Sistemi Operativi/Linux.md",
-    "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
     "Algebra e Mate Discreta/Algebra.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Calendar/2026-06-22.md",

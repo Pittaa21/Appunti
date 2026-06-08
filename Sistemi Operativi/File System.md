@@ -14,7 +14,7 @@ Il ***file system*** (FS)  designa la parte di S/O che si occupa di *file* secon
     - Operazioni ammissibili sui *file*
 - come realizzarlo in modo pratico ed economico
 
-### File
+## File
 Il ***file*** è un concetto logico realizzato mediante **meccanismi di astrazione**, ossia:
 - Salvare le informazioni in memoria e poterle ritrovare in seguito senza sapere la stuttura logico-fisica e il funzionamento, all'utente non interessa come si verificano questi passaggi
 - All'utente interessa poter assegnare le proprie unità di informazione con **nomi logici** *unici* e *distinti*. Infatti l'utente vede e tratta solo nomi di *file*
@@ -93,7 +93,7 @@ A livello fisico un *file* è un insieme di blocchi di disco, bisogna decidere q
 - **Allocazione a lista concatenata** (*linked list*): *file* come lista concatenata di blocchi e identificato dal puntatore al suo primo blocco. Ogni blocco di *file* contiene il puntatore al prossimo blocco o alla fine della lista. L'accesso sequenzale è semplica ma ha bisogno di molte operazioni su disco. Un solo blocco guasto ==corrompe== l'intero *file*. <br>
 - **Allocazione a lista indicizzata**: i puntatori ai blocchi sono in strutture apposite, i blocchi hanno solo i dati. Il *file* + descritto dall'insieme dei suoi puntatori. Si può organizzare in **forma tabulare** (***FAT***, *File Allocation Table*) o in **forma indicizzata** (***i-node***). Niente ==frammentazione esterna==. Consente accesso sequenziale e diretto, inoltre non serve sapere la dimensione massima del *file*.
 
-#### File Allocation Table (FAT)
+### File Allocation Table (FAT)
 Si usava in **MS Windows**.
 Si tratta di una *tabella ordinata di puntatori*, si ha un puntatore per ogni blocco (*cluster*), quindi la tabella aumenta con l'ampiezza della partizione. La porzione di **FAT** relativa ai *file* in uso deve stare sempre interamente in RAM. Un *file* è una catena di indici.
 
