@@ -13,4 +13,4 @@ Il S/O si può trovare:
 4. [[Linux]]
 5. [[Windows]]
 6. [[Gestione Memoria]]
-7. 
+7. [[File System]]

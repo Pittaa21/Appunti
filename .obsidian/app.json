@@ -15,7 +15,7 @@
   "strictLineBreaks": false,
   "useTab": false,
   "livePreview": true,
-  "defaultViewMode": "source",
+  "defaultViewMode": "preview",
   "readableLineLength": false,
   "propertiesInDocument": "visible"
 }
