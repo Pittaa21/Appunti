@@ -64,7 +64,7 @@ Le azioni più complesse si ottiene tramite la combinazione delle operazioni bas
 
 #### File mappati in memoria
 Il S/O può mappare un *file* in memoria virtuale.
-Il *file* continua a risiedere in memoria secondaria, all'indirizzo di ogni suo dati si ha un indirizzo di memoria virtuale (base + *offset*). Le operazioni su *file* avvengono in memoria principale. A fine sessione tutte le modifiche fatte in memoria primaria sono riportate in quella secondaria.
+Il *file* continua a risiedere in memoria secondaria, all'indirizzo di ogni suo dato si ha un indirizzo di memoria virtuale (base + *offset*). Le operazioni su *file* avvengono in memoria principale. A fine sessione tutte le modifiche fatte in memoria primaria sono riportate in quella secondaria.
 
 ### Struttura directory
 Ogni FS  usa *directory* o *folder* per tener traccia dei sui *file regolari*. Le *directory* possono essere classificate secondo l'organizzazione dei *file* che contengono:
@@ -90,8 +90,8 @@ I *file system* sono memorizzati su disco, il quale può essere **partizionato**
 A livello fisico un *file* è un insieme di blocchi di disco, bisogna decidere quali blocchi assegnare e come tenerne traccia. Ci sono quindi 3 modi di allocazione di blocchi a *file*:
 
 - **Allocazione contigua**: si cerca di memorizzare i *file* su blocchi **consecutivi**, ogni *file* è descritto dall'indirizzo del suo primo blocco e dal numero di blocchi usati. Consente sia accesso **sequenziale** sia **diretto**. Le modifiche ai *file* comportano il rischio di ==frammentazione esterna==. <br>
-- **Allocazione a lista concatenata** (*linked list*): *file* come lista concatenata di blocchi e identificato dal puntatore al suo primo blocco. Ogni blocco di *file* contiene il puntatore al prossimo blocco o alla fine della lista. L'accesso sequenzale è semplica ma ha bisogno di molte operazioni su disco. Un solo blocco guasto ==corrompe== l'intero *file*. <br>
-- **Allocazione a lista indicizzata**: i puntatori ai blocchi sono in strutture apposite, i blocchi hanno solo i dati. Il *file* + descritto dall'insieme dei suoi puntatori. Si può organizzare in **forma tabulare** (***FAT***, *File Allocation Table*) o in **forma indicizzata** (***i-node***). Niente ==frammentazione esterna==. Consente accesso sequenziale e diretto, inoltre non serve sapere la dimensione massima del *file*.
+- **Allocazione a lista concatenata** (*linked list*): *file* come lista concatenata di blocchi e identificato dal puntatore al suo primo blocco. Ogni blocco di *file* contiene il puntatore al prossimo blocco o alla fine della lista. L'accesso sequenzale è semplice ma ha bisogno di molte operazioni su disco. Un solo blocco guasto ==corrompe== l'intero *file*. <br>
+- **Allocazione a lista indicizzata**: i puntatori ai blocchi sono in strutture apposite, i blocchi hanno solo i dati. Il *file* è descritto dall'insieme dei suoi puntatori. Si può organizzare in **forma tabulare** (***FAT***, *File Allocation Table*) o in **forma indicizzata** (***i-node***). Niente ==frammentazione esterna==. Consente accesso sequenziale e diretto, inoltre non serve sapere la dimensione massima del *file*.
 
 ### File Allocation Table (FAT)
 Si usava in **MS Windows**.

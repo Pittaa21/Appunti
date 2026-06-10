@@ -65,10 +65,13 @@ Ciascuna *page frame* in RAM può essere:
     - ***A*** In attesa: ossia recentemente rimossa dal **WS** di un processo ma ancora ==associata== e ==non modificata==
     - ***B*** Da copiare su disco: come ***A*** ma se rimpiazzata deve essere riportata su disco
     - ***C*** Libera: come ***A*** ma ==non associata== ad alcun processo
-    - ***D*** Azzerata: come ***C*** ma con il contenuto annullato a zero per consentire riassegnazione *senza travaso di info privata*
+    - ***D*** Azzerata: come ***C*** ma con il contenuto annullato a zero per consentire che il precedente contenuto non possa essere estrapolato, in modo malevolo
     - ***E*** Difettosa: non può essere usata a causa di ==difetti nella zona della memoria fisica==
 
 Lo stato della RAM è mantenuto in una **tabella** dedicata a cui si accede per indice di **pagina fisica** (*page frame database*)
+C'è un *deamon* (**swapper thread**) del **Memory manager** mette in ***A*** o ***B*** le pagine dello *stack* dei processi i cui *thread* sono stati inattivi di recente.
+Altri 2 *deamon* si assicurano che ci sono abbastanza pagine in ***C*** salvando su disco quelle in ***B*** e accodandole in ***A***.
+Un **Working Set** che cresce  preleva le pagine libere da ***C*** se le sovrascrive interamente, altrimenti da ***D***.
 
 ## NTFS
 ***NTFS*** è il *file system* adottato da **Windows NT** e poi **XP** e **Vista**. Supporta tutti i FS Windows e anche ***ext2fs*** di **GNU/Linux**. 
