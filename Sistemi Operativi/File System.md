@@ -95,7 +95,7 @@ A livello fisico un *file* è un insieme di blocchi di disco, bisogna decidere q
 
 ### File Allocation Table (FAT)
 Si usava in **MS Windows**.
-Si tratta di una *tabella ordinata di puntatori*, si ha un puntatore per ogni blocco (*cluster*), quindi la tabella aumenta con l'ampiezza della partizione. La porzione di **FAT** relativa ai *file* in uso deve stare sempre interamente in RAM. Un *file* è una catena di indici.
+Si tratta di una *tabella ordinata di puntatori*, si ha un puntatore per ogni blocco (***cluster***), quindi la tabella aumenta con l'ampiezza della partizione. La porzione di **FAT** relativa ai *file* in uso deve stare sempre interamente in RAM. Un *file* è una catena di indici.
 
 *Esempio*: Con un disco da 200GB, blocchi da 1KB, serve FAT da 200 milioni di righe ognuna di 3-4 Bytes: 600-800MB di memoria usati.
 
