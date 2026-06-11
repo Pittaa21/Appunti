@@ -131,7 +131,7 @@ Il **Kernel** usa due strutture di controllo:
 - Una **tabella globale** mantiene la corrispondenza tra tutti i *file* aperti e i loro *i-node*
 Ogni voce della **tabella di processo** punta a una voce della **tabella globale** che specifica ==diritti== e ==posizione di R/W== attuale nel *file*. 
 
-Sono previsti fino a 3 livelli di *indirezzione* per gli *i-node* (64B) e 12 indirizzi diretti dell'*i-node* principale.
+Sono previsti fino a 3 livelli di *indirezione* per gli *i-node* (64B) e 12 indirizzi diretti dell'*i-node* principale.
 
 #### GNU/Linux
 Come FS viene scelto ***ext2***, che suddivide la partizione in **gruppi di blocchi**. Si ha quindi una distribuzione uniforme delle *directory* su disco, gli *i-node* e i relativi blocchi dati sono vicini tramite la preallocazione di alcuni blocchi quando si crea un *file*.

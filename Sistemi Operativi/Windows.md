@@ -10,10 +10,10 @@
 
 Tutte le informazioni di configurazione del sistama sono raccolte in un File System detto *registry* salvato in file detti *hives*.
 
-***Job**: più processi gestiti come una singola unità con limiti di risorse.
+***Job***: più processi gestiti come una singola unità con limiti di risorse.
 ***Processo***: più di un *thread*.
 ***Thread***: flusso di controllo gestito dal nucleo.
-***Fiber**: suddivisione di *thread* sconosciuta al nucleo.
+***Fiber***: suddivisione di *thread* sconosciuta al nucleo.
 
 ## Thread
 I ***thread*** si sincronizzano in vari modi:
