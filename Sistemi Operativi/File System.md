@@ -131,4 +131,4 @@ Non è ***multiprogrammato***, quindi l'utente vede tutto il FS. Il FS è **gera
 
 ### Prestazioni FS
 - Una porzione di memoria principale viene usata come *cahce* di blocchi, in questo modo si riduce la frequenza di accesso ai dischi, l'accesso ai blocchi avviene tramite ricerca *hash*.
-- Occorre garantire la consistenza dei dati: **MS-DOS** i blocchi modificati son copiati subito su disco (*write trough*), **UNIX** un processo periodico *sync* effettua l'aggiornamento dei blocchi su disco.
+- Occorre garantire la consistenza dei dati: **MS-DOS** i blocchi modificati son copiati subito su disco (*write trough*), **UNIX** un processo periodico *sync* effettua l'aggiornamento dei blocchi su disco (*copy on write*).

@@ -12,8 +12,8 @@ Vantaggioso per pochi processi.
 ### Frammentazione
 Suddivisione in più parti della memoria
 
-- **Interna**: la memoria è divisa in blocchi di grandezza *uguale*, comporta uno *spreco di memoria*
-- **Esterna**: la memoria è divisa in blocchi di grandezza *variabile*, comporta un calo alle prestazioni del sistema
+- **Interna**: la memoria è divisa in blocchi di grandezza *uguale*, comporta uno *spreco di memoria*. Si verifica quando a un processo viene allocata più memoria del necessario e pertanto, viene lasciato poco spazio inutilizzato.
+- **Esterna**: la memoria è divisa in blocchi di grandezza *variabile*, comporta un calo alle prestazioni del sistema. Si verifica quando un algoritmo di allocazione della **memoria dinamica** alloca una parte della memoria e ne rimane una parte che non può essere utilizzata in modo efficace.
 
 Nei sistemi **multiprogrammati** viene creata una partizione per ogni processo, il problema è quindi assegnare dinamicamente processi alle partizioni. A ogni nuovo *processo* si assegna la partizione di dimensione più adatta.
 Poco efficacie nell'uso della memoria disponibile.
@@ -111,7 +111,7 @@ Si ha quindi un **WS approssimato**, simile all'*Aging*:
 ###### Anomalia di Belady
 La frequenza di *page fault* non sempre descresce al crescere della grandezza della RAM.
 
-**LRU** è immune all'*anomalia*. Gli ***stack algorithms*** sono immuni all'*anomalia di Belady*.
+Gli ***stack algorithms*** (**LRU**, **LIFO**, **Optimal**) sono immuni all'*anomalia di Belady*.
 
 Nel rimpiazzare una pagina bisogna scegliere tra:
 
