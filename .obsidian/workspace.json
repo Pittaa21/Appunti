@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Sistemi Operativi/Gestione Memoria.md",
-                "mode": "source",
+                "file": "Sistemi Operativi/EserciziSO.md",
+                "mode": "preview",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Gestione Memoria"
+              "title": "EserciziSO"
             }
           },
           {
@@ -63,8 +63,7 @@
               "title": "File System"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -139,8 +138,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5124969482422,
-    "collapsed": true
+    "width": 329.5124969482422
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -286,13 +284,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "cbbd1abe0c27521b",
+  "active": "e0c723b7664e2447",
   "lastOpenFiles": [
-    "Sistemi Operativi/Windows.md",
     "Sistemi Operativi/Gestione Memoria.md",
-    "Sistemi Operativi/Linux.md",
-    "Sistemi Operativi/Processi.md",
+    "Sistemi Operativi/EserciziSO.md",
     "Sistemi Operativi/File System.md",
+    "Sistemi Operativi/Linux.md",
+    "Sistemi Operativi/Windows.md",
+    "Sistemi Operativi/Processi.md",
     "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
     "Sistemi Operativi/Politiche di Ordinamento.md",
     "Algebra e Mate Discreta/Algebra.md",
@@ -330,7 +329,6 @@
     "Metodi di Conteggio.md",
     "Grafi.md",
     "Congruenze.md",
-    "Insiemi Numerici e Polinomi.md",
     "Matrici e Sistemi lineari.pdf",
     "Sincronizzazione tra Processi.pdf",
     "Untitled.base"
