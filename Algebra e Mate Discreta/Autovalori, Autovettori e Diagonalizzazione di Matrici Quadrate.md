@@ -99,4 +99,46 @@ a_{1} &  &  \\
 
 ##### Costruzione diagonalizzazione unitaria
 Sia $A\in M_{n}(\mathbb K)$ **unitariamente diagonalizzabile**. Vogliamo trovare una matrice diagonale $D\in M_{n}(\mathbb K)$ e una matrice unitaria $U\in M_{n}(\mathbb K)$ tali che $$A=U\cdot D\cdot U^H$$
-$A$ è simile a $D$, dunque 
+$A$ è simile a $D$, dunque $\text{Spec}(A)=\text{Spec}(D)=\{ \lambda_{1},\dots,\lambda_{t} \}$ e $$D=\begin{pmatrix}
+\lambda_{1} &  &  \\
+ & \dots &  \\
+  &  & \lambda_{t}
+\end{pmatrix}$$Per ogni *autovalore* $\lambda_{i}$, consideriamo una base **ortonormale** $B_{\lambda_{i}}^*$ di $E_{A}(\lambda_{i})$ e una matrice $Q_{i}$ che ha come colonne i vettori di $B_{\lambda_{i}}^*$.
+Dunque $\quad U=\left(Q_{1}\ \dots\ Q_{t}\right)$
+
+*Osservazioni*:
+1. Se $A\in M_{n}(\mathbb K)$ è **hermitiana** ($A=A^H$) allora tutti gli *autovalori* di $A$ sono ==reali==.
+2. Se $U\in M_{n}(\mathbb K)$ è una matrice unitaria $(U^{-1}=U^H)$ allora le colonne di $U$ formano un insieme **ortonormale** (con una base ortonormale di $\mathbb K^n$).
+
+*Nota*: se $A\in M_{n}(\mathbb K)$ è **unit. diag.**, allora l'insieme di vettori che formano basi **ortonormali** degli *autospazi* di $A$ è una base **ortonormale** di $\mathbb K^n$.
+
+*Def*: Sia $V\leq\mathbb K^n$ un sottospazio vettoriale di dimensione $m\leq n$ e sia $B=\{ \underline{v_{1}},\dots,\underline{v_{n}} \}$ una base **ortonormale** di $V$. Poniamo $$Q=\begin{pmatrix}
+\underline{v_{1}} & \dots & \underline{v_{n}}
+\end{pmatrix}\in M_{n,m}(\mathbb K)$$La matrice di ***proiezione ortogonale*** di $\mathbb K^n$ su $V$ è:$$P=Q\cdot Q^H\in M_{n}(\mathbb K)$$
+
+##### Teorema Spettrale (additivo)
+Sia $A\in M_{n}(\mathbb K)$ con $\text{Spec}(A)=\{ \lambda_{1},\dots,\lambda_{t} \}$. 
+Sia $Q_{i}$ la matrice che ha come colonne i vettori di una base **ortonormale** dell'autospazio $E_{A}(\lambda_{i})$.
+Sia $P_{i}=Q_{i}\cdot Q_{i}^H\in M_{n}(\mathbb K)$ la matrice di ***proiezione ortogonale*** di $\mathbb K^n$ su $E_{A}(\lambda_{i})$. 
+Allora: $$A\text{ è unitariamente diagonalizzabile }\Leftrightarrow A=\lambda_{1}\cdot P_1+\dots+\lambda_{t}\cdot P_{t}$$
+###### Proprietà
+Se $A\in M_{n}(\mathbb K)$ è unitariamente diagonalizzabile e $\text{Spec}(A)=\{ \lambda_{1},\lambda_{2} \}$ (cioè $A$ ha esattamente 2 autovalori distinti) allora:$$P_{1}+P_{2}=\mathbb 1_{n}$$(quindi $P_{2}=\mathbb 1_{n}-P_{1}$).
+
+## Matrici Quadrate di Ordine 2
+$$A=\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}\in M_{2}(\mathbb C)$$
+1. ***Determinante***$$\det(A)=a\cdot d-b\cdot c$$
+2. ***Invertibilità***<br>Se $A$ è invertibile ($\det(A)\neq{0}$) allora:$$A^{-1}=\frac{1}{ad-bc}\cdot \begin{pmatrix}
+d & -b \\
+-c & a
+\end{pmatrix}$$
+3. ***Diagonalizzabilità***<br>polinomio caratteristico $P_{A}(x)=\det \begin{pmatrix}a-x & b \\ c & d-x\end{pmatrix}=x^2+(-a-d)x-bc$
+4. ***Diagonalizzabilità Unitaria***<br>Supponiamo $A=\begin{pmatrix}a & b \\ c & d\end{pmatrix}\in M_{2}(\mathbb R)$<br>$A^H=A^T=\begin{pmatrix}a & c \\ b & d\end{pmatrix}$<br>Se $A$ ha coefficienti reali allora è **unitariam. diag.** se e solo se $A$ ha una delle forme:$$\begin{pmatrix}
+a & b \\
+b & d
+\end{pmatrix}\ ,\ \begin{pmatrix}
+a & b \\
+-b & a
+\end{pmatrix}$$
