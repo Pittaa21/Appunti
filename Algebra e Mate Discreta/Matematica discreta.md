@@ -2,6 +2,4 @@
 
 1. [[Grafi]]
 2. [[Metodi di Conteggio]]
-3. [[Relazioni di Ricorrenza]]
-
-- [[EserciziMateDiscreta|Esercizi]]
+3. [[Metodi di Conteggio]]

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
+                "file": "Algebra e Mate Discreta/Metodi di Conteggio.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate"
+              "title": "Metodi di Conteggio"
             }
           }
         ]
@@ -245,6 +245,9 @@
   },
   "active": "e3fa756e5cbd9e24",
   "lastOpenFiles": [
+    "Algebra e Mate Discreta/Matematica discreta.md",
+    "Relazioni di Ricorrenza.md",
+    "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
     "Sistemi Operativi/Linux.md",
     "Sistemi Operativi/File System.md",
     "Sistemi Operativi/Windows.md",
@@ -252,7 +255,6 @@
     "PDF/SECONDO-COMPITINO-12giugno2024vA+SOL.pdf",
     "Sistemi Operativi/EserciziSO.md",
     "Sistemi Operativi/Processi.md",
-    "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
     "Sistemi Operativi/Politiche di Ordinamento.md",
     "Algebra e Mate Discreta/Algebra.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
@@ -281,7 +283,6 @@
     "Algebra e Mate Discreta/Congruenze.md",
     "Algebra e Matematica discreta.md",
     "Matematica discreta.md",
-    "Algebra e Mate Discreta/Matematica discreta.md",
     "Spazi Vettoriali.md",
     "Algebra e Mate Discreta",
     "2026-06-12.md",
