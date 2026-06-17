@@ -29,7 +29,7 @@ che soddisfano le proprietà:
 1. **Vettori colonna**<br>$V=\mathbb R^n\left\{\underline{u}=\begin{pmatrix}u_{1} \\ \dots \\ u_{n}\end{pmatrix}\ |\ u_{i}\in\mathbb R\right\}$<br>$V=\mathbb C^n$<br>
 2. **Spazio Vettoriale** dei **Vettori Riga**<br>$V=\mathbb R_{n}$ o $\mathbb C_{n}$<br>In questi casi<br>$\underline{0}=\begin{pmatrix}0 & \dots & 0\end{pmatrix}$<br>se $\underline{u}=\begin{pmatrix}u_{1} & \dots & u_{n}\end{pmatrix},\ -\underline{u}=\begin{pmatrix}-u_{1} & \dots & -u_{n}\end{pmatrix}$<br>
 3. **Spazio vettoriale** delle **Matrici**<br>$V=M_{m,n}(\mathbb K)$<br>$\underline{0}=\emptyset=\begin{pmatrix}0 & \dots & 0 \\ \dots &  & \dots \\ 0 & \dots & 0\end{pmatrix}$<br>se $A=(a_{ij})\in V$ allora $-A=(-a_{ij})\in V$<br>
-4. **Spazio Vettoriale** dei **Polinomi** a coefficiente in $\mathbb R$ o $\mathbb C$<br>$V=\mathbb R[x]$ o $\mathbb C[x]$<br>$=\{f(x)=a_{0}+a_{1}x+a_{2}x^2+\dots+a_{n}x^n|ai\in \mathbb K\}$<br>In questi casi<br>$\underline{0}$ è il polinomio nullo $f(x)=0$<br>se $f(x)=a_{0}+a_{1}x+\dots+a_{n}x^n,\ -f(x)=-a_{0}-a_{1}x\dots-a_{n}x^n$<br>
+4. **Spazio Vettoriale** dei **Polinomi** a coefficiente in $\mathbb R$ o $\mathbb C$<br>$V=\mathbb R[x]$ o $\mathbb C[x]$<br>$=\left\{f(x)=a_{0}+a_{1}x+a_{2}x^2+\dots+a_{n}x^n|ai\in \mathbb K\right\}$<br>In questi casi<br>$\underline{0}$ è il polinomio nullo $f(x)=0$<br>se $f(x)=a_{0}+a_{1}x+\dots+a_{n}x^n,\ -f(x)=-a_{0}-a_{1}x\dots-a_{n}x^n$<br>
 5. **Spazio Vett** dei **Polinomi di Grado** al più $n$<br>$V=\mathbb R_{n}[x]=\{f(x)\in\mathbb[x]\ |\ deg(f(x))\le n\}$<br>$V=\mathbb C_{n}[x]$<br>Osserviamo che le operazioni *somma* e *per* sono ben definite su $V$:<br>se $f(x),g(x)\in\mathbb K_{n}[x]$ allora
     - $deg\left(f(x)+g(x)\right)\le \text{max}\{deg(f(x)),deg(g(x))\}\le n$
     - $\forall \alpha\ne 0,\alpha\in\mathbb K,deg(\alpha \cdot f(x))=deg(f(x))\le n$
@@ -73,8 +73,8 @@ Sia $V$ uno *spazio vettoriale* su $\mathbb K$. Allora:
 3. Se $\underline{v}\ne \underline{0}$ allora, se $\alpha,\beta\in\mathbb K$, $\alpha \cdot \underline{v}=\beta \cdot \underline{v}\Leftrightarrow\alpha=\beta$<br>Dunque se $\underline{v}\ne \underline{0}$, $<\underline{v}>$ ha tanti elementi quanti sono i numeri in $\mathbb K$ ($\mathbb R$ o $\mathbb C$), cioè **infiniti**.
 
 ## Combinazioni Lineari
-***Def***: Sia $V$ uno spazio vettoriale su $\mathbb K\in\left\{\mathbb R,\mathbb C\right\}$. La **combinazione lineare** degli $n$ vettori $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ di $V$ con coefficienti $\alpha_{1},\alpha_{2},\dots,\alpha_{n}\in\mathbb K$ è il vettore:$$\underline{v}=\alpha_{1}\cdot \underline{v_{2}}+\alpha_{2}\cdot \underline{v_{2}}+\dots+\alpha_{n}\cdot \underline{v_{n}}$$
-*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Siano $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ vettori di $V$. Il **sottospazio** di $V$ **generato** da $\underline{v_{1}},\underline{v_{2}},\dots ,\underline{v_{n}}$ è l'insieme di tutte le combinazioni lineari di $\underline{v_{1}},\dots,\underline{v_{n}}$:$$<\underline{v_{1}},\dots,\underline{v_{n}}\geq\left\{\alpha_{1}\cdot \underline{v_{1}}+\dots+\alpha_{n}\cdot \underline{v_{n}}\ |\ \alpha_{1},\dots,\alpha_{n}\in\mathbb K\right\}$$
+***Def***: Sia $V$ uno spazio vettoriale su $\mathbb K\in\left\{\mathbb R,\mathbb C\right\}$. La ***combinazione lineare*** degli $n$ vettori $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ di $V$ con coefficienti $\alpha_{1},\alpha_{2},\dots,\alpha_{n}\in\mathbb K$ è il vettore:$$\underline{v}=\alpha_{1}\cdot \underline{v_{2}}+\alpha_{2}\cdot \underline{v_{2}}+\dots+\alpha_{n}\cdot \underline{v_{n}}$$
+*Def*: Sia $V$ uno spazio vettoriale su $\mathbb K$. Siano $\underline{v_{1}},\underline{v_{2}},\dots,\underline{v_{n}}$ vettori di $V$. Il **sottospazio** di $V$ **generato** da $\underline{v_{1}},\underline{v_{2}},\dots ,\underline{v_{n}}$ è l'insieme di tutte le combinazioni lineari di $\underline{v_{1}},\dots,\underline{v_{n}}$:$$<\underline{v_{1}},\dots,\underline{v_{n}}>\ =\left\{\alpha_{1}\cdot \underline{v_{1}}+\dots+\alpha_{n}\cdot \underline{v_{n}}\ |\ \alpha_{1},\dots,\alpha_{n}\in\mathbb K\right\}$$
 *Osservazioni*:
 1. $<\underline{v_{1}},\dots,\underline{v_{n}}>$ è sottospazio vettoriale di $V$ ed è il più piccolo sottospazio di $V$ che contiene $\underline{v_{1}},\dots,\underline{v_{n}}$
 2. L'insieme dei multipli di $\underline{v}\in V$, $<\underline{v}>$, è lo **spazio generato** da $\underline{v}$
@@ -83,7 +83,7 @@ Sia $V$ uno *spazio vettoriale* su $\mathbb K$. Allora:
 
 ### Insieme di Generatori
 *Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in\{\mathbb R,\mathbb C\}$. 
-Sia $\textit{S}=\{\underline{v_{1}},\dots,\underline{v_{n}}\}$ un insieme di vettori di $V$. Diciamo che $\textit{S}$ è un **insieme di generatori** di $V$ se $<\textit{S}>\ =\ <\underline{v_{1}},\dots,\underline{v_{n}}>\ =V$, cioè se ogni vettore di $V$ si può scrivere come combinazione lineare dei vettori di $\textit{S}$.
+Sia $\textit{S}=\{\underline{v_{1}},\dots,\underline{v_{n}}\}$ un insieme di vettori di $V$. Diciamo che $\textit{S}$ è un ***insieme di generatori*** di $V$ se $<\textit{S}>\ =\ <\underline{v_{1}},\dots,\underline{v_{n}}>\ =V$, cioè se ogni vettore di $V$ si può scrivere come combinazione lineare dei vettori di $\textit{S}$.
 
 *Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in\{\mathbb R,\mathbb C\}$. L'insieme $\textit{S}=\{\underline{v_{1}},\dots,\underline{v_{n}}\}$ di vettori di $V$ si dice:
 - **Linearmente Indipendente** (*L.I.*): se $$\alpha_{1}\cdot \underline{v_{1}}+\dots+\alpha_{n}\cdot \underline{v_{n}}=\underline{0}\Leftrightarrow\alpha_{1}=\dots=\alpha_{n}=0$$
