@@ -151,7 +151,7 @@ Il **massimo comun divisore** MCD($a,b$) è l'ultimo resto *non-nullo* della seq
 ##### in $\mathbb{Z}$
 Siano *a*,*b* $\in\mathbb{Z}$ non entrambi nulli.
 
-- **1° Metodo**: $|a|,|b|\in\mathbb{N}$ e MCD($|a|,|b|$) è un massimo comun divisore di $a$ e $b$. Quindi si può applicate l'*algoritmo di Euclide*.
+- **1° Metodo**: $|a|,|b|\in\mathbb{N}$ e MCD($|a|,|b|$) è un massimo comun divisore di $a$ e $b$. Quindi si può applicare l'*algoritmo di Euclide*.
 - **2° Metodo**: Eseguiamo le divisioni successive dell'*algoritmo di Euclide* in $\mathbb{Z}$<br>*N.B.* tutti i resti devono essere numeri naturali. I massimi comun divisori sono dati dall'ultimo resto *non nullo* $d$ e da $-d$. 
 
 *Esempio*: MCD(-274, 110)

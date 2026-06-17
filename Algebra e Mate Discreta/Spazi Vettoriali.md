@@ -26,7 +26,7 @@ che soddisfano le proprietà:
  4. $-(\alpha \cdot \underline{v})\dots$
 
 *Esempi*:
-1. **Vettori colonna**<br>$V=\mathbb R^n\{\underline{u}=\}$<br>
+1. **Vettori colonna**<br>$V=\mathbb R^n\left\{\underline{u}=\begin{pmatrix}u_{1} \\ \dots \\ u_{n}\end{pmatrix}\ |\ u_{i}\in\mathbb R\right\}$<br>$V=\mathbb C^n$<br>
 2. **Spazio Vettoriale** dei **Vettori Riga**<br>$V=\mathbb R_{n}$ o $\mathbb C_{n}$<br>In questi casi<br>$\underline{0}=\begin{pmatrix}0 & \dots & 0\end{pmatrix}$<br>se $\underline{u}=\begin{pmatrix}u_{1} & \dots & u_{n}\end{pmatrix},\ -\underline{u}=\begin{pmatrix}-u_{1} & \dots & -u_{n}\end{pmatrix}$<br>
 3. **Spazio vettoriale** delle **Matrici**<br>$V=M_{m,n}(\mathbb K)$<br>$\underline{0}=\emptyset=\begin{pmatrix}0 & \dots & 0 \\ \dots &  & \dots \\ 0 & \dots & 0\end{pmatrix}$<br>se $A=(a_{ij})\in V$ allora $-A=(-a_{ij})\in V$<br>
 4. **Spazio Vettoriale** dei **Polinomi** a coefficiente in $\mathbb R$ o $\mathbb C$<br>$V=\mathbb R[x]$ o $\mathbb C[x]$<br>$=\{f(x)=a_{0}+a_{1}x+a_{2}x^2+\dots+a_{n}x^n|ai\in \mathbb K\}$<br>In questi casi<br>$\underline{0}$ è il polinomio nullo $f(x)=0$<br>se $f(x)=a_{0}+a_{1}x+\dots+a_{n}x^n,\ -f(x)=-a_{0}-a_{1}x\dots-a_{n}x^n$<br>

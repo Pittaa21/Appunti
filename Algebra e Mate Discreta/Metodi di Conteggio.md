@@ -77,4 +77,29 @@ Per esempio: se $a_{0}=1$ allora $a_{1}=2\cdot{1}=2$, $a_{2}=2\cdot 2=4$, $a_{3}
 **La soluzione** di una ***relazione di ricorrenza*** è una formula esplicita per $a_{n}$ che dipende solo da $n$.
 
 ##### Relazioni di ricorrenza lineari omogenee
-Sono relazioni di ricorrenza in cui $a_{n}$ viene espresso
+Sono ***relazioni di ricorrenza*** in cui $a_{n}$ viene espresso ==solo== in funzione di alcuni degli $a_{k}$ con $k<n$.
+Sono del tipo:$$a_{n}=c_{1}\cdot a_{n-1}+c_{2}\cdot a_{n-2}+\dots+c_{r}\cdot a_{n-r}$$dove $c_{1},\dots,c_{r}$ sono costanti e $c_{r}\neq{0}$
+Per poterle risolvere servono $r$ *condizioni iniziali* che permettono di calcolare $c_{1},\dots,c_{r}$
+$r=$ ***grado*** della **relazione di ricorrenza**
+
+###### Per risolverle:
+1. Porre $x^k$ al posto di $a_{k}$ nella relazione$$x^n=c_{1}x^{n-1}+c_{2}x^{n-2}+\dots+c_{2}x^{n-r}$$
+2. Dividere per $x^{n-r}$ $$x^r=c_{1}x^{r-1}+c_{2}x^{r-2}+\dots+c_{r-1}x+c_{r}$$
+3. L'*equazione caratteristica* della relazione è:$$x^r-c_{1}x^{r-1}-\dots-c_{r-1}x-c_{r}=0$$Siano $\alpha_{1},\dots,\alpha_{k}$ le soluzioni ==distinte== dell'eq. caratteristica con molteplicità $m_{1},\dots,m_{k}$:$$0=(x-\alpha_{1})^{m_{1}}\dots(x-\alpha_{k})^{m_{k}}$$$m_{1}+\dots+m_{k}=r$
+4. La **soluzione generale** della relazione di ricorrenza è l'***insieme delle combinazioni lineari*** delle seguenti soluzioni.$$\begin{align}
+ & \alpha_{1}^n,n\alpha_{1}^n,n^2\alpha_{1}^{n},\dots,n^{m_{1}-1}\alpha_{1}^n \\
+  & \dots \\
+   & \alpha_{k}^n,n\alpha_{k}^n,n^2\alpha_{k}^{n},\dots,n^{m_{k}-1}\alpha_{k}^n
+\end{align}$$
+La soluzione generale è:$$a_{n}=A_{1}\alpha_{1}^n+A_{2}n\alpha_{1}^n+\dots+A_{m_{1}}n^{m_{1}-1}\alpha_{1}^n+A_{m_{1}+1}\alpha_{2}^n+\dots+A_{r}n^{m_{k}-1}\alpha_{k}^n$$dove $A_{1},A_{2},\dots,A_{r}$ sono costanti.
+
+5. A questo punto decidiamo il valore delle costanti imponendo le $r$ *condizioni iniziali*.
+
+
+##### Relazioni di ricorrenza lineari non omogenee di grado 1
+Sono **relazioni di ricorrenza** del tipo:$$\circledast\qquad a_{n}=c\cdot a_{n-1}+f(n)$$con $c$ costante, $c\neq 0$ e $f(n)$ una funzione (in $n$)
+
+###### Per risolverle:
+1. Si trova la soluzione generale delle relazioni di ricorrenza omogenee associate a $\circledast$, cioè:$$\circledast\circledast\qquad a_{n}=c\cdot a_{n-1}$$Sol. gen. di $\circledast\circledast$: $A\cdot c^n$ dove $A$ è una costante che determineremo solo alla fine
+2. Si somma alla soluzione generale di $\circledast\circledast$, cioè $A\cdot c^n$, una *soluzione particolare* $p(n)$ di $\circledast$<br>La **soluzione generale** di $\circledast$ è:$$A\cdot c^n+p(n)$$
+3. Le constanti vengono determinate alla fine imponendo le condizioni iniziali
