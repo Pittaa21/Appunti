@@ -275,7 +275,7 @@ $\mathbb R^2$ il piano cartesiano di coordinate dei punti $P(a,b)$.
 
 ## Norme di Vettori
 *Def*: Sia $V$ uno spazio vettoriale su $\mathbb K\in \{ \mathbb R,\mathbb C \}$. Una ***norma*** per $V$ è una funzione$$\|\cdot\|:\ V\to\mathbb R\geq0$$tale che:
-1. $\|\underline{v}\|>=0\quad\forall \underline{v}\in V,\ \underline{v}\neq \underline{0}$ e $\|\underline{0}\|=0$
+1. $\|\underline{v}\|\geq0\quad\forall \underline{v}\in V,\ \underline{v}\neq \underline{0}$ e $\|\underline{0}\|=0$
 2. $\|\alpha \cdot \underline{v}\|=|\alpha|\cdot\|\underline{v}\|\quad\forall \alpha\in\mathbb K,\forall \underline{v}\in V$
 3. $\|\underline{v}+\underline{w}\|\leq\|\underline{v}\|+\|\underline{w}\|\quad \forall \underline{v},\underline{w}\in V$ (**disuguaglianza triangolare**)
 
@@ -347,7 +347,7 @@ Siano $\underline{v},\underline{w}\in\mathbb K^m,\ \underline{v}\neq \underline{
 Una ***Base Ortogonale*** di $V$ è una base che è anche **insieme ortogonale**.
 
 *Def*: Un insieme $S=\{ \underline{v_{1}},\dots \underline{v_{j}} \}$ di vettori di $V\leq\mathbb K^m$ si dice ***Insieme Ortonormale***, se è un **insieme ortogonale** in cui tutti i vettori hanno **norma euclidea** uguale a 1, ossia $\underline{v_{i}}\perp \underline{v_{j}}$ e $\|\underline{v_{i}}\|_{2}=\|\underline{v_{j}}\|_{2}=1\ \forall i\neq j$, $(\underline{v_{i}}|\underline{v_{j}})=0$ e $(\underline{v_{i}}|\underline{v_{i}})=(\underline{v_{j}}|\underline{v_{j}})=1$.
-Una ***Base Ortonormale*** di $V$ è una base di $V$ che è anche **insieme ortonormale**, quindi tutti i .
+Una ***Base Ortonormale*** di $V$ è una base di $V$ che è anche **insieme ortonormale**, quindi tutti i vettori hanno *norma euclidea* = 1.
 
 *Osservazione*: Dato un **insieme ortogonale** possiamo ottenere un **insieme ortonormale** rimuovendo eventuali vettori *nulli* di $S$ e normalizzando i *non-nulli*:$$S'=\left\{ \frac{1}{\|\underline{v_{1}}\|_{2}}\cdot \underline{v_{1}},\ \dots \right\}$$
 ###### Proprietà
