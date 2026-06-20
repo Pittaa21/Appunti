@@ -50,7 +50,7 @@ $a_{11}=-1\qquad a_{23}=4$
 \end{pmatrix}\in M_{m,n}(\mathbb C)
 $$
 2. **Matrice Identità**: è la matrice quadrata di ordine $n$ che ha tutti 1 nella diagonale principale e 0 nel resto $$
-II_{n}=\begin{pmatrix}
+\mathbb 1_{n}=\begin{pmatrix}
  & 1 & 0 & 0 & 0 &  \\
   & 0 & 1 & 0 & 0 \\
    & 0 & 0 & 1 & 0 \\

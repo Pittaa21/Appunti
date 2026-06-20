@@ -73,7 +73,7 @@ Allora:$$A\text{ è diagonalizzabile }\ \Leftrightarrow\ \ m(\lambda_{i})=d(\lam
 ## Matrici Unitariamente Diagonalizzabili
 *Def*: Una matrice quadrata $U\in M_{n}(\mathbb K)$ invertibile si dice:
 - ***Unitaria*** se $U^{-1}=U^H$ (cioè $U\cdot U^H=\mathbb 1_{n}=U^H\cdot U$)
-- ***Togonale*** se $U^{-1}=U^T$ (cioè $U\cdot U^T=\mathbb 1_{n}=U^T\cdot U$)
+- ***Ortogonale*** se $U^{-1}=U^T$ (cioè $U\cdot U^T=\mathbb 1_{n}=U^T\cdot U$)
 
 *Osservazione*:
 - se $U\in M_{n}(\mathbb R)$ allora $U^H=U^T$, quindi ogni matrice **unitaria** è anche **ortogonale**.
