@@ -388,7 +388,7 @@ Dato $S=\{ \underline{v_{1}},\dots,\underline{v_{m}} \}$ insieme di generatori d
 \large \frac{(\underline{w_{1}}|\underline{v_{2}})}{\|\underline{w_{1}}\|_{2}^2} & \text{se }\underline{w_{1}}\neq \underline{0}
 \end{cases}$$
 - $\underline{w_{3}}=\underline{v_{3}}-\alpha_{13}\underline{w_{1}}-\alpha_{23}\cdot \underline{w_{2}}$<br>
-    dove $\quad\alpha_{13}=\begin{cases}0\qquad & \text{se }\underline{w_{1}}=\underline{0} \\ \large \frac{(\underline{w_{1}}|\underline{v_{2}})}{\|\underline{w_{1}}\|_{2}^2} & \text{se }\underline{w_{1}}\neq \underline{0}\end{cases}\qquad$ e $\quad \alpha_{23}=\begin{cases}0\qquad & \text{se }\underline{w_{2}}=\underline{0} \\ \large\frac{(\underline{w_{2}}|\underline{v_{3}})}{\|\underline{w_{2}}\|_{2}^2} & \text{se }\underline{w_{2}}\neq \underline{0}\end{cases}$
+    dove $\quad\alpha_{13}=\begin{cases}0\qquad & \text{se }\underline{w_{1}}=\underline{0} \\ \large \frac{(\underline{w_{1}}|\underline{v_{3}})}{\|\underline{w_{1}}\|_{2}^2} & \text{se }\underline{w_{1}}\neq \underline{0}\end{cases}\qquad$ e $\quad \alpha_{23}=\begin{cases}0\qquad & \text{se }\underline{w_{2}}=\underline{0} \\ \large\frac{(\underline{w_{2}}|\underline{v_{3}})}{\|\underline{w_{2}}\|_{2}^2} & \text{se }\underline{w_{2}}\neq \underline{0}\end{cases}$
 
 In generale:$$\underline{w_{i}}=\underline{v_{i}}-\alpha_{1i}\cdot \underline{w_{1}}-\dots-\alpha_{(i-1)i}\cdot \underline{w_{(i-1)}}$$
 con$$\alpha_{ji}=\begin{cases}

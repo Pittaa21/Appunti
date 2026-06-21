@@ -29,8 +29,9 @@ Numero di permutazioni di un insieme di $n$ elementi **disgiunti** è $n!$
 Dati $n$ oggetti *distinti*, con $n,r\in\mathbb N$, $r\le n$
 Una $r$**-permutazione** è una disposizione ordinata di questi $n$ oggetti usando $r$ degli $n$ oggetti.
 Il numero di tutte le possibili $r$**-permutazioni** di $n$ oggetti è:$$\text{P}(n,r)=n\cdot(n-1)\cdot(n-2)\cdot\ \dots\ \cdot (n-r+1)$$Quindi$$\text{P}(n,r)=\frac{n!}{(n-r)!}$$
+*Nota*: Per gli **anagrammi** si ha $n$ è il numero di lettere da permutare e $r_{1}$ è il numero di volte che si ripete una lettera$$P=\frac{n!}{r_{1}!\cdot r_{i}!}$$
 #### $r$-combinazioni
-Selezione *non ordinata* di $r$ degli $n$ oggetti (un sottoinsieme di $r$ oggetti dell'insieme di $n$ oggetti) e si indica con $\text{C}(n,r)$.$$C(n,r)=\frac{P(n,r)}{r!}=\frac{n!}{(n-r)!\ r!}=\binom nr$$
+Selezione *non ordinata* di $r$ degli $n$ oggetti (un sottoinsieme di $r$ oggetti dell'insieme di $n$ oggetti) e si indica con $\text{C}(n,r)$ senza ripezioni.$$C(n,r)=\frac{P(n,r)}{r!}=\frac{n!}{(n-r)!\ r!}=\binom nr$$
 
 Dato un insieme di $n$ elementi **diversi**$$A=\{a_{1},\dots,a_{n}\}$$Una $r$-combinazione è un sottoinsieme di $r$-elementi di $A$.
 
@@ -103,3 +104,10 @@ Sono **relazioni di ricorrenza** del tipo:$$\circledast\qquad a_{n}=c\cdot a_{n-
 1. Si trova la soluzione generale delle relazioni di ricorrenza omogenee associate a $\circledast$, cioè:$$\circledast\circledast\qquad a_{n}=c\cdot a_{n-1}$$Sol. gen. di $\circledast\circledast$: $A\cdot c^n$ dove $A$ è una costante che determineremo solo alla fine
 2. Si somma alla soluzione generale di $\circledast\circledast$, cioè $A\cdot c^n$, una *soluzione particolare* $p(n)$ di $\circledast$<br>La **soluzione generale** di $\circledast$ è:$$A\cdot c^n+p(n)$$
 3. Le constanti vengono determinate alla fine imponendo le condizioni iniziali
+
+### Distribuzioni oggetti distinti
+Numero di distribuzioni di $r$ oggetti distinti nelle $n$ scatole distinte:$$n^r$$
+
+Numero di permutazioni di $r$ oggetti di cui $r_{1}$ di tipo 1,... $$\frac{r!}{r_{1}!\dots r_{i}!}$$
+#### Distribuzioni oggetti identici
+Modi in cui posso distribuire gli $r$ oggetti nelle $n$ scatole:$$\binom {r+n-1}r$$
