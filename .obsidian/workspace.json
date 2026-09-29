@@ -4,77 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "df81ef696df23679",
+        "id": "17218a8eef49d3fc",
         "type": "tabs",
         "children": [
           {
-            "id": "e3fa756e5cbd9e24",
+            "id": "5bad11733dcb0ec6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e Mate Discreta/Congruenze.md",
-                "mode": "preview",
+                "file": "Algoritmi e Strutture Dati/Ordinamento.md",
+                "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Congruenze"
-            }
-          },
-          {
-            "id": "84b9500c3d0cec49",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra e Mate Discreta/Grafi.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Grafi"
-            }
-          },
-          {
-            "id": "1ca5e3df4d9285fa",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Matrici e Sistemi lineari"
-            }
-          },
-          {
-            "id": "4a4a68c8e9975932",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate"
-            }
-          },
-          {
-            "id": "3a88b9e5ff54f0a1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra e Mate Discreta/Metodi di Conteggio.md",
-                "mode": "preview",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Metodi di Conteggio"
+              "title": "Ordinamento"
             }
           }
         ]
@@ -89,7 +33,7 @@
       {
         "id": "6cc669c8a32e7f5f",
         "type": "tabs",
-        "dimension": 73.24414715719064,
+        "dimension": 67.50418760469012,
         "children": [
           {
             "id": "c96fc433758e8523",
@@ -111,7 +55,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -134,12 +78,12 @@
         ]
       },
       {
-        "id": "801abca2438ad71b",
+        "id": "c32b9eb2edc0b65f",
         "type": "tabs",
-        "dimension": 26.755852842809368,
+        "dimension": 32.49581239530988,
         "children": [
           {
-            "id": "662dde1f805c9be1",
+            "id": "c62ea90046959f99",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -152,7 +96,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5124969482422
+    "width": 479.5110321044922,
+    "collapsed": true
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -161,15 +106,24 @@
       {
         "id": "6ed2a097ec0a53a9",
         "type": "tabs",
-        "dimension": 61.1470113085622,
         "children": [
+          {
+            "id": "9622b43658bb58c6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
           {
             "id": "1efde5ccd4ee8fed",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Politiche di Ordinamento.md",
+                "file": "Algoritmi e Strutture Dati/Ordinamento.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -179,7 +133,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Politiche di Ordinamento"
+              "title": "Backlinks for Ordinamento"
             }
           },
           {
@@ -188,12 +142,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Processi.md",
+                "file": "Algoritmi e Strutture Dati/Ordinamento.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Processi"
+              "title": "Outgoing links from Ordinamento"
             }
           },
           {
@@ -226,50 +180,38 @@
             }
           },
           {
-            "id": "9622b43658bb58c6",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "65a72720771fcdae",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e Mate Discreta/Insiemi Numerici e Polinomi.md",
+                "file": "Congruenze.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Insiemi Numerici e Polinomi"
+              "title": "Outline of Congruenze"
             }
           },
           {
-            "id": "7f286304ab1bac18",
+            "id": "f1a5d1b66fdd31f0",
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
-        "id": "77d9e3146dde93c2",
+        "id": "f9a6dd153d4270ec",
         "type": "tabs",
-        "dimension": 38.8529886914378,
         "children": [
           {
-            "id": "e7043d6b58567007",
+            "id": "b88e17757eb18162",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -282,11 +224,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 486
+    "width": 283.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "graph:Open graph view": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
@@ -294,57 +236,57 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "graph:Open graph view": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e3fa756e5cbd9e24",
+  "active": "5bad11733dcb0ec6",
   "lastOpenFiles": [
-    "Algebra e Mate Discreta/Spazi Vettoriali.md",
+    "Algoritmi e Strutture Dati/Ordinamento.md",
+    "Algoritmi e Strutture Dati",
+    "Calcolo numerico/Sistemi non Decimali.md",
+    "Calcolo numerico",
     "Algebra e Mate Discreta/Metodi di Conteggio.md",
+    "Algebra e Mate Discreta/Insiemi Numerici e Polinomi.md",
     "Algebra e Mate Discreta/Grafi.md",
+    "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
     "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
     "Esercizi Mate.md",
-    "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
-    "Algebra e Mate Discreta/Algebra.md",
-    "Algebra e Mate Discreta/Congruenze.md",
-    "Algebra e Mate Discreta/Matematica discreta.md",
-    "Algebra e Mate Discreta/Insiemi Numerici e Polinomi.md",
-    "Relazioni di Ricorrenza.md",
-    "Sistemi Operativi/Linux.md",
-    "Sistemi Operativi/File System.md",
-    "Sistemi Operativi/Windows.md",
-    "Sistemi Operativi/Gestione Memoria.md",
-    "PDF/SECONDO-COMPITINO-12giugno2024vA+SOL.pdf",
     "Sistemi Operativi/EserciziSO.md",
-    "Sistemi Operativi/Processi.md",
+    "Sistemi Operativi/Gestione Memoria.md",
+    "Sistemi Operativi/Windows.md",
+    "Sistemi Operativi/Linux.md",
+    "PDF/SECONDO-COMPITINO-12giugno2024vA+SOL.pdf",
+    "Sistemi Operativi/Sistemi Operativi.md",
+    "Sistemi Operativi/File System.md",
     "Sistemi Operativi/Politiche di Ordinamento.md",
-    "Calendar/2026-06-22.md",
     "SVG/android.svg",
     "PDF/Linux.pdf",
-    "android.svg",
     "PDF",
+    "Calendar/2026-06-22.md",
+    "Algebra e Mate Discreta/Spazi Vettoriali.md",
+    "conflict-files-obsidian-git.md",
+    "SVG/matAsso.svg",
     "SVG/graph.svg",
     "SVG/baseOrd.svg",
-    "SVG/matAsso.svg",
+    "Sistemi Operativi/Esercizi Sincronizzazione.md",
+    "Varie/Date Esami.md",
+    "Varie/Cyber.md",
     "Varie",
-    "SVG/teo52.svg",
-    "SVG/teo51.svg",
-    "SVG/teo51 1.svg",
-    "SVG/teo5.svg",
-    "SVG/stati.svg",
-    "SVG",
+    "Algebra e Mate Discreta/Algebra.md",
     "Calendar/2026-06-12.md",
     "Calendar",
-    "Sistemi Operativi",
-    "Algebra e Matematica discreta.md",
-    "Matematica discreta.md",
-    "Spazi Vettoriali.md",
-    "Algebra e Mate Discreta",
-    "2026-06-12.md",
-    "Gestione Memoria.md",
-    "Metodi di Conteggio.md",
+    "Sistemi Operativi/Sincronizzazione tra Processi.md",
+    "Cyber.md",
+    "Date Esami.md",
+    "SVG/teo52.svg",
+    "SVG/teo51 1.svg",
+    "SVG/monitor.svg",
     "Matrici e Sistemi lineari.pdf",
-    "Sincronizzazione tra Processi.pdf"
+    "SVG/iso.svg",
+    "SVG/dijkstra.svg",
+    "SVG/complexsum.svg",
+    "SVG",
+    "Sistemi Operativi"
   ]
 }
