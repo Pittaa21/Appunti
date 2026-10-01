@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FasSquareRootVariable",
+      "FiCode",
       "FarFilePdf",
       "FasFilePdf",
-      "FiArchive",
-      "FiImage",
-      "FiDatabase"
+      "FiArchive"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -39,5 +39,7 @@
   "Sistemi Operativi": "FiDatabase",
   "SVG": "FiImage",
   "Varie": "FiArchive",
-  "PDF": "FarFilePdf"
+  "PDF": "FarFilePdf",
+  "Programmazione a Oggetti": "FiCode",
+  "Calcolo numerico": "FasSquareRootVariable"
 }
