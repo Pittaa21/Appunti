@@ -54,6 +54,8 @@ Se definiti direttamente dentro la classe, i metodi sono **inline**:
 A A::f() { a = 5; return *this; }
 ```
 
+---
+
 ## Information Hiding
 
 > [!info] Definizione
@@ -78,6 +80,8 @@ A A::f() { a = 5; return *this; }
 - ADT = **Valori + operazioni**.
 - Esempio di ADT primitivo: `int`.
 - `struct` del C/C++ non rispetta il concetto di ADT (membri pubblici di default).
+
+---
 
 ## Namespace
 
@@ -125,6 +129,8 @@ int main() {
 
 - `using namespace std;` è considerata una scelta discutibile.
 
+---
+
 ### Stringhe in STL
 
 - `string` è una classe della libreria standard STL.
@@ -148,6 +154,98 @@ cout << st.size(); // metodo size()
   - `immag() { return mod*sin(arg); }`
 - La classe nasconde la rappresentazione interna e fornisce un’interfaccia pubblica.
 
+---
+
 ### Compilatore
 
 `g++` è l’alias per `gcc -xc++`.
+
+---
+
+### Reference
+> [!info] **Definizione**: una *reference* è un alias, ossia un altro nome di una variabile già esistente. Quando una *reference* è inizializzata con una variabile, sia la variabile sia la *reference* possono essere usate per riferirsi alla variabile.
+
+```c++
+int x=2;
+int& a = x; // ALIAS
+```
+
+#### Differenze coi puntatori
+- Non si possono avere *reference* `NULL`. Le *reference* devono essere sempre connesse ad una cella di memoria
+- Quando una *reference* è inizializzata ad un *oggetto* non può cambiare riferimento. I puntatori li puoi invece spostare tra oggetti.
+- Una *reference* deve essere inizializzata quando viene creata, i puntatori quando si vuole invece.
+
+```c++
+int i;
+int& r=i;
+i=5;
+cout<<"I: "<<i<<" R: "<<r<<endl; // 5 5
+
+void swap(int& x, int& y){
+    int tmp = x;
+    x = y;
+    y = tmp;
+}
+
+int a = 1, b = 2;
+cout<<a<<" "<<b<<endl; // 1 2
+swap(a,b);
+cout<<a<<" "<<b<<endl; // 2 1
+```
+
+
+> Una funzione può anche ritornare *reference* in modo simile ai puntatori.
+> Quando una funzione ritorna una *reference*, ritorna un puntatore implicito al suo valore di ritorno
+
+```c++
+int v[] = {2, 4, 3, 5}
+int& setValue(int i){
+    return v[i] // ritorna una reference al i-esimo elemento
+}
+
+setValue(1) = 9;
+```
+
+> [!warning] Non è legale ritornare una *reference* ad una variabile locale:
+
+```c++
+int& f(int& a){
+    int q;
+    // return q;   errore di compilazione
+    return a;  // sicuro
+}
+```
+
+```c++
+int x=2
+int& a=x;
+int& b=2; // non si può fare
+a=5;
+int y=3;
+a=y;   // al valore di x ci assegno il valore di y
+
+int* p = &x;
+*p=5;
+int y=3;
+p=&y;
+
+int * const c = &x;
+*c=5; // si
+int y=3;
+c=&y; // no
+
+int & const d = x; // tipo illegale
+```
+
+```c++
+int x=2;
+const int& r=x; //riferimento a tipo costante
+r=5;  //illegale
+int y=3;
+r=y;  // illegale
+
+const int& r1 = 4; // si
+r = 5; //no
+int y=3;
+r=y; //no
+```

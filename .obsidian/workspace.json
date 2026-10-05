@@ -63,8 +63,7 @@
               "title": "Ordinamento"
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -178,7 +177,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Programmazione a Oggetti"
+              "title": "Backlinks"
             }
           },
           {
@@ -285,11 +284,11 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "c6c40d5117c710a3",
+  "active": "75117d52d51c40ad",
   "lastOpenFiles": [
+    "Algoritmi e Strutture Dati/Ordinamento.md",
     "Calcolo numerico/Sistemi non Decimali.md",
     "Reti/Layer e Protocolli.md",
-    "Algoritmi e Strutture Dati/Ordinamento.md",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "SVG/carbon.svg",
     "Varie/Date Esami.md",

@@ -154,16 +154,14 @@ $$
 
 ---
 
-## Induzione
-
 ### Principio di induzione
 
-Per dimostrare che $P(m)$ vale per ogni $m\in\mathbb{N}$:
+Per dimostrare che $P(m)$ vale $\forall\ m\in\mathbb{N}$:
 
 1. **Base**: dimostro $P(0)$.
 2. **Passo induttivo**: assumo $P(m)$ e dimostro $P(m+1)$.
 
-Allora $P(m)$ vale per ogni $m$.
+Allora $P(m)$ vale $\forall\ m$.
 
 > [!example] Esempio
 > $Q(m):\ 2^m \le (m+1)!$
@@ -178,26 +176,27 @@ Allora $P(m)$ vale per ogni $m$.
 
 Per dimostrare $P(m)$:
 
-- assumo $P(k)$ vero per ogni $k<m$;
+- assumo $P(k)$ vero $\forall\ k<m$;
 - dimostro $P(m)$.
 
-Allora $P(m)$ vale per ogni $m$.
+Allora $P(m)$ vale $\forall\ m$.
 
 > [!note] Utilità
 > L’induzione forte serve quando il passo induttivo richiede più casi precedenti, ad esempio per alberi binari e MergeSort.
 
 ### Alberi binari
 
-- **Altezza**: lunghezza del cammino più lungo dalla radice a una foglia.
-- **Teorema**: per ogni albero binario $T$ di altezza $m$,
+- **Altezza**: lunghezza del cammino più lungo dalla *radice* a una *foglia*.
+
+> [!info] **Teorema**: per ogni albero binario $T$ di altezza $m$, allora:
   $$
   \#\text{foglie}(T)\le 2^m
   $$
 
 **Dimostrazione per induzione forte su $m$:**
 
-- Base $m=0$: l’albero è una sola foglia ⇒ $1\le 2^0=1$.
-- Passo: sia $T$ di altezza $m+1$. La radice ha due sottoalberi $T'$ e $T''$ di altezze $m',m''\le m$. Allora
+- **Base** $m=0$: l’albero è una sola foglia ⇒ $1\le 2^0=1$.
+- **Passo** $\left(P(m)\to P(m+1)\right)$: sia $T$ di altezza $m+1$. La radice ha due sottoalberi *$T'$* e $T''$ di altezze $m',m''\le m$. Allora:
   $$
   \#\text{foglie}(T)
   =\#\text{foglie}(T')+\#\text{foglie}(T'')
@@ -207,6 +206,10 @@ Allora $P(m)$ vale per ogni $m$.
   $$
 
 ---
+
+Contesto
+$f,g:\ \mathbb R\to\mathbb R$
+
 
 ## Esercizi
 - pdf 01/10/2026
