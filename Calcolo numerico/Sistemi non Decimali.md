@@ -1,6 +1,7 @@
-### Conversione da base $N$ a base $M$
+# Conversione da base $N$ a base $M$
 
-Dato $x > 0$ (per semplicità) e nota la rappresentazione $(x)_N$, vogliamo trovare $(x)_M$.
+> [!info] Obiettivo
+> Dato $x > 0$ (per semplicità) e nota la rappresentazione $(x)_N$, vogliamo trovare $(x)_M$.
 
 Vogliamo che:
 $$
@@ -12,7 +13,7 @@ $$
 
 Si procede separatamente per parte *intera* e *frazionaria*.
 
-#### Conversione della parte intera
+## Conversione della parte intera
 
 Iteriamo lo schema con divisione intera per $M$:
 $$
@@ -31,14 +32,14 @@ $$
 (x_{\text{int}})_M = y_m y_{m-1} \dots y_0
 $$
 
-#### Conversione della parte frazionaria
+## Conversione della parte frazionaria
 
 Si procede moltiplicando per $M$:
 - calcolo $M \cdot x_{\text{fraz}}$;
 - sottraggo (e annoto) la parte intera del numero ottenuto;
 - se ottengo $0$ ho finito.
 
-### Esempi
+## Esempi
 
 > [!example] Convertire $(10011010010)_2$ in base $10$
 > $$
@@ -63,23 +64,30 @@ Si procede moltiplicando per $M$:
 > $$
 > Quindi $(0.0625)_{10} = (0.0001)_2$.
 
-> [!warning]  $0.1$ è *periodico* in base 2
+> [!warning] $0.1$ è *periodico* in base 2
 > $$
 > (0.1)_{10} = (0.0001100110011\ldots)_2
 > $$
 > Ha un numero illimitato di cifre e **non può** essere rappresentato *esattamente* in un calcolatore binario.
 
-## Numeri macchina
+---
 
-### Interi macchina (IEEE 754)
+# Numeri macchina
+
+## Interi macchina (IEEE 754)
+
 Tipici: *int32* (32 bit) o *int64* (64 bit). Il primo bit a sinistra è riservato al segno: $0 \to +$, $1 \to -$.
-Il **massimo** intero rappresentabile con $n$ bit:  $$  I_{\max,n} = (111\dots1)_2 = \sum_{i=0}^{n-1} 2^i = 2^n - 1.  $$
+
+Il **massimo** intero rappresentabile con $n$ bit:
+$$
+I_{\max,n} = (111\dots1)_2 = \sum_{i=0}^{n-1} 2^i = 2^n - 1.
+$$
 
 > [!warning] **Overflow**
 > Avviene quando il risultato non è rappresentabile e il *riporto* va a scriversi sul **bit di segno**.
 
-> [!example] \(7+2\) calcolato da una lavatrice
-> Usando interi macchina a 4 bit (\(n=3\)):
+> [!example] $7+2$ calcolato da una lavatrice
+> Usando interi macchina a 4 bit ($n=3$):
 > $$
 > \begin{array}{c}
 > 0111 \\
@@ -88,9 +96,9 @@ Il **massimo** intero rappresentabile con $n$ bit:  $$  I_{\max,n} = (111\dots1)
 > 1001
 > \end{array} = -1
 > $$
-> Quindi \(7+2 = -1\)! Questo problema si chiama **overflow**.
+> Quindi $7+2 = -1$! Questo problema si chiama **overflow**.
 
-### Floating point (IEEE 754)
+## Floating point (IEEE 754)
 
 Usando la notazione binaria, un numero $x \neq 0$ può essere scritto come:
 $$
@@ -102,7 +110,7 @@ dove:
 - $1.f$ è la *mantissa*
 - se $x \neq 0$ non ha senso memorizzare l'$1$ (**hidden bit**), quindi $0$ ha bisogno di una convenzione particolare
 
-#### Tabella riassuntiva IEEE 754
+### Tabella riassuntiva IEEE 754
 
 |                     | 32 bit                             | 64 bit                             |
 | ------------------- | ---------------------------------- | ---------------------------------- |
@@ -110,14 +118,14 @@ dove:
 | Bit segno           | 1                                  | 1                                  |
 | Bit esponente       | 8                                  | 11                                 |
 | Bit mantissa        | 23                                 | 52                                 |
-| Bias \(b\)          | 127                                | 1023                               |
-| Intervallo \(e\)    | $0 < e < 255$                      | $0 < e < 2047$                     |
+| Bias $b$            | 127                                | 1023                               |
+| Intervallo $e$      | $0 < e < 255$                      | $0 < e < 2047$                     |
 | $e=0, f=0$          | $\pm 0$                            | $\pm 0$                            |
 | $e=0, f>0$          | denormalizzato                     | denormalizzato                     |
 | $e=255, f=0$        | $\pm \infty$                       | $\pm \infty$                       |
 | $e=255, f>0$        | NaN (Not-a-Number)                 | NaN                                |
 
-#### Arrotondamento e troncamento
+### Arrotondamento e troncamento
 
 Cosa facciamo con le cifre in più?
 
@@ -212,6 +220,7 @@ $$
 > $$
 
 ### Operazioni macchina
+
 ==Definizione==:
 $$
 \Delta: \mathbb{R} \times \mathbb{R} \to \mathbb{R} \quad (+,\cdot)

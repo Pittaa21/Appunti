@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "FasNetworkWired",
       "FasSquareRootVariable",
       "FiCode",
       "FarFilePdf",
-      "FasFilePdf",
-      "FiArchive"
+      "FasFilePdf"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -41,5 +41,6 @@
   "Varie": "FiArchive",
   "PDF": "FarFilePdf",
   "Programmazione a Oggetti": "FiCode",
-  "Calcolo numerico": "FasSquareRootVariable"
+  "Calcolo numerico": "FasSquareRootVariable",
+  "Reti": "FasNetworkWired"
 }

@@ -4,20 +4,67 @@
     "type": "split",
     "children": [
       {
-        "id": "22e168cc6299c590",
+        "id": "763a8468dab89e8c",
         "type": "tabs",
         "children": [
           {
-            "id": "a361d6482a361d16",
+            "id": "75117d52d51c40ad",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Programmazione a Oggetti/Programmazione a Oggetti.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Programmazione a Oggetti"
+            }
+          },
+          {
+            "id": "260ae0fd84771742",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Reti/Layer e Protocolli.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Layer e Protocolli"
+            }
+          },
+          {
+            "id": "cd215db707af61b9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Calcolo numerico/Sistemi non Decimali.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Sistemi non Decimali"
+            }
+          },
+          {
+            "id": "c6c40d5117c710a3",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Algoritmi e Strutture Dati/Ordinamento.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Ordinamento"
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -29,7 +76,7 @@
       {
         "id": "6cc669c8a32e7f5f",
         "type": "tabs",
-        "dimension": 67.50418760469012,
+        "dimension": 66.32016632016632,
         "children": [
           {
             "id": "c96fc433758e8523",
@@ -76,12 +123,12 @@
         ]
       },
       {
-        "id": "c32b9eb2edc0b65f",
+        "id": "17f62d0b8512c7ff",
         "type": "tabs",
-        "dimension": 32.49581239530988,
+        "dimension": 33.679833679833685,
         "children": [
           {
-            "id": "c62ea90046959f99",
+            "id": "adc08d0b011e82e0",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -94,7 +141,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 479.5110321044922
+    "width": 280.79740142822266,
+    "collapsed": true
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -237,9 +285,18 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "9622b43658bb58c6",
+  "active": "c6c40d5117c710a3",
   "lastOpenFiles": [
+    "Calcolo numerico/Sistemi non Decimali.md",
+    "Reti/Layer e Protocolli.md",
+    "Algoritmi e Strutture Dati/Ordinamento.md",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
+    "SVG/carbon.svg",
+    "Varie/Date Esami.md",
+    "Sistemi.md",
+    "(Sistemi.md",
+    "Algoritmi.md",
+    "Reti",
     "SVG/carbon(6) 1.svg",
     "SVG/carbon(7).svg",
     "SVG/carbon(8).svg",
@@ -249,11 +306,8 @@
     "Esercizi Mate.md",
     "Pasted image 20261001105631.png",
     "Pasted image 20261001105848.png",
-    "carbon.svg",
     "carbon(5).svg",
-    "Calcolo numerico/Sistemi non Decimali.md",
     "Programmazione a Oggetti",
-    "Algoritmi e Strutture Dati/Ordinamento.md",
     "Algoritmi e Strutture Dati",
     "Calcolo numerico",
     "Algebra e Mate Discreta/Metodi di Conteggio.md",
@@ -275,14 +329,8 @@
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "conflict-files-obsidian-git.md",
     "Sistemi Operativi/Esercizi Sincronizzazione.md",
-    "Varie/Date Esami.md",
-    "Varie/Cyber.md",
     "Varie",
-    "Algebra e Mate Discreta/Algebra.md",
-    "Calendar/2026-06-12.md",
     "Calendar",
-    "Sistemi Operativi/Sincronizzazione tra Processi.md",
-    "Matrici e Sistemi lineari.pdf",
-    "SVG"
+    "Matrici e Sistemi lineari.pdf"
   ]
 }
