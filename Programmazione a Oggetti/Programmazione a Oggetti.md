@@ -249,3 +249,52 @@ r = 5; //no
 int y=3;
 r=y; //no
 ```
+
+#### Parametro per valore - per riferimento costante
+```c++
+class C{
+    int a[1000];
+}
+
+bool perValore(C x){return true;}
+bool perRiferimentoCostante(const C& x){return true;}
+
+int main(){
+    C obj;
+    for(int i=0; i<1000000; i++) perValore(obj); //3 sec
+    for(int i=0; i<1000000; i++) perRiferimentoCostante(obj); //0.03 sec
+}
+```
+
+---
+### Campi Statici
+L'inizializzazione dei campi statici si fa fuori dalla classe ed è sempre richiesta
+```c++
+class orario{
+    public:
+    static int secOra;
+}
+
+int orario::secOra = 3600;
+```
+
+### Operator Overloading
+```c++
+class orario{
+    public:
+    orario operator+(orario) const;
+}
+
+orario orario::operator+(orario o) const{
+    orario aux;
+    aux.sec = (sec + o.sec) % 86400;
+    return aux;
+}
+
+int main{
+    orario ora(22,45);
+    orario DUE_E_QUARTO(2,15);
+    ora = ora + DUE_E_QUARTO;
+}
+```
+
