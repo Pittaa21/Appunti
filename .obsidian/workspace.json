@@ -49,7 +49,8 @@
               "title": "Ordinamento"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -272,12 +273,12 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "75117d52d51c40ad",
+  "active": "c6c40d5117c710a3",
   "lastOpenFiles": [
-    "Algoritmi e Strutture Dati/Ordinamento.md",
-    "Calcolo numerico/Sistemi non Decimali.md",
-    "Reti/Layer e Protocolli.md",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
+    "Algoritmi e Strutture Dati/Ordinamento.md",
+    "Reti/Layer e Protocolli.md",
+    "Calcolo numerico/Sistemi non Decimali.md",
     "SVG/carbon.svg",
     "Varie/Date Esami.md",
     "Sistemi.md",

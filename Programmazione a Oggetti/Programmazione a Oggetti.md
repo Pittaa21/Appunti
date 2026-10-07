@@ -339,3 +339,47 @@ Il costruttore di copia `C(const C&)` viene invocato automaticamente quando:
 
 Esiste un'ottimizzazione di default per `g++` che quando si crea un oggetto temporaneo *inutile* usato per indirizzare un nuovo oggetto dello stesso tipo (*costruzione di copia*), il temporaneo non viene creato.
 
+==Osservazione==: L'operatore di default per la classe X assegna membro per membro ai suoi soggetti. Se il soggetto è un array, **ogni elemento** è assegnato in modo appropriato al tipo dell'elemento.
+```c++
+class V{
+    public:
+        int vett[10];
+}
+
+int main(){
+    V x,y;
+    x.vett[2]=1;
+    y=x; // si può fare
+    int a[10], b[10];
+    a[1]=0;
+    b=a; // errore compilazione
+}
+```
+
+##### Operatore Output `<<`
+
+Con **overloading** *interno*:
+```c++
+std::ostream& orario::operator<<(std::ostream& os) const{
+    return os<<Ore()<<':'<<Minuti()<<':'<<Secondi();
+}
+```
+
+```c++
+orario tre(15,0), quattro(16,0);
+quattro<<((tre<<cout)<<" sono prima delle ");
+```
+
+Con **overloading** *esterno* alla classe:
+```c++
+ostream& operator<<(ostream& os, const orario& o){
+    return os<<o.Ore()<<':'<<o.Minuti()<<':'<<o.Secondi();
+}
+```
+
+```c++
+orario tre(15,0), dodici(12,0);
+cout << "Ora sono le "<<tre<<endl; // Ora sono le 15:0:0
+cout << "fra dodici ore sono le "<<tre+dodici<<endl; // fra dodici ore sono le 3:0:0
+```
+

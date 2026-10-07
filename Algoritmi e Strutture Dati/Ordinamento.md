@@ -193,24 +193,28 @@ Allora $P(m)$ vale $\forall\ m$.
   \#\text{foglie}(T)\le 2^m
   $$
 
-**Dimostrazione per induzione forte su $m$:**
+==Dimostrazione per induzione== su $m$:
 
 - **Base** $m=0$: l’albero è una sola foglia ⇒ $1\le 2^0=1$.
-- **Passo** $\left(P(m)\to P(m+1)\right)$: sia $T$ di altezza $m+1$. La radice ha due sottoalberi *$T'$* e $T''$ di altezze $m',m''\le m$. Allora:
-  $$
+- **Passo** $\left(P(m)\to P(m+1)\right)$: sia $T$ di altezza $m+1$. La radice ha due sottoalberi *$T'$* e $T''$ di altezze $m',m''\le m$. Allora (se uso *induzione completa*):$$
   \#\text{foglie}(T)
   =\#\text{foglie}(T')+\#\text{foglie}(T'')
   \le 2^{m'}+2^{m''}
   \le 2^m+2^m
   =2^{m+1}
   $$
-
----
+Analisi mergeSort
+spazio occupato in memoria:$$a\cdot n+b$$
+$a$ = spazio occupato da un elemento dell'array (`int` 4byte)
+$n$ = numero di elementi dell'array
+$b$ = spazio occupato dagli *elementi di controllo* (`if`, `for`)
 
 Contesto
 $f,g:\ \mathbb R\to\mathbb R$
 
 
+
+
 ## Esercizi
 - pdf 01/10/2026
-- 
+- 05/10/2026
