@@ -298,3 +298,44 @@ int main{
 }
 ```
 
+==Regole Overloading==
+1. Non si può cambiare
+    - posizione
+    - numero operandi
+    - precedenza e associatività
+2. Tra gli argomenti deve esserci almeno un tipo definito dall'utente
+3. `=`, `[]` e `->` si possono sovraccaricare solo come metodi *interni*
+4. Non si può sovrascrivere: `.`, `::`, `sizeof`, `typeid`, i cast e l'*operatore condizionale ternario* `? :`
+5. `=`, `&` e `,` hanno una versione standard
+
+***Operatore Condizionale Ternario***
+`boolExpr ? expr1 : expr2;`
+
+```c++
+orario ora = (day == SUNDAY) ? 15 : 9;
+
+int max(int x, int y){
+    return x>y ? x : y;
+}
+```
+
+Il costruttore di copia `C(const C&)` viene invocato automaticamente quando:
+1.  Un oggetto viene dichiarato ed inizializzato da un altro oggetto della stessa classe:
+   ```c++
+   orario adesso(14,30);
+       orario copia = adesso; 
+   ```
+   2. Un oggetto viene passato per valore come parametro di una funzione:
+```c++
+       ora = ora.Somma(DUE_QUARTO);
+       
+       orario orario::Somma(orario o) const {
+           orario aux;
+           aux.sec = (sec+ o.sec) % 86400;
+           return aux;
+       }
+```
+3. Una funzione ritorna per valore tramite l'istruzione `return` un oggetto
+
+Esiste un'ottimizzazione di default per `g++` che quando si crea un oggetto temporaneo *inutile* usato per indirizzare un nuovo oggetto dello stesso tipo (*costruzione di copia*), il temporaneo non viene creato.
+
