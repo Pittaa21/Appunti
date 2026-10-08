@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algoritmi e Strutture Dati/Ordinamento.md",
+                "file": "Algoritmi e Strutture Dati/Algoritmi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Ordinamento"
+              "title": "Algoritmi"
             }
           }
         ],
@@ -276,8 +276,9 @@
   "active": "c6c40d5117c710a3",
   "lastOpenFiles": [
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
-    "Algoritmi e Strutture Dati/Ordinamento.md",
     "Reti/Layer e Protocolli.md",
+    "Algoritmi e Strutture Dati/Algoritmi.md",
+    "Pasted image 20261008130804.png",
     "Calcolo numerico/Sistemi non Decimali.md",
     "SVG/carbon.svg",
     "Varie/Date Esami.md",
@@ -294,7 +295,6 @@
     "Esercizi Mate.md",
     "Pasted image 20261001105631.png",
     "Pasted image 20261001105848.png",
-    "carbon(5).svg",
     "Programmazione a Oggetti",
     "Algoritmi e Strutture Dati",
     "Calcolo numerico",

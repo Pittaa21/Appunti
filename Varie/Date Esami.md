@@ -1,1 +1,1 @@
-[Algoritmi e strutture dati](Ordinamento):
+[Algoritmi e strutture dati](Algoritmi.md):
