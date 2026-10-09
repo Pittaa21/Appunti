@@ -383,3 +383,47 @@ cout << "Ora sono le "<<tre<<endl; // Ora sono le 15:0:0
 cout << "fra dodici ore sono le "<<tre+dodici<<endl; // fra dodici ore sono le 3:0:0
 ```
 
+### Macro
+Il processore di *c* e *cpp* da la possibilità di includere **file di header** (`#include`), espansioni **macro** (`#define`), **compilazione condizionale** e linee di controllo.
+
+
+
+##### Problema di inclusione multipla di file header
+```c++
+// file C.h
+class C{
+    public:
+        int x;
+};
+
+// file D.h
+#include <iostream>
+#include "C.h"
+class D{
+    public:
+        int x;
+        void print(const C& c) const{std::cout<<x+c.x;};
+};
+
+//file main.cpp
+#include "C.h"
+#include "D.h"
+
+int main(){
+    C c; D d;
+    d.print(c);
+}
+```
+
+Tramite `ifdef` e `ifndef` che corrispondono a `if defined` e `if !defined`, permettono di verificare se un *identificatore* è stato definito o no.
+> [!example] Esempio
+ ```c++
+ #ifndef ORARIO_H
+ #define ORARIO_H
+ class orario{
+ }
+ #endif
+ ```
+
+#### Make
+Il **make** è un tool che automatizza la creazione di file che dipendono da altri file, risolvendo le *dipendenze* e invocando programmi esterni.
