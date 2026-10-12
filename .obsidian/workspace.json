@@ -49,7 +49,8 @@
               "title": "Algoritmi"
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -272,10 +273,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "75117d52d51c40ad",
+  "active": "c6c40d5117c710a3",
   "lastOpenFiles": [
-    "Algoritmi e Strutture Dati/Algoritmi.md",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
+    "Algoritmi e Strutture Dati/Algoritmi.md",
     "Reti/Layer e Protocolli.md",
     "Pasted image 20261008130804.png",
     "Calcolo numerico/Sistemi non Decimali.md",

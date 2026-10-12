@@ -285,8 +285,16 @@ Dimostro per induzione che questa è la soluzione di $\circledast$.
    & b+c=4,\ c=0 & \Rightarrow b=4
 \end{align}$$Soluzione:$$\boxed{T(n)=6n\log_{2}n+4n}\Rightarrow T(n)=\Theta(n\log n)$$
 
+---
+### Master's Theorem
+Dato: $$T(n)=a\cdot T\left( \frac{n}{b} \right)+f(n)$$con $a\geq1$ è il numero di sottoproblemi,
+$\frac{n}{b}$ con $b>1$ è la dimensione dei sottoproblemi,
+e $f(n)$ è il costo della parte non ricorsiva.
 
-
+Confrontando $f(n)$ con $n^{\log_{b}a}$, allora:
+1. $T(n)=\Theta\left(n^{\log_{b}a}\right)$ se $f(n)=O\left(n^{\log_{b}a-\epsilon}\right)$ per $\epsilon>0$
+2. $T(n)=\Theta\left(n^{\log_{b}a}\log n\right)$ se $f(n)=\Theta\left(n^{\log_{b}a}\right)$
+3. $T(n)=\Theta\left(f(n)\right)$ se $f(n)=\Omega\left(n^{\log_{b}a+\epsilon}\right)$ per $\epsilon>0$ e *regolarità* $\exists k\quad 0<k<1$ a $f\left( \frac{n}{b} \right)\leq kf(n)\quad \forall n\geq n_{0}$
 
 ## Esercizi
 - 01/10/2026

@@ -427,3 +427,34 @@ Tramite `ifdef` e `ifndef` che corrispondono a `if defined` e `if !defined`, per
 
 #### Make
 Il **make** è un tool che automatizza la creazione di file che dipendono da altri file, risolvendo le *dipendenze* e invocando programmi esterni.
+
+---
+
+### Modularizzazione
+Per quanto riguarda la programmazione a oggetti, significa un oggetto ha all'interno di un altro oggetto (**has-a**).
+
+> [!example] Esempio
+
+```c++
+  #define TELEFONATA_H
+  #include <iostream>
+  #include "orario.h"
+  
+  class telefonata{
+      private:
+          orario inizio, fine; // has-a
+          int numero;
+      public:
+          telefonata(orario, orario, int);
+          telefonata();
+  };
+
+```
+
+Invocazione **esplicita** del costruttore di copia
+```c++
+telefonata::telefonata() : numero(0) {}
+```
+
+L'ordine con cui si inizializzano i campi di una classe, solitamente viene usato anche per il costruttore di default.
+
