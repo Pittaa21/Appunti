@@ -13,7 +13,7 @@
   "loadSnippetVariablesFromFile": false,
   "snippetsFileLocation": "",
   "snippetVariablesFileLocation": "",
-  "concealEnabled": true,
+  "concealEnabled": false,
   "concealRevealTimeout": 1,
   "colorPairedBracketsEnabled": true,
   "highlightCursorBracketsEnabled": true,

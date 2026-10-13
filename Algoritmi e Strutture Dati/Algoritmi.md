@@ -13,7 +13,7 @@ Di ogni algoritmo bisogna sapere:
 > Si costruisce incrementalmente un sottoarray ordinato `A[1..j-1]`.  
 > A ogni passo si inserisce `A[i]` nella posizione corretta.
 
-https://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif
+[animazione](https://upload.wikimedia.org/wikipedia/commons/9/9c/Insertion-sort-example.gif)
 
 ### Pseudocodice
 
@@ -68,7 +68,7 @@ Dato che ci sono 2 cicli il caso peggiore e quello medio avrà complessità $n^2
 > - **Impera**: risolve ricorsivamente i sottoproblemi.
 > - **Combina**: fonde le soluzioni in una soluzione del problema originale.
 
-https://commons.wikimedia.org/wiki/File:Merge-sort-example-300px.gif
+[animazione](https://commons.wikimedia.org/wiki/File:Merge-sort-example-300px.gif)
 
 ### Pseudocodice
 
@@ -287,14 +287,58 @@ Dimostro per induzione che questa è la soluzione di $\circledast$.
 
 ---
 ### Master's Theorem
-Dato: $$T(n)=a\cdot T\left( \frac{n}{b} \right)+f(n)$$con $a\geq1$ è il numero di sottoproblemi,
+Dato $T(n)$ che rappresenta il **tempo totale** dell'algoritmo dato un input $n$: $$T(n)=a\cdot T\left( \frac{n}{b} \right)+f(n)$$con $a\geq1$ è il numero di sottoproblemi,
 $\frac{n}{b}$ con $b>1$ è la dimensione dei sottoproblemi,
 e $f(n)$ è il costo della parte non ricorsiva.
 
-Confrontando $f(n)$ con $n^{\log_{b}a}$, allora:
+Confrontando $f(n)$ con $n^{\log_{b}a}$, allora ho 3 casi:
 1. $T(n)=\Theta\left(n^{\log_{b}a}\right)$ se $f(n)=O\left(n^{\log_{b}a-\epsilon}\right)$ per $\epsilon>0$
 2. $T(n)=\Theta\left(n^{\log_{b}a}\log n\right)$ se $f(n)=\Theta\left(n^{\log_{b}a}\right)$
 3. $T(n)=\Theta\left(f(n)\right)$ se $f(n)=\Omega\left(n^{\log_{b}a+\epsilon}\right)$ per $\epsilon>0$ e *regolarità* $\exists k\quad 0<k<1$ a $f\left( \frac{n}{b} \right)\leq kf(n)\quad \forall n\geq n_{0}$
+
+##### Utilizzo
+Con il *metodo del limite* per il confronto tra $f(n)$ e $n^{\log_{b}a}$:
+
+- $\lim_{ n \to \infty } \frac{f(n)}{n^{\log_{b}a}}=k>0\ne\infty\quad\to\quad f(n)=\Theta(n^{\log_{b}a})$ *caso 2*
+- $\lim_{ n \to \infty } \frac{f(n)}{n^{\log_{b}a}}=0\quad\to\quad f(n)=(n^{\log_{b}a})\ne\Omega(n\log_{b}a)$ *caso 1*
+
+infine devo trovare $\epsilon>0$ tale che
+$$\lim_{ n \to \infty } \frac{f(n)}{n^{\log_{b}a}-\epsilon}=0\quad\to\quad T(n)=\Theta(n^{\log_{b}a})$$
+- $\lim_{ n \to \infty } \frac{f(n)}{n^{\log_{b}a}}=\infty\quad\to\quad f(n)=\Omega (n^{\log_{b}a}\ne O(n^{\log_{b}a})$  *caso 3*
+
+> [!example] Esempio MergeSort
+> $$\begin{align}
+> T(n)&=T\left(\frac{n}{2}\right)+T\left(\frac{n}{2}\right)+a'n+b' \\
+> &=2T\left(\frac{n}{2}\right)+\underbrace{a'n+b'}_{f(n)}
+> \end{align}$$
+
+==Svolgimento==:
+Dato che $a=2$ e $b=2$ allora $n^{\log_{b}a}=n^{\log_{2}2}=n^1=n$.
+Quindi se faccio il limite tra:$$\lim_{ n \to \infty } \frac{a'n+b'}{n}>0\ne\infty$$Sono nel *caso 2* del **master theorem**, quindi $T(n)=\Theta(n\log n)$
+
+nel caso non sia possibile risolvere con il *master theorem* si usa quello di  [sostituzione](https://stem.elearning.unipd.it/pluginfile.php/1500726/mod_resource/content/0/Algoritmi-2026-10-08.pdf)
+
+## Insertion Sort Ricorsivo
+==PseudoCodice==:
+```python
+InsertionSort(A, j):
+    if j>1:
+        InsertionSort(A, j-1)
+        Insert(A,j)
+
+Insert(A, j):
+    if (j>1) and (A[j-1]>A[j]):
+        A[j-1]<-> A[j]
+        Insert(A,j-1)
+```
+
+==Analisi==:
+- Costo della funzione `Insert`: $$T^{INS}(j)=c+T^{INS}(j-1)\quad\to\quad T^{INS}(j)=\Theta(j)$$
+- Costo funzione `InsertionSort`: $$T^{IS}(n)=T^{IS}(n-1)+T^{INS}(n)+c$$
+Quindi in totale $$\boxed{T^{IS}(n)=T^{IS}(n-1)+\Theta(n)=\Theta\left(n^2\right)}$$
+
+#### Duplicati
+
 
 ## Esercizi
 - 01/10/2026
