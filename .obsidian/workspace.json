@@ -22,6 +22,20 @@
             }
           },
           {
+            "id": "3800f24fa11dd66a",
+            "type": "leaf",
+            "state": {
+              "type": "split-diff-view",
+              "state": {
+                "aFile": "conflict-files-obsidian-git.md",
+                "bFile": "conflict-files-obsidian-git.md",
+                "aRef": ""
+              },
+              "icon": "diff",
+              "title": "Diff: conflict-files-obsidian-git  (Working Tree)"
+            }
+          },
+          {
             "id": "260ae0fd84771742",
             "type": "leaf",
             "state": {
@@ -35,7 +49,8 @@
               "title": "Layer e Protocolli"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -258,14 +273,15 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "75117d52d51c40ad",
+  "active": "3800f24fa11dd66a",
   "lastOpenFiles": [
+    "conflict-files-obsidian-git.md",
+    "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "Reti/Layer e Protocolli.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
     "Algebra e Mate Discreta/Algebra.md",
     "Algoritmi e Strutture Dati/Algoritmi.md",
-    "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "().md",
     "Pasted image 20261008130804.png",
     "Calcolo numerico/Sistemi non Decimali.md",
@@ -302,7 +318,6 @@
     "PDF/Linux.pdf",
     "PDF",
     "Calendar/2026-06-22.md",
-    "conflict-files-obsidian-git.md",
     "Varie",
     "Calendar",
     "Matrici e Sistemi lineari.pdf"
