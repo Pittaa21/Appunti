@@ -458,3 +458,86 @@ telefonata::telefonata() : numero(0) {}
 
 L'ordine con cui si inizializzano i campi di una classe, solitamente viene usato anche per il costruttore di default.
 
+### Container
+È una classe che è una *collezione di oggetti*. Sono usati per contenere oggetti e sono organizzati secondo delle **regole di accesso** specifiche. La dimensione del *container* dipende dal numero di oggetti che contiene.
+I *container* richiedono:
+- Un **costruttore**, per creare un container vuoto
+- metodi per inserire oggetti al suo interno
+- metodi per eliminare oggetti dal container
+- **clear**, per rimuovere tutti gli oggetti dentro il container
+- metodi per accedere ai suoi oggetti
+- **count** per accedere al numero di oggetti in esso
+I container sono solitamente implementati con gli *iteratori*.
+Per esempio delle classi contenitori della libreria standard sono: `string`, `list`, `vector`, `map` e `set`.
+
+#### Linked List
+I nodi si definiscono come tipo di dato (*classe*) non più *struct*:
+```c++
+// bolletta.h
+class bolletta{
+public:
+    bolletta();
+    bool Vuota() const;
+    void Aggiungi_Tel(const telefonata&);
+    void Togli_Tel(const telefonata&);
+    telefonata get_Una();
+private:
+    class nodo{
+        public:  // pubblico solo all'interno della classe bolletta
+            nodo();
+            nodo(const telefonata&, nodo*);
+            telefonato info;
+            nodo* next;
+    }
+    nodo* first; // field della classe bolletta
+}
+```
+
+```c++
+// bolletta.cpp
+#include "bolletta.h";
+
+bolletta::nodo::nodo() : next(nullptr) {}; // costruttore di default per il nodo
+bolletta::nodo::nodo(const telefonata& t, nodo* s) : info(t), next(s) {};
+bolletta::bolletta(): first(nullptr) {};
+bool bolletta::Vuota() const {
+    return first == nullptr;
+};
+void bolletta::Aggiungi_Tel(const telefonata& t){
+    first = new nodo(t, first); //aggiunto alla lista
+};
+void bolletta::Togli_Tel(const telefonata& t){
+    nodo *p = first, *prec = nullptr;
+    while(p && !(p->info == t)){ // continuo a cercare finchè non trovo una telefonata = t 
+                                 // o finchè p!= null
+        prec = p;
+        p = p->next;
+    }
+    if(p){
+        if(prec==nullptr)
+            first = p->next;
+        else
+            prec->next=p->next; // rimozione logica
+        delete p; //rimozione cella di memoria 
+    }
+};
+telefonata bolletta::get_Una(const telefonata& t){ // bolletta non vuota
+    nodo* p=first;
+    first = first->next;
+    telefonata tmp = p->info; // costruzione di copia
+    delete p;
+    return tmp;
+};
+```
+
+#### Interferenza/Aliasing
+Viene causata da:
+1. Condivizione di memoria
+2. Funzioni con side effects
+L'**aliasing** è una situazione in cui la locazione di un dato in memoria ci si può accedere da diversi nomi simbolici. Modificando il dato con un nome modifica il valore associato a tutti gli *alias*, che non ci si aspetta.
+
+###### Shallow Copy
+È eseguita dall'assegnazione standard e dal costruttore di copia standard. Viene copiato il valore di A in B, se modifichi l'indirizzo di memoria a cui punta B, modifichi anche dove punta A.
+
+###### Deep Copy
+È un'alternativa alla **shallow copy** dove i dati sono effettivamente sovrascritti, dove A e B non dipendono l'uno dall'altro.
