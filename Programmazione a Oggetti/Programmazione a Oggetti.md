@@ -541,3 +541,34 @@ L'**aliasing** è una situazione in cui la locazione di un dato in memoria ci si
 
 ###### Deep Copy
 È un'alternativa alla **shallow copy** dove i dati sono effettivamente sovrascritti, dove A e B non dipendono l'uno dall'altro.
+
+
+### Lifetime
+Il **tempo di vita** di un oggetto è il tempo tra la creazione e la sua distruzione. In generale il tempo di vita di un oggetto non per forza è legato al tempo di vita di una variabile.
+
+#### Variabile Statica
+È una variabile che viene allocata **staticamente**, il suo *lifetime* dura per tutta l'esecuzione del programma. Si trovano nella **memoria statica**.
+
+Le ***variabili dinamiche*** sono nell'**heap**.
+
+### Distruttore
+Un **distructor** è un metodo che viene invocato automaticamente quando un oggetto viene distrutto. Il **distruttore standard** distrugge tutti campi di dati della classe in ordine inverso alla loro dichiarazione.
+```c++
+bolletta::~bolletta() {distruggi(first);} 
+// distrugge la lista in modo ricorsivo e di conseguenza anche la bolletta
+```
+
+I *distruttori* vengono invocati:
+- per oggetti **statici**, al termine del programma
+- per oggetti definiti in un blocco, all'uscita dal blocco in cui sono dichiarati
+- per oggetti **dinamici**, quando viene invocato `delete` su un puntatore ad essi
+- per oggetti che sono *campi dati* di un oggetto `x`, quando `x` viene distrutto
+- per oggetti con lo stesso tempo di vita, sono distrutti in ordine inverso a quello in cui sono creati
+
+Il distruttore viene invocato, in particolare, nell'ordine:
+1. sulle *variabili locali* di una funzione, quando si esce dalla funzione
+2. sull'*oggetto anonimo* ritornato per valore da una funzione, non appena esso è stato usato
+3. sui *parametri* di una funzione, all'uscita dalla funzione
+
+##### Regola del Tre
+È una regola, che se una classe definisce uno o più tra *distruttori*, *costruttori di copia*, *operatore di assagnazione di copia*, allora bisogna probabilmente definire esplicitamente tutte e tre.

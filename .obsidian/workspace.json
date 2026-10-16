@@ -22,20 +22,6 @@
             }
           },
           {
-            "id": "3800f24fa11dd66a",
-            "type": "leaf",
-            "state": {
-              "type": "split-diff-view",
-              "state": {
-                "aFile": "conflict-files-obsidian-git.md",
-                "bFile": "conflict-files-obsidian-git.md",
-                "aRef": ""
-              },
-              "icon": "diff",
-              "title": "Diff: conflict-files-obsidian-git  (Working Tree)"
-            }
-          },
-          {
             "id": "260ae0fd84771742",
             "type": "leaf",
             "state": {
@@ -49,8 +35,7 @@
               "title": "Layer e Protocolli"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -273,11 +258,11 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "3800f24fa11dd66a",
+  "active": "75117d52d51c40ad",
   "lastOpenFiles": [
+    "Reti/Layer e Protocolli.md",
     "conflict-files-obsidian-git.md",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
-    "Reti/Layer e Protocolli.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
     "Algebra e Mate Discreta/Algebra.md",
