@@ -572,3 +572,21 @@ Il distruttore viene invocato, in particolare, nell'ordine:
 
 ##### Regola del Tre
 È una regola, che se una classe definisce uno o più tra *distruttori*, *costruttori di copia*, *operatore di assagnazione di copia*, allora bisogna probabilmente definire esplicitamente tutte e tre.
+
+### Dichiarazioni incomplete
+Una classe `C` può dichiarare ed usare puntatori e reference ad una classe `D` che viene meramente dichiarata. È una **dichiarazione incompleta** della classe `D`.
+
+#### Funzione Amica
+È un metodo *amico* di una data classe e può accedere ai dati privati e protetti. Queste funzioni vanno usate con attenzione. Troppe dichiarazioni di amicizia possono creare dei problemi.
+
+```c++
+class bolletta{
+    friend ostream& operator<<(ostream&, const bolletta&);
+};
+```
+
+#### Overloading operatori puntatore
+```c++
+telefonata* operator->() const {return &(punt->info);};
+telefonata& operator*() const {return punt->info;};
+```

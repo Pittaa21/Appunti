@@ -35,7 +35,8 @@
               "title": "Layer e Protocolli"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -258,11 +259,11 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "75117d52d51c40ad",
+  "active": "260ae0fd84771742",
   "lastOpenFiles": [
+    "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "Reti/Layer e Protocolli.md",
     "conflict-files-obsidian-git.md",
-    "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
     "Algebra e Mate Discreta/Algebra.md",
