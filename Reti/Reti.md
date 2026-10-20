@@ -52,4 +52,10 @@ Le onde radio a **bassa frequenza** come *AM*, si disperdono facilmente.
 Mentre quelle ad **alta frequenza**, non attraversano bene gli ostacoli e sono assorbite dalla pioggia.
 
 ##### Trasmissione a micro-onde
-Sopra i 100MHz, le onde viaggiano quasi in linea retta, possono essere meglio focalizzate e percorrere distanze più lunghe.
+Sopra i 100MHz, le onde viaggiano quasi in linea retta, possono essere meglio *focalizzate* e percorrere distanze più lunghe, ma ricevitore e trasmettitore devono essere meglio allineati. Prima della fibra ottica, le **micro-onde** erano il centro delle comunicazioni a lunga distanza.
+Le **micro-onde** sono **direzionali** e sono necessari dei *ripetitori*.
+Non possono attraversare efficaciemente gli ostacoli, e sono soggette a delle *interferenze atmosferiche* come il **multipath fading**.
+
+##### Trasmissioni Infrarossi
+Usate per comunicazioni a corto raggio (telecomandi). Sono **direzionali**, economiche e sicure
+

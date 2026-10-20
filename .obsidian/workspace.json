@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Reti/Layer e Protocolli.md",
+                "file": "Reti/Reti.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Layer e Protocolli"
+              "title": "Reti"
             }
           }
         ],
@@ -262,7 +262,7 @@
   "active": "260ae0fd84771742",
   "lastOpenFiles": [
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
-    "Reti/Layer e Protocolli.md",
+    "Reti/Reti.md",
     "conflict-files-obsidian-git.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
