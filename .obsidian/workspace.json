@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Algebra e Mate Discreta/Spazi Vettoriali.md",
+                "file": "Programmazione a Oggetti/Programmazione a Oggetti.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spazi Vettoriali"
+              "title": "Programmazione a Oggetti"
             }
           },
           {
@@ -35,7 +35,8 @@
               "title": "Reti"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -112,7 +113,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280.79740142822266
+    "width": 280.79740142822266,
+    "collapsed": true
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -257,14 +259,14 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "3e91d3b7d7df7c0b",
+  "active": "1bf8d0436c848b0f",
   "lastOpenFiles": [
-    "PDF/Spazi Vettoriali.pdf",
-    "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
-    "PDF/Matrici e Sistemi lineari.pdf",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "Reti/Reti.md",
+    "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
+    "PDF/Spazi Vettoriali.pdf",
+    "PDF/Matrici e Sistemi lineari.pdf",
     "Algoritmi e Strutture Dati/Algoritmi.md",
     "conflict-files-obsidian-git.md",
     "Algebra e Mate Discreta/Algebra.md",
@@ -303,7 +305,6 @@
     "Sistemi Operativi/Politiche di Ordinamento.md",
     "PDF/Linux.pdf",
     "PDF",
-    "Varie",
-    "Calendar"
+    "Varie"
   ]
 }

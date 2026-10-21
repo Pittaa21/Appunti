@@ -595,4 +595,17 @@ telefonata& operator*() const {return punt->info;};
 È una tecnica per immagazzinare il numero di *reference*, *puntatori* o *handle* ad una risorsa, come un oggetto, un blocco di memoria, lo spazio del disco o altre risorse. Si riferisce a un algoritmo di **garbage collector** che usa questi contatori di *reference* per deallocare oggetti che non sono più referenziati.
 
 ### Smart Pointer
-È un tipo di dato *astratto* che simula un puntatore 
+È un tipo di dato *astratto* che simula un puntatore mentre aggiunge delle funzionalità, come la **gestione automatica** della memoria o il **controllo dei limiti** (per esempio di un array)
+Disponibili tramite:
+```c++
+std::shared_ptr<T>
+std::weak_ptr<T>
+```
+
+#### Boost
+È un set di *librerie* per c++ che forniscono supporto per delle strutture come *algebra lineare*, *pseudo-randomico* generatore di numeri, *multithreading*, *image processing* e *espressioni regolari*. Contiene oltre 80 librerie.
+
+### Unions Type
+Come le **struct** però i suoi membri sono memorizzati nella stessa locazione di memoria.
+
+### Conversioni

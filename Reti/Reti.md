@@ -59,3 +59,6 @@ Non possono attraversare efficaciemente gli ostacoli, e sono soggette a delle *i
 ##### Trasmissioni Infrarossi
 Usate per comunicazioni a corto raggio (telecomandi). Sono **direzionali**, economiche e sicure
 
+
+#### DSL
+Una *linea* di *telecomunicazioni digitale*, hanno velocità di 56KB, con i modem è quasi il **limite fisico**
