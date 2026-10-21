@@ -590,3 +590,9 @@ class bolletta{
 telefonata* operator->() const {return &(punt->info);};
 telefonata& operator*() const {return punt->info;};
 ```
+
+### Reference Counting
+È una tecnica per immagazzinare il numero di *reference*, *puntatori* o *handle* ad una risorsa, come un oggetto, un blocco di memoria, lo spazio del disco o altre risorse. Si riferisce a un algoritmo di **garbage collector** che usa questi contatori di *reference* per deallocare oggetti che non sono più referenziati.
+
+### Smart Pointer
+È un tipo di dato *astratto* che simula un puntatore 

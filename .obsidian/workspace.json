@@ -4,25 +4,25 @@
     "type": "split",
     "children": [
       {
-        "id": "763a8468dab89e8c",
+        "id": "59c4db277efb1ab8",
         "type": "tabs",
         "children": [
           {
-            "id": "75117d52d51c40ad",
+            "id": "3e91d3b7d7df7c0b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Programmazione a Oggetti/Programmazione a Oggetti.md",
+                "file": "Algebra e Mate Discreta/Spazi Vettoriali.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Programmazione a Oggetti"
+              "title": "Spazi Vettoriali"
             }
           },
           {
-            "id": "260ae0fd84771742",
+            "id": "1bf8d0436c848b0f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -35,8 +35,7 @@
               "title": "Reti"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -113,8 +112,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 280.79740142822266,
-    "collapsed": true
+    "width": 280.79740142822266
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -259,15 +257,17 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "260ae0fd84771742",
+  "active": "3e91d3b7d7df7c0b",
   "lastOpenFiles": [
+    "PDF/Spazi Vettoriali.pdf",
+    "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
+    "PDF/Matrici e Sistemi lineari.pdf",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "Reti/Reti.md",
-    "conflict-files-obsidian-git.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
-    "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
-    "Algebra e Mate Discreta/Algebra.md",
     "Algoritmi e Strutture Dati/Algoritmi.md",
+    "conflict-files-obsidian-git.md",
+    "Algebra e Mate Discreta/Algebra.md",
     "().md",
     "Pasted image 20261008130804.png",
     "Calcolo numerico/Sistemi non Decimali.md",
@@ -303,9 +303,7 @@
     "Sistemi Operativi/Politiche di Ordinamento.md",
     "PDF/Linux.pdf",
     "PDF",
-    "Calendar/2026-06-22.md",
     "Varie",
-    "Calendar",
-    "Matrici e Sistemi lineari.pdf"
+    "Calendar"
   ]
 }
