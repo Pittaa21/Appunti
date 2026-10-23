@@ -35,8 +35,7 @@
               "title": "Reti"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -259,10 +258,10 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "1bf8d0436c848b0f",
+  "active": "3e91d3b7d7df7c0b",
   "lastOpenFiles": [
-    "file:/home/pitta/Downloads/exercises_07/01_hello_world/description.md",
     "Reti/Reti.md",
+    "file:/home/pitta/Downloads/exercises_07/01_hello_world/description.md",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",

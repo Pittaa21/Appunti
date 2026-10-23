@@ -609,3 +609,122 @@ std::weak_ptr<T>
 Come le **struct** però i suoi membri sono memorizzati nella stessa locazione di memoria.
 
 ### Conversioni
+#### Conversioni Implicite
+
+### Template
+I ***Template*** sono delle funzionalità di c++ che permettono alle funzioni e alle classi di operare con tipi **generici**. Questo permette di lavorare su diversi tipi di dati senza dover riscrivere le funzioni per ogni tipo di dato.
+```c++
+template <class T> // oppure <typename T>
+T min(T a, T b) {
+    return a < b ? a : b;
+};
+```
+Quindi nel main:
+```c++
+int i,j, k;
+orario r,s, t;
+// instanziazione implicita
+k = min(i, j);
+t = min(r, s);
+// instanziazione esplicita
+k = min<int>(i, j);
+t = min<orario>(r, s);
+```
+
+I parametri di un template possono essere:
+- **Parametri di tipo**: instanziabili con un tipo qualsiasi
+- **Parametri valore**: instanziabili con un valore costante del tipo indicato
+
+Un template **non** è codice **compilabile**.
+
+Nell'*instanziazione implicita* il tipo di ritorno  di un template non viene mai considerato nella deduzione degli argomenti:
+```c++
+double d; int i, j;
+d = min(i,j); // viene ritornato int e poi convertito a double
+```
+
+Nell'algoritmo di deduzione degli argomenti sono ammessi quattro tipi di conversione:
+- da *l-valore* a *r-valore* ossia: da `T&` a `T`
+- da *array* a *puntatore* ossia: da `T[]` a `T*`
+- a *costante* ossia: da `T` a `const T`
+- da *r-valore* a *riferimento costante*, ossia: da `T` a `const T&`
+
+Nell'*istanziazione esplicita* è possibile applicare **qualsiasi** conversione implicita:
+```c++
+int i; double d, e;
+e = min<double>(d, i); //converte i da int a double: double min(double, double)
+```
+
+Si può passare come parametro un riferimento ad un array statico:
+```c++
+template <class T, int size> // il secondo è un parametro valore
+T min(T (&a)[size]){
+    ...
+};
+
+void main(){
+    int a[20];
+    cout << min(a)
+    // oppure
+    cout << min<int,20>(a);
+}
+```
+
+###### Compilazione di un template
+Estensione *.hpp* che contiene la definizione del **template** .
+Si ha una **compilazione per inclusione**. Il file di header del template deve essere instanziato includendolo nel codice, si ha quindi **No** information hiding.
+
+C'è un altro problema, ossia vengono generate istanze multiple del template:
+```c++
+// min.h
+template <class T>
+T min(T a, T b) ...
+
+// main1.cpp
+#include "min.h"
+min(1,0);
+// main2.cpp
+#include "min.h"
+min(1,0);
+// main3.cpp
+#include "min.h"
+min(1,0);
+```
+Viene istanziato 3 volte lo stesso template.
+==soluzione==:
+```c++
+// usedTemplates.cpp
+#include "min.h"
+template int min(int,int);
+template orario min(orario,orario);
+// main.cpp
+#include "min.h"
+
+main(){
+    min(9,3);
+    min(orario(4));
+}
+```
+si compila usando: 
+```bash
+g++ -fno-implicit-templates -c main.cpp
+g++ -fno-implicit-templates -c usedTemplates.cpp
+g++ main.o usedTemplates.o
+```
+
+###### Compilazione per separazione
+Dichiarazione del template separata dalla sua definizione.
+
+##### Programmazione generica
+Gli algoritmi sono scritti in termini di tipi che sono specificati dopo che sono instanziati quando c'è bisogno di specifici tipi come *parametri*.
+
+definizione **macro**:
+```c++
+#define min(a,b) ((a) < (b) ? (a) : (b))
+```
+il processore sostituisce `min(10, 20)` con `10 < 20 ? 10 :20`.
+fa **side effect** nel caso di `min(++i, --j)` 
+
+#### Template di Classe
+##### Coda
+È un tipo di dato **astratto** dove gli oggetti al suo interno sono tenuti in ordine e possono essere aggiunti solo dalla fine e rimossi dall'inizio.
