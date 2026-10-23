@@ -117,3 +117,22 @@ C'è il problema degli *echi* del terreno. Per risolvere il problema si usa il *
 Ogni canale è suddiviso in tante trasmissioni indipendenti in due modi:
 - **2K**: 1705 sottocanali
 - **8K**: 6817 sottocanali
+
+##### Switching
+La struttura della rete telefonica (*PSTN*), il suo traffico è gestito da dei *switching center* in tre modi:
+- **circuit switching**: viene creato un **collegamento fisico** (circuito elettrico) tra due utenti. È per i collegamenti fisici serve del tempo, c'è quindi un *delay* iniziale.
+- **message switching**: invece di creare il percorso e poi iniziare la trasmissione, il messaggio viene inviato subito, così facendo appena il percorso è finito il messaggio arriva subito, diminuito il *delay* iniziale, problema dei messaggi grandi (**sostituito**)
+- **packet switching**: quando si ha un messaggio grosso,viene diviso in *packets* di lunghezza massima nota. Viene resa possibile la trasmissione in parallelo.
+
+### Telefonia Mobile
+#### 0G (Gen Zero)
+Deriva dalla trasmissione radio: **PTT** ossia **Push To Talk**, un solo canale per ricevere o trasmettere, **half-duplex**, ossia *push* per trasmettere senza ricevere.
+
+#### IMTS (Improved Mobile Telephone System)
+Si passa a due frequenze, niente PTT. Viene introdotto un livello di **privacy**: non si sentono le comunicazioni degli altri. Si usano dei *super-trasmettitori* ad alta potenza, ci sono solo 23 canali per centinaia di km per *cella* che evita le interferenze.
+
+#### 1G
+Viene introdotto **AMPS** (**Advanced Mobile Phone System**), in Italia *TACS*. Ora le *celle* sono molto più piccole (10-20km). Aumenta la **capacità** degli utenti che usano il servizio e diminuisce la **potenza** richiesta per la trasmissione, quindi meno uso della batteria dei telefoni. 
+C'è il problema dell'**interferenza** tra celle: si usa la *separazione di frequenza*. Il numero di frequenze dipende dalle *zone*, dalla *densità* d'uso, e dalla necessità di *espansione*, solitamente si usano 3 o 7 frequenze.
+
+Ogni **cella** ha al centro lo *switching center*, un cellulare è connesso ad una sola cella, finchè non si sposta. Si deve trovare il modo di passare il segnale ad un'altra cella
