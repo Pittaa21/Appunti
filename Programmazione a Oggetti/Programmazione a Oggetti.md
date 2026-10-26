@@ -728,3 +728,87 @@ fa **side effect** nel caso di `min(++i, --j)`
 #### Template di Classe
 ##### Coda
 È un tipo di dato **astratto** dove gli oggetti al suo interno sono tenuti in ordine e possono essere aggiunti solo dalla fine e rimossi dall'inizio.
+
+==Nota==: il compilatore genera una istanza un **template** solo quando necessario. Per esempio non si genera `Queue<int>` quando:
+```c++
+template <class T> class Queue;
+
+void Stampa(const Queue<int>& q) {
+    Queue<int>* pqi = const_cast< Queue<int>* >(&q); //non serve istanziare
+    //se invece ho
+    pqi++; //serve istanziare per calcolare la quantità sizeof(Queue<int>)
+    ...
+}
+```
+
+Si istanza sempre, invece, quando:
+```c++
+template <class T> class Queue {
+};
+
+void Stampa(Queue<int> q) {
+    Queue<int> qi;
+}
+```
+
+In un **template di classe** si posso definire metodi *inline*
+```c++
+template <class T>
+class Queue {
+    public:
+        Queue() : primo(0), ultimo(0) {} // costruzione di default
+};
+```
+
+Se definisco **esternamente**:
+```c++
+template <class T>
+class Queue {
+    public:
+        Queue(); // costruzione di default
+};
+
+template <class T>
+Queue<T>::Queue() : primo(0), ultimo(0) {}
+```
+
+#### Amicizia nei Template
+- Amicizia assoluta: tutte le istanze sono amiche dei soggetti specificati
+```c++
+template<class T>
+class C{
+    friend int A::fun();
+    friend class B;
+    friend bool test();
+}
+```
+- Amicizia associata: in base al tipo di classe per esempio `<int, double>` o `<double, double>` 
+```c++
+template<class T>
+class C{
+    private:
+        T t;
+    public:
+        C(const T&);
+        friend void f_friend<T>(const C<T>&); // amicizia associata
+};
+```
+- Amicizia non associata: qualsiasi istanza dell'amico può accedere a qualsiasi istanza del template, a prescindere dal tipo di dato
+
+#### Campi dati statici in template di classe
+Tutto ciò che vive dentro un template è templatizzato.
+
+#### Amicizia e classi annidate
+```c++
+template <class T>
+class Queue {
+    private:
+    // annidamento di classe associato
+    class QueueItem {
+        public:
+            QueueItem(const T& val);
+    }
+}
+```
+`QueueItem<T>` è detto di **tipo implicito**, dato che non è completamente definito ma dipende dai parametri di tipo di `Queue<T>`.
+
