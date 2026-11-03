@@ -305,7 +305,11 @@ $$\|\cdot\|:\ \mathbb K^m\to\mathbb R\geq{0}$$
     \dots \\
     v_{m}
     \end{pmatrix}\right\|=\text{max }\{ |v_{1}|,\dots,|v_{m}| \}$$
-    *Osservazione*: Sia $\underline{v}\in\mathbb K^m$, allora$$\|\underline{v}\|_{\infty}\leq\|\underline{v}\|_{2}\leq\|\underline{v}\|_{1}$$
+    
+> [!example] Esempio
+> $$v=(2,5,-3)\quad\|v\|_{\infty}=max\{2,5,-3\}=5$$ 
+ 
+   *Osservazione*: Sia $\underline{v}\in\mathbb K^m$, allora$$\|\underline{v}\|_{\infty}\leq\|\underline{v}\|_{2}\leq\|\underline{v}\|_{1}$$
     in$\mathbb R^2$. D'ora in poi, ci si concentra sulla **Norma Euclidea**.
 
 
