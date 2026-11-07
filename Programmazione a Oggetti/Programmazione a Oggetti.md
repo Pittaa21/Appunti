@@ -728,3 +728,180 @@ fa **side effect** nel caso di `min(++i, --j)`
 #### Template di Classe
 ##### Coda
 È un tipo di dato **astratto** dove gli oggetti al suo interno sono tenuti in ordine e possono essere aggiunti solo dalla fine e rimossi dall'inizio.
+
+==Nota==: il compilatore genera una istanza un **template** solo quando necessario. Per esempio non si genera `Queue<int>` quando:
+```c++
+template <class T> class Queue;
+
+void Stampa(const Queue<int>& q) {
+    Queue<int>* pqi = const_cast< Queue<int>* >(&q); //non serve istanziare
+    //se invece ho
+    pqi++; //serve istanziare per calcolare la quantità sizeof(Queue<int>)
+    ...
+}
+```
+
+Si istanza sempre, invece, quando:
+```c++
+template <class T> class Queue {
+};
+
+void Stampa(Queue<int> q) {
+    Queue<int> qi;
+}
+```
+
+In un **template di classe** si posso definire metodi *inline*
+```c++
+template <class T>
+class Queue {
+    public:
+        Queue() : primo(0), ultimo(0) {} // costruzione di default
+};
+```
+
+Se definisco **esternamente**:
+```c++
+template <class T>
+class Queue {
+    public:
+        Queue(); // costruzione di default
+};
+
+template <class T>
+Queue<T>::Queue() : primo(0), ultimo(0) {}
+```
+
+#### Amicizia nei Template
+- Amicizia assoluta: tutte le istanze sono amiche dei soggetti specificati
+```c++
+template<class T>
+class C{
+    friend int A::fun();
+    friend class B;
+    friend bool test();
+}
+```
+- Amicizia associata: in base al tipo di classe per esempio `<int, double>` o `<double, double>` 
+```c++
+template<class T>
+class C{
+    private:
+        T t;
+    public:
+        C(const T&);
+        friend void f_friend<T>(const C<T>&); // amicizia associata
+};
+```
+- Amicizia non associata: qualsiasi istanza dell'amico può accedere a qualsiasi istanza del template, a prescindere dal tipo di dato
+
+#### Campi dati statici in template di classe
+Tutto ciò che vive dentro un template è *templatizzato*.
+
+#### Amicizia e classi annidate
+```c++
+template <class T>
+class Queue {
+    private:
+    // annidamento di classe associato
+    class QueueItem {
+        public:
+            QueueItem(const T& val);
+    }
+}
+```
+`QueueItem<T>` è detto di **tipo implicito**, dato che non è completamente definito ma dipende dai parametri di tipo di `Queue<T>`.
+
+
+### Iteratori
+ad ogni classe contenitore `C` di stl sono associati due tipi di iteratore:
+- `C::iterator` quando si necessita un accesso al contenitore come lvalue (lettura e scrittura)
+- `C::const_iterator` quando si accede in sola lettura
+
+```c++
+//iteratore
+template <class T>
+T& vector<T>::iterator::operator*() const; // con il const non c'è side-effect sull'iteratore
+
+//iteratore costante
+template <class T>
+const T& vector<T>::const_iterator::operator*() const;
+```
+
+Un iteratore costante può chiamare solo metodi che hanno la firma const come ritorno. Mentre quelli non costanti chiamano altri metodi con ritorno non costante.
+
+Si possono usare con la classe `vector` nel seguente modo supponendo il contenitore `Cont<Tipo>::[const_]iterator`:
+```c++
+Cont<Tipo> x;
+Cont<Tipo>::[const_]iterator i;
+
+x.begin(); // iteratore che punta al primo elemento dell'array
+x.end(); // iteratore che non punta ad alcun elemento
+*i; // elemento puntato da i
+i++; ++i // puntatore all'elemento successivo, 
+//se puntava all'ultimo elemento di x ora è == x.end()
+
+```
+
+Le classi contenitore `deque` e `vector` sono ad **accesso casuale**, permette di avanzare e retrocedere di un numero arbitrario di elementi in tempo *costante*.
+```c++
+vector<Tipo> v;
+vector<Tipo>::iterator i,j;
+int k;
+i += k; i-= k;
+```
+
+Gli **iteratori** sono usati per scorrere gli elementi di un *contenitore*.
+```c++
+Cont<Tipo> x;
+
+for(Cont<Tipo>::iterator i = x.begin(); i != x.end(); i++)
+```
+Comuni nei *contenitori* sono i metodi `empty()` e `size()`. 
+
+C'è la possibilità di diminuire la capacità di un contenitore per adeguarsi al suo `size`. Tramite il metodo `shrink_to_fit` è possibile farlo, però è rischioso, può causare reallocazione, ma non ha effetti nel size del vettore.
+
+È anche possibile inizializzare un `vector` con un segmento di array:
+```c++
+int ia[20];
+vector<int> iv(ia,ia+6); // il primo elemento è incluso l'ultimo è escluso
+```
+
+I vector hanno anche un metodo `insert()` ma è abbastanza inefficiente:
+```c++
+string s;
+vector<string> vs;
+vector<string>::iterator i;
+vs.insert(i, s); // aggiunge s prima di *i
+```
+
+C'è il metodo `pop_back()` che rimuove e distrugge l'ultimo elemento senza ritornarlo.
+
+Il metodo `erase(i)` fa come l'insert, ossia rimuove ad una certa posizione, può rimuovere anche un certo intervallo `erase(i,j)`.
+
+Su tutti i **contenitori sequenziali** (`vector`, `list`, `deque`) sono deviniti gli operatori booleani relazionali
+
+##### Invalidazione
+Le operazioni che modificano un contenitore possono rendere **non validi** gli iteratori. Il successivo utilizzo di iteratori invalidati provoca **undefined behavoir** (UB).
+```c++
+for(auto it=v.begin(); it!=v.end(); ++it)
+    if(*it==x) v.erase(it); // probabile UB
+
+//versione corretta
+for(auto it=v.begin(); it!=v.end(); )
+    if(*it==x) it = v.erase(it);
+    else
+        ++it;
+```
+Lo stesso può valere per `push_back`, `insert`.
+
+Si può accedere al primo elemento con:
+```c++
+T& front();
+const T& front() const;
+
+T& back();
+const T& back() const;
+```
+
+La classe contenitore `list` è doppiamente linkata, ha quindi il next e il prev.
