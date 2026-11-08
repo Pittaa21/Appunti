@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "9ab93b261adc56be",
+        "id": "9014eece026c6ca6",
         "type": "tabs",
         "children": [
           {
-            "id": "470b402f1e855dab",
+            "id": "e4225afb79a05ec4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
-                "mode": "preview",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate"
+              "title": "New tab"
             }
           }
         ]
@@ -244,18 +240,21 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "470b402f1e855dab",
+  "active": "e4225afb79a05ec4",
   "lastOpenFiles": [
-    "Algebra e Mate Discreta/Spazi Vettoriali.md",
+    "Pasted image 20261008130804.png",
+    "Pasted image 20261107161457.png",
     "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
-    "Reti/Reti.md",
-    "PDF/Spazi Vettoriali.pdf",
+    "PDF/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.pdf",
     "PDF/Matrici e Sistemi lineari.pdf",
     "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
+    "Algebra e Mate Discreta/Spazi Vettoriali.md",
+    "conflict-files-obsidian-git.md",
+    "Reti/Reti.md",
+    "PDF/Spazi Vettoriali.pdf",
     "Algoritmi e Strutture Dati/Algoritmi.md",
     "().md",
     "Calcolo numerico/Sistemi non Decimali.md",
-    "Pasted image 20261008130804.png",
     "SVG/carbon.svg",
     "SVG/carbon(9).svg",
     "SVG/carbon(8).svg",
@@ -284,13 +283,9 @@
     "Sistemi Operativi/Windows.md",
     "Sistemi Operativi/Gestione Memoria.md",
     "Sistemi Operativi/Processi.md",
-    "Sistemi Operativi/Politiche di Ordinamento.md",
-    "Calendar/2026-06-22.md",
     "SVG/android.svg",
     "android.svg",
     "PDF",
-    "SVG/graph.svg",
-    "SVG/baseOrd.svg",
-    "Varie"
+    "SVG/graph.svg"
   ]
 }
