@@ -905,3 +905,40 @@ const T& back() const;
 ```
 
 La classe contenitore `list` è doppiamente linkata, ha quindi il next e il prev.
+
+## Ereditarietà
+```c++
+class dataora : puclic orario{ // eredito da orario
+// importo i membri
+    private:
+        int giorno;
+        //...
+    public:
+        int  Giorno() const;
+        //...
+}
+```
+
+L'oggetto `dataora` ha quindi al suo interno un sotto oggetto `orario` e dei metodi/dati propri.
+
+#### Subtyping
+È una forma di polimorfismo dei dati dove un **subtype** è un *datatype* riferito ad un altro *datatype* (**supertype**) da alcune nozioni di sostituibilità.
+
+Ogni oggetto della classe derivata è utilizzabile come oggetto della classe base.
+
+##### Casi d'uso:
+- **Estensione** `dataora <: orario`
+- **Specializzazione** `QButton <: QComponent`
+- **Ridefinizione** `Queue <: List`
+- **Riuso** di codice (non è *subtyping*) `Queue reuse List`
+
+Si ha la conversione *implicita* per esempio `dataora => orario`, non vale il contrario.
+```c++
+int F(orario o) {}
+dataora d;
+int i = F(d);
+```
+
+
+Il tipo **statico** di un puntatore `p` è il tipo `T*` di dichiarazione di `p`, mentre se in un  certo istante dell'esecuzione il tipo dell'oggetto a cui punta `p` è `U` allora in quell'istante `U*` è il tipo **dinamico** di `p`.
+Il tipo **statico** è fissato al momento della dichiarazione, mentre il tipo **dinamico**, può variare al runtime

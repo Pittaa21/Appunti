@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "9014eece026c6ca6",
+        "id": "59c4db277efb1ab8",
         "type": "tabs",
         "children": [
           {
-            "id": "e4225afb79a05ec4",
+            "id": "3e91d3b7d7df7c0b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Programmazione a Oggetti/Programmazione a Oggetti.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Programmazione a Oggetti"
             }
           }
         ]
@@ -29,7 +33,7 @@
       {
         "id": "6cc669c8a32e7f5f",
         "type": "tabs",
-        "dimension": 73.24414715719064,
+        "dimension": 66.32016632016632,
         "children": [
           {
             "id": "c96fc433758e8523",
@@ -53,7 +57,7 @@
               "type": "search",
               "state": {
                 "query": "",
-                "matchingCase": true,
+                "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
                 "extraContext": false,
@@ -76,12 +80,12 @@
         ]
       },
       {
-        "id": "801abca2438ad71b",
+        "id": "17f62d0b8512c7ff",
         "type": "tabs",
-        "dimension": 26.755852842809368,
+        "dimension": 33.679833679833685,
         "children": [
           {
-            "id": "662dde1f805c9be1",
+            "id": "adc08d0b011e82e0",
             "type": "leaf",
             "state": {
               "type": "graph",
@@ -94,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 329.5124969482422
+    "width": 280.79740142822266,
+    "collapsed": true
   },
   "right": {
     "id": "e8f31d88b3fc8c0c",
@@ -103,15 +108,25 @@
       {
         "id": "6ed2a097ec0a53a9",
         "type": "tabs",
-        "dimension": 61.1470113085622,
+        "dimension": 74.05913978494624,
         "children": [
+          {
+            "id": "9622b43658bb58c6",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
+          },
           {
             "id": "1efde5ccd4ee8fed",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Politiche di Ordinamento.md",
+                "file": "Programmazione a Oggetti/Programmazione a Oggetti.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -121,7 +136,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Politiche di Ordinamento"
+              "title": "Backlinks"
             }
           },
           {
@@ -130,12 +145,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Processi.md",
+                "file": "Programmazione a Oggetti/Programmazione a Oggetti.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Processi"
+              "title": "Outgoing links from Programmazione a Oggetti"
             }
           },
           {
@@ -168,50 +183,39 @@
             }
           },
           {
-            "id": "9622b43658bb58c6",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
-            }
-          },
-          {
             "id": "65a72720771fcdae",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "Algebra e Mate Discreta/Insiemi Numerici e Polinomi.md",
+                "file": "Congruenze.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Insiemi Numerici e Polinomi"
+              "title": "Outline of Congruenze"
             }
           },
           {
-            "id": "7f286304ab1bac18",
+            "id": "f1a5d1b66fdd31f0",
             "type": "leaf",
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {},
-              "icon": "spreadsheet",
-              "title": "Advanced Tables"
+              "icon": "lucide-ghost",
+              "title": "advanced-tables-toolbar"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       },
       {
-        "id": "77d9e3146dde93c2",
+        "id": "f9a6dd153d4270ec",
         "type": "tabs",
-        "dimension": 38.8529886914378,
+        "dimension": 25.940860215053764,
         "children": [
           {
-            "id": "e7043d6b58567007",
+            "id": "b88e17757eb18162",
             "type": "leaf",
             "state": {
               "type": "calendar",
@@ -224,11 +228,11 @@
       }
     ],
     "direction": "horizontal",
-    "width": 486
+    "width": 283.5
   },
   "left-ribbon": {
     "hiddenItems": {
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "graph:Open graph view": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
@@ -236,56 +240,56 @@
       "command-palette:Open command palette": false,
       "bases:Create new base": false,
       "obsidian-git:Open Git source control": false,
-      "graph:Open graph view": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "e4225afb79a05ec4",
+  "active": "3e91d3b7d7df7c0b",
   "lastOpenFiles": [
-    "Pasted image 20261008130804.png",
-    "Pasted image 20261107161457.png",
-    "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
-    "PDF/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.pdf",
-    "PDF/Matrici e Sistemi lineari.pdf",
-    "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
-    "conflict-files-obsidian-git.md",
+    "PDF/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.pdf",
+    "Algebra e Mate Discreta/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.md",
+    "Algebra e Mate Discreta/Matrici e Sistemi lineari.md",
+    "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "Reti/Reti.md",
+    "file:/home/pitta/Downloads/exercises_07/01_hello_world/description.md",
     "PDF/Spazi Vettoriali.pdf",
+    "PDF/Matrici e Sistemi lineari.pdf",
     "Algoritmi e Strutture Dati/Algoritmi.md",
+    "conflict-files-obsidian-git.md",
+    "Algebra e Mate Discreta/Algebra.md",
     "().md",
+    "Pasted image 20261008130804.png",
     "Calcolo numerico/Sistemi non Decimali.md",
     "SVG/carbon.svg",
-    "SVG/carbon(9).svg",
-    "SVG/carbon(8).svg",
-    "SVG/carbon(7).svg",
-    "SVG/carbon(6) 1.svg",
-    "Reti/Layer e Protocolli.md",
+    "Varie/Date Esami.md",
+    "Sistemi.md",
+    "(Sistemi.md",
+    "Algoritmi.md",
     "Reti",
-    "Programmazione a Oggetti/Programmazione a Oggetti.md",
-    "Programmazione a Oggetti",
-    "Calcolo numerico",
-    "Algoritmi e Strutture Dati/Ordinamento.md",
-    "Algoritmi e Strutture Dati",
+    "SVG/carbon(6) 1.svg",
+    "SVG/carbon(7).svg",
+    "SVG/carbon(8).svg",
+    "SVG/carbon(9).svg",
+    "SVG/cammino.svg",
+    "carbon(6).svg",
     "Esercizi Mate.md",
-    "PDF/SECONDO-COMPITINO-12giugno2024vA+SOL.pdf",
-    "PDF/Linux.pdf",
-    "Sistemi Operativi/EserciziSO.md",
+    "Pasted image 20261001105631.png",
+    "Pasted image 20261001105848.png",
+    "Programmazione a Oggetti",
+    "Algoritmi e Strutture Dati",
+    "Calcolo numerico",
     "Algebra e Mate Discreta/Metodi di Conteggio.md",
-    "Algebra e Mate Discreta/Grafi.md",
-    "Algebra e Mate Discreta/Congruenze.md",
-    "Algebra e Mate Discreta/Algebra.md",
-    "Algebra e Mate Discreta/Matematica discreta.md",
     "Algebra e Mate Discreta/Insiemi Numerici e Polinomi.md",
-    "Relazioni di Ricorrenza.md",
-    "Sistemi Operativi/Linux.md",
-    "Sistemi Operativi/File System.md",
-    "Sistemi Operativi/Windows.md",
+    "Algebra e Mate Discreta/Grafi.md",
+    "Sistemi Operativi/EserciziSO.md",
     "Sistemi Operativi/Gestione Memoria.md",
-    "Sistemi Operativi/Processi.md",
-    "SVG/android.svg",
-    "android.svg",
-    "PDF",
-    "SVG/graph.svg"
+    "Sistemi Operativi/Windows.md",
+    "Sistemi Operativi/Linux.md",
+    "PDF/SECONDO-COMPITINO-12giugno2024vA+SOL.pdf",
+    "Sistemi Operativi/Sistemi Operativi.md",
+    "Sistemi Operativi/File System.md",
+    "PDF/Linux.pdf",
+    "PDF"
   ]
 }
