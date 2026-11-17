@@ -509,6 +509,16 @@ Search(A, p, r, k)  # A è un array ordinato
 $f(n)=\Theta(1)\ =\ n^{\log_{b}a}=n^{\log_{2}1}=n^0=1$
 Caso 2 *Master Theorem*$$T(n)=\Theta\left(n^{\log_{b}a}\cdot \log n\right)=\boxed{\Theta(\log n)}$$
 
+---
+
+## Counting Sort
+Il Counting Sort è una tecnica di ordinamento stabile, utilizzata per ordinare gli oggetti in base allechiavi che sono piccoli numeri. Conta il numero di chiavi i cui valori sono uguali. Questa tecnica diordinamento è efficiente quando la differenza tra le diverse chiavi non è così grande, altrimenti può aumentare la complessità dello spazio.
+
+### Funzionamento
+
+### Pseudocodice
+
+### Complessità
 
 ---
 

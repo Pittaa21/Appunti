@@ -9,5 +9,6 @@
     "center-image"
   ],
   "baseFontSizeAction": true,
-  "accentColor": ""
+  "accentColor": "",
+  "showRibbon": true
 }

@@ -941,4 +941,118 @@ int i = F(d);
 
 
 Il tipo **statico** di un puntatore `p` è il tipo `T*` di dichiarazione di `p`, mentre se in un  certo istante dell'esecuzione il tipo dell'oggetto a cui punta `p` è `U` allora in quell'istante `U*` è il tipo **dinamico** di `p`.
-Il tipo **statico** è fissato al momento della dichiarazione, mentre il tipo **dinamico**, può variare al runtime
+Il tipo **statico** è fissato al momento della dichiarazione, mentre il tipo **dinamico**, può variare al runtime.
+
+## Binding
+#### Statico
+
+#### Dinamico
+Ritardato rispetto al *compile time* 
+
+## Overriding
+Permette di ad una *sottoclasse* di specificare l'implementazione di un metodo che è stato già dichiarato da una delle sue *superclassi*.
+Tramite lo statement `override` si può ridefinire una funzione **virtuale**.
+```c++
+class orario{
+virtual void Stampa(); //metodo virtuale
+}
+
+class dataora: public orario{
+    void Stampa() override;
+}
+```
+Quindi se un oggetto `dataora` chiama la funzione `stampa` viene chiamato il suo override, altrimenti quello della classe `orario`. Queste sono le chiamate **polimorfe**.
+Una classe che contiene almento un metodo *virtuale* è **polimorfa**, per esempio `orario`.
+ Ci sono 3 modi per fare l'*overriding*:
+ ```c++
+ class orario{
+     virtual void Stampa();
+ }
+ 
+ class dataora: public orario{
+     // 1
+     void Stampa() override; // più chiaro (soluzione migliore)
+     // 2
+     virtual void Stampa();
+     // 3
+     void Stampa();
+ }
+ ```
+
+Nel caso definisco `T2` sottoclasse di `T1`:
+```c++
+virtual T1* m() // metodo virtuale
+
+T2* m() //overriding
+```
+L'overriding è detto con tipo di ritorno **covariante**.
+
+>[!example] Esempi:
+```c++
+class B{
+    public:
+        virtual int f();
+        virtual void f(string s);
+        virtual void g();
+}
+
+class D1: public B{
+    public:
+        void g() //override
+}
+class D3: public B{
+    public:
+        void f() override; // non compila ho cambiato la firma
+}
+
+class D4: public B{
+    public:
+        int f(int); // ridefinizione quindi compila
+}
+```
+
+```c++
+class X{};
+class Y: public X{};
+class Z: public X{};
+class B{
+    public:
+        virual X* m();
+}
+
+class C: public B{
+    Y y;
+    public:
+        X* m() override {return &y;} //override ma perdo informazioni perchè in realtà sto tornando Y*
+}
+
+class D: public B{
+    Z z;
+    public:
+        Z* m() override {return &z;} //override corretto
+}
+
+// main
+    C c; D d
+    Y* py = c.m(); // illegale perchè ritorna X* e viene messo su Y* e il compilatore non sa che in realtà viene ritornato Y*
+    Z* pz = d.m(); // ok
+    B* pb = &d; X x = *(pb->m()); // ok perchè per il compilatore viene ritornato X*
+```
+
+Il default sui parametri del metodo *virtuale* non può essere cambiato con l'*overloading*:
+```c++
+virtual void m(int x=0); //metodo virtuale
+
+void m(int x) override; // override
+```
+
+
+Per bloccare il *late binding* bisogna usare lo *scoping*:
+```c++
+B* p = new D;
+p->B::m(); // viene usato il metodo virtuale m di B e non di D
+```
+
+Il **polimorfismo** permette l'*estensibilità del codice*.
+
+Una chiamata *virtuale* richiede almeno una deferenzazione indicizzata extra, e a volte anche un *fixup*. 
