@@ -1056,3 +1056,65 @@ p->B::m(); // viene usato il metodo virtuale m di B e non di D
 Il **polimorfismo** permette l'*estensibilità del codice*.
 
 Una chiamata *virtuale* richiede almeno una deferenzazione indicizzata extra, e a volte anche un *fixup*. 
+
+#### Distruttori virtuali
+==Problema==:
+```c++
+D* pd = new D; // D derivata di B
+B* pb = pd;  // tipo dinamico D*
+delete pb;
+```
+
+La soluzione è l'utilizzo di **distruttori virtuali**, ossia:
+```c++
+class B{
+    public:
+        virtual ~B() {} // distruttore virtuale
+}
+
+class C: public B{
+    public:
+        ~C() override {}
+}
+
+//main
+C* q = new C;
+B* p=q;
+delete p; //viene invocato ~C()
+```
+
+## Classi astratte
+Una classe base è **astratta**, quando non può essere instanziata direttamente, ma può essere usata come base per altre classi. Una classe è **astratta** quando contiene almeno un metodo *virtuale* **puro**.
+Una classe **concreta**, è invece una classe che può essere instanziata.
+ ==Esempio==:
+ ```c++
+ class B{ // classe base astratta
+     public:
+         virtual void f() = 0; // metodo virtuale puro
+ }
+ 
+ class C: public B{ //sottoclasse astratta
+     public:
+         void g() {}
+ }
+ 
+ class D: public B{ //sottoclasse concreta
+     public:
+         void f() override {cout<<"ciao"<<end;} // override del metodo puro
+ }
+ //main
+ D d; //ok
+ C c; //illegale, non è concreta
+ B* p; //ok, punta ad una classe astratta
+ p = &d; // puntatore (super)polimorfo
+ p->f(); //chiama f() di D
+ ```
+
+Il modo più veloce per avere una classe *astratta* è mettendo il **distruttore** come metodo virtuale **puro**, se tutti gli altri metodi non sono puri e la classe deve essere per FORZA *astratta*.
+
+---
+##### se una classe è POLIMORFA, il distruttore DEVE essere VIRTUALE
+
+---
+
+## Run Time Type Information (RTTI)
