@@ -135,4 +135,32 @@ Si passa a due frequenze, niente PTT. Viene introdotto un livello di **privacy**
 Viene introdotto **AMPS** (**Advanced Mobile Phone System**), in Italia *TACS*. Ora le *celle* sono molto più piccole (10-20km). Aumenta la **capacità** degli utenti che usano il servizio e diminuisce la **potenza** richiesta per la trasmissione, quindi meno uso della batteria dei telefoni. 
 C'è il problema dell'**interferenza** tra celle: si usa la *separazione di frequenza*. Il numero di frequenze dipende dalle *zone*, dalla *densità* d'uso, e dalla necessità di *espansione*, solitamente si usano 3 o 7 frequenze.
 
-Ogni **cella** ha al centro lo *switching center*, un cellulare è connesso ad una sola cella, finchè non si sposta. Si deve trovare il modo di passare il segnale ad un'altra cella
+Ogni **cella** ha al centro lo *switching center*, un cellulare è connesso ad una sola cella, finchè non si sposta. Si deve trovare il modo di passare il segnale ad un'altra cella (**handoff**).
+
+##### Handoff soft
+Ossia la nuova cella acquisisce il cellulare prima che la vecchia lo lasci. Ciò implica che il telefono deve essere in grado di collegarsi a due *celle* in contemporanea. **Costi maggiori** quindi 1G e 2G non lo gestiscono. 
+
+L'**1G**, quindi, con ogni cella gestisce molti utenti e usa il *multiplex*: **FDM** per la gestione di 832 canali. In realtà le celle hanno capacità inferiore, perchè alcuni *canali* sono usati per controllo e smistamento delle frequenze.
+
+###### Funzionamento
+Ogni cellulare ha un *numero seriale* (32 bit) e un *numero telefonico* (34 bit). Ogni circa 15 minuti il cellulare manda i suoi 32+34 bit in **broadcast** per registrarsi alla cella. Quando si chiama si usa un canale apposta (**condiviso**) per la richiesta. Per la ricezione si usa un canale di **paging**, per vedere se ci sono chiamate che li riguardano. In caso affermativo, la cella da loro un canale **esclusivo** per la comunicazione.
+
+#### 2G
+###### D-AMPS
+Si comprime maggiormente il suono, peggiora quindi la qualità, ma aumenta la quantità.
+
+###### GSM
+Canali più ampi (200kHz), più utenti e *data-rate* per utente maggiore. Inoltre la qualità della voce è molto migliore e anche modem migliori.
+PDF 16
+
+PDF 24 
+### Hamming
+Generalizzazione dei *parity bit*.
+
+##### Repetition codes
+per esempio con **R3** abbiamo un bit $\begin{pmatrix}a\end{pmatrix}$ che diventa $\begin{pmatrix}a & a & a\end{pmatrix}$. Viene usata quindi la matrice generatrice $\begin{pmatrix}1 & 1 & 1\end{pmatrix}$. Ha peso **minimo** 3.
+
+Esiste anche **R2**, ossia *repetition 2* usato per esempio nel **RAID 1**.
+
+#### Errori
+Gli errori non sono del tutto casuali, si verificano in **burst** (esplosioni ravvicinate). Per risolvere questo problema si usa il *metodo della matrice invertita* (**interleaving**)
