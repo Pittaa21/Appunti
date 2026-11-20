@@ -1118,3 +1118,45 @@ Il modo più veloce per avere una classe *astratta* è mettendo il **distruttore
 ---
 
 ## Run Time Type Information (RTTI)
+Meccanismo che espone informazioni riguardo un oggetto *data type* a *runtime*.
+
+L'operatore `typeid` permette di determinare il tipo di una espressione  qualsiasi a tempo di esecuzione.
+```c++
+#include <typeinfo>
+
+int main(){
+    std::cout<<typeid(5).name; // stampa i(nt)
+    std::cout<<typeid(3.14).name; // stampa d(ouble)
+}
+```
+
+#### Funzionamento `typeid`
+Se l'operando è un riferimento **ref** ad una classe che contiene almeno un metodo virtuale, allora `typeid` restituisce un oggetto di `type_info` che rappresenta il tipo *dinamico* di **ref**.
+Se l'operando è un puntatore dereferenziato `*punt`, con `punt` puntatore a **tipo polimorfo**, allora `typeid` restituisce un oggetto `type_info` che rappresenta il tipo `T` dove `T*` è il tipo *dinamico* di `punt`.
+
+Se la classe non contiene metodi virtuali viene restituito il tipo *statico* del riferimento o puntatore.
+
+### DownCasting
+Significa fare il **casting** della *reference* di una classe base ad una sua derivata.
+```c++
+class B{
+    public:
+        virtual void m();
+};
+class D: public B{
+    public:
+        virtual void f();
+};
+
+int main(){
+    B* p = fun();
+    if(dynamic_cast<D*>(p)) // downcast possibile
+        (static_cast<D*>(p))->f(); // downcast
+}
+```
+
+##### Criticità
+- Usare il ***downcasting*** solo quando necessario
+- non fare *type checking* dinamico inutile
+- dove possibile usare metodi virtuali nelle classi base, invece che fare *type checking* dinamico
+

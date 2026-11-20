@@ -164,3 +164,30 @@ Esiste anche **R2**, ossia *repetition 2* usato per esempio nel **RAID 1**.
 
 #### Errori
 Gli errori non sono del tutto casuali, si verificano in **burst** (esplosioni ravvicinate). Per risolvere questo problema si usa il *metodo della matrice invertita* (**interleaving**)
+
+
+
+PDF 27
+### CRC
+
+#### CRC-32
+Corregge i *burst* fino a 32, e tutti i *burst* che alterano un numero dispari di bit. Viene usato nei modem v4, nelle zip e nel **FDDI** (trasporto in fibra ottica)
+Questa tecnica *polinomiale*, è alla base per i codici di **error-correction** più avanzati.
+
+
+#### Protocolli Stop-and- Wait
+Viene introdotto il concetto di *parlare* tra ricevente e chi invia i dati. Si invia un blocco dati (**frame**) e si aspetta che il recevente mandi un messaggio di conferma (**ack**), segnala che si può inviarne un'altro.
+Basta quindi un canale *half-duplex*, è però lento come protocollo.
+
+Se il pacchetto inviato viene corrotto, si può introdurre un **timeout**: se entro un certo periodo di tempo non riceviamo **ack**, rimandiamo il pacchetto. Quindi il ricevitore si accorge che il pacchetto è *corrotto* e quindi non manda l'**ack**, quindi viene riinviato il pacchetto appena scade il **timeout**.
+
+Se invece viene corrotta la **ricevuta**, i dati sono ricevuti correttamente, ma il flusso dati arriva con un **pacchetto** ripetuto due volte. Una soluzione è **numerare i pacchetti**, ci si accorge se ci sono ripetizioni.
+C'è però il problema che si occupa tanto spazio per questa numerazione, se ogni *frame* ha un numero diverso.
+
+Si fa quindi una distinzione solo tra **frame contigui** con un solo *bit* per alternare tra pari e dispari.
+
+I protocolli *Stop-and-Wait* che usano il **timeout** si chiamano **PAR** (Positive Acknowledgement with Retransmission)
+Questi usano un verso di trasmissione, uno che manda e uno che riceve (**Duplex**).
+
+Invece di mandare un **ack** ogni volta che si riceve un **frame**; si può aspettare e inviare l'**ack** insieme al primo **frame dati** che inviamo (***Piggybacking***). Bisogna stare attenti a non attendere troppo per la ritrasmissione. Serve quindi un corretto bilanciamento dei flussi, oppure un adeguato calcolo del *timeout* di ritrasmissione.
+
