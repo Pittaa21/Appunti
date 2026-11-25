@@ -1160,3 +1160,42 @@ int main(){
 - non fare *type checking* dinamico inutile
 - dove possibile usare metodi virtuali nelle classi base, invece che fare *type checking* dinamico
 
+
+### Ereditarietà a diamante
+![[Pasted image 20261125150039.png]]
+
+
+```c++
+class A{  // classe base virtuale
+    public:
+        int a;
+        a(int x=1): a(x){}
+        void print() {cout<<"A";}
+};
+class B: virtual A{
+    public:
+        B(): A(2) {}
+        void print() {cout<<"B";}
+};
+class C: virtual A{
+    public:
+        C(): A(3) {}
+        void print() {cout<<"C";}
+};
+class D: public B, public C {};
+
+int main(){
+   D d;
+   A* p=&d //compila
+   cout<<p->a; //stampa 1 perchè viene invocato il costruttore di default di A dato che D non ne ha uno 
+   d.print(); // illegale, funzione ambigua
+   d.B::print(); // stampa "B"
+}
+```
+
+#### Regole
+Costruttore `D` in presenza di basi virtuali rispetta:
+1. Per primi sono richiamati, una volta, i costruttori delle classi base virtuali che sono nella classe di derivazione di `D`.
+2. Dopo sono richiamati i costruttori delle superclassi dirette non virtuali di `D` che escludono il richiamo del punto 1.
+3. Per ultimo viene eseguito il costruttore base di `D`.
+
