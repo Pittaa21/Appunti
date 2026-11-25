@@ -191,3 +191,11 @@ Questi usano un verso di trasmissione, uno che manda e uno che riceve (**Duplex*
 
 Invece di mandare un **ack** ogni volta che si riceve un **frame**; si può aspettare e inviare l'**ack** insieme al primo **frame dati** che inviamo (***Piggybacking***). Bisogna stare attenti a non attendere troppo per la ritrasmissione. Serve quindi un corretto bilanciamento dei flussi, oppure un adeguato calcolo del *timeout* di ritrasmissione.
 
+Se il canale viene **sottoutilizzato** il protocollo funziona male.
+Una soluzione è l'utilizzo del **pipelining**, ossia si aumenta il grado di parralelismo. Per far ciò si usa il metodo della ***Sliding Windows***, che prevede di *preoccuparsi* solo quando c'è un numero di *frame incerti* maggiori di `n`. Serve però un buffer di taglia in cui tener traccia degli `n` **frame** e quindi un `n` **timer** per l'eventuale ritrasmissione. Se esauriamo il buffer di taglia bisogna aspettare e non inviare **frames**.
+
+###### Problemi Parallelismo
+Se si aumenta troppo il **parallelismo** si crea confusione. Per evitar ciò bisogna che il **parallelismo** sia al massimo la metà della grandezza della **sliding window**.
+
+##### Protocolli Selective repeat
+funzionano bene, ma anche il *receiver* deve allocare un buffer di taglia.
