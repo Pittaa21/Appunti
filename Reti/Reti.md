@@ -197,5 +197,37 @@ Una soluzione è l'utilizzo del **pipelining**, ossia si aumenta il grado di par
 ###### Problemi Parallelismo
 Se si aumenta troppo il **parallelismo** si crea confusione. Per evitar ciò bisogna che il **parallelismo** sia al massimo la metà della grandezza della **sliding window**.
 
-##### Protocolli Selective repeat
-funzionano bene, ma anche il *receiver* deve allocare un buffer di taglia.
+I timer dei *sender* possono avere un tempo **molto variabile** per l'ack, allora si imposta il timer del *sender* con un valore molto grande, inoltre si da il **NAK** al *sender*.
+
+Il ***NAK***, misura il rischio che si verificano errori, se il rischio è troppo alto viene sollecitato il *sender* con un messaggio **NAK** (*Not AcK*). In questo modo non serve aspettare la fine del timer, ma si può ritrasmettere subito. Il **NAK** si può attivare per esempio tramite un *timer nak*.
+
+#### Protocolli usati
+##### HDLC
+High-level Data Link Control, ideato per IBM, si usa ancora per modem/fax. Usa la tecnica del **bit stuffing**, controllo dell'errore tramite **CRC-32** e controllo del flusso tramite *piggyback* e *sliding window*.
+
+##### Point to Point
+Connessioni internet dedicate *punto a punto*, si usa il protocollo **PPP**. Per il controllo del flusso usa **LCP** (*Link Control Protocol*). Usa il **byte stuffing**.
+
+**LCP**, usa 11 *frame*:
+- 4 di *configurazione*
+- 2 di *terminazione*
+- 2 di *rifiuto*
+- 2 di *echo*
+- 1 di *test*
+
+La taglia massima di ogni pacchetto si chiama **MTU** (*Maximum Transmission Unit*). Ogni protocollo ha il proprio **MTU** fissato.
+- **MTU** grande, comporta pacchetti più grandi, meno *overhead* e più banda (ottimale se ci sono pochi errori nel canale)
+- **MTU** piccolo, comporta pacchetti più piccoli, più *overhead* e meno banda (va bene se ci sono molti errori)
+
+##### ATM
+Asynchronous Transfer Mode, usa **TDM** divide i dati in un flusso di celle con ampiezza fissa. Usato per telefonia/bancomat. Per controllo di flusso usa *sliding window*, per controllo errori usa **CRC-8**. Ha un'indirizzamento con doppia gerarchia: *path* e *channel*.
+
+Per gestire l'unione dei canali si usano i protocolli **LLC** (*Logical Link Control*) e **VC-MUX** (*Virtual Connection Multiplexing*).
+
+==Flusso dati==:
+1. Da computer a router (**PPP** -> **PPPoE** -> **Ethernet**)
+2. Da router a modem (**PPPoA Ethernet** -> **ATM**)
+3. Da modem a provider (**PPPoA ATM** -> **LLC**/**VC-MUX**)
+4. Da provider ad un punto interno
+5. Da punto interno a Ethernet (-> ricostruzione flusso Ethernet)
+6. A Internet
