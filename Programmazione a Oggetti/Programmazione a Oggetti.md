@@ -1199,3 +1199,88 @@ Costruttore `D` in presenza di basi virtuali rispetta:
 2. Dopo sono richiamati i costruttori delle superclassi dirette non virtuali di `D` che escludono il richiamo del punto 1.
 3. Per ultimo viene eseguito il costruttore base di `D`.
 
+#### Stream
+È un flusso di celle (*byte*), può essere di input o output. Per effettuare I/O su usa un buffer associato ad uno **stream**. Uno **stream** può avere 8 diversi stati di funzionamento che corrispondo al numero binario `bad fail eof` della classe `ios.
+Dove `eof=1` lo stream è alla posizione di **end-of-file**.
+`fail=1` la precedente operazione sullo stream è fallita, con errore senza perdita di dati.
+`bad=1` la precedente operazione sullo stream è fallita, con perdita di dati.
+
+###### La classe `ios`
+Permette di controlllare lo stato di funzionamento di uno **stream**.
+ Gli oggetti della sottoclasse `istream` rappresentano lo **stream di input**. Di cui `cin` è un suo oggetto.
+
+`istream` include l'overloading di `operator>>` di input:
+```c++
+class istream: public virtual ios{
+    public:
+        istream& operator>>(bool&);
+        istream& operator>>(int&);
+        istream& operator>>(double&);
+};
+istream& std::operator>>(istream&, char&); //byte
+```
+
+Tutti gli operatori di input ignorano le *spaziature* (*tab*, *space*, *enter*). Queste servono per far capire al buffer di passare al prossimo **stream**.
+
+Ci sono i metodi `get` per prelevare un carattere dall'`istream` e `read` per un `char*`.
+
+##### Parsing
+Definire un overloading di `operator>>` per una classe C significa fare la **conversione**:
+$$\text{sequenza di byte}\implies\text{oggetto di C}$$
+ossia il **parsing** di una sequenza di *byte di input* secondo le regole di rappresentazione di *C*.
+
+>[!example] Esempio:
+```c++
+class Punto{
+    friend istream& operator>>(istream&, Punto&);
+    private:
+        double x,y;
+}
+
+// parsing inserimento come input '(double,double)'
+istream& operator>>(istream& in, Punto& p){
+    char cc; in >> cc;
+    if(cc=='q') return in; // 'q' per uscire
+    if(cc!='(') {in.clear(ios::failbit); return in;}
+    else{
+        in>>p.x;
+        if(!in.good()) {in.clear(ios::failbit); return in;}
+        in >> cc;
+        if(cc!=',') {in.clear(ios::failbit); return in;}
+        else{
+            in >> p.y;
+            if(!in.good()) {in.clear(ios::failbit); return in;}
+            in >> cc;
+            if(cc!=')') {in.clear(ios::failbit); return in;}
+        }
+    }
+    return in;
+}
+
+int main(){
+    Punto p;
+    while(cin.good()){
+        cin>>p;
+        if(cin.fail()){ // input non valido
+            cin.clear(ios::goodbit);
+            char c=0;
+            while(c!=10) {cin.get(c);} // svuoto il cin
+            cin.clear(ios::goodbit);
+        }
+        else cin.clear(ios::eofbit);
+    }
+}
+```
+
+Per la sottoclasse `ostream` il concetto è lo stesso solo che si usa l'overloading di `operator<<`.
+Ci sono i metodi `put` per inserire un carattere nell'`ostream` e `write` per un `char*`.
+
+#### Stream di file
+Ci sono gli stream associati ai file `ifstream`, `ofstream` e `fstream`. Che hanno dei costruttori che necessitano il nome del percorso del file e la modalità di apertura.
+
+Quando si apre un file, viene messo in **lock** in modo che non possa essere aperto due volte. Bisogna quindi chiuderlo, per esempio con il metodo `close()`.
+
+#### Stream di stringhe
+Si usano le classi `istringstream`, `ostringstream` e `stringstream`.
+
+### Eccezioni

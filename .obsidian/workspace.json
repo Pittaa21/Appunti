@@ -35,8 +35,7 @@
               "title": "Reti"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -259,11 +258,11 @@
       "omnisearch:Omnisearch": false
     }
   },
-  "active": "fc2dcadb29fd40a0",
+  "active": "3e91d3b7d7df7c0b",
   "lastOpenFiles": [
+    "Reti/Reti.md",
     "Programmazione a Oggetti/Programmazione a Oggetti.md",
     "Pasted image 20261125150039.png",
-    "Reti/Reti.md",
     "Algoritmi e Strutture Dati/Algoritmi.md",
     "Algebra e Mate Discreta/Spazi Vettoriali.md",
     "PDF/Autovalori, Autovettori e Diagonalizzazione di Matrici Quadrate.pdf",
